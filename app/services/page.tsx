@@ -69,7 +69,7 @@ export default function Services() {
     {servicesList.map((service, index) => (
       <div className="col-sm-6 col-md-4 col-lg-3" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
         <div className="card service-card border-0 shadow-sm overflow-hidden position-relative">
-          <img
+          <Image
             src="./bg-gallery.jpg"
             className="card-img"
             alt={service.title}

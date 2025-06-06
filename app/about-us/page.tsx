@@ -49,7 +49,7 @@ export default function About() {
   <div className="row align-items-center">
     {/* Clinic Image */}
     <div className="col-md-5 mb-4 mb-md-0 text-center">
-      <img
+      <Image
         src="/bg-gallery.jpg" // Replace with actual image path
         alt="Our Clinic"
         className="img-fluid rounded shadow"
@@ -86,7 +86,7 @@ export default function About() {
   <div className="row justify-content-center g-4">
     {/* Example Certification 1 */}
     <div className="col-6 col-md-3 text-center" data-aos="zoom-in">
-      <img
+      <Image
         src="/bg-gallery.jpg" // Replace with actual path
         alt="ADA Certified"
         className="img-fluid mb-3"
@@ -98,7 +98,7 @@ export default function About() {
 
     {/* Example Certification 2 */}
     <div className="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
-      <img
+      <Image
         src="/bg-gallery.jpg" // Replace with actual path
         alt="ISO Certified"
         className="img-fluid mb-3"
@@ -110,7 +110,7 @@ export default function About() {
 
     {/* Example Certification 3 */}
     <div className="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
-      <img
+      <Image
         src="/bg-gallery.jpg" // Replace with actual path
         alt="WHO Affiliation"
         className="img-fluid mb-3"
@@ -122,7 +122,7 @@ export default function About() {
 
     {/* Example Certification 4 */}
     <div className="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
-      <img
+      <Image
         src="/bg-gallery.jpg" // Replace with actual path
         alt="DCI Certified"
         className="img-fluid mb-3"
@@ -140,7 +140,7 @@ export default function About() {
   <div className="row align-items-center">
     {/* Executive Photo */}
     <div className="col-lg-5 mb-4 mb-lg-0 text-center">
-      <img
+      <Image
         src="/images/executive.jpg" // Replace with real image path
         alt="Dr. Aisha Sharma"
         className="img-fluid rounded shadow"

@@ -78,7 +78,7 @@ export default function Home() {
               className="col-lg-6 col-md-6 mb-4 mb-md-0"
               data-aos="fade-right"
             >
-              <img
+              <Image
                 src="/bg-gallery.jpg" // Replace with your actual image
                 alt="Our Team"
                 className="img-fluid rounded shadow"
@@ -125,7 +125,7 @@ export default function Home() {
             data-aos="fade-right"
           >
             <div className="col-md-4 text-center mb-3 mb-md-0">
-              <img
+              <Image
                 src="/bg-gallery.jpg"
                 alt="Dr. Sophia Mehra"
                 className="img-fluid rounded shadow"
@@ -167,7 +167,7 @@ export default function Home() {
               </blockquote>
             </div>
             <div className="col-md-4 text-center mb-3 mb-md-0">
-              <img
+              <Image
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
