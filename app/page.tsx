@@ -80,6 +80,7 @@ export default function Home() {
             >
               <Image
                 src="/bg-gallery.jpg" // Replace with your actual image
+                fill
                 alt="Our Team"
                 className="img-fluid rounded shadow"
                 data-aos="zoom-in"
@@ -122,12 +123,20 @@ export default function Home() {
           {/* Team Member 1 */}
           <div
             className="row align-items-center mb-5 flex-md-row flex-column"
+            style={{
+              background:
+                "linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.33))",
+              borderRadius: 10,
+              padding: 20,
+            }}
             data-aos="fade-right"
           >
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <Image
+                width={"400"}
+                height={"300"}
                 src="/bg-gallery.jpg"
-                alt="Dr. Sophia Mehra"
+                alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: "300px", objectFit: "cover" }}
               />
@@ -152,6 +161,12 @@ export default function Home() {
           <div
             className="row align-items-center mb-5 flex-md-row flex-column-reverse"
             data-aos="fade-left"
+            style={{
+              background:
+                "linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0.33))",
+              borderRadius: 10,
+              padding: 20,
+            }}
           >
             <div className="col-md-8">
               <h3 className="mb-1">Dr. Rahul Iyer</h3>
@@ -168,6 +183,8 @@ export default function Home() {
             </div>
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <Image
+                width={"400"}
+                height={"300"}
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
