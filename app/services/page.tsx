@@ -61,7 +61,7 @@ export default function Services() {
   return (
     <section className="container py-5">
   <div className="text-center mb-5" data-aos="fade-down">
-    <h2 className="fw-bold">Our Treatments & Services</h2>
+    <h2 className="fw-bold py-5">Our Treatments & Services</h2>
     <p className="text-muted">Explore the wide range of dental care we offer at BrightSmile Clinic</p>
   </div>
 
@@ -70,9 +70,11 @@ export default function Services() {
       <div className="col-sm-6 col-md-4 col-lg-3" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
         <div className="card service-card border-0 shadow-sm overflow-hidden position-relative">
           <Image
-            src="./bg-gallery.jpg"
+            src="/bg-gallery.jpg"
             className="card-img"
             alt={service.title}
+            width= {300}
+            height={300}
             style={{ height: "250px", objectFit: "cover" }}
           />
           <div className="overlay d-flex flex-column justify-content-end p-3">
