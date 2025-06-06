@@ -40,3 +40,77 @@ a {
     color-scheme: dark;
   }
 }
+
+html,
+body {
+  text-decoration-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.slideshow-wrapper {
+  overflow: hidden;
+}
+
+.slideshow .slide {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slideshow .slide.active {
+  opacity: 1;
+}
+
+.content-overlay {
+  transition: all 0.5s ease;
+}
+
+section {
+  color: white;
+}
+@media (min-width: 901px) {
+  .content-overlay {
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+  }
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgb(249, 10, 253), rgba(255, 255, 255, 0.33));
+    z-index: 1;
+  }
+}
+@media (max-width: 900px) {
+  .content-overlay {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    padding: 0rem;
+    border-radius: 1rem;
+    width: 100%;
+  }
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgb(249, 10, 253), rgba(255, 255, 255, 0.33));
+    z-index: 1;
+  }
+}
+

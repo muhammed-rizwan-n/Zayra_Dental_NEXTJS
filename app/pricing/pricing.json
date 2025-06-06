@@ -1,0 +1,38 @@
+[
+  {
+    "treatment": "Dental Check-up",
+    "price": "₹500"
+  },
+  {
+    "treatment": "Teeth Cleaning",
+    "price": "₹1,200"
+  },
+  {
+    "treatment": "Teeth Whitening",
+    "price": "₹4,500"
+  },
+  {
+    "treatment": "Dental Implants",
+    "price": "₹25,000"
+  },
+  {
+    "treatment": "Root Canal Therapy",
+    "price": "₹3,000"
+  },
+  {
+    "treatment": "Dental Aligners",
+    "price": "₹15,000 - ₹60,000"
+  },
+  {
+    "treatment": "Smile Makeover (Veneers)",
+    "price": "₹8,000 / tooth"
+  },
+  {
+    "treatment": "Tooth Extraction",
+    "price": "₹800 - ₹1,500"
+  },
+  {
+    "treatment": "Emergency Consultation",
+    "price": "₹600"
+  }
+]
