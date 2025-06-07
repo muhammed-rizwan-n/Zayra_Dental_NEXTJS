@@ -166,3 +166,9 @@ a.secondary {
     filter: invert();
   }
 }
+
+.team_member {
+  background:linear-gradient(to right, rgb(190, 38, 255), rgba(255, 255, 255, 0.33));
+  border-radius: 10;
+  padding: 20;
+}

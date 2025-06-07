@@ -52,6 +52,8 @@ export default function About() {
       <Image
         src="/bg-gallery.jpg" // Replace with actual image path
         alt="Our Clinic"
+        width={"400"}
+        height={"300"}
         className="img-fluid rounded shadow"
         style={{ maxHeight: '300px', objectFit: 'cover' }}
       />
@@ -90,6 +92,8 @@ export default function About() {
         src="/bg-gallery.jpg" // Replace with actual path
         alt="ADA Certified"
         className="img-fluid mb-3"
+                width={"400"}
+        height={"300"}
         style={{ height: '80px', objectFit: 'contain' }}
       />
       <h6 className="fw-semibold">American Dental Association</h6>
@@ -102,6 +106,8 @@ export default function About() {
         src="/bg-gallery.jpg" // Replace with actual path
         alt="ISO Certified"
         className="img-fluid mb-3"
+                width={"400"}
+        height={"300"}
         style={{ height: '80px', objectFit: 'contain' }}
       />
       <h6 className="fw-semibold">ISO 9001:2015</h6>
@@ -114,6 +120,8 @@ export default function About() {
         src="/bg-gallery.jpg" // Replace with actual path
         alt="WHO Affiliation"
         className="img-fluid mb-3"
+                width={"400"}
+        height={"300"}
         style={{ height: '80px', objectFit: 'contain' }}
       />
       <h6 className="fw-semibold">World Health Organization</h6>
@@ -126,6 +134,8 @@ export default function About() {
         src="/bg-gallery.jpg" // Replace with actual path
         alt="DCI Certified"
         className="img-fluid mb-3"
+                width={"400"}
+        height={"300"}
         style={{ height: '80px', objectFit: 'contain' }}
       />
       <h6 className="fw-semibold">Dental Council of India</h6>
@@ -144,6 +154,8 @@ export default function About() {
         src="/images/executive.jpg" // Replace with real image path
         alt="Dr. Aisha Sharma"
         className="img-fluid rounded shadow"
+                width={"400"}
+        height={"300"}
         style={{ maxHeight: "450px", objectFit: "cover" }}
       />
     </div>

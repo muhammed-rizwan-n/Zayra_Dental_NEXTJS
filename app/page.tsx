@@ -1,7 +1,7 @@
 import Image from "next/image";
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
-//import style from "./styles/Home.module.css";
+import style from "./page.module.css";
 //import Map from "./components/Map";
 export default function Home() {
   return (
@@ -29,6 +29,8 @@ export default function Home() {
               <h1 className="display-4 fw-bold mb-3"></h1>
               <Image
                 src={zayra_dental}
+                width={"500"}
+                height={"100"}
                 alt="zayra_dental Logo"
                 className="mb-4 img-fluid"
                 data-aos="zoom-in"
@@ -80,7 +82,8 @@ export default function Home() {
             >
               <Image
                 src="/bg-gallery.jpg" // Replace with your actual image
-                fill
+                width={"500"}
+                height={"400"}
                 alt="Our Team"
                 className="img-fluid rounded shadow"
                 data-aos="zoom-in"
@@ -122,23 +125,17 @@ export default function Home() {
 
           {/* Team Member 1 */}
           <div
-            className="row align-items-center mb-5 flex-md-row flex-column"
-            style={{
-              background:
-                "linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.33))",
-              borderRadius: 10,
-              padding: 20,
-            }}
+            className={style['team_member'] + " row align-items-center mb-5 flex-md-row flex-column"}
             data-aos="fade-right"
           >
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <Image
-                width={"400"}
-                height={"300"}
+                width={"300"}
+                height={"400"}
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "400px", objectFit: "cover" }}
               />
             </div>
             <div className="col-md-8">
@@ -159,14 +156,8 @@ export default function Home() {
 
           {/* Team Member 2 */}
           <div
-            className="row align-items-center mb-5 flex-md-row flex-column-reverse"
+            className={ style['team_member'] + " row align-items-center mb-5 flex-md-row flex-column-reverse"}
             data-aos="fade-left"
-            style={{
-              background:
-                "linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0.33))",
-              borderRadius: 10,
-              padding: 20,
-            }}
           >
             <div className="col-md-8">
               <h3 className="mb-1">Dr. Rahul Iyer</h3>
@@ -183,20 +174,28 @@ export default function Home() {
             </div>
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <Image
-                width={"400"}
-                height={"300"}
+                width={"300"}
+                height={"400"}
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "400px", objectFit: "cover" }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-5 bg-light">
-        <div className="container">
+      <section className="py-5"
+      style={{
+
+            height: "100%",
+            width: "100%",
+            background: "rgba(99, 33, 253, 0.74)", // Light overlay
+            zIndex: 1,
+          }}>
+        <div className="container"
+        >
           <h2 className="fw-bold text-center mb-5 text-dark" data-aos="fade-up">
             What Our Patients Say
           </h2>

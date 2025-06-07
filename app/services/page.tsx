@@ -56,6 +56,100 @@ export default function Services() {
         },
       ],
     },
+    {
+      title: "General Dentistry",
+      services: [
+        {
+          name: "Dental Check-ups",
+          desc: "Routine exams to maintain oral health and detect issues early.",
+        },
+        {
+          name: "Fillings",
+          desc: "Repair cavities and restore tooth function with durable materials.",
+        },
+        {
+          name: "Crowns & Bridges",
+          desc: "Strengthen damaged teeth or replace missing ones with natural-looking restorations.",
+        },
+      ],
+    },
+    {
+      title: "Cosmetic Dentistry",
+      services: [
+        {
+          name: "Teet Whitening",
+          desc: "Brighten your smile with safe and effective in-office whitening.",
+        },
+        {
+          name: "Veneers",
+          desc: "Improve the shape, size, and color of your teeth with custom porcelain shells.",
+        },
+      ],
+    },
+    {
+      title: "Preventative Care",
+      services: [
+        {
+          name: "Cleanings",
+          desc: "Professional dental cleaning to remove plaque and prevent gum disease.",
+        },
+        {
+          name: "Fluoride Treatments",
+          desc: "Strengthen enamel and help protect teeth from decay.",
+        },
+        {
+          name: "Sealants",
+          desc: "A protective coating applied to molars to prevent cavities.",
+        },
+      ],
+    },
+    {
+      title: "General Dentistry",
+      services: [
+        {
+          name: "Dental Check-ups",
+          desc: "Routine exams to maintain oral health and detect issues early.",
+        },
+        {
+          name: "Fillings",
+          desc: "Repair cavities and restore tooth function with durable materials.",
+        },
+        {
+          name: "Crowns & Bridges",
+          desc: "Strengthen damaged teeth or replace missing ones with natural-looking restorations.",
+        },
+      ],
+    },
+    {
+      title: "Cosmetic Dentistry",
+      services: [
+        {
+          name: "Teet Whitening",
+          desc: "Brighten your smile with safe and effective in-office whitening.",
+        },
+        {
+          name: "Veneers",
+          desc: "Improve the shape, size, and color of your teeth with custom porcelain shells.",
+        },
+      ],
+    },
+    {
+      title: "Preventative Care",
+      services: [
+        {
+          name: "Cleanings",
+          desc: "Professional dental cleaning to remove plaque and prevent gum disease.",
+        },
+        {
+          name: "Fluoride Treatments",
+          desc: "Strengthen enamel and help protect teeth from decay.",
+        },
+        {
+          name: "Sealants",
+          desc: "A protective coating applied to molars to prevent cavities.",
+        },
+      ],
+    }
   ];
 
   return (
