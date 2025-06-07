@@ -135,7 +135,7 @@ export default function Home() {
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "400px", objectFit: "cover" }}
+                style={{ minHeight: "300px", objectFit: "cover" }}
               />
             </div>
             <div className="col-md-8">
@@ -179,7 +179,7 @@ export default function Home() {
                 src="/bg-gallery.jpg"
                 alt="Dr. Rahul Iyer"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "400px", objectFit: "cover" }}
+                style={{ minHeight: "300px", objectFit: "cover" }}
               />
             </div>
           </div>
