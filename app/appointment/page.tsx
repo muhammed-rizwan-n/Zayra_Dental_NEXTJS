@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhoneAlt, FaGlobe, FaClock } from 'react-icons/fa';
+import { FaPhoneAlt, FaClock } from 'react-icons/fa';
 export default function Appointment() {
   return (
     <section className="py-5 bg-transparent">
