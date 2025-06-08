@@ -1,8 +1,9 @@
 import Image from "next/image";
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
-import style from "./page.module.css";
 //import Map from "./components/Map";
+import KeyServiceSection from "../components/KeyServices";
+
 export default function Home() {
   return (
     <>
@@ -117,75 +118,79 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-5">
-        <div className="container">
-          <h2 className="fw-bold text-center mb-5" data-aos="fade-up">
-            Meet Our Team
-          </h2>
-
-          {/* Team Member 1 */}
-          <div
-            className={style['team_member'] + " row align-items-center mb-5 flex-md-row flex-column"}
-            data-aos="fade-right"
-          >
-            <div className="col-md-4 text-center mb-3 mb-md-0">
-              <Image
-                width={"300"}
-                height={"400"}
-                src="/bg-gallery.jpg"
-                alt="Dr. Rahul Iyer"
-                className="img-fluid rounded shadow"
-                style={{ minHeight: "300px", objectFit: "cover" }}
-              />
-            </div>
-            <div className="col-md-8">
-              <h3 className="mb-1">Dr. Sophia Mehra</h3>
-              <h6 className="text-muted">Chief Dental Surgeon</h6>
-              <p className="mb-1">
-                <strong>Specialization:</strong> Cosmetic Dentistry, Full Mouth
-                Rehabilitation
-              </p>
-              <blockquote className="blockquote fst-italic mt-3">
-                <p>
-                  &quot;A confident smile is the most beautiful thing you can
-                  wear.&quot;
-                </p>
-              </blockquote>
-            </div>
+            <section
+        className="container-fluid py-5 px-4"
+        style={{ backgroundColor: "purple" }}
+      >
+        <div className="row align-items-center">
+          {/* Executive Photo */}
+          <div className="col-lg-5 mb-4 mb-lg-0 text-center">
+            <Image
+              src="/images/executive.jpg" // Replace with real image path
+              alt="Dr. Aisha Sharma"
+              className="img-fluid rounded shadow"
+              width={"400"}
+              height={"300"}
+              style={{ maxHeight: "450px", objectFit: "cover" }}
+            />
           </div>
 
-          {/* Team Member 2 */}
-          <div
-            className={ style['team_member'] + " row align-items-center mb-5 flex-md-row flex-column-reverse"}
-            data-aos="fade-left"
-          >
-            <div className="col-md-8">
-              <h3 className="mb-1">Dr. Rahul Iyer</h3>
-              <h6 className="text-muted">Orthodontist</h6>
-              <p className="mb-1">
-                <strong>Specialization:</strong> Dental Aligners, Braces & Smile
-                Correction
-              </p>
-              <blockquote className="blockquote fst-italic mt-3">
-                <p>
-                  &quot;Precision is the key to unlocking a perfect smile.&quot;
-                </p>
-              </blockquote>
-            </div>
-            <div className="col-md-4 text-center mb-3 mb-md-0">
-              <Image
-                width={"300"}
-                height={"400"}
-                src="/bg-gallery.jpg"
-                alt="Dr. Rahul Iyer"
-                className="img-fluid rounded shadow"
-                style={{ minHeight: "300px", objectFit: "cover" }}
-              />
+          {/* Executive Info */}
+          <div className="col-lg-7">
+            <h2 className="fw-bold" data-aos="fade-left">
+              Meet Our Principal Dentist
+            </h2>
+            <h4
+              className="text-primary mb-2"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              Dr. Aisha Sharma
+            </h4>
+            <p
+              className="text-muted mb-2"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              BDS, MDS – Prosthodontics | 15+ Years of Experience
+            </p>
+            <p className="lead" data-aos="fade-left" data-aos-delay="300">
+              &quot;Dental care is not just about treating a tooth—it&apos;s
+              about understanding a person, building trust, and creating smiles
+              that change lives.&quot;
+            </p>
+            <p data-aos="fade-left" data-aos-delay="400">
+              Dr. Aisha has dedicated over a decade to the field of advanced
+              restorative and cosmetic dentistry. Under her leadership,
+              BrightSmile Clinic has grown into a center of excellence known for
+              compassion, precision, and innovation. She regularly speaks at
+              international dental conferences and is a strong advocate for
+              patient-first care.
+            </p>
+
+            <div className="mt-4" data-aos="fade-left" data-aos-delay="500">
+              {/* Social Links */}
+              <a
+                href="https://linkedin.com/in/dr-aisha-sharma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="me-3 text-decoration-none text-dark"
+              >
+                <i className="fab fa-linkedin fa-lg"></i> LinkedIn
+              </a>
+              <a
+                href="mailto:dr.aisha@brightsmile.com"
+                className="text-decoration-none text-dark"
+              >
+                <i className="fas fa-envelope fa-lg"></i> Email
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      <KeyServiceSection />
+      
       <section className="py-5"
       style={{
 
