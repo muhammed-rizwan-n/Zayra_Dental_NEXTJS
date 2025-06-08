@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import image from "../public/zayra-dental.png";
+import GoogleReviewWidget from "./GoogleReviewWidget";
 
 export default function Footer() {
   return (
@@ -96,9 +97,8 @@ export default function Footer() {
               <p className="mb-3">
                 Check out real reviews from our happy patients.
               </p>
-              <a href="/reviews" className="btn btn-light rounded-pill px-4">
-                <i className="fas fa-star me-2 text-warning"></i>View Reviews
-              </a>
+              <GoogleReviewWidget />
+              
             </div>
           </div>
         </div>
