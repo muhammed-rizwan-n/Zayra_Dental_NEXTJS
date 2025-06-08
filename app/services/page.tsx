@@ -2,7 +2,7 @@ import React from "react";
 //import AOS from "aos";
 import "aos/dist/aos.css";
 import "./style.css";
-import Image from "next/image";
+import ServiceCard from "../../components/Services";
 //import style from "../styles/Home.module.css"
 //import Footer from "../components/Footer";
 //AOS.init();
@@ -153,33 +153,14 @@ export default function Services() {
   ];
 
   return (
-    <section className="container py-5">
-  <div className="text-center mb-5" data-aos="fade-down">
-    <h2 className="fw-bold py-5">Our Treatments & Services</h2>
-    <p className="text-muted">Explore the wide range of dental care we offer at BrightSmile Clinic</p>
-  </div>
-
-  <div className="row g-4">
-    {servicesList.map((service, index) => (
-      <div className="col-sm-6 col-md-4 col-lg-3" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
-        <div className="card service-card border-0 shadow-sm overflow-hidden position-relative">
-          <Image
-            src="/bg-gallery.jpg"
-            className="card-img"
-            alt={service.title}
-            width= {300}
-            height={300}
-            style={{ height: "250px", objectFit: "cover" }}
-          />
-          <div className="overlay d-flex flex-column justify-content-end p-3">
-            <h5 className="text-white fw-bold mb-1">{service.title}</h5>
-            <p className="text-white small">{service.title}</p>
-          </div>
-        </div>
-      </div>
-    ))}
+    <section className="py-5 text-white">
+  <div className="container">
+    
+    <h2 className="text-center fw-bold my-5" data-aos="fade-up">Our Treatments & Services</h2>
+    <ServiceCard />
   </div>
 </section>
+
 
   );
 }

@@ -2,14 +2,14 @@ import { FaGoogle } from "react-icons/fa";
 
 export default function GoogleReviewWidget() {
   return (
-    <section class="google-reviews-widget">
+    <section className="google-reviews-widget">
         {/*Last update: 08-06-2025 */}
       <FaGoogle className="fs-5 text-dark" />
 
-      <div class="reviews-header text-dark">
-        <span class="rating-stars">★★★★★</span>
-        <span class="rating-value">4.8</span>
-        <span class="total-reviews">(86)</span>
+      <div className="reviews-header text-dark">
+        <span className="rating-stars">★★★★★</span>
+        <span className="rating-value">4.8</span>
+        <span className="total-reviews">(86)</span>
       </div>
       <a
         href="https://g.co/kgs/dLNUEWq"

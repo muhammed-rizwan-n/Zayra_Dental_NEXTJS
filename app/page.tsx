@@ -191,6 +191,7 @@ export default function Home() {
 
       <KeyServiceSection />
       
+      {/* Customers Review */}
       <section className="py-5"
       style={{
 
@@ -201,7 +202,7 @@ export default function Home() {
           }}>
         <div className="container"
         >
-          <h2 className="fw-bold text-center mb-5 text-dark" data-aos="fade-up">
+          <h2 className="fw-bold text-center mb-5 text-white" data-aos="fade-up">
             What Our Patients Say
           </h2>
 
