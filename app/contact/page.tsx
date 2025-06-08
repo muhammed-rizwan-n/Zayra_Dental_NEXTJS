@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "aos/dist/aos.css";
 //import Footer from "../components/Footer";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
   return (

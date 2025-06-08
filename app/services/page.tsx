@@ -8,7 +8,7 @@ import ServiceCard from "../../components/Services";
 //AOS.init();
 
 export default function Services() {
-  const servicesList = [
+  /*const servicesList = [
     {
       title: "General Dentistry",
       services: [
@@ -151,7 +151,7 @@ export default function Services() {
       ],
     }
   ];
-
+*/
   return (
     <section className="py-5 text-white">
   <div className="container">
