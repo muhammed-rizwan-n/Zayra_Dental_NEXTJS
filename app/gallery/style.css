@@ -1,0 +1,40 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  padding: 4px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modifiers for varying image sizes */
+.grid-item.wide {
+  grid-column: span 2;
+}
+
+.grid-item.tall {
+  grid-row: span 2;
+}
+
+.grid-item.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}

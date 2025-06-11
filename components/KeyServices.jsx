@@ -41,12 +41,12 @@ export default function KeyServices() {
 
         <div className="row g-4 justify-content-center">
           {services.map((service, index) => (
-        <div className="col-md-6 col-lg-3" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
+        <div className="col-md-6 col-lg-5" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
           <a href={service.href} className="text-decoration-none">
             <div
               className="card border-0 text-white service-card h-100"
               style={{
-                background: `linear-gradient(135deg, #6507fcbb, #f28dffaa), url(${service.img}) center/cover no-repeat`,
+                background: `linear-gradient(to top,rgba(0, 0, 0, 0.73),rgba(255, 255, 255, 0)), url(${service.img}) center/cover no-repeat`,
                 borderRadius: "16px",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease"
               }}

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import style from "./style.module.css";
+import bg from "../../public/bg-gallery.jpg"
 
 export default function About() {
   return (
     <>
+      {/* 
       <section
         className="d-flex align-items-center vh-100 text-white"
         style={{
@@ -14,7 +16,6 @@ export default function About() {
           zIndex: 0,
         }}
       >
-        {/* Gradient Overlay */}
         <div
           style={{
             position: "absolute",
@@ -28,7 +29,6 @@ export default function About() {
           }}
         ></div>
 
-        {/* Content */}
         <div className="container position-relative z-2">
           <div className="row justify-content-start align-items-center">
             <div
@@ -46,7 +46,15 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="container py-5">
+      */}
+      <section className="py-5">
+<div className="container">
+          <h1 className="fw-bold text-center my-5" data-aos="fade-up">
+            About Us
+          </h1>
+          </div>
+      </section>
+      <section className="container pb-5">
         <div className="row align-items-center">
           {/* Clinic Image */}
           <div className="col-md-5 mb-4 mb-md-0 text-center">
@@ -84,11 +92,23 @@ export default function About() {
           </div>
         </div>
       </section>
+      
       <section className="py-5">
         <div className="container">
           <h2 className="fw-bold text-center mb-5" data-aos="fade-up">
             Meet Our Team
           </h2>
+          <div className= {style['full-width-image']} >
+    <Image
+      src={bg}
+      alt="Team Photo"
+      layout="responsive"
+      width={1920}
+      height={500}
+      className="img-fluid mb-4"
+      style={{ objectFit: "cover", maxHeight: "400px" }}
+    />
+  </div>
 
           {/* Team Member 1 */}
           <div

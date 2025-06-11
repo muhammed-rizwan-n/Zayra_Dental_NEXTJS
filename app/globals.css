@@ -176,3 +176,51 @@ section {
 .google-link:hover {
   text-decoration: underline;
 }
+
+.service-card {
+  height: 280px;
+  width: 90%;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-bg {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  filter: brightness(1);
+}
+
+/* Gradient appears only on hover */
+.service-card:hover .service-overlay {
+  background: linear-gradient(135deg, #ffffff76, #f28dffaa);
+  opacity: 1;
+}
+
+.service-overlay {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+}
+
+/* Title box always shows with white text */
+.service-title-box {
+  z-index: 2;
+  background: rgba(0, 30, 255, 0.753); /* semi-transparent dark base */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.service-title-box h5 {
+  color: white;
+}
+

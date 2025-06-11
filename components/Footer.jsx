@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMailBulk, FaMailchimp, FaPhone } from "react-icons/fa";
 import image from "../public/zayra-dental.png";
 import GoogleReviewWidget from "./GoogleReviewWidget";
+import { FaE, FaLetterboxd, FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -18,14 +19,17 @@ export default function Footer() {
               style={{ width: "220px", height: "auto" }}
             ></Image>
             <p className="mb-1">
-              <i className="fas fa-map-marker-alt me-2"></i>123 Smile Street,
-              Dental City
+              <FaLocationDot className="mx-2"/>
+              599 Harehills Lane Leeds,{"            "}
+              LS96NQ
             </p>
             <p className="mb-1">
-              <i className="fas fa-phone-alt me-2"></i>+1 (123) 456-7890
+              <FaPhone className="mx-2"/>
+              <a href="tel:01132488398" className="text-dark">01132488398</a>
             </p>
             <p className="mb-2">
-              <i className="fas fa-envelope me-2"></i>contact@zayradental.com
+              <FaEnvelope className="mx-2"/>
+              <a href="mail:info@zayradental.co.uk" className="text-dark">info@zayradental.co.uk</a>
             </p>
             <div className="container d-flex flex-column mt-3" style={{justifyItems:"center"}}>
               <p className="h4"><b>Follow Us</b></p>
@@ -70,6 +74,7 @@ export default function Footer() {
                 { text: "Pricing", href: "/pricing" },
                 { text: "Contact", href: "/contact" },
                 { text: "Appointment", href: "/appointment" },
+                { text: "Gallery", href: "/gallery"},
               ].map(({ text, href }) => (
                 <li key={text}>
                   <Link

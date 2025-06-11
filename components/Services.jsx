@@ -26,30 +26,27 @@ export default function ServicesCard(){
     return(
         <div className="row g-4">
         {service.map((service, index) => (
-        <div className="col-md-6 col-lg-3" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
-          <a href={service.href} className="text-decoration-none">
-            <div
-              className="card border-0 text-white service-card h-100"
-              style={{
-                background: `linear-gradient(135deg, #6507fcbb, #f28dffaa), url(${service.img}) center/cover no-repeat`,
-                borderRadius: "16px",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease"
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = "translateY(-6px)";
-                e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.3)";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = "none";
-                e.currentTarget.style.boxShadow = "none";
-              }}
-            >
-              <div className="card-body d-flex align-items-end p-4" style={{ height: "250px" }}>
-                <h5 className="card-title fw-bold">{service.name}</h5>
-              </div>
-            </div>
-          </a>
-        </div>
+   <div
+  className="col-md-6 col-lg-4 d-flex"
+  key={index}
+  data-aos="zoom-in"
+  data-aos-delay={index * 100}
+>
+  <a href={service.href} className="text-decoration-none w-100">
+    <div className="service-card position-relative overflow-hidden w-100">
+      <div
+        className="service-bg"
+        style={{ backgroundImage: `url(${service.img})` }}
+      ></div>
+      <div className="service-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+      <div className="service-title-box position-absolute bottom-0 w-100 text-center">
+        <h5 className="fw-bold m-0 py-3 px-2 text-white">{service.name}</h5>
+      </div>
+    </div>
+  </a>
+</div>
+
+
       ))}
       </div>
     )
