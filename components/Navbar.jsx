@@ -17,9 +17,26 @@ export default function Navbar() {
           if (bsCollapse && navbarCollapse.classList.contains("show")) {
             setTimeout(() => {
               bsCollapse.hide();
-            }, 500);
+            }, 200);
           }
         });
+
+        const handleOutsideClick = (e) => {
+      if (
+        navbarCollapse.classList.contains("show") &&
+        !navbarCollapse.contains(e.target) &&
+        !e.target.closest(".navbar-toggler")
+      ) {
+        const bsCollapse = Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
       });
     });
   }, []);
