@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMailBulk, FaMailchimp, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone} from "react-icons/fa";
 import image from "../public/zayra-dental.png";
 import GoogleReviewWidget from "./GoogleReviewWidget";
 import { FaE, FaLetterboxd, FaLocationDot } from "react-icons/fa6";
@@ -20,7 +20,7 @@ export default function Footer() {
             ></Image>
             <p className="mb-1">
               <FaLocationDot className="mx-2"/>
-              599 Harehills Lane Leeds,{"            "}
+              599 Harehills Lane Leeds,
               LS96NQ
             </p>
             <p className="mb-1">

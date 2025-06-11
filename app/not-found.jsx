@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { FaTooth } from "react-icons/fa";
 
 export default function NotFound(){
     return(
         <section className="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white px-3">
   <div data-aos="fade-down">
+
     <h1 className="display-1 fw-bold text-gradient mb-3" style={{ background: "linear-gradient(135deg,rgb(239, 235, 244),rgb(248, 241, 249))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
       404
     </h1>
@@ -16,12 +18,8 @@ export default function NotFound(){
     </Link>
   </div>
   <div className="mt-5" data-aos="zoom-in">
-    <img
-      src="/images/404_tooth.png"
-      alt="Lost Tooth Illustration"
-      className="img-fluid"
-      style={{ maxHeight: "250px" }}
-    />
+        <FaTooth className="s-5" size={75} />
+ 
   </div>
 </section>
 

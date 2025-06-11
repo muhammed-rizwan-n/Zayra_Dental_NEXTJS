@@ -6,8 +6,8 @@ const services = [
   {
     id: 1,
     name: "Teeth Whitening",
-    img: "/bg-gallery.jpg",
-    href: "/services/1",
+    img: "/services/dental_bonding.jpg",
+    href: "/services/teeth-whitening",
     description:
       "Brighten your smile with our safe, effective teeth whitening treatments designed for lasting results.",
   },

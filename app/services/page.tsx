@@ -1,13 +1,10 @@
 import React from "react";
-//import AOS from "aos";
 import "aos/dist/aos.css";
 import "./style.css";
-import ServiceCard from "../../components/Services";
-//import style from "../styles/Home.module.css"
-//import Footer from "../components/Footer";
-//AOS.init();
+import serviceList from "./serviceList.json";
 
 export default function Services() {
+
   /*const servicesList = [
     {
       title: "General Dentistry",
@@ -154,14 +151,36 @@ export default function Services() {
 */
   return (
     <section className="py-5 text-white">
-  <div className="container">
-    
-    <h2 className="text-center fw-bold my-5" data-aos="fade-up">Our Treatments & Services</h2>
-    <ServiceCard />
-  </div>
-</section>
-
-
-
+      <div className="container">
+        <h1 className="text-center fw-bold my-5" data-aos="fade-up">
+          Our Treatments & Services
+        </h1>
+        <div className="row g-4">
+          {serviceList.map((service, index) => (
+            <div
+              className="col-md-6 col-lg-4 d-flex"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <a href={service.href} className="text-decoration-none w-100">
+                <div className="service-card position-relative overflow-hidden w-100">
+                  <div
+                    className="service-bg"
+                    style={{ backgroundImage: `url(${service.img})` }}
+                  ></div>
+                  <div className="service-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                  <div className="service-title-box position-absolute bottom-0 w-100 text-center">
+                    <h5 className="fw-bold m-0 py-3 px-2 text-white">
+                      {service.name}
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
