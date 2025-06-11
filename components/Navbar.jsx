@@ -7,17 +7,30 @@ import { useEffect } from "react";
 
 export default function Navbar() {
   useEffect(() => {
-    // Only load Bootstrap once on client side
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    import("bootstrap/dist/js/bootstrap.bundle.min.js").then(({ Collapse }) => {
+      const navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const bsCollapse = Collapse.getInstance(navbarCollapse);
+          if (bsCollapse && navbarCollapse.classList.contains("show")) {
+            setTimeout(() => {
+              bsCollapse.hide();
+            }, 500);
+          }
+        });
+      });
+    });
   }, []);
   return (
     <nav
       className="navbar navbar-expand-md navbar-light fixed-top bg-white bg-opacity-75 shadow-sm backdrop-blur z-3"
       style={{ transition: "all 0.3s ease" }}
     >
-      <div className="container-fluid px-4">
+      <div className="container-fluid px-4 nav-link">
         {/* Logo */}
-        <Link href="/" className="navbar-brand p-0">
+        <Link href="/" className="navbar-brand nav-link p-0">
           <Image
             src={image}
             alt="Clinic Logo"
@@ -63,7 +76,7 @@ export default function Navbar() {
             <li className="nav-item">
               <Link
                 href="/appointment"
-                className="btn text-white px-4 py-2"
+                className="btn nav-link text-white px-4 py-2"
                 style={{
                   background: "linear-gradient(135deg, #6507fc, #f28dff)",
                   borderRadius: "30px",
