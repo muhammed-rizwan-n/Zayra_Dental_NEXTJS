@@ -1,7 +1,7 @@
 import Image from "next/image";
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
-//import Map from "./components/Map";
+import { FaCheck } from "react-icons/fa";
 import KeyServiceSection from "../components/KeyServices";
 
 export default function Home() {
@@ -55,7 +55,7 @@ export default function Home() {
         className="d-flex align-items-center py-5"
         style={{
           position: "relative",
-          backgroundImage: `url('./bg-gallery.jpg')`, // Optional background
+          backgroundImage: `url('/home/waiting_room.jpg')`, // Optional background
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: 0,
@@ -82,7 +82,7 @@ export default function Home() {
               data-aos="fade-right"
             >
               <Image
-                src="/bg-gallery.jpg" // Replace with your actual image
+                src="/home/waiting_room.jpg" // Replace with your actual image
                 width={"500"}
                 height={"400"}
                 alt="Our Team"
@@ -96,29 +96,35 @@ export default function Home() {
             <div className="col-lg-6 col-md-6 text-start" data-aos="fade-left">
               <h2 className="fw-bold mb-3">Who We Are</h2>
               <p className="lead mb-3">
-                At <strong>BrightSmile Dental Clinic</strong>, we are more than
-                a team — we are a family of passionate dental professionals
-                committed to your oral well-being.
+                At <strong>Zayra Dental</strong> in Leeds, we’re a team of
+                passionate, certified dental professionals committed to making
+                high-quality private dental care accessible and affordable.
               </p>
               <p>
-                Our clinic brings together experienced dentists, cutting-edge
-                technology, and a patient-first philosophy. We focus on quality
-                care, comfort, and making every visit a positive experience.
+                With years of experience, modern technology, and a focus on
+                patient comfort, we’re here to provide care that’s gentle, safe,
+                and tailored to your needs — all at a cost that’s easier than
+                you’d expect.
               </p>
               <ul className="list-unstyled mt-3">
                 <li className="mb-2">
-                  ✔️ Passionate & certified dental experts
+                  <FaCheck className="mx-2" />
+                  Expert dentists you can trust{" "}
                 </li>
                 <li className="mb-2">
-                  ✔️ Compassionate care in a modern facility
+                  <FaCheck className="mx-2" />
+                  Compassionate care in a modern, friendly clinic{" "}
                 </li>
-                <li className="mb-2">✔️ Strong focus on hygiene and safety</li>
+                <li className="mb-2">
+                  <FaCheck className="mx-2" />
+                  Strong focus on hygiene, safety, and comfort{" "}
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-            <section
+      <section
         className="container-fluid py-5 px-4"
         style={{ backgroundColor: "purple" }}
       >
@@ -126,12 +132,12 @@ export default function Home() {
           {/* Executive Photo */}
           <div className="col-lg-5 mb-4 mb-lg-0 text-center">
             <Image
-              src="/images/executive.jpg" // Replace with real image path
-              alt="Dr. Aisha Sharma"
+              src="/home/waiting_room.jpg" // Replace with real image path
+              alt="Dr"
               className="img-fluid rounded shadow"
-              width={"400"}
-              height={"300"}
-              style={{ maxHeight: "450px", objectFit: "cover" }}
+              width={"300"}
+              height={"400"}
+              style={{ maxHeight: "550px", objectFit:"contain" }}
             />
           </div>
 
@@ -145,7 +151,7 @@ export default function Home() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              Dr. Aisha Sharma
+              Dr Reshma Parambil
             </h4>
             <p
               className="text-muted mb-2"
@@ -155,17 +161,14 @@ export default function Home() {
               BDS, MDS – Prosthodontics | 15+ Years of Experience
             </p>
             <p className="lead" data-aos="fade-left" data-aos-delay="300">
-              &quot;Dental care is not just about treating a tooth—it&apos;s
-              about understanding a person, building trust, and creating smiles
-              that change lives.&quot;
+              &quot;I believe everyone deserves a healthy, confident smile—without fear or financial worry.&quot;
             </p>
             <p data-aos="fade-left" data-aos-delay="400">
-              Dr. Aisha has dedicated over a decade to the field of advanced
-              restorative and cosmetic dentistry. Under her leadership,
-              BrightSmile Clinic has grown into a center of excellence known for
-              compassion, precision, and innovation. She regularly speaks at
-              international dental conferences and is a strong advocate for
-              patient-first care.
+              With over 10 years of experience in general dentistry, Dr. Reshma
+              brings advanced training in oral and maxillofacial surgery from
+              Mysore, India, and a strong focus on restorative and cosmetic
+              dentistry. She has completed a one-year restorative program under
+              the renowned Dr. Nigel Hargreaves.
             </p>
 
             <div className="mt-4" data-aos="fade-left" data-aos-delay="500">
@@ -190,19 +193,22 @@ export default function Home() {
       </section>
 
       <KeyServiceSection />
-      
-      {/* Customers Review */}
-      <section className="py-5"
-      style={{
 
-            height: "100%",
-            width: "100%",
-            background: "rgba(99, 33, 253, 0.74)", // Light overlay
-            zIndex: 1,
-          }}>
-        <div className="container"
-        >
-          <h2 className="fw-bold text-center mb-5 text-white" data-aos="fade-up">
+      {/* Customers Review */}
+      <section
+        className="py-5"
+        style={{
+          height: "100%",
+          width: "100%",
+          background: "rgba(99, 33, 253, 0.74)", // Light overlay
+          zIndex: 1,
+        }}
+      >
+        <div className="container">
+          <h2
+            className="fw-bold text-center mb-5 text-white"
+            data-aos="fade-up"
+          >
             What Our Patients Say
           </h2>
 

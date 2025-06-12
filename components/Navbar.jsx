@@ -42,7 +42,7 @@ export default function Navbar() {
   }, []);
   return (
     <nav
-      className="navbar navbar-expand-md navbar-light fixed-top bg-white bg-opacity-75 shadow-sm backdrop-blur z-3"
+      className="navbar navbar-expand-md navbar-light fixed-top bg-white bg-opacity-75 shadow backdrop-blur z-3"
       style={{ transition: "all 0.3s ease" }}
     >
       <div className="container-fluid px-4 nav-link">

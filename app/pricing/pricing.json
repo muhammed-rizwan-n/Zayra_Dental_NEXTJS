@@ -5,17 +5,17 @@
       {
         "name": "New Patient Consultation",
         "description": "Hello world",
-        "price": "₹500"
+        "price": "500"
       },
       {
         "name": "Regular Check-up",
         "description": "Hello world",
-        "price": "₹300"
+        "price": "300"
       },
       {
         "name": "X-Ray",
         "description": "Hello world",
-        "price": "₹250"
+        "price": "250"
       }
     ]
   },
@@ -25,12 +25,12 @@
       {
         "name": "Teeth Whitening",
         "description": "Hello world",
-        "price": "₹2000"
+        "price": "2000"
       },
       {
         "name": "Veneers",
         "description": "Hello world",
-        "price": "₹4000 per tooth"
+        "price": "4000 per tooth"
       }
     ]
   }

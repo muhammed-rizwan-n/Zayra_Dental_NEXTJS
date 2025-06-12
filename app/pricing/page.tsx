@@ -20,7 +20,7 @@ export default function PricingSection() {
            data-aos="fade-right"
            data-aos-delay="100">
             {category.treatments.map((item, idx) => (
-              <div className="col-md-8 col-lg-4" key={idx}>
+              <div className="col-lg-4 col-md-6 col-10" key={idx}>
                 <div
                   className="card h-100 shadow-sm border-0"
                   style={{
@@ -33,7 +33,7 @@ export default function PricingSection() {
                     </h5>
                     <p className="card-text text-muted">{item.description}</p>
                     <div className="text-end text-success fw-bold fs-5">
-                      {item.price}
+                      £{item.price}
                     </div>
                   </div>
                 </div>
