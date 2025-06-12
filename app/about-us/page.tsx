@@ -1,6 +1,7 @@
 import Image from "next/image";
 import style from "./style.module.css";
 import bg from "../../public/bg-gallery.jpg";
+import { title } from "process";
 
 export default function About() {
   return (
@@ -56,19 +57,18 @@ export default function About() {
       </section>
       <section
         className="container-flex px-sm-2"
-        style={
-          {backgroundImage: `url("/home/waiting_room.jpg")`}
-        }
-
+        style={{ backgroundImage: `url("/home/waiting_room.jpg")` }}
       >
-        <div className="row align-items-center container-flex p-4"
-                  style={{
-                      background: "rgba(76, 0, 252, 0.74)", // Light overlay
-        }}>
+        <div
+          className="row align-items-center container-flex p-4"
+          style={{
+            background: "rgba(76, 0, 252, 0.74)", // Light overlay
+          }}
+        >
           {/* Clinic Image */}
           <div className="col-md-5 mb-4 mb-md-0 text-center">
             <Image
-              src="/bg-gallery.jpg" // Replace with actual image path
+              src="/gallery/Zayradental_Edits_11.jpg" // Replace with actual image path
               alt="Our Clinic"
               width={"400"}
               height={"300"}
@@ -149,19 +149,25 @@ export default function About() {
             }
             data-aos="fade-right"
           >
-            <div className="col-md-4 text-center">
+            <div className="col-md-4 text-center mb-3 mb-md-0">
               <Image
                 width={"300"}
                 height={"400"}
-                src="/bg-gallery.jpg"
-                alt="Dr. Rahul Iyer"
+                src="/about-us/reshma_parambil.jpg"
+                alt="Dr. Reshma Parambil"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "270px",maxWidth:"200px", objectFit: "contain" }}
+                style={{
+                  maxHeight: "270px",
+                  maxWidth: "200px",
+                  objectFit: "cover",
+                }}
               />
             </div>
             <div className="col-md-8">
-              <h3 className="mb-1">Dr. Reshma Parambil</h3>
-              <h6 className="text-muted">Chief Dental Surgeon</h6>
+              <h3 className="mb-1">
+                <strong>Dr. Reshma Parambil</strong>
+              </h3>
+              <h6 className="text-white">Chief Dental Surgeon</h6>
               <p className="mb-1">
                 <strong>Specialization:</strong> Cosmetic Dentistry, Full Mouth
                 Rehabilitation
@@ -184,7 +190,9 @@ export default function About() {
             data-aos="fade-left"
           >
             <div className="col-md-8">
-              <h3 className="mb-1"><strong>Dr. Emilio Cecamore</strong></h3>
+              <h3 className="mb-1">
+                <strong>Dr. Emilio Cecamore</strong>
+              </h3>
               <h6 className="text-white">Orthodontist</h6>
               <p className="mb-1">
                 <strong>Specialization:</strong> Dental Aligners, Braces & Smile
@@ -203,7 +211,11 @@ export default function About() {
                 src="/about-us/emilio.jpg"
                 alt="Dr. Emilio Cecamore"
                 className="img-fluid rounded shadow"
-                style={{ maxHeight: "270px",maxWidth:"200px", objectFit: "contain" }}
+                style={{
+                  maxHeight: "270px",
+                  maxWidth: "200px",
+                  objectFit: "cover",
+                }}
               />
             </div>
           </div>
@@ -296,9 +308,8 @@ export default function About() {
       {/*Aim*/}
       <section
         className="container-flex"
-        style={{ backgroundImage: `url("/home/waiting_room.jpg")`,
-         }}
-         data-aos="fade-in"
+        style={{ backgroundImage: `url("/gallery/Zayradental_Edits_02.jpg")` }}
+        data-aos="fade-in"
       >
         <div
           className="container-flex p-5"
@@ -319,65 +330,41 @@ export default function About() {
             </p>
           </div>
           <div className="row g-4 text-center mx-md-5 mx-sm-5 mx-2">
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-hand-holding-heart fa-2x text-primary mb-3"></i>
-                <h5 className="fw-semibold">Compassionate Care</h5>
-                <p className="text-white">
-                  We treat each patient with kindness, empathy, and respect.
-                </p>
+            {[
+              {
+                title: "Compassionate Care",
+                content:
+                  "We treat each patient with kindness, empathy, and respect.",
+              },
+              {
+                title: "Affordable Treatments",
+                content: "High-quality care that doesn’t break the bank.",
+              },
+              {
+                title: "Advanced Technology",
+                content: "Using the latest innovations to ensure precision and comfort."
+              },
+              {
+                title: "Personalized Approach",
+                content: "Every treatment is tailored to your unique smile and needs."
+              },
+              {
+                title: "Flexible Scheduling",
+                content: "Convenient appointments that fit your lifestyle.",
+              },
+              {
+                title: "Trust & Transparency",
+                content: "We explain everything — no hidden costs or confusion.",
+              }
+            ].map((search, index) => (
+              <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div className="p-4 border rounded shadow-sm h-100">
+                  <i className="fas fa-hand-holding-heart fa-2x text-primary mb-3"></i>
+                  <h5 className="fw-semibold">{search.title}</h5>
+                  <p className="text-white">{search.content}</p>
+                </div>
               </div>
-            </div>
-
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-wallet fa-2x text-success mb-3"></i>
-                <h5 className="fw-semibold">Affordable Treatments</h5>
-                <p className="text-muted">
-                  High-quality care that doesn’t break the bank.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-microscope fa-2x text-info mb-3"></i>
-                <h5 className="fw-semibold">Advanced Technology</h5>
-                <p className="text-muted">
-                  Using the latest innovations to ensure precision and comfort.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay="400">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-user-check fa-2x text-warning mb-3"></i>
-                <h5 className="fw-semibold">Personalized Approach</h5>
-                <p className="text-muted">
-                  Every treatment is tailored to your unique smile and needs.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay="500">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-clock fa-2x text-danger mb-3"></i>
-                <h5 className="fw-semibold">Flexible Scheduling</h5>
-                <p className="text-muted">
-                  Convenient appointments that fit your lifestyle.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay="600">
-              <div className="p-4 border rounded shadow-sm h-100">
-                <i className="fas fa-star fa-2x text-secondary mb-3"></i>
-                <h5 className="fw-semibold">Trust & Transparency</h5>
-                <p className="text-muted">
-                  We explain everything — no hidden costs or confusion.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

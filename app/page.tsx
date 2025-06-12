@@ -2,12 +2,13 @@ import Image from "next/image";
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
 import { FaCheck } from "react-icons/fa";
+import style from "./page.module.css";
 import KeyServiceSection from "../components/KeyServices";
 
 export default function Home() {
   return (
     <>
-      <section
+      <section 
         className="d-flex align-items-center vh-100 text-white"
         style={{
           position: "relative",
@@ -126,18 +127,18 @@ export default function Home() {
       </section>
       <section
         className="container-fluid py-5 px-4"
-        style={{ backgroundColor: "purple" }}
+        style={{ background: "rgba(93, 0, 93, 0.55)" }}
       >
         <div className="row align-items-center">
           {/* Executive Photo */}
           <div className="col-lg-5 mb-4 mb-lg-0 text-center">
             <Image
-              src="/home/waiting_room.jpg" // Replace with real image path
-              alt="Dr"
+              src="/about-us/reshma_parambil.jpg" // Replace with real image path
+              alt="Dr. Reshma Parambil"
               className="img-fluid rounded shadow"
               width={"300"}
               height={"400"}
-              style={{ maxHeight: "550px", objectFit:"contain" }}
+              style={{ maxHeight: "350px", objectFit: "cover" }}
             />
           </div>
 
@@ -151,17 +152,18 @@ export default function Home() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              Dr Reshma Parambil
+              Dr. Reshma Parambil
             </h4>
             <p
-              className="text-muted mb-2"
+              className="text-white mb-2"
               data-aos="fade-left"
               data-aos-delay="200"
             >
               BDS, MDS – Prosthodontics | 15+ Years of Experience
             </p>
             <p className="lead" data-aos="fade-left" data-aos-delay="300">
-              &quot;I believe everyone deserves a healthy, confident smile—without fear or financial worry.&quot;
+              &quot;I believe everyone deserves a healthy, confident
+              smile—without fear or financial worry.&quot;
             </p>
             <p data-aos="fade-left" data-aos-delay="400">
               With over 10 years of experience in general dentistry, Dr. Reshma
@@ -348,21 +350,20 @@ export default function Home() {
             <div className="col-md-6" data-aos="fade-right">
               <h4 className="mb-3">Clinic Info</h4>
               <p>
-                <strong>📍 Address:</strong> 123 Smile Street, Dental City,
-                Smileland 456789
+                <strong>📍 Address:</strong> 599 Harehills Lane Leeds, LS96NQ
               </p>
               <p>
-                <strong>📞 Phone:</strong> (123) 456-7890
+                <strong>📞 Phone:</strong> <a href="tel:01132488398" className="text-white">01132488398</a>
               </p>
               <p>
-                <strong>✉️ Email:</strong> contact@brightsmile.com
+                <strong>✉️ Email:</strong> <a href="mail:info@zayradental.co.uk" className="text-white">info@zayradental.co.uk</a>
               </p>
 
               {/* Google Map */}
               <div className="map-wrapper mt-4 rounded shadow overflow-hidden">
                 <iframe
-                  title="Clinic Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.452697041917!2d78.39076592375736!3d17.43803374982052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9144cdba8c47%3A0x937fe346f411a645!2sTutorials%20Point%20(India)%20Ltd.!5e0!3m2!1sen!2sin!4v1673629212535!5m2!1sen!2sin"
+                  title="Zayra Dental Clinic Map"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9425.13490044596!2d-1.4994857!3d53.8022349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795dbf6d694a51%3A0x406604ce7c613151!2sZayra%20dental%20practice!5e0!3m2!1sen!2sin!4v1749748955383!5m2!1sen!2sin"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}

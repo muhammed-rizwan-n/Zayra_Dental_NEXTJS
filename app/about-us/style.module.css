@@ -1,5 +1,5 @@
 .team_member {
-  background:linear-gradient(to right, rgb(89, 0, 255), rgba(255, 0, 225, 0.16));
+  background:linear-gradient(to right, rgb(89, 0, 255), rgba(102, 0, 255, 0.402));
   border-radius: calc(0.5 * var(--bs-gutter-x));
   padding: calc(1 * var(--bs-gutter-x));
   margin: 10px;
