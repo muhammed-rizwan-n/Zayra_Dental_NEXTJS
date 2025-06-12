@@ -356,8 +356,8 @@ export default function About() {
                 title: "Trust & Transparency",
                 content: "We explain everything — no hidden costs or confusion.",
               }
-            ].map((search, index) => (
-              <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            ].map((search) => (
+              <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" key={search.title}>
                 <div className="p-4 border rounded shadow-sm h-100">
                   <i className="fas fa-hand-holding-heart fa-2x text-primary mb-3"></i>
                   <h5 className="fw-semibold">{search.title}</h5>

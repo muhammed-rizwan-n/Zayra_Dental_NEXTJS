@@ -2,7 +2,6 @@ import Image from "next/image";
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
 import { FaCheck } from "react-icons/fa";
-import style from "./page.module.css";
 import KeyServiceSection from "../components/KeyServices";
 
 export default function Home() {

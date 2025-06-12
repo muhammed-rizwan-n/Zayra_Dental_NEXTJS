@@ -1,5 +1,5 @@
 import "./style.css";
-
+import Image from "next/image";
 
 export default function gallery() {
   console.log(`Picstueserwd $S{pics}`)
@@ -33,7 +33,7 @@ export default function gallery() {
         </div> */}
       {pic.map((item, i) => (
         <div className={`grid-item ${item.className}`} key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
-          <img src={`/gallery/${item.src}`} alt={`Gallery ${i + 1}`}/>
+          <Image src={`/gallery${item.src}`} alt={`Gallery ${i + 1}`} width={500} height={500}/>
         </div>
       ))}
     </div>
