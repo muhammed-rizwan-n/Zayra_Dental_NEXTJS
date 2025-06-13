@@ -1,7 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.css";
 import bg from "../../public/bg-gallery.jpg";
-import { title } from "process";
 
 export default function About() {
   return (
