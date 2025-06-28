@@ -89,23 +89,7 @@ export default function Footer() {
                 href="https://facebook.com/zayradental"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="d-inline-flex align-items-center justify-content-center rounded-circle"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "rgba(255, 255, 255, 0.1)",
-                  color: "white",
-                  textDecoration: "none",
-                  transition: "var(--transition-smooth)",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = "var(--primary-teal)";
-                  e.target.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                  e.target.style.transform = "translateY(0)";
-                }}
+                className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
               >
                 <Facebook size={18} />
               </a>
@@ -113,23 +97,7 @@ export default function Footer() {
                 href="https://instagram.com/zayradental"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="d-inline-flex align-items-center justify-content-center rounded-circle"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "rgba(255, 255, 255, 0.1)",
-                  color: "white",
-                  textDecoration: "none",
-                  transition: "var(--transition-smooth)",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = "var(--primary-teal)";
-                  e.target.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                  e.target.style.transform = "translateY(0)";
-                }}
+                className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
               >
                 <Instagram size={18} />
               </a>
@@ -137,23 +105,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/zayradental"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="d-inline-flex align-items-center justify-content-center rounded-circle"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  background: "rgba(255, 255, 255, 0.1)",
-                  color: "white",
-                  textDecoration: "none",
-                  transition: "var(--transition-smooth)",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = "var(--primary-teal)";
-                  e.target.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
-                  e.target.style.transform = "translateY(0)";
-                }}
+                className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
               >
                 <Linkedin size={18} />
               </a>
