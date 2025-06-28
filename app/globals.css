@@ -432,6 +432,32 @@ body {
   }
 }
 
+/* Footer Styles */
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.social-link:hover {
+  background: var(--primary-teal);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: white;
+  padding-left: 0.5rem;
+}
+
 /* Professional color scheme for dental practice */
 .text-professional {
   color: var(--text-primary);
