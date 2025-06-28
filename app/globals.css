@@ -458,6 +458,25 @@ body {
   padding-left: 0.5rem;
 }
 
+/* Gallery Page Hover Effects */
+.card-modern:hover .img-fluid {
+  transform: scale(1.05);
+}
+
+.card-modern:hover .opacity-0 {
+  opacity: 1 !important;
+}
+
+/* 404 Page Hover Effects */
+.card-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.card-modern:hover .rounded-circle {
+  transform: scale(1.1);
+}
+
 /* Professional color scheme for dental practice */
 .text-professional {
   color: var(--text-primary);
