@@ -206,18 +206,6 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-
-      {/* Custom CSS for hover effects */}
-      <style jsx>{`
-        .card-modern:hover {
-          transform: translateY(-5px);
-          box-shadow: var(--shadow-medium);
-        }
-
-        .card-modern:hover .rounded-circle {
-          transform: scale(1.1);
-        }
-      `}</style>
     </section>
   );
 }
