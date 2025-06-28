@@ -122,19 +122,7 @@ export default function Footer() {
                 <li key={text} className="mb-2">
                   <Link
                     href={href}
-                    className="d-flex align-items-center gap-2 text-decoration-none"
-                    style={{
-                      color: "rgba(255, 255, 255, 0.8)",
-                      transition: "var(--transition-smooth)",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.color = "white";
-                      e.target.style.paddingLeft = "0.5rem";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.color = "rgba(255, 255, 255, 0.8)";
-                      e.target.style.paddingLeft = "0";
-                    }}
+                    className="footer-link d-flex align-items-center gap-2 text-decoration-none"
                   >
                     <ArrowRight size={14} />
                     {text}
