@@ -442,17 +442,6 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-
-      {/* Add CSS for hover effects */}
-      <style jsx>{`
-        .card-modern:hover .img-fluid {
-          transform: scale(1.05);
-        }
-
-        .card-modern:hover .opacity-0 {
-          opacity: 1 !important;
-        }
-      `}</style>
     </>
   );
 }
