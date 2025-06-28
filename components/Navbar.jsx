@@ -1,111 +1,158 @@
 "use client";
 
-import image from "../public/zayra-dental.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Calendar, Menu, Phone, X } from "lucide-react";
+import logo from "../public/zayra-dental.png";
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle.min.js").then(({ Collapse }) => {
-      const navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
-      const navbarCollapse = document.querySelector(".navbar-collapse");
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          const bsCollapse = Collapse.getInstance(navbarCollapse);
-          if (bsCollapse && navbarCollapse.classList.contains("show")) {
-            setTimeout(() => {
-              bsCollapse.hide();
-            }, 200);
-          }
-        });
-
-        const handleOutsideClick = (e) => {
-      if (
-        navbarCollapse.classList.contains("show") &&
-        !navbarCollapse.contains(e.target) &&
-        !e.target.closest(".navbar-toggler")
-      ) {
-        const bsCollapse = Collapse.getInstance(navbarCollapse);
-        if (bsCollapse) bsCollapse.hide();
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
 
-    document.addEventListener("click", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-      });
-    });
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navItems = [
+    { label: "About", href: "/about-us" },
+    { label: "Services", href: "/services" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Contact", href: "/contact" },
+  ];
+
   return (
     <nav
-      className="navbar navbar-expand-md navbar-light fixed-top bg-white bg-opacity-75 shadow backdrop-blur z-3"
-      style={{ transition: "all 0.3s ease" }}
+      className={`fixed-top navbar-modern ${isScrolled ? "scrolled" : ""}`}
+      style={{
+        background: isScrolled
+          ? "rgba(255, 255, 255, 0.98)"
+          : "rgba(255, 255, 255, 0.95)",
+        backdropFilter: "blur(20px)",
+        borderBottom: isScrolled ? "1px solid rgba(0,0,0,0.1)" : "none",
+        transition: "all 0.3s ease",
+      }}
     >
-      <div className="container-fluid px-4 nav-link">
-        {/* Logo */}
-        <Link href="/" className="navbar-brand nav-link p-0">
-          <Image
-            src={image}
-            alt="Clinic Logo"
-            style={{ width: "120px", height: "auto" }}
-          />
-        </Link>
+      <div className="container-modern">
+        <div className="d-flex justify-content-between align-items-center py-3">
+          {/* Logo */}
+          <Link href="/" className="navbar-brand d-flex align-items-center">
+            <Image
+              src={logo}
+              alt="Zayra Dental"
+              width={140}
+              height={45}
+              style={{ height: "auto" }}
+              priority
+            />
+          </Link>
 
-        {/* Toggler */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          {/* Desktop Navigation */}
+          <div className="d-none d-lg-flex align-items-center gap-4">
+            <div className="d-flex gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="nav-link-modern text-decoration-none"
+                  style={{
+                    padding: "0.5rem 0",
+                    position: "relative",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
 
-        {/* Nav Items */}
-        <div className="navbar-collapse collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto align-items-lg-center gap-3 mt-3 mt-md-0">
-            {["About Us", "Services", "Pricing", "Contact"].map((page) => {
-              const href =
-                page === "About Us" ? "/about-us" : `/${page.toLowerCase()}`;
-              return (
-                <li className="nav-item" key={page}>
-                  <Link
-                    href={href}
-                    className="nav-link fw-medium text-dark position-relative"
-                    style={{
-                      paddingBottom: "6px",
-                    }}
-                  >
-                    {page}
-                  </Link>
-                </li>
-              );
-            })}
+            {/* Contact Info */}
+            <div className="d-flex align-items-center gap-3 ms-4">
+              <a
+                href="tel:01132488398"
+                className="d-flex align-items-center gap-2 text-decoration-none"
+                style={{ color: "var(--text-primary)" }}
+              >
+                <Phone size={18} />
+                <span className="fw-medium">0113 248 8398</span>
+              </a>
 
-            {/* Appointment Button */}
-            <li className="nav-item">
               <Link
                 href="/appointment"
-                className="btn nav-link text-white px-4 py-2"
+                className="btn-primary-modern"
                 style={{
-                  background: "linear-gradient(135deg, #6507fc, #f28dff)",
-                  borderRadius: "30px",
-                  boxShadow: "0 4px 15px rgba(100, 0, 255, 0.3)",
-                  fontWeight: "500",
+                  textDecoration: "none",
+                  borderRadius: "25px",
+                  padding: "0.75rem 1.5rem",
                 }}
               >
+                <Calendar size={18} />
                 Book Appointment
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="d-lg-none btn border-0 bg-transparent"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div
+            className="d-lg-none"
+            style={{
+              background: "white",
+              borderRadius: "15px",
+              padding: "1.5rem",
+              marginTop: "1rem",
+              boxShadow: "var(--shadow-medium)",
+            }}
+          >
+            <div className="d-flex flex-column gap-3">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="nav-link-modern text-decoration-none py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <hr style={{ margin: "1rem 0", opacity: 0.2 }} />
+
+              <a
+                href="tel:01132488398"
+                className="d-flex align-items-center gap-2 text-decoration-none py-2"
+                style={{ color: "var(--text-primary)" }}
+              >
+                <Phone size={18} />
+                <span>0113 248 8398</span>
+              </a>
+
+              <Link
+                href="/appointment"
+                className="btn-primary-modern justify-content-center mt-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Calendar size={18} />
+                Book Appointment
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
