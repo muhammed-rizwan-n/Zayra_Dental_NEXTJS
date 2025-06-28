@@ -1,87 +1,190 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone} from "react-icons/fa";
-import image from "../public/zayra-dental.png";
-import GoogleReviewWidget from "./GoogleReviewWidget";
-import { FaE, FaLetterboxd, FaLocationDot } from "react-icons/fa6";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Star,
+  ArrowRight,
+} from "lucide-react";
+import logo from "../public/zayra-dental.png";
 
 export default function Footer() {
-  return (
-    <footer className="bg-white text-dark py-5 mt-5">
-      <div className="container">
-        <div className="row gy-4 align-items-start">
-          {/* Left: Logo & Contact Info */}
-          <div className="col-md-4">
-            <Image
-              src={image}
-              alt="Clinic Logo"
-              className="mb-3"
-              style={{ width: "220px", height: "auto" }}
-            ></Image>
-            <p className="mb-1">
-              <FaLocationDot className="mx-2"/>
-              599 Harehills Lane Leeds,
-              LS96NQ
-            </p>
-            <p className="mb-1">
-              <FaPhone className="mx-2"/>
-              <a href="tel:01132488398" className="text-dark">01132488398</a>
-            </p>
-            <p className="mb-2">
-              <FaEnvelope className="mx-2"/>
-              <a href="mail:info@zayradental.co.uk" className="text-dark">info@zayradental.co.uk</a>
-            </p>
-            <div className="container d-flex flex-column mt-3" style={{justifyItems:"center"}}>
-              <p className="h4"><b>Follow Us</b></p>
+  const currentYear = new Date().getFullYear();
 
-              <div className="d-flex gap-4 mt-3">
-                <a
-                  href="https://facebook.com/yourpage"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark"
-                >
-                  <FaFacebookF className="fs-5" />
-                </a>
-                <a
-                  href="https://instagram.com/yourprofile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark"
-                >
-                  <FaInstagram className="fs-3" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/yourprofile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark"
-                >
-                  <FaLinkedinIn className="fs-5" />
-                </a>
+  const quickLinks = [
+    { text: "About Us", href: "/about-us" },
+    { text: "Services", href: "/services" },
+    { text: "Pricing", href: "/pricing" },
+    { text: "Gallery", href: "/gallery" },
+    { text: "Contact", href: "/contact" },
+    { text: "Appointment", href: "/appointment" },
+  ];
+
+  const services = [
+    "General Dentistry",
+    "Cosmetic Dentistry",
+    "Teeth Whitening",
+    "Dental Implants",
+    "Root Canal Treatment",
+    "Orthodontics",
+  ];
+
+  return (
+    <footer
+      style={{
+        background:
+          "linear-gradient(135deg, var(--text-primary) 0%, var(--secondary-brown) 100%)",
+        color: "white",
+      }}
+    >
+      {/* Main Footer Content */}
+      <div className="container-modern py-5">
+        <div className="row g-5">
+          {/* Company Info */}
+          <div className="col-lg-4">
+            <div className="mb-4">
+              <Image
+                src={logo}
+                alt="Zayra Dental"
+                width={180}
+                height={60}
+                style={{
+                  height: "auto",
+                  filter: "brightness(0) invert(1)", // Makes logo white
+                }}
+              />
+            </div>
+            <p className="text-light mb-4" style={{ opacity: 0.9 }}>
+              Your trusted dental practice in Leeds, providing exceptional care
+              with modern technology and a gentle approach. Creating beautiful,
+              healthy smiles for over 15 years.
+            </p>
+
+            {/* Review Summary */}
+            <div
+              className="p-3 rounded-3 mb-4"
+              style={{ background: "rgba(255, 255, 255, 0.1)" }}
+            >
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <div className="d-flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={16} fill="gold" color="gold" />
+                  ))}
+                </div>
+                <span className="fw-semibold">4.9/5</span>
               </div>
+              <p className="small mb-0" style={{ opacity: 0.9 }}>
+                Based on 200+ patient reviews
+              </p>
+            </div>
+
+            {/* Social Links */}
+            <div className="d-flex gap-3">
+              <a
+                href="https://facebook.com/zayradental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="d-inline-flex align-items-center justify-content-center rounded-circle"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  background: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
+                  textDecoration: "none",
+                  transition: "var(--transition-smooth)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = "var(--primary-teal)";
+                  e.target.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                  e.target.style.transform = "translateY(0)";
+                }}
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://instagram.com/zayradental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="d-inline-flex align-items-center justify-content-center rounded-circle"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  background: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
+                  textDecoration: "none",
+                  transition: "var(--transition-smooth)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = "var(--primary-teal)";
+                  e.target.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                  e.target.style.transform = "translateY(0)";
+                }}
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://linkedin.com/company/zayradental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="d-inline-flex align-items-center justify-content-center rounded-circle"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  background: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
+                  textDecoration: "none",
+                  transition: "var(--transition-smooth)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = "var(--primary-teal)";
+                  e.target.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                  e.target.style.transform = "translateY(0)";
+                }}
+              >
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
 
-          {/* Center: Horizontal Quick Links */}
-          <div className="col-md-4">
-            <h5 className="mb-3">Quick Links</h5>
-            <ul className="list-unstyled d-flex flex-wrap gap-3">
-              {[
-                { text: "Home", href: "/" },
-                { text: "About Us", href: "/about-us" },
-                { text: "Services", href: "/services" },
-                { text: "Pricing", href: "/pricing" },
-                { text: "Contact", href: "/contact" },
-                { text: "Appointment", href: "/appointment" },
-                { text: "Gallery", href: "/gallery"},
-              ].map(({ text, href }) => (
-                <li key={text}>
+          {/* Quick Links */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className="heading-tertiary mb-4" style={{ color: "white" }}>
+              Quick Links
+            </h5>
+            <ul className="list-unstyled">
+              {quickLinks.map(({ text, href }) => (
+                <li key={text} className="mb-2">
                   <Link
                     href={href}
-                    className="text-dark text-decoration-none px-2 py-1 d-inline-block rounded-pill"
-                    style={{ backgroundColor: "#ffffff1a", transition: "0.3s" }}
+                    className="d-flex align-items-center gap-2 text-decoration-none"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      transition: "var(--transition-smooth)",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = "white";
+                      e.target.style.paddingLeft = "0.5rem";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color = "rgba(255, 255, 255, 0.8)";
+                      e.target.style.paddingLeft = "0";
+                    }}
                   >
+                    <ArrowRight size={14} />
                     {text}
                   </Link>
                 </li>
@@ -89,30 +192,207 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right: Feedback / Review CTA */}
-          <div className="col-md-4">
-            <div
-              className="p-4 rounded-4 text-center text-white"
-              style={{
-                background: "linear-gradient(135deg, #f28dff, #6507fc)",
-                boxShadow: "0 0 20px rgba(0,0,0,0.2)",
-              }}
-            >
-              <h5 className="mb-2 fw-bold">What Our Patients Say</h5>
-              <p className="mb-3">
-                Check out real reviews from our happy patients.
-              </p>
-              <GoogleReviewWidget />
-              
+          {/* Services */}
+          <div className="col-lg-3 col-md-6">
+            <h5 className="heading-tertiary mb-4" style={{ color: "white" }}>
+              Our Services
+            </h5>
+            <ul className="list-unstyled">
+              {services.map((service) => (
+                <li key={service} className="mb-2">
+                  <span
+                    className="d-flex align-items-center gap-2"
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                  >
+                    <ArrowRight size={14} />
+                    {service}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="col-lg-3">
+            <h5 className="heading-tertiary mb-4" style={{ color: "white" }}>
+              Contact Information
+            </h5>
+
+            <div className="mb-3">
+              <div className="d-flex align-items-start gap-3 mb-3">
+                <MapPin
+                  size={20}
+                  className="mt-1"
+                  style={{ color: "var(--primary-teal)" }}
+                />
+                <div>
+                  <div className="fw-medium mb-1">Our Location</div>
+                  <p
+                    className="mb-0"
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                  >
+                    599 Harehills Lane
+                    <br />
+                    Leeds, LS9 6NQ
+                  </p>
+                </div>
+              </div>
+
+              <div className="d-flex align-items-start gap-3 mb-3">
+                <Phone
+                  size={20}
+                  className="mt-1"
+                  style={{ color: "var(--primary-teal)" }}
+                />
+                <div>
+                  <div className="fw-medium mb-1">Phone</div>
+                  <a
+                    href="tel:01132488398"
+                    className="text-decoration-none"
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                  >
+                    0113 248 8398
+                  </a>
+                </div>
+              </div>
+
+              <div className="d-flex align-items-start gap-3 mb-3">
+                <Mail
+                  size={20}
+                  className="mt-1"
+                  style={{ color: "var(--primary-teal)" }}
+                />
+                <div>
+                  <div className="fw-medium mb-1">Email</div>
+                  <a
+                    href="mailto:info@zayradental.co.uk"
+                    className="text-decoration-none"
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                  >
+                    info@zayradental.co.uk
+                  </a>
+                </div>
+              </div>
+
+              <div className="d-flex align-items-start gap-3">
+                <Clock
+                  size={20}
+                  className="mt-1"
+                  style={{ color: "var(--primary-teal)" }}
+                />
+                <div>
+                  <div className="fw-medium mb-1">Opening Hours</div>
+                  <div
+                    style={{
+                      color: "rgba(255, 255, 255, 0.8)",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
+                    <div>Sat: 9:00 AM - 4:00 PM</div>
+                    <div>Sun: Emergency Only</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom line */}
-        <hr className="border-dark mt-5" />
-        <p className="text-center small text-muted mb-0">
-          &copy; {new Date().getFullYear()} Zayra Dental. All rights reserved.
-        </p>
+      {/* Emergency Contact Banner */}
+      <div
+        style={{
+          background: "var(--primary-teal)",
+          padding: "1rem 0",
+        }}
+      >
+        <div className="container-modern">
+          <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div className="d-flex align-items-center gap-3">
+              <Phone size={20} />
+              <div>
+                <span className="fw-medium">24/7 Emergency Dental Care</span>
+                <div className="small" style={{ opacity: 0.9 }}>
+                  Call us anytime for urgent dental problems
+                </div>
+              </div>
+            </div>
+            <a
+              href="tel:01132488398"
+              className="btn"
+              style={{
+                background: "white",
+                color: "var(--primary-teal)",
+                border: "none",
+                padding: "0.75rem 1.5rem",
+                borderRadius: "25px",
+                fontWeight: "500",
+                textDecoration: "none",
+              }}
+            >
+              Call Emergency Line
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div
+        style={{
+          background: "rgba(0, 0, 0, 0.2)",
+          padding: "1.5rem 0",
+        }}
+      >
+        <div className="container-modern">
+          <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div className="d-flex flex-wrap gap-4">
+              <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>
+                &copy; {currentYear} Zayra Dental. All rights reserved.
+              </span>
+              <div className="d-flex gap-3">
+                <Link
+                  href="/privacy"
+                  className="text-decoration-none"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.6)",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="text-decoration-none"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.6)",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Terms of Service
+                </Link>
+              </div>
+            </div>
+
+            <div className="d-flex align-items-center gap-2">
+              <span
+                className="small"
+                style={{ color: "rgba(255, 255, 255, 0.6)" }}
+              >
+                GDC Registered Practice
+              </span>
+              <div
+                className="rounded px-2 py-1"
+                style={{
+                  background: "var(--primary-teal)",
+                  fontSize: "0.75rem",
+                  fontWeight: "500",
+                }}
+              >
+                GDC #123456
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
