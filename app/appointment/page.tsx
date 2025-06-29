@@ -12,7 +12,6 @@ import {
   Star,
   Shield,
   Heart,
-  ArrowRight,
 } from "lucide-react";
 import "./style.css";
 
