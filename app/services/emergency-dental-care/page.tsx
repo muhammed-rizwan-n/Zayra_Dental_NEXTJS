@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Calendar, 
-  CheckCircle, 
-  Clock, 
+import {
+  Calendar,
+  CheckCircle,
+  Clock,
   Star,
   ArrowRight,
   Phone,
@@ -36,7 +36,7 @@ export default function EmergencyDentalCare() {
     {
       emergency: "Lost Filling/Crown",
       description: "Dental restoration has fallen out, exposing sensitive tooth",
-      urgency: "Within 24 hours", 
+      urgency: "Within 24 hours",
       treatment: "Temporary or permanent restoration replacement"
     },
     {
@@ -109,10 +109,10 @@ export default function EmergencyDentalCare() {
   return (
     <>
       {/* Hero Section */}
-      <section 
-        className="hero-modern" 
-        style={{ 
-          paddingTop: '120px', 
+      <section
+        className="hero-modern"
+        style={{
+          paddingTop: '120px',
           minHeight: '80vh',
           background: 'linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(255, 255, 255, 0.9))'
         }}
@@ -125,23 +125,23 @@ export default function EmergencyDentalCare() {
                 <ArrowRight size={16} className="text-subtle" />
                 <span className="text-subtle">Emergency Dental Care</span>
               </div>
-              
+
               <h1 className="heading-primary mb-4">
-                24/7 Emergency 
+                24/7 Emergency
                 <span className="text-primary-brown d-block">Dental Care</span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Dental emergencies don't wait for business hours. Our experienced team provides 
-                immediate pain relief and emergency dental treatment when you need it most, 
+                Dental emergencies don't wait for business hours. Our experienced team provides
+                immediate pain relief and emergency dental treatment when you need it most,
                 with same-day appointments and 24/7 emergency support.
               </p>
-              
+
               {/* Emergency Contact */}
-              <div 
+              <div
                 className="p-4 rounded-3 mb-4"
-                style={{ 
-                  background: 'rgba(220, 53, 69, 0.1)', 
-                  border: '2px solid #dc3545' 
+                style={{
+                  background: 'rgba(220, 53, 69, 0.1)',
+                  border: '2px solid #dc3545'
                 }}
               >
                 <div className="d-flex align-items-center gap-3">
@@ -150,8 +150,8 @@ export default function EmergencyDentalCare() {
                     <div className="fw-bold h5 mb-1" style={{ color: '#dc3545' }}>
                       Dental Emergency? Call Now!
                     </div>
-                    <a 
-                      href="tel:01132488398" 
+                    <a
+                      href="tel:01132488398"
                       className="btn btn-danger btn-lg"
                       style={{ borderRadius: '50px' }}
                     >
@@ -161,7 +161,7 @@ export default function EmergencyDentalCare() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Key Features */}
               <div className="row g-4">
                 <div className="col-4">
@@ -172,7 +172,7 @@ export default function EmergencyDentalCare() {
                 </div>
                 <div className="col-4">
                   <div className="text-center">
-                    <div className="heading-tertiary text-accent mb-1">< 1hr</div>
+                    <div className="heading-tertiary text-accent mb-1">&lt; 1hr</div>
                     <div className="small text-subtle">Response Time</div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function EmergencyDentalCare() {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
@@ -198,9 +198,9 @@ export default function EmergencyDentalCare() {
                     priority
                   />
                 </div>
-                
+
                 {/* Emergency Badge */}
-                <div 
+                <div
                   className="card-modern position-absolute d-none d-md-block"
                   style={{
                     bottom: '20px',
@@ -233,7 +233,7 @@ export default function EmergencyDentalCare() {
               Dental Emergencies We Treat
             </h2>
             <p className="lead text-subtle mx-auto" style={{ maxWidth: '600px' }}>
-              We handle all types of dental emergencies with expertise and urgency, 
+              We handle all types of dental emergencies with expertise and urgency,
               providing immediate relief and comprehensive treatment.
             </p>
           </div>
@@ -243,12 +243,12 @@ export default function EmergencyDentalCare() {
               <div key={index} className="col-lg-6" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-modern h-100">
                   <div className="d-flex align-items-start gap-3">
-                    <div 
+                    <div
                       className="rounded-circle d-inline-flex align-items-center justify-content-center"
                       style={{
                         width: '60px',
                         height: '60px',
-                        background: emergency.urgency === 'Immediate' ? '#dc3545' : 
+                        background: emergency.urgency === 'Immediate' ? '#dc3545' :
                                    emergency.urgency.includes('hour') ? '#fd7e14' : 'var(--primary-teal)',
                         color: 'white',
                         flexShrink: 0
@@ -259,10 +259,10 @@ export default function EmergencyDentalCare() {
                     <div className="flex-grow-1">
                       <div className="d-flex justify-content-between align-items-start mb-2">
                         <h5 className="fw-semibold mb-0">{emergency.emergency}</h5>
-                        <span 
+                        <span
                           className="badge rounded-pill"
                           style={{
-                            background: emergency.urgency === 'Immediate' ? '#dc3545' : 
+                            background: emergency.urgency === 'Immediate' ? '#dc3545' :
                                        emergency.urgency.includes('hour') ? '#fd7e14' : 'var(--primary-teal)',
                             color: 'white',
                             fontSize: '0.7rem'
@@ -294,7 +294,7 @@ export default function EmergencyDentalCare() {
               What to Do Before You Arrive
             </h2>
             <p className="lead text-subtle mx-auto" style={{ maxWidth: '600px' }}>
-              These immediate steps can help manage pain and prevent further damage 
+              These immediate steps can help manage pain and prevent further damage
               while you're on your way to our clinic.
             </p>
           </div>
@@ -304,7 +304,7 @@ export default function EmergencyDentalCare() {
               <div key={index} className="col-lg-4" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-modern h-100">
                   <div className="text-center mb-3">
-                    <div 
+                    <div
                       className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                       style={{
                         width: '70px',
@@ -338,7 +338,7 @@ export default function EmergencyDentalCare() {
               Why Choose Zayra Dental for Emergencies?
             </h2>
             <p className="lead text-subtle mx-auto" style={{ maxWidth: '600px' }}>
-              When you're in pain, you need immediate, expert care. We're equipped 
+              When you're in pain, you need immediate, expert care. We're equipped
               and ready to handle any dental emergency with speed and precision.
             </p>
           </div>
@@ -347,7 +347,7 @@ export default function EmergencyDentalCare() {
             {whyChooseUs.map((feature, index) => (
               <div key={index} className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-modern text-center h-100">
-                  <div 
+                  <div
                     className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                     style={{
                       width: '80px',
@@ -380,7 +380,7 @@ export default function EmergencyDentalCare() {
           <div className="row g-4">
             <div className="col-lg-3 col-md-6" data-aos="fade-up">
               <div className="text-center">
-                <div 
+                <div
                   className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style={{
                     width: '80px',
@@ -399,7 +399,7 @@ export default function EmergencyDentalCare() {
             </div>
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="text-center">
-                <div 
+                <div
                   className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style={{
                     width: '80px',
@@ -418,7 +418,7 @@ export default function EmergencyDentalCare() {
             </div>
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="text-center">
-                <div 
+                <div
                   className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style={{
                     width: '80px',
@@ -437,7 +437,7 @@ export default function EmergencyDentalCare() {
             </div>
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="text-center">
-                <div 
+                <div
                   className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style={{
                     width: '80px',
@@ -467,7 +467,7 @@ export default function EmergencyDentalCare() {
               Transparent Emergency Fees
             </h2>
             <p className="lead text-subtle mx-auto" style={{ maxWidth: '600px' }}>
-              No surprises when you're already stressed. Our emergency fees are clearly defined 
+              No surprises when you're already stressed. Our emergency fees are clearly defined
               and competitive, with payment plans available.
             </p>
           </div>
@@ -501,7 +501,7 @@ export default function EmergencyDentalCare() {
 
           <div className="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
             <p className="text-subtle small">
-              *Treatment costs are additional and will be discussed before any procedures. 
+              *Treatment costs are additional and will be discussed before any procedures.
               Payment plans available for emergency treatments over £500.
             </p>
           </div>
@@ -566,7 +566,7 @@ export default function EmergencyDentalCare() {
       </section>
 
       {/* Emergency CTA */}
-      <section 
+      <section
         className="section-modern text-white"
         style={{
           background: 'linear-gradient(135deg, #dc3545, #c82333)'
@@ -586,7 +586,7 @@ export default function EmergencyDentalCare() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="d-flex align-items-center gap-4">
                 <div>
                   <div className="h4 mb-1" style={{ color: 'white' }}>24/7</div>
@@ -602,10 +602,10 @@ export default function EmergencyDentalCare() {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-lg-4 text-lg-end" data-aos="fade-left" data-aos-delay="200">
-              <a 
-                href="tel:01132488398" 
+              <a
+                href="tel:01132488398"
                 className="btn btn-light btn-lg d-block mb-3"
                 style={{
                   borderRadius: '50px',
