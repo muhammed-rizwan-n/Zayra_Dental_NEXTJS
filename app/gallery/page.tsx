@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Camera,
   ArrowRight,
@@ -8,6 +9,43 @@ import {
   Share2,
   Maximize2,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental Photos",
+  description:
+    "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers, implants & smile makeover transformations. Virtual clinic tour available.",
+  keywords: [
+    "dental clinic Leeds photos",
+    "dental before after Leeds",
+    "teeth whitening results",
+    "dental transformation Leeds",
+    "smile makeover Leeds",
+    "dental clinic interior",
+    "dental treatment results",
+    "cosmetic dentistry results",
+    "dental practice Leeds tour",
+    "dental gallery Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental",
+    description:
+      "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
+    url: "https://zayradental.co.uk/gallery",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zayra Dental Clinic Gallery Leeds - Modern Dental Practice",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/gallery",
+  },
+};
 
 export default function Gallery() {
   const galleryCategories = [
@@ -114,9 +152,9 @@ export default function Gallery() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take a virtual tour of our state-of-the-art dental practice and
-                see the incredible smile transformations we&apos;ve achieved for our
-                patients. Every picture tells a story of confidence, health, and
-                happiness.
+                see the incredible smile transformations we&apos;ve achieved for
+                our patients. Every picture tells a story of confidence, health,
+                and happiness.
               </p>
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
