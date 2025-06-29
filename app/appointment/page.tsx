@@ -83,7 +83,6 @@ export default function Appointment() {
   ];
 
 
-
   const benefits = [
     {
       icon: <Shield size={24} />,
@@ -190,6 +189,7 @@ export default function Appointment() {
                         >
                           0113 248 8398
                         </a>
+
                       </div>
                     </div>
                   </div>
@@ -217,6 +217,7 @@ export default function Appointment() {
                     </div>
                   </div>
                 </div>
+              
               </div>
             </div>
           </div>
@@ -297,7 +298,6 @@ export default function Appointment() {
           </div>
         </div>
       </section>
-
       {/* Emergency Contact */}
       <section
         className="section-modern"

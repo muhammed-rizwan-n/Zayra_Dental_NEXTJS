@@ -112,13 +112,15 @@ export default function Gallery() {
           src: "/about-us/reshma_parambil.jpg",
           alt: "Dr. Reshma Parambil",
           category: "team",
+          classname: "custom-focus",
         },
         {
           src: "/about-us/emilio.jpg",
           alt: "Dr. Emilio Cecamore",
           category: "team",
+              className: "custom-focus"
         },
-        { src: "/bg-gallery.jpg", alt: "Team Photo", category: "team" },
+        { src: "/about-us/bg-team.jpg", alt: "Team Photo", category: "team" },
         { src: "/bg-gallery.jpg", alt: "Staff Meeting", category: "team" },
       ],
     },
@@ -161,10 +163,10 @@ export default function Gallery() {
                   <Calendar size={20} />
                   Book Your Visit
                 </Link>
-                <Link href="/about-us" className="btn-secondary-modern">
+                {/* <Link href="/about-us" className="btn-secondary-modern">
                   <Eye size={20} />
                   Virtual Tour
-                </Link>
+                </Link> */}
               </div>
 
               {/* Stats */}
@@ -243,18 +245,18 @@ export default function Gallery() {
               </p>
             </div>
 
-            <div className="row g-4">
+            <div className="row g-4 justify-content-center">
               {category.images.map((image, imageIndex) => (
                 <div
                   key={imageIndex}
-                  className="col-lg-6 col-xl-3"
+                  className="col-12 col-sm-15 col-md-5 col-lg-3 col-xl-3 col-xxl-3" // "col-lg-6 col-xl-3"
                   data-aos="fade-up"
                   data-aos-delay={imageIndex * 100}
                 >
                   <div className="card-modern overflow-hidden p-0 h-100">
                     <div
                       className="position-relative overflow-hidden"
-                      style={{ height: "250px" }}
+                      style={{ height: "300px"}}
                     >
                       <Image
                         src={image.src}
@@ -268,7 +270,7 @@ export default function Gallery() {
                       />
 
                       {/* Hover Overlay */}
-                      <div
+                      {/* <div
                         className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0"
                         style={{
                           background: "rgba(115, 175, 170, 0.9)",
@@ -279,7 +281,7 @@ export default function Gallery() {
                           <Maximize2 size={32} className="mb-2" />
                           <div className="fw-medium">View Full Size</div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="p-3">
@@ -455,7 +457,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-modern">
+      <section className="section-modern" style={{background: "rgb(249, 243, 255)"}}>
         <div className="container-modern">
           <div className="text-center" data-aos="fade-up">
             <h2 className="heading-secondary mb-4">
