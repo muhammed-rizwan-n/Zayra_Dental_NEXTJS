@@ -1,9 +1,4 @@
 import Image from "next/image";
-//import Link from "next/link";
-import zayra_dental from "../public/zayra-dental.png";
-import { FaCheck } from "react-icons/fa";
-import KeyServiceSection from "../components/KeyServices";
-import style from "./page.module.css";
 import Link from "next/link";
 import {
   Award,
@@ -264,8 +259,8 @@ export default function Home() {
                   style={{ borderColor: "var(--primary-teal)" }}
                 >
                   <p className="fst-italic lead">
-                    "I believe everyone deserves a healthy, confident
-                    smile—without fear or financial worry."
+                    &quot;I believe everyone deserves a healthy, confident
+                    smile—without fear or financial worry.&quot;
                   </p>
                 </blockquote>
               </div>
@@ -512,7 +507,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-subtle mb-4 fst-italic">
-                    "{review.review}"
+                    &quot;{review.review}&quot;
                   </p>
                   <div className="d-flex align-items-center gap-3">
                     <Image

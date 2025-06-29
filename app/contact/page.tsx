@@ -10,7 +10,6 @@ import {
   Navigation,
   Car,
   Bus,
-  ArrowRight,
   Facebook,
   Instagram,
   Linkedin,

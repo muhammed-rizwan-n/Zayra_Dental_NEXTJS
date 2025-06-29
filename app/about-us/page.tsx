@@ -7,9 +7,7 @@ import {
   Shield,
   Clock,
   CheckCircle,
-  Star,
   Phone,
-  Mail,
   ArrowRight,
   Target,
   Eye,
@@ -128,7 +126,7 @@ export default function About() {
                 <span className="text-primary-brown d-block">Leeds</span>
               </h1>
               <p className="lead text-subtle mb-4">
-                At Zayra Dental, we're on a mission to make high-quality private
+                At Zayra Dental, we&apos;re on a mission to make high-quality private
                 dental care affordable and accessible for everyone in Leeds. We
                 believe cost should never stand in the way of a healthy,
                 confident smile.
@@ -211,7 +209,7 @@ export default function About() {
               </h2>
               <p className="text-subtle mb-4">
                 Our clinic is built around comfort, honesty, and care that truly
-                puts patients first. We don't push unnecessary treatments — just
+                puts patients first. We don&apos;t push unnecessary treatments — just
                 expert dental care that fits your needs and your budget.
               </p>
               <p className="text-subtle mb-4">
@@ -243,7 +241,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="section-modern">
+      <section className="section-modern" style={{background: "rgb(255, 200, 123)"}}>
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">Meet Our Expert Team</span>
@@ -297,7 +295,7 @@ export default function About() {
                         style={{ borderColor: "var(--primary-teal)" }}
                       >
                         <p className="fst-italic text-subtle mb-0">
-                          "{member.quote}"
+                          &quot;{member.quote}&quot;
                         </p>
                       </blockquote>
 
@@ -454,7 +452,7 @@ export default function About() {
                     Our Vision
                   </h3>
                   <p style={{ opacity: 0.9 }}>
-                    To be Leeds' most trusted dental practice, known for making
+                    To be Leeds&apos; most trusted dental practice, known for making
                     high-quality dental care accessible, affordable, and
                     anxiety-free for every patient who walks through our doors.
                   </p>
@@ -503,7 +501,7 @@ export default function About() {
             </h2>
             <p className="lead text-subtle mb-4">
               Join over 1000 satisfied patients who trust us with their smiles.
-              Book your consultation today and discover why we're Leeds'
+              Book your consultation today and discover why we&apos;re Leeds&apos;
               favorite dental practice.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">

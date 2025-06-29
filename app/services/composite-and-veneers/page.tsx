@@ -9,7 +9,6 @@ import {
   Phone,
   Sparkles,
   Palette,
-  Award,
 } from "lucide-react";
 
 export default function CompositeAndVeneers() {
@@ -477,8 +476,8 @@ export default function CompositeAndVeneers() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "My chipped front tooth was fixed in one visit. It looks
-                  completely natural and no one can tell!"
+                  &ldquo;My chipped front tooth was fixed in one visit. It looks
+                  completely natural and no one can tell!&rdquo;
                 </p>
                 <div className="fw-semibold">Lisa K.</div>
                 <div className="small text-subtle">Composite Bonding</div>
@@ -497,8 +496,8 @@ export default function CompositeAndVeneers() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "The porcelain veneers gave me the Hollywood smile I always
-                  dreamed of. Worth every penny!"
+                  &ldquo;The porcelain veneers gave me the Hollywood smile I always
+                  dreamed of. Worth every penny!&rdquo;
                 </p>
                 <div className="fw-semibold">James T.</div>
                 <div className="small text-subtle">Porcelain Veneers</div>
@@ -517,8 +516,8 @@ export default function CompositeAndVeneers() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Dr. Reshma's attention to detail is incredible. My composite
-                  veneers look amazing!"
+                  &ldquo;Dr. Reshma&apos;s attention to detail is incredible. My composite
+                  veneers look amazing!&rdquo;
                 </p>
                 <div className="fw-semibold">Maria S.</div>
                 <div className="small text-subtle">Composite Veneers</div>

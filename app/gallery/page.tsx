@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Calendar,
   Eye,
-  Download,
   Share2,
   Maximize2,
 } from "lucide-react";
@@ -115,7 +114,7 @@ export default function Gallery() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take a virtual tour of our state-of-the-art dental practice and
-                see the incredible smile transformations we've achieved for our
+                see the incredible smile transformations we&apos;ve achieved for our
                 patients. Every picture tells a story of confidence, health, and
                 happiness.
               </p>

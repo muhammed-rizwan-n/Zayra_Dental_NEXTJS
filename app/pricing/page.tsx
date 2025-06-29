@@ -6,7 +6,6 @@ import {
   CreditCard,
   DollarSign,
   Phone,
-  ArrowRight,
   Clock,
   Shield,
   Award,
@@ -113,7 +112,7 @@ export default function PricingSection() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              We believe everyone deserves access to quality dental care. That's
+              We believe everyone deserves access to quality dental care. That&apos;s
               why we offer flexible payment options to fit your budget.
             </p>
           </div>
@@ -233,7 +232,7 @@ export default function PricingSection() {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h4 className="heading-tertiary mb-3">
-                  What's Included in Our Prices
+                  What&apos;s Included in Our Prices
                 </h4>
                 <div className="row g-3">
                   {benefits.map((benefit, index) => (
