@@ -1,0 +1,27 @@
+[
+  {
+    "step": "1",
+    "title": "Initial Consultation",
+    "description": "3D scan and assessment to determine if aligners are suitable for you"
+  },
+  {
+    "step": "2",
+    "title": "Treatment Planning",
+    "description": "Custom 3D treatment plan showing your week-by-week progress"
+  },
+  {
+    "step": "3",
+    "title": "Aligner Creation",
+    "description": "Your custom aligners are precisely manufactured for your unique smile"
+  },
+  {
+    "step": "4",
+    "title": "Active Treatment",
+    "description": "Wear aligners 20-22 hours daily, changing every 1-2 weeks"
+  },
+  {
+    "step": "5",
+    "title": "Retention Phase",
+    "description": "Retainers maintain your new smile position permanently"
+  }
+]

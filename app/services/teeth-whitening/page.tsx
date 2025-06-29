@@ -3,13 +3,10 @@ import Link from "next/link";
 import {
   Calendar,
   CheckCircle,
-  Clock,
   Star,
   ArrowRight,
   Phone,
   Sparkles,
-  Shield,
-  Award,
 } from "lucide-react";
 
 export default function TeethWhitening() {

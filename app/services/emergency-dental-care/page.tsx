@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Calendar,
-  CheckCircle,
   Clock,
   Star,
   ArrowRight,
@@ -141,7 +139,7 @@ export default function EmergencyDentalCare() {
                 <span className="text-primary-brown d-block">Dental Care</span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Dental emergencies don't wait for business hours. Our
+                Dental emergencies don&apos;t wait for business hours. Our
                 experienced team provides immediate pain relief and emergency
                 dental treatment when you need it most, with same-day
                 appointments and 24/7 emergency support.
@@ -340,7 +338,7 @@ export default function EmergencyDentalCare() {
               style={{ maxWidth: "600px" }}
             >
               These immediate steps can help manage pain and prevent further
-              damage while you're on your way to our clinic.
+              damage while you&apos;re on your way to our clinic.
             </p>
           </div>
 
@@ -395,7 +393,7 @@ export default function EmergencyDentalCare() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              When you're in pain, you need immediate, expert care. We're
+              When you&apos;re in pain, you need immediate, expert care. We're
               equipped and ready to handle any dental emergency with speed and
               precision.
             </p>
@@ -557,7 +555,7 @@ export default function EmergencyDentalCare() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              No surprises when you're already stressed. Our emergency fees are
+              No surprises when you&apos;re already stressed. Our emergency fees are
               clearly defined and competitive, with payment plans available.
             </p>
           </div>
@@ -631,8 +629,8 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Called at 11 PM with excruciating pain. Dr. Reshma met me at
-                  the clinic within 30 minutes and saved my tooth."
+                  &ldquo;Called at 11 PM with excruciating pain. Dr. Reshma met me at
+                  the clinic within 30 minutes and saved my tooth.&rdquo;
                 </p>
                 <div className="fw-semibold">Tom W.</div>
                 <div className="small text-subtle">Emergency Root Canal</div>
@@ -651,8 +649,8 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "My son knocked out his front tooth. They saw us immediately
-                  and saved the tooth. Amazing emergency care!"
+                  &ldquo;My son knocked out his front tooth. They saw us immediately
+                  and saved the tooth. Amazing emergency care!&rdquo;
                 </p>
                 <div className="fw-semibold">Linda P.</div>
                 <div className="small text-subtle">Dental Trauma</div>
@@ -671,8 +669,8 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Weekend emergency with severe abscess. They treated me
-                  immediately and the infection cleared up quickly."
+                  &ldquo;Weekend emergency with severe abscess. They treated me
+                  immediately and the infection cleared up quickly.&rdquo;
                 </p>
                 <div className="fw-semibold">Robert K.</div>
                 <div className="small text-subtle">Dental Abscess</div>
@@ -699,11 +697,11 @@ export default function EmergencyDentalCare() {
                     className="heading-secondary mb-2"
                     style={{ color: "white" }}
                   >
-                    Don't Wait - Get Emergency Care Now!
+                    Don&apos;t Wait - Get Emergency Care Now!
                   </h2>
                   <p className="lead mb-0" style={{ opacity: 0.9 }}>
                     Dental emergencies require immediate attention. Every minute
-                    counts when you're in pain.
+                    counts when you&apos;re in pain.
                   </p>
                 </div>
               </div>

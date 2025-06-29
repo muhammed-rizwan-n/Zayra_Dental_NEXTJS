@@ -205,7 +205,7 @@ export default function DentalImplants() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              Whether you're missing one tooth or need a complete smile
+              Whether you&apos;re missing one tooth or need a complete smile
               restoration, we have the perfect implant solution tailored to your
               specific needs.
             </p>
@@ -447,8 +447,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "The implant feels completely natural. I can eat anything I
-                  want and smile with confidence again."
+                  &ldquo;The implant feels completely natural. I can eat anything I
+                  want and smile with confidence again.&rdquo;
                 </p>
                 <div className="fw-semibold">Sarah M.</div>
                 <div className="small text-subtle">Single Implant Patient</div>
@@ -467,8 +467,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Best decision I ever made. The team was professional and the
-                  results exceeded my expectations."
+                  &ldquo;Best decision I ever made. The team was professional and the
+                  results exceeded my expectations.&rdquo;
                 </p>
                 <div className="fw-semibold">Michael R.</div>
                 <div className="small text-subtle">Multiple Implants</div>
@@ -487,8 +487,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "From consultation to final crown, the entire process was
-                  smooth and pain-free."
+                  &ldquo;From consultation to final crown, the entire process was
+                  smooth and pain-free.&rdquo;
                 </p>
                 <div className="fw-semibold">Emma L.</div>
                 <div className="small text-subtle">Full Mouth Restoration</div>

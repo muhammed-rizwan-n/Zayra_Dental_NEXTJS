@@ -7,7 +7,6 @@ import {
   Star,
   ArrowRight,
   Phone,
-  Shield,
   Heart,
   AlertCircle,
 } from "lucide-react";
@@ -226,8 +225,8 @@ export default function RootCanal() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              Root canal treatment becomes necessary when the tooth's pulp
-              becomes infected or severely inflamed. Don't ignore these warning
+              Root canal treatment becomes necessary when the tooth&apos;s pulp
+              becomes infected or severely inflamed. Don&apos;t ignore these warning
               signs.
             </p>
           </div>
@@ -277,7 +276,7 @@ export default function RootCanal() {
                     Experiencing Severe Pain?
                   </div>
                   <div className="small text-subtle">
-                    Don't wait - call us immediately for emergency treatment
+                    Don&apos;t wait - call us immediately for emergency treatment
                   </div>
                 </div>
               </div>
@@ -477,7 +476,7 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">"Root canals are extremely painful"</p>
+                <p className="mb-3">&ldquo;Root canals are extremely painful&rdquo;</p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Modern root canal treatment is
                   virtually painless thanks to advanced anesthesia and
@@ -494,7 +493,7 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">"It's better to extract the tooth"</p>
+                <p className="mb-3">"It&apos;s better to extract the tooth"</p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Saving your natural tooth is almost
                   always the best option. Root canal treatment has a 95% success
@@ -510,7 +509,7 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">"Root canal treatment causes illness"</p>
+                <p className="mb-3">&ldquo;Root canal treatment causes illness&rdquo;</p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> This outdated myth has been thoroughly
                   debunked by modern research. Root canals eliminate infection
@@ -526,7 +525,7 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">"Recovery takes weeks"</p>
+                <p className="mb-3">&ldquo;Recovery takes weeks&rdquo;</p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Most patients return to normal
                   activities the next day. Any discomfort is mild and easily
@@ -562,9 +561,9 @@ export default function RootCanal() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "I was terrified, but Dr. Reshma made it completely painless.
+                  &ldquo;I was terrified, but Dr. Reshma made it completely painless.
                   I felt immediate relief from the severe pain I had been
-                  experiencing."
+                  experiencing.&rdquo;
                 </p>
                 <div className="fw-semibold">Mark R.</div>
                 <div className="small text-subtle">Emergency Root Canal</div>
@@ -583,8 +582,8 @@ export default function RootCanal() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "The procedure was much easier than I expected. I was back to
-                  work the next day with no pain at all."
+                  &ldquo;The procedure was much easier than I expected. I was back to
+                  work the next day with no pain at all.&rdquo;
                 </p>
                 <div className="fw-semibold">Jennifer L.</div>
                 <div className="small text-subtle">Preventive Root Canal</div>
@@ -603,8 +602,8 @@ export default function RootCanal() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Five years later and my tooth is still perfect. So glad I
-                  chose to save it instead of having it extracted."
+                  &ldquo;Five years later and my tooth is still perfect. So glad I
+                  chose to save it instead of having it extracted.&rdquo;
                 </p>
                 <div className="fw-semibold">Paul M.</div>
                 <div className="small text-subtle">Follow-up Patient</div>
@@ -634,13 +633,12 @@ export default function RootCanal() {
                     Dental Emergency?
                   </h2>
                   <p className="mb-0" style={{ opacity: 0.9 }}>
-                    Don't suffer in pain - we offer same-day emergency root
+                    Don&apos;t suffer in pain - we offer same-day emergency root
                     canal treatment
                   </p>
                 </div>
               </div>
             </div>
-
             <div
               className="col-lg-4 text-lg-end"
               data-aos="fade-left"
@@ -679,7 +677,7 @@ export default function RootCanal() {
                 Save Your Tooth with Expert Care
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                Don't let dental pain control your life. Our experienced team
+                Don&apos;t let dental pain control your life. Our experienced team
                 provides comfortable, effective root canal treatment to save
                 your natural tooth.
               </p>

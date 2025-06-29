@@ -1,0 +1,38 @@
+[
+  {
+    "type": "Invisalign",
+    "description": "World's most advanced clear aligner system with proven results",
+    "features": [
+      "Virtually invisible",
+      "Custom 3D treatment plan",
+      "SmartTrack material",
+      "Precision attachments"
+    ],
+    "duration": "6-18 months",
+    "price": "From £2,500"
+  },
+  {
+    "type": "Clear Correct",
+    "description": "High-quality clear aligners offering excellent value and results",
+    "features": [
+      "Crystal clear material",
+      "Comfortable fit",
+      "Gradual movement",
+      "Cost-effective"
+    ],
+    "duration": "8-20 months",
+    "price": "From £1,800"
+  },
+  {
+    "type": "Express Treatment",
+    "description": "Fast-track aligners for minor corrections and touch-ups",
+    "features": [
+      "Quick results",
+      "Fewer aligners needed",
+      "Minor corrections",
+      "Affordable option"
+    ],
+    "duration": "3-6 months",
+    "price": "From £1,200"
+  }
+]

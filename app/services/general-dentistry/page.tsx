@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   Calendar,
   CheckCircle,
-  Clock,
   Star,
   ArrowRight,
   Phone,
@@ -545,8 +544,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Regular cleanings and checkups have kept my teeth healthy for
-                  years. The team is thorough and gentle."
+                  &ldquo;Regular cleanings and checkups have kept my teeth healthy for
+                  years. The team is thorough and gentle.&rdquo;
                 </p>
                 <div className="fw-semibold">Patricia M.</div>
                 <div className="small text-subtle">Long-term Patient</div>
@@ -565,8 +564,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "They caught a cavity early during my routine checkup. Quick
-                  treatment prevented a bigger problem."
+                  &ldquo;They caught a cavity early during my routine checkup. Quick
+                  treatment prevented a bigger problem.&rdquo;
                 </p>
                 <div className="fw-semibold">Andrew R.</div>
                 <div className="small text-subtle">Preventive Care Success</div>
@@ -585,8 +584,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "My whole family comes here. Professional, caring staff who
-                  make dental visits comfortable for everyone."
+                  &ldquo;My whole family comes here. Professional, caring staff who
+                  make dental visits comfortable for everyone.&rdquo;
                 </p>
                 <div className="fw-semibold">The Johnson Family</div>
                 <div className="small text-subtle">Family Practice</div>
@@ -611,7 +610,7 @@ export default function GeneralDentistry() {
                 Ready for Your Next Checkup?
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                Don't wait for problems to develop. Schedule your routine
+                Don&apos;t wait for problems to develop. Schedule your routine
                 checkup and cleaning today to maintain optimal oral health and
                 prevent costly future treatments.
               </p>

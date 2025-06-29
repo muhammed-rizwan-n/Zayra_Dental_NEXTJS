@@ -413,7 +413,7 @@ export default function Services() {
             </h2>
             <p className="lead mb-4" style={{ opacity: 0.9 }}>
               Book your consultation today and discover how our expert team can
-              help you achieve the healthy, beautiful smile you've always
+              help you achieve the healthy, beautiful smile you&apos;ve always
               wanted.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">

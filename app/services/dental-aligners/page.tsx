@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import alignerTypes from "./alignerTypes.json";
+import benefits from "./benefits.json";
+import treatmentSteps from "./treatmentSteps.json";
+import treatedConditions from "./treatedConditions.json";
 
 import {
   Calendar,
@@ -10,101 +14,9 @@ import {
   Phone,
   Eye,
   Smartphone,
-  Award,
 } from "lucide-react";
 
 export default function DentalAligners() {
-  const alignerTypes = [
-    {
-      type: "Invisalign",
-      description:
-        "World's most advanced clear aligner system with proven results",
-      features: [
-        "Virtually invisible",
-        "Custom 3D treatment plan",
-        "SmartTrack material",
-        "Precision attachments",
-      ],
-      duration: "6-18 months",
-      price: "From £2,500",
-    },
-    {
-      type: "Clear Correct",
-      description:
-        "High-quality clear aligners offering excellent value and results",
-      features: [
-        "Crystal clear material",
-        "Comfortable fit",
-        "Gradual movement",
-        "Cost-effective",
-      ],
-      duration: "8-20 months",
-      price: "From £1,800",
-    },
-    {
-      type: "Express Treatment",
-      description: "Fast-track aligners for minor corrections and touch-ups",
-      features: [
-        "Quick results",
-        "Fewer aligners needed",
-        "Minor corrections",
-        "Affordable option",
-      ],
-      duration: "3-6 months",
-      price: "From £1,200",
-    },
-  ];
-
-  const benefits = [
-    "Virtually invisible - no one will know you're straightening your teeth",
-    "Removable for eating, drinking, and special occasions",
-    "More comfortable than traditional braces with no metal or wires",
-    "Better oral hygiene - brush and floss normally",
-    "Shorter treatment time compared to conventional braces",
-    "Predictable results with 3D treatment visualization",
-  ];
-
-  const treatmentSteps = [
-    {
-      step: "1",
-      title: "Initial Consultation",
-      description:
-        "3D scan and assessment to determine if aligners are suitable for you",
-    },
-    {
-      step: "2",
-      title: "Treatment Planning",
-      description:
-        "Custom 3D treatment plan showing your week-by-week progress",
-    },
-    {
-      step: "3",
-      title: "Aligner Creation",
-      description:
-        "Your custom aligners are precisely manufactured for your unique smile",
-    },
-    {
-      step: "4",
-      title: "Active Treatment",
-      description: "Wear aligners 20-22 hours daily, changing every 1-2 weeks",
-    },
-    {
-      step: "5",
-      title: "Retention Phase",
-      description: "Retainers maintain your new smile position permanently",
-    },
-  ];
-
-  const treatedConditions = [
-    "Crowded teeth",
-    "Gaps between teeth",
-    "Overbite",
-    "Underbite",
-    "Crossbite",
-    "Open bite",
-    "Relapsed orthodontic treatment",
-    "Minor to moderate misalignment",
-  ];
 
   return (
     <>
@@ -134,7 +46,7 @@ export default function DentalAligners() {
                 </span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Achieve the straight, beautiful smile you've always wanted with
+                Achieve the straight, beautiful smile you&quot;ve always wanted with
                 virtually invisible aligners. Our clear aligner treatments offer
                 a comfortable, convenient alternative to traditional braces with
                 predictable, professional results.
@@ -610,7 +522,7 @@ export default function DentalAligners() {
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
                 Book your free smile assessment and discover how clear aligners
-                can give you the straight, confident smile you've always wanted
+                can give you the straight, confident smile you&quot;ve always wanted
                 - virtually invisibly!
               </p>
 
