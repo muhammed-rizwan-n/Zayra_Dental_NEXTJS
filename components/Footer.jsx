@@ -26,12 +26,13 @@ export default function Footer() {
   ];
 
   const services = [
-    "General Dentistry",
-    "Cosmetic Dentistry",
-    "Teeth Whitening",
-    "Dental Implants",
-    "Root Canal Treatment",
-    "Orthodontics",
+    { name: "General Dentistry", href: "/services/general-dentistry" },
+    { name: "Teeth Whitening", href: "/services/teeth-whitening" },
+    { name: "Dental Implants", href: "/services/dental-implants" },
+    { name: "Composite & Veneers", href: "/services/composite-and-veneers" },
+    { name: "Dental Aligners", href: "/services/dental-aligners" },
+    { name: "Root Canal Treatment", href: "/services/root-canal" },
+    { name: "Emergency Care", href: "/services/emergency-dental-care" },
   ];
 
   return (
