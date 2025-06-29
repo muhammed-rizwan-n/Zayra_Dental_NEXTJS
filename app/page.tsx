@@ -1,11 +1,9 @@
 import Image from "next/image";
-<<<<<<< HEAD
 //import Link from "next/link";
 import zayra_dental from "../public/zayra-dental.png";
 import { FaCheck } from "react-icons/fa";
 import KeyServiceSection from "../components/KeyServices";
 import style from "./page.module.css";
-=======
 import Link from "next/link";
 import {
   Award,
@@ -21,19 +19,10 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
 
 export default function Home() {
   return (
     <>
-<<<<<<< HEAD
-      <section 
-        className={`${style['responsive-bg']} d-flex align-items-center vh-100 text-white`}
-        
-      >
-        {/* Gradient Overlay */}
-        <div className="gradient-overlay"></div>
-=======
       {/* Hero Section */}
       <section className="hero-modern" style={{ paddingTop: "120px" }}>
         <div className="container-modern">
@@ -64,7 +53,6 @@ export default function Home() {
                     <ArrowRight size={20} />
                   </Link>
                 </div>
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
 
                 {/* Trust Indicators */}
                 <div className="d-flex flex-wrap gap-4 text-subtle">
@@ -225,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="section-modern">
+      <section className="section-modern bg-white">
         <div className="container-modern">
           <div className="row align-items-center g-5">
             <div className="col-lg-6" data-aos="fade-right">
@@ -324,27 +312,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        className="container-fluid py-5 px-4"
-        style={{ background: "rgba(93, 0, 93, 0.55)" }}
-      >
-        <div className="row align-items-center">
-          {/* Executive Photo */}
-          <div className="col-lg-5 mb-4 mb-lg-0 text-center">
-            <Image
-              src="/about-us/reshma_parambil.jpg" // Replace with real image path
-              alt="Dr. Reshma Parambil"
-              className="img-fluid rounded shadow"
-              width={"300"}
-              height={"400"}
-                            data-aos="fade-left"
-              data-aos-delay="100"
-              style={{ maxHeight: "350px", objectFit: "cover" }}
-            />
-          </div>
-=======
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
 
       {/* Services Preview */}
       <section className="section-modern bg-light-modern">
@@ -432,7 +399,10 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-modern">
+      <section
+        className="section-modern"
+        style={{ background: "rgb(255, 216, 174)" }}
+      >
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">
@@ -580,7 +550,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="section-modern">
+      <section className="section-modern bg-white">
         <div className="container-modern">
           <div
             className="card-elevated text-center"

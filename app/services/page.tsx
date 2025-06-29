@@ -85,50 +85,7 @@ export default function Services() {
   ];
 
   return (
-<<<<<<< HEAD
-    <section className="py-5 text-white">
-      <div className="container">
-        <h1 className="text-center fw-bold my-5" data-aos="fade-up">
-          Our Treatments & Services
-        </h1>
-        <div className="row g-4">
-          {serviceList.map((service, index) => (
-<div
-  className="col-md-6 col-lg-4 d-flex"
-  key={index}
-  data-aos="zoom-in"
-  data-aos-delay={index * 100}
->
-  <a href={service.href} className="text-decoration-none w-100">
-    <div className="service-card-modern position-relative overflow-hidden w-100 rounded-4 shadow-sm">
-      
-      {/* Background Image with subtle overlay */}
-      <div
-        className="service-img position-absolute top-0 start-0 w-100 h-100"
-        style={{ backgroundImage: `url(${service.img})` }}
-      >
-        <div className="gradient-overlay w-100 h-100"></div>
-      </div>
 
-      {/* Title always visible at bottom */}
-      <div className="service-title-box position-absolute bottom-0 w-100 text-center">
-        <h5 className="fw-semibold text-white m-0 py-3 px-2">{service.name}</h5>
-      </div>
-
-      {/* Hover description (full cover) */}
-      <div className="service-hover-box position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
-        <div className="text-white px-4">
-          <p className="mb-2 small">{service.name}</p>
-          <span className="fw-semibold text-info">Read More →</span>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
-
-          ))}
-=======
     <>
       {/* Hero Section */}
       <section
@@ -437,7 +394,6 @@ export default function Services() {
               </a>
             </div>
           </div>
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
         </div>
       </section>
 

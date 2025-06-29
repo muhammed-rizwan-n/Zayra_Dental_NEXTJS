@@ -114,7 +114,7 @@ body {
   box-shadow: var(--shadow-medium);
   color: white;
 }
-<<<<<<< HEAD
+
 @media (min-width: 767.99px) {
   .content-overlay {
     top: 50%;
@@ -154,7 +154,7 @@ body {
     background: linear-gradient(to top, rgb(249, 10, 253), rgba(255, 255, 255, 0.33));
     z-index: 1;
   }
-=======
+}
 
 .btn-secondary-modern {
   background: transparent;
@@ -169,7 +169,6 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
 }
 
 .btn-secondary-modern:hover {
