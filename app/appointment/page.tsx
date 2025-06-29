@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Calendar,
   Clock,
@@ -14,6 +15,42 @@ import {
   ArrowRight,
 } from "lucide-react";
 import "./style.css";
+
+export const metadata: Metadata = {
+  title:
+    "Book Dental Appointment Leeds Online | Zayra Dental Appointment Booking",
+  description:
+    "Book your dental appointment online in Leeds. Quick & easy booking for dental check-ups, teeth whitening, implants & emergency care. Same-day appointments available.",
+  keywords: [
+    "book dental appointment Leeds",
+    "online dental booking Leeds",
+    "dental appointment booking",
+    "dentist appointment Leeds",
+    "emergency dental appointment",
+    "dental consultation Leeds",
+    "same day dental appointment",
+    "dental check up booking",
+    "Leeds dentist booking online",
+    "dental appointment Harehills",
+  ],
+  openGraph: {
+    title: "Book Dental Appointment Leeds Online | Zayra Dental",
+    description:
+      "Book your dental appointment online in Leeds. Quick & easy booking for check-ups, teeth whitening, implants & emergency care.",
+    url: "https://zayradental.co.uk/appointment",
+    images: [
+      {
+        url: "/home/waiting_room.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Book Dental Appointment Online at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/appointment",
+  },
+};
 
 export default function Appointment() {
   const appointmentTypes = [
