@@ -193,23 +193,6 @@ export default function Appointment() {
                         </a>
                       </div>
                     </div>
-                    <div className="col-md-6">
-                      <div className="quick-contact-card">
-                        <Calendar className="quick-contact-icon" size={32} />
-                        <h4>Online Form</h4>
-                        <p>Book using the form below</p>
-                        <button
-                          className="quick-contact-link"
-                          onClick={() =>
-                            document
-                              .getElementById("booking-form")
-                              ?.scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          Book Now
-                        </button>
-                      </div>
-                    </div>
                   </div>
 
                   <div className="clinic-hours mt-4">
