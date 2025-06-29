@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   ArrowRight,
   Calendar,
@@ -13,6 +14,47 @@ import {
   Zap,
 } from "lucide-react";
 import serviceList from "./serviceList.json";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+  description:
+    "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics, root canal & emergency care. Expert dentist, affordable prices. Book today!",
+  keywords: [
+    "dental services Leeds",
+    "cosmetic dentistry Leeds",
+    "teeth whitening Leeds",
+    "dental implants Leeds",
+    "dental veneers Leeds",
+    "orthodontics Leeds",
+    "dental aligners Leeds",
+    "root canal Leeds",
+    "emergency dental Leeds",
+    "dental check up Leeds",
+    "dental hygienist Leeds",
+    "composite bonding Leeds",
+    "dental crown Leeds",
+    "dental bridge Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+    description:
+      "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics & emergency care. Expert dentist, affordable prices.",
+    url: "https://zayradental.co.uk/services",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Comprehensive Dental Services at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services",
+  },
+};
 
 export default function Services() {
   const serviceCategories = [
@@ -85,7 +127,6 @@ export default function Services() {
   ];
 
   return (
-
     <>
       {/* Hero Section */}
       <section
