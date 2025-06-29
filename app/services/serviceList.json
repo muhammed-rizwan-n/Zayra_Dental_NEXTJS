@@ -1,47 +1,47 @@
 [
-    {
-      "name": "Composite and Veneers",
-      "img": "/services/dental_bonding.jpg",
-      "href": "/services/composite-and-veneers"
-    },
-    {
-      "name": "Teeth Whitening",
-      "img": "/services/teeth_white.jpg",
-      "href": "/services/teeth-whitening"
-    },
-    {
-      "name": "Dental Aligners",
-      "img": "/services/dental_aligners.jpeg",
-      "href": "/services/dental-aligners"
-    },
-    {
-      "name": "Dental Implants",
-      "img": "/services/dental_implant.jpeg",
-      "href": "/services/dental-implants"
-    },
-    {
-      "name": "Facial Aesthetics",
-      "img": "/bg-gallery.jpg",
-      "href": "/services/facial-aesthetics"
-    },
-    {
-      "name": "Cosmetic Dentist",
-      "img": "/bg-gallery.jpg",
-      "href": "/services/cosmetic-dental"
-    },
-    {
-      "name": "Dental Treatment",
-      "img": "/services/dental_treatment.jpeg",
-      "href": "/services/dental-treatment"
-    },
-    {
-      "name": "Dental Spa",
-      "img": "/bg-gallery.jpg",
-      "href": "/services/dental-spa"
-    },
-    {
-      "name": "Emergency Dental Care",
-      "img": "/bg-gallery.jpg",
-      "href": "/services/emergency-dental-care"
-    }
-  ]
+  {
+    "name": "General Dentistry",
+    "img": "/services/dental_treatment.jpeg",
+    "href": "/services/general-dentistry"
+  },
+  {
+    "name": "Composite and Veneers",
+    "img": "/services/dental_bonding.jpg",
+    "href": "/services/composite-and-veneers"
+  },
+  {
+    "name": "Teeth Whitening",
+    "img": "/services/teeth_white.jpg",
+    "href": "/services/teeth-whitening"
+  },
+  {
+    "name": "Dental Aligners",
+    "img": "/services/dental_aligners.jpeg",
+    "href": "/services/dental-aligners"
+  },
+  {
+    "name": "Dental Implants",
+    "img": "/services/dental_implant.jpeg",
+    "href": "/services/dental-implants"
+  },
+  {
+    "name": "Root Canal Treatment",
+    "img": "/services/dental_treatment.jpeg",
+    "href": "/services/root-canal"
+  },
+  {
+    "name": "Emergency Dental Care",
+    "img": "/bg-gallery.jpg",
+    "href": "/services/emergency-dental-care"
+  },
+  {
+    "name": "Facial Aesthetics",
+    "img": "/bg-gallery.jpg",
+    "href": "/services/facial-aesthetics"
+  },
+  {
+    "name": "Dental Spa",
+    "img": "/bg-gallery.jpg",
+    "href": "/services/dental-spa"
+  }
+]
