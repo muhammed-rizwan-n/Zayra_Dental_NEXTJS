@@ -6,7 +6,6 @@ import {
   Calendar,
   Eye,
   Share2,
-  Maximize2,
 } from "lucide-react";
 
 export default function Gallery() {

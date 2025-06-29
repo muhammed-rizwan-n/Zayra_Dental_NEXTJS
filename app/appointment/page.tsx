@@ -105,7 +105,7 @@ export default function Appointment() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take the first step towards a healthier, more confident smile.
-                Book your appointment online or call us directly - we're here to
+                Book your appointment online or call us directly - we&apos;re here to
                 make your dental care convenient and stress-free.
               </p>
 
@@ -290,7 +290,7 @@ export default function Appointment() {
                     Schedule Your Appointment
                   </h2>
                   <p className="text-subtle">
-                    Fill out the form below and we'll get back to you within 24
+                    Fill out the form below and we&aposll get back to you within 24
                     hours to confirm your appointment.
                   </p>
                 </div>
@@ -647,7 +647,7 @@ export default function Appointment() {
                         Book My Appointment
                       </button>
                       <p className="small text-subtle mt-3">
-                        We'll confirm your appointment within 24 hours via email
+                        We&aposll confirm your appointment within 24 hours via email
                         or phone.
                       </p>
                     </div>
@@ -670,7 +670,7 @@ export default function Appointment() {
               Need Urgent Dental Care?
             </h2>
             <p className="lead mb-4" style={{ opacity: 0.9 }}>
-              Don't wait if you're experiencing dental pain or have a dental
+              Don&apos;t wait if you&aposre experiencing dental pain or have a dental
               emergency. Call us immediately for prompt care.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
