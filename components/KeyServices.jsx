@@ -66,11 +66,8 @@ export default function KeyServices() {
 
         <div className="row g-4">
           {services.map((service, index) => (
-<<<<<<< HEAD
         <div className="col-md-5 col-lg-4" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
           <a href={service.href} className="text-decoration-none">
-=======
->>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
             <div
               className="col-lg-4 col-md-6"
               key={service.id}
@@ -152,8 +149,9 @@ export default function KeyServices() {
                 </div>
               </div>
             </div>
-          ))}
+            </a>
         </div>
+          ))}
 
         {/* Bottom CTA */}
         <div className="text-center mt-5" data-aos="fade-up">
@@ -222,6 +220,7 @@ export default function KeyServices() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
