@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Award,
   Calendar,
@@ -14,6 +15,50 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+  description:
+    "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening, dental implants & emergency dental services. Book online today!",
+  keywords: [
+    "private dentist Leeds",
+    "dentist Leeds",
+    "cosmetic dentist Leeds",
+    "teeth whitening Leeds",
+    "dental implants Leeds",
+    "emergency dentist Leeds",
+    "affordable dentist Leeds",
+    "dental clinic Leeds",
+    "Dr Reshma Parambil",
+    "Harehills Lane dentist",
+    "dental check up Leeds",
+    "root canal Leeds",
+  ],
+  openGraph: {
+    title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+    description:
+      "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
+    url: "https://zayradental.co.uk",
+    images: [
+      {
+        url: "/home/waiting_room.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zayra Dental Modern Clinic Leeds - Award Winning Dentist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Private Dentist Leeds | Zayra Dental",
+    description:
+      "Award-winning private dentist in Leeds. Affordable dental care, cosmetic dentistry & emergency services.",
+    images: ["/home/waiting_room.jpg"],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk",
+  },
+};
 
 export default function Home() {
   return (
