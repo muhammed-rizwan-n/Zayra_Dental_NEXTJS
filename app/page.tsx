@@ -1,409 +1,634 @@
 import Image from "next/image";
-//import Link from "next/link";
-import zayra_dental from "../public/zayra-dental.png";
-import { FaCheck } from "react-icons/fa";
-import KeyServiceSection from "../components/KeyServices";
+import Link from "next/link";
+import {
+  Award,
+  Calendar,
+  CheckCircle,
+  MapPin,
+  Phone,
+  Star,
+  Users,
+  Shield,
+  Clock,
+  Heart,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      <section 
-        className="d-flex align-items-center vh-100 text-white"
-        style={{
-          position: "relative",
-          backgroundImage: `url('./bg-gallery.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="gradient-overlay"></div>
+      {/* Hero Section */}
+      <section className="hero-modern" style={{ paddingTop: "120px" }}>
+        <div className="container-modern">
+          <div className="row align-items-center min-vh-100">
+            <div className="col-lg-6" data-aos="fade-right">
+              <div className="hero-content">
+                <h1 className="heading-primary mb-4">
+                  Crafting Beautiful Smiles with
+                  <span className="text-accent d-block">
+                    Expert Dental Care
+                  </span>
+                </h1>
+                <p
+                  className="lead text-subtle mb-4"
+                  style={{ fontSize: "1.2rem", lineHeight: "1.8" }}
+                >
+                  At Zayra Dental in Leeds, we combine advanced technology with
+                  compassionate care to deliver exceptional dental treatments in
+                  a comfortable, modern environment.
+                </p>
+                <div className="d-flex flex-wrap gap-3 mb-5">
+                  <Link href="/appointment" className="btn-primary-modern">
+                    <Calendar size={20} />
+                    Book Consultation
+                  </Link>
+                  <Link href="/services" className="btn-secondary-modern">
+                    Our Services
+                    <ArrowRight size={20} />
+                  </Link>
+                </div>
 
-        {/* Content */}
-        <div className="container position-relative z-2">
-          <div className="row justify-content-start align-items-center">
-            <div
-              className="col-lg-6 col-md-8 col-12 text-center"
-              data-aos="fade-right"
-            >
-              <h1 className="display-4 fw-bold mb-3"></h1>
-              <Image
-                src={zayra_dental}
-                width={"500"}
-                height={"100"}
-                alt="zayra_dental Logo"
-                className="mb-4 img-fluid"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-              />
-              <p className="lead" data-aos="fade-up" data-aos-delay="400">
-                &quot;Crafting Smiles, One Tooth at a Time.&quot;
-              </p>
-              <button
-                className="btn btn-outline-light mt-4"
-                data-aos="zoom-in-up"
-                data-aos-delay="400"
+                {/* Trust Indicators */}
+                <div className="d-flex flex-wrap gap-4 text-subtle">
+                  <div className="d-flex align-items-center gap-2">
+                    <Award size={18} className="text-accent" />
+                    <span className="small">Award Winning</span>
+                  </div>
+                  <div className="d-flex align-items-center gap-2">
+                    <Shield size={18} className="text-accent" />
+                    <span className="small">GDC Registered</span>
+                  </div>
+                  <div className="d-flex align-items-center gap-2">
+                    <Users size={18} className="text-accent" />
+                    <span className="small">1000+ Happy Patients</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+              <div className="position-relative">
+                <div className="card-elevated">
+                  <Image
+                    src="/home/waiting_room.jpg"
+                    alt="Modern Zayra Dental Clinic"
+                    width={600}
+                    height={500}
+                    className="img-fluid rounded-modern"
+                    style={{ objectFit: "cover" }}
+                    priority
+                  />
+                </div>
+
+                {/* Floating Stats Card */}
+                <div
+                  className="card-modern position-absolute d-none d-md-block"
+                  style={{
+                    bottom: "20px",
+                    left: "20px",
+                    minWidth: "200px",
+                  }}
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div className="text-center">
+                    <div className="d-flex justify-content-center mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          size={16}
+                          fill="var(--primary-teal)"
+                          color="var(--primary-teal)"
+                        />
+                      ))}
+                    </div>
+                    <div className="heading-tertiary text-accent mb-1">
+                      4.9/5
+                    </div>
+                    <div className="small text-subtle">
+                      Based on 200+ reviews
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Action Cards */}
+      <section className="section-modern bg-cream">
+        <div className="container-modern">
+          <div className="row g-4">
+            <div className="col-md-4" data-aos="fade-up">
+              <div className="card-modern text-center h-100">
+                <div className="mb-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      background: "var(--primary-teal)",
+                      color: "white",
+                    }}
+                  >
+                    <Phone size={32} />
+                  </div>
+                </div>
+                <h3 className="heading-tertiary mb-3">Call Us</h3>
+                <p className="text-subtle mb-3">
+                  Speak directly with our friendly team for immediate assistance
+                </p>
+                <a
+                  href="tel:01132488398"
+                  className="btn-teal"
+                  style={{ textDecoration: "none" }}
+                >
+                  Call 0113 248 8398
+                </a>
+              </div>
+            </div>
+
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div
+                className="card-elevated text-center h-100"
+                style={{ transform: "translateY(-20px)" }}
               >
-                Book an Appointment
-              </button>
+                <div className="mb-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      background: "var(--primary-brown)",
+                      color: "white",
+                    }}
+                  >
+                    <Calendar size={32} />
+                  </div>
+                </div>
+                <h3 className="heading-tertiary mb-3">Book Online</h3>
+                <p className="text-subtle mb-3">
+                  Schedule your appointment online 24/7 at your convenience
+                </p>
+                <Link href="/appointment" className="btn-primary-modern">
+                  Book Appointment
+                </Link>
+              </div>
+            </div>
+
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div className="card-modern text-center h-100">
+                <div className="mb-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      background: "var(--accent-teal)",
+                      color: "white",
+                    }}
+                  >
+                    <MapPin size={32} />
+                  </div>
+                </div>
+                <h3 className="heading-tertiary mb-3">Find Us</h3>
+                <p className="text-subtle mb-3">
+                  Located in the heart of Leeds, easily accessible by car or
+                  public transport
+                </p>
+                <Link href="/contact" className="btn-secondary-modern">
+                  Get Directions
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        className="d-flex align-items-center py-5"
-        style={{
-          position: "relative",
-          backgroundImage: `url('/home/waiting_room.jpg')`, // Optional background
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-        }}
-      >
-        {/* Optional Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            height: "100%",
-            width: "100%",
-            background: "rgba(99, 33, 253, 0.74)", // Light overlay
-            zIndex: 1,
-          }}
-        ></div>
 
-        <div className="container position-relative z-2">
-          <div className="row align-items-center">
-            {/* Left Image */}
-            <div
-              className="col-lg-6 col-md-6 mb-4 mb-md-0"
-              data-aos="fade-right"
-            >
-              <Image
-                src="/home/waiting_room.jpg" // Replace with your actual image
-                width={"500"}
-                height={"400"}
-                alt="Our Team"
-                className="img-fluid rounded shadow"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-              />
+      {/* About Section */}
+      <section className="section-modern">
+        <div className="container-modern">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6" data-aos="fade-right">
+              <div className="position-relative">
+                <Image
+                  src="/about-us/reshma_parambil.jpg"
+                  alt="Dr. Reshma Parambil - Principal Dentist"
+                  width={500}
+                  height={600}
+                  className="img-fluid rounded-modern shadow-modern"
+                  style={{ objectFit: "cover" }}
+                />
+
+                {/* Experience Badge */}
+                <div
+                  className="card-modern position-absolute d-none d-md-block"
+                  style={{
+                    top: "30px",
+                    right: "30px",
+                    padding: "1rem",
+                  }}
+                >
+                  <div className="text-center">
+                    <div className="heading-tertiary text-accent mb-1">15+</div>
+                    <div className="small text-subtle">Years Experience</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Right Content */}
-            <div className="col-lg-6 col-md-6 text-start" data-aos="fade-left">
-              <h2 className="fw-bold mb-3">Who We Are</h2>
-              <p className="lead mb-3">
-                At <strong>Zayra Dental</strong> in Leeds, we’re a team of
-                passionate, certified dental professionals committed to making
-                high-quality private dental care accessible and affordable.
+            <div className="col-lg-6" data-aos="fade-left">
+              <div className="mb-4">
+                <span className="text-accent fw-medium">
+                  About Zayra Dental
+                </span>
+                <h2 className="heading-secondary mt-2 mb-4">
+                  Meet Our Expert Principal Dentist
+                </h2>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="heading-tertiary text-primary-brown mb-2">
+                  Dr. Reshma Parambil
+                </h3>
+                <p className="text-subtle mb-3">BDS, MDS – Prosthodontics</p>
+                <blockquote
+                  className="border-start border-5 ps-4 mb-4"
+                  style={{ borderColor: "var(--primary-teal)" }}
+                >
+                  <p className="fst-italic lead">
+                    "I believe everyone deserves a healthy, confident
+                    smile—without fear or financial worry."
+                  </p>
+                </blockquote>
+              </div>
+
+              <p className="text-subtle mb-4">
+                With over 15 years of experience in general dentistry, Dr.
+                Reshma brings advanced training in oral and maxillofacial
+                surgery from Mysore, India, and specialized expertise in
+                restorative and cosmetic dentistry.
               </p>
-              <p>
-                With years of experience, modern technology, and a focus on
-                patient comfort, we’re here to provide care that’s gentle, safe,
-                and tailored to your needs — all at a cost that’s easier than
-                you’d expect.
-              </p>
-              <ul className="list-unstyled mt-3">
-                <li className="mb-2">
-                  <FaCheck className="mx-2" />
-                  Expert dentists you can trust{" "}
-                </li>
-                <li className="mb-2">
-                  <FaCheck className="mx-2" />
-                  Compassionate care in a modern, friendly clinic{" "}
-                </li>
-                <li className="mb-2">
-                  <FaCheck className="mx-2" />
-                  Strong focus on hygiene, safety, and comfort{" "}
-                </li>
-              </ul>
+
+              <div className="row g-3 mb-4">
+                <div className="col-sm-6">
+                  <div className="d-flex align-items-center gap-2">
+                    <CheckCircle size={20} className="text-accent" />
+                    <span>Advanced Prosthodontics</span>
+                  </div>
+                </div>
+                <div className="col-sm-6">
+                  <div className="d-flex align-items-center gap-2">
+                    <CheckCircle size={20} className="text-accent" />
+                    <span>Cosmetic Dentistry Expert</span>
+                  </div>
+                </div>
+                <div className="col-sm-6">
+                  <div className="d-flex align-items-center gap-2">
+                    <CheckCircle size={20} className="text-accent" />
+                    <span>Restorative Specialist</span>
+                  </div>
+                </div>
+                <div className="col-sm-6">
+                  <div className="d-flex align-items-center gap-2">
+                    <CheckCircle size={20} className="text-accent" />
+                    <span>Patient-Centered Care</span>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/about-us" className="btn-secondary-modern">
+                Learn More About Us
+                <ArrowRight size={20} />
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <section
-        className="container-fluid py-5 px-4"
-        style={{ background: "rgba(93, 0, 93, 0.55)" }}
-      >
-        <div className="row align-items-center">
-          {/* Executive Photo */}
-          <div className="col-lg-5 mb-4 mb-lg-0 text-center">
-            <Image
-              src="/about-us/reshma_parambil.jpg" // Replace with real image path
-              alt="Dr. Reshma Parambil"
-              className="img-fluid rounded shadow"
-              width={"300"}
-              height={"400"}
-              style={{ maxHeight: "350px", objectFit: "cover" }}
-            />
-          </div>
 
-          {/* Executive Info */}
-          <div className="col-lg-7">
-            <h2 className="fw-bold" data-aos="fade-left">
-              Meet Our Principal Dentist
+      {/* Services Preview */}
+      <section className="section-modern bg-light-modern">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Our Services</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              Comprehensive Dental Care Solutions
             </h2>
-            <h4
-              className="text-primary mb-2"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
-              Dr. Reshma Parambil
-            </h4>
             <p
-              className="text-white mb-2"
-              data-aos="fade-left"
-              data-aos-delay="200"
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
             >
-              BDS, MDS – Prosthodontics | 15+ Years of Experience
+              From routine checkups to advanced cosmetic procedures, we offer a
+              complete range of dental services to keep your smile healthy and
+              beautiful.
             </p>
-            <p className="lead" data-aos="fade-left" data-aos-delay="300">
-              &quot;I believe everyone deserves a healthy, confident
-              smile—without fear or financial worry.&quot;
-            </p>
-            <p data-aos="fade-left" data-aos-delay="400">
-              With over 10 years of experience in general dentistry, Dr. Reshma
-              brings advanced training in oral and maxillofacial surgery from
-              Mysore, India, and a strong focus on restorative and cosmetic
-              dentistry. She has completed a one-year restorative program under
-              the renowned Dr. Nigel Hargreaves.
-            </p>
+          </div>
 
-            <div className="mt-4" data-aos="fade-left" data-aos-delay="500">
-              {/* Social Links */}
-              <a
-                href="https://linkedin.com/in/dr-aisha-sharma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="me-3 text-decoration-none text-dark"
+          <div className="row g-4">
+            {[
+              {
+                icon: <Sparkles size={32} />,
+                title: "Cosmetic Dentistry",
+                description:
+                  "Transform your smile with veneers, teeth whitening, and cosmetic bonding",
+                color: "var(--primary-teal)",
+              },
+              {
+                icon: <Shield size={32} />,
+                title: "Preventive Care",
+                description:
+                  "Regular checkups, cleanings, and preventive treatments to maintain oral health",
+                color: "var(--primary-brown)",
+              },
+              {
+                icon: <Heart size={32} />,
+                title: "Restorative Dentistry",
+                description:
+                  "Dental implants, crowns, bridges, and fillings to restore function and beauty",
+                color: "var(--accent-teal)",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
-                <i className="fab fa-linkedin fa-lg"></i> LinkedIn
-              </a>
-              <a
-                href="mailto:dr.aisha@brightsmile.com"
-                className="text-decoration-none text-dark"
+                <div className="service-card-modern h-100">
+                  <div className="service-content text-center">
+                    <div
+                      className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        background: service.color,
+                        color: "white",
+                      }}
+                    >
+                      {service.icon}
+                    </div>
+                    <h3 className="heading-tertiary mb-3">{service.title}</h3>
+                    <p className="text-subtle mb-4">{service.description}</p>
+                    <Link
+                      href="/services"
+                      className="text-decoration-none d-inline-flex align-items-center gap-2"
+                      style={{ color: service.color, fontWeight: "500" }}
+                    >
+                      Learn More <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-5" data-aos="fade-up">
+            <Link href="/services" className="btn-primary-modern">
+              View All Services
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-modern">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">
+              Why Choose Zayra Dental
+            </span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              Excellence in Every Aspect of Care
+            </h2>
+          </div>
+
+          <div className="row g-4">
+            {[
+              {
+                icon: <Clock size={40} />,
+                title: "Flexible Hours",
+                description:
+                  "Evening and weekend appointments available to fit your schedule",
+              },
+              {
+                icon: <Shield size={40} />,
+                title: "Latest Technology",
+                description:
+                  "State-of-the-art equipment and modern techniques for better outcomes",
+              },
+              {
+                icon: <Heart size={40} />,
+                title: "Gentle Care",
+                description:
+                  "Comfortable, anxiety-free environment with sedation options available",
+              },
+              {
+                icon: <Award size={40} />,
+                title: "Expert Team",
+                description:
+                  "Highly qualified professionals committed to continuing education",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="col-md-6 col-lg-3"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
-                <i className="fas fa-envelope fa-lg"></i> Email
-              </a>
+                <div className="text-center">
+                  <div className="text-accent mb-3">{feature.icon}</div>
+                  <h4 className="heading-tertiary mb-3">{feature.title}</h4>
+                  <p className="text-subtle">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Patient Reviews */}
+      <section className="section-modern bg-cream">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Patient Reviews</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              What Our Patients Say About Us
+            </h2>
+          </div>
+
+          <div className="row g-4">
+            {[
+              {
+                name: "Sarah Johnson",
+                profession: "Marketing Manager",
+                rating: 5,
+                review:
+                  "Exceptional service from start to finish. Dr. Reshma and her team made me feel completely at ease during my treatment. Highly recommend!",
+                image: "/bg-gallery.jpg",
+              },
+              {
+                name: "Michael Chen",
+                profession: "Software Engineer",
+                rating: 5,
+                review:
+                  "The best dental experience I've ever had. Modern facility, friendly staff, and painless procedures. My smile has never looked better!",
+                image: "/bg-gallery.jpg",
+              },
+              {
+                name: "Emma Williams",
+                profession: "Teacher",
+                rating: 5,
+                review:
+                  "Professional, caring, and thorough. The team at Zayra Dental genuinely cares about their patients' wellbeing and comfort.",
+                image: "/bg-gallery.jpg",
+              },
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="testimonial-card h-100">
+                  <div className="d-flex mb-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        size={16}
+                        fill="var(--primary-teal)"
+                        color="var(--primary-teal)"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-subtle mb-4 fst-italic">
+                    "{review.review}"
+                  </p>
+                  <div className="d-flex align-items-center gap-3">
+                    <Image
+                      src={review.image}
+                      alt={review.name}
+                      width={50}
+                      height={50}
+                      className="rounded-circle"
+                      style={{ objectFit: "cover" }}
+                    />
+                    <div>
+                      <div className="fw-semibold">{review.name}</div>
+                      <div className="small text-subtle">
+                        {review.profession}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-5" data-aos="fade-up">
+            <div className="d-inline-flex align-items-center gap-2 text-subtle">
+              <Star
+                size={20}
+                fill="var(--primary-teal)"
+                color="var(--primary-teal)"
+              />
+              <span className="fw-semibold">4.9/5 average rating</span>
+              <span>based on 200+ reviews</span>
             </div>
           </div>
         </div>
       </section>
 
-      <KeyServiceSection />
-
-      {/* Customers Review */}
-      <section
-        className="py-5"
-        style={{
-          height: "100%",
-          width: "100%",
-          background: "rgba(99, 33, 253, 0.74)", // Light overlay
-          zIndex: 1,
-        }}
-      >
-        <div className="container">
-          <h2
-            className="fw-bold text-center mb-5 text-white"
-            data-aos="fade-up"
-          >
-            What Our Patients Say
-          </h2>
-
+      {/* Contact CTA */}
+      <section className="section-modern">
+        <div className="container-modern">
           <div
-            id="reviewCarousel"
-            className="carousel slide"
-            data-bs-ride="carousel"
+            className="card-elevated text-center"
+            style={{
+              background:
+                "linear-gradient(135deg, var(--primary-teal), var(--accent-teal))",
+              color: "white",
+            }}
           >
-            <div className="carousel-inner">
-              {/* Review 1 */}
-              <div className="carousel-item active">
-                <div className="row justify-content-center">
-                  <div className="col-md-8">
-                    <div className="card border-0 shadow p-4 text-center">
-                      <Image
-                        src="/bg-gallery.jpg"
-                        alt="Customer"
-                        className="rounded-circle mx-auto mb-3"
-                        width={"100"}
-                        height={"100"}
-                        style={{
-                          width: "80px",
-                          height: "80px",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <h5 className="mb-1">Ayesha Khan</h5>
-                      <p className="text-muted mb-2">Software Engineer</p>
-                      <div className="mb-3">
-                        {"★".repeat(5)}
-                        <span className="text-muted"> (5.0)</span>
+            <div className="row align-items-center">
+              <div className="col-lg-8">
+                <h2
+                  className="heading-secondary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Ready to Transform Your Smile?
+                </h2>
+                <p className="lead mb-4 opacity-90">
+                  Schedule your consultation today and take the first step
+                  towards a healthier, more confident smile.
+                </p>
+                <div className="d-flex flex-wrap gap-3 justify-content-center">
+                  <Link
+                    href="/appointment"
+                    className="btn"
+                    style={{
+                      background: "white",
+                      color: "var(--accent-teal)",
+                      border: "none",
+                      padding: "1rem 2rem",
+                      borderRadius: "50px",
+                      fontWeight: "500",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <Calendar size={20} />
+                    Book Consultation
+                  </Link>
+                  <a
+                    href="tel:01132488398"
+                    className="btn"
+                    style={{
+                      background: "transparent",
+                      color: "white",
+                      border: "2px solid white",
+                      padding: "1rem 2rem",
+                      borderRadius: "50px",
+                      fontWeight: "500",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <Phone size={20} />
+                    Call Now
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-4 d-none d-lg-block">
+                <div className="text-center">
+                  <div className="d-flex justify-content-center gap-4">
+                    <div>
+                      <div className="h3 mb-1" style={{ color: "white" }}>
+                        15+
                       </div>
-                      <p className="fst-italic">
-                        &quot;BrightSmile made me feel so comfortable. The staff
-                        was amazing and the service was top-notch!&quot;
-                      </p>
+                      <div className="small opacity-90">Years Experience</div>
+                    </div>
+                    <div>
+                      <div className="h3 mb-1" style={{ color: "white" }}>
+                        1000+
+                      </div>
+                      <div className="small opacity-90">Happy Patients</div>
+                    </div>
+                    <div>
+                      <div className="h3 mb-1" style={{ color: "white" }}>
+                        4.9★
+                      </div>
+                      <div className="small opacity-90">Average Rating</div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Review 2 */}
-              <div className="carousel-item">
-                <div className="row justify-content-center">
-                  <div className="col-md-8">
-                    <div className="card border-0 shadow p-4 text-center">
-                      <Image
-                        src="/bg-gallery.jpg"
-                        alt="Customer"
-                        className="rounded-circle mx-auto mb-3"
-                        width={"100"}
-                        height={"100"}
-                        style={{
-                          width: "80px",
-                          height: "80px",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <h5 className="mb-1">Ravi Sharma</h5>
-                      <p className="text-muted mb-2">Marketing Manager</p>
-                      <div className="mb-3">
-                        {"★".repeat(4)}
-                        {"☆"}
-                        <span className="text-muted"> (4.0)</span>
-                      </div>
-                      <p className="fst-italic">
-                        &quot;Very clean clinic, friendly staff, and
-                        professional doctors. Highly recommended!&quot;
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Review 3 */}
-              <div className="carousel-item">
-                <div className="row justify-content-center">
-                  <div className="col-md-8">
-                    <div className="card border-0 shadow p-4 text-center">
-                      <Image
-                        src="/bg-gallery.jpg"
-                        alt="Customer"
-                        className="rounded-circle mx-auto mb-3"
-                        width={"100"}
-                        height={"100"}
-                        style={{
-                          width: "80px",
-                          height: "80px",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <h5 className="mb-1">Meena Reddy</h5>
-                      <p className="text-muted mb-2">College Student</p>
-                      <div className="mb-3">
-                        {"★".repeat(5)}
-                        <span className="text-muted"> (5.0)</span>
-                      </div>
-                      <p className="fst-italic">
-                        &quot;Dr. Sophia explained every step clearly. I love my
-                        new smile!&quot;
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Carousel Controls */}
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#reviewCarousel"
-              data-bs-slide="prev"
-            >
-              <span className="carousel-control-prev-icon"></span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#reviewCarousel"
-              data-bs-slide="next"
-            >
-              <span className="carousel-control-next-icon"></span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-5 bg-primary">
-        <div className="container">
-          <h2 className="text-center fw-bold mb-4" data-aos="fade-up">
-            Get in Touch
-          </h2>
-
-          <div className="row g-4 align-items-start">
-            {/* Contact Details */}
-            <div className="col-md-6" data-aos="fade-right">
-              <h4 className="mb-3">Clinic Info</h4>
-              <p>
-                <strong>📍 Address:</strong> 599 Harehills Lane Leeds, LS96NQ
-              </p>
-              <p>
-                <strong>📞 Phone:</strong> <a href="tel:01132488398" className="text-white">01132488398</a>
-              </p>
-              <p>
-                <strong>✉️ Email:</strong> <a href="mail:info@zayradental.co.uk" className="text-white">info@zayradental.co.uk</a>
-              </p>
-
-              {/* Google Map */}
-              <div className="map-wrapper mt-4 rounded shadow overflow-hidden">
-                <iframe
-                  title="Zayra Dental Clinic Map"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9425.13490044596!2d-1.4994857!3d53.8022349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795dbf6d694a51%3A0x406604ce7c613151!2sZayra%20dental%20practice!5e0!3m2!1sen!2sin!4v1749748955383!5m2!1sen!2sin"
-                  width="100%"
-                  height="250"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-
-            {/* Mini Contact Form */}
-            <div className="col-md-6" data-aos="fade-left">
-              <h4 className="mb-3">Quick Message</h4>
-              <form>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email Address"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <textarea
-                    className="form-control"
-                    rows={4}
-                    placeholder="Your Message"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-100">
-                  Send Message
-                </button>
-              </form>
             </div>
           </div>
         </div>
