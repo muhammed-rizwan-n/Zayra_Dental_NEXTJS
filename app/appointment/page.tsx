@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
-  Calendar,
   Clock,
   Phone,
   Mail,
@@ -13,6 +13,42 @@ import {
   Heart,
 } from "lucide-react";
 import "./style.css";
+
+export const metadata: Metadata = {
+  title:
+    "Book Dental Appointment Leeds Online | Zayra Dental Appointment Booking",
+  description:
+    "Book your dental appointment online in Leeds. Quick & easy booking for dental check-ups, teeth whitening, implants & emergency care. Same-day appointments available.",
+  keywords: [
+    "book dental appointment Leeds",
+    "online dental booking Leeds",
+    "dental appointment booking",
+    "dentist appointment Leeds",
+    "emergency dental appointment",
+    "dental consultation Leeds",
+    "same day dental appointment",
+    "dental check up booking",
+    "Leeds dentist booking online",
+    "dental appointment Harehills",
+  ],
+  openGraph: {
+    title: "Book Dental Appointment Leeds Online | Zayra Dental",
+    description:
+      "Book your dental appointment online in Leeds. Quick & easy booking for check-ups, teeth whitening, implants & emergency care.",
+    url: "https://zayradental.co.uk/appointment",
+    images: [
+      {
+        url: "/home/waiting_room.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Book Dental Appointment Online at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/appointment",
+  },
+};
 
 export default function Appointment() {
   const appointmentTypes = [
@@ -44,22 +80,6 @@ export default function Appointment() {
       price: "£50",
       icon: <Star size={24} />,
     },
-  ];
-
-  const timeSlots = [
-    "9:00 AM",
-    "9:30 AM",
-    "10:00 AM",
-    "10:30 AM",
-    "11:00 AM",
-    "11:30 AM",
-    "2:00 PM",
-    "2:30 PM",
-    "3:00 PM",
-    "3:30 PM",
-    "4:00 PM",
-    "4:30 PM",
-    "5:00 PM",
   ];
 
   const benefits = [
@@ -120,7 +140,7 @@ export default function Appointment() {
               </div>
 
               {/* Quick Stats */}
-              <div className="row g-3 mt-4">
+              <div className="flex justify-content-center row g-3 mt-4">
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
@@ -137,12 +157,6 @@ export default function Appointment() {
                     <div className="small text-subtle">Patient Rating</div>
                   </div>
                 </div>
-                <div className="col-4">
-                  <div className="text-center">
-                    <div className="heading-tertiary text-accent mb-1">15+</div>
-                    <div className="small text-subtle">Years Experience</div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -151,12 +165,9 @@ export default function Appointment() {
                 <div className="card-elevated">
                   <div className="text-center mb-4">
                     <h3 className="heading-tertiary mb-3">Quick Booking</h3>
-                    <p className="text-subtle">
-                      Choose your preferred contact method
-                    </p>
                   </div>
 
-                  <div className="row g-3 justify-content-center">
+                  <div className="flex justify-content-center row g-3">
                     <div className="col-md-6">
                       <div className="quick-contact-card">
                         <Phone className="quick-contact-icon" size={32} />
@@ -170,7 +181,6 @@ export default function Appointment() {
                         </a>
                       </div>
                     </div>
-
                   </div>
 
                   <div className="clinic-hours mt-4">
@@ -234,7 +244,7 @@ export default function Appointment() {
       </section>
 
       {/* Appointment Types */}
-      <section className="section-modern">
+      <section className="section-modern" style={{background: "rgb(255, 222, 185)"}}>
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">Treatment Options</span>
@@ -277,387 +287,6 @@ export default function Appointment() {
         </div>
       </section>
 
-      {/* Booking Form */}
-      <section id="booking-form" className="section-modern bg-light-modern" style={{display: "none"}}>
-        <div className="container-modern">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="card-elevated">
-                <div className="text-center mb-5" data-aos="fade-up">
-                  <span className="text-accent fw-medium">Book Online</span>
-                  <h2 className="heading-secondary mt-2 mb-4">
-                    Schedule Your Appointment
-                  </h2>
-                  <p className="text-subtle">
-                    Fill out the form below and we&aposll get back to you within 24
-                    hours to confirm your appointment.
-                  </p>
-                </div>
-
-                <form
-                  className="appointment-form"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  {/* Personal Information */}
-                  <div className="form-section">
-                    <h3 className="form-section-title">Personal Information</h3>
-                    <div className="row g-3">
-                      <div className="col-md-6">
-                        <label htmlFor="firstName" className="form-label">
-                          First Name *
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control-modern"
-                          id="firstName"
-                          placeholder="John"
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="lastName" className="form-label">
-                          Last Name *
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control-modern"
-                          id="lastName"
-                          placeholder="Doe"
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="email" className="form-label">
-                          Email Address *
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control-modern"
-                          id="email"
-                          placeholder="john.doe@example.com"
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="phone" className="form-label">
-                          Phone Number *
-                        </label>
-                        <input
-                          type="tel"
-                          className="form-control-modern"
-                          id="phone"
-                          placeholder="07123 456789"
-                          required
-                        />
-                      </div>
-                      <div className="col-12">
-                        <label htmlFor="dob" className="form-label">
-                          Date of Birth
-                        </label>
-                        <input
-                          type="date"
-                          className="form-control-modern"
-                          id="dob"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Appointment Details */}
-                  <div className="form-section">
-                    <h3 className="form-section-title">Appointment Details</h3>
-                    <div className="row g-3">
-                      <div className="col-md-6">
-                        <label htmlFor="appointmentType" className="form-label">
-                          Appointment Type *
-                        </label>
-                        <select
-                          className="form-control-modern"
-                          id="appointmentType"
-                          required
-                        >
-                          <option value="">Select appointment type</option>
-                          <option value="initial">
-                            Initial Consultation (£75)
-                          </option>
-                          <option value="checkup">
-                            General Check-up (£45)
-                          </option>
-                          <option value="emergency">
-                            Emergency Appointment (£95)
-                          </option>
-                          <option value="cosmetic">
-                            Cosmetic Consultation (£50)
-                          </option>
-                          <option value="cleaning">
-                            Professional Cleaning (£65)
-                          </option>
-                          <option value="whitening">
-                            Teeth Whitening Consultation (£40)
-                          </option>
-                        </select>
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="preferredDate" className="form-label">
-                          Preferred Date *
-                        </label>
-                        <input
-                          type="date"
-                          className="form-control-modern"
-                          id="preferredDate"
-                          min={new Date().toISOString().split("T")[0]}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="preferredTime" className="form-label">
-                          Preferred Time *
-                        </label>
-                        <select
-                          className="form-control-modern"
-                          id="preferredTime"
-                          required
-                        >
-                          <option value="">Select preferred time</option>
-                          {timeSlots.map((time, index) => (
-                            <option key={index} value={time}>
-                              {time}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div className="col-md-6">
-                        <label htmlFor="alternativeDate" className="form-label">
-                          Alternative Date
-                        </label>
-                        <input
-                          type="date"
-                          className="form-control-modern"
-                          id="alternativeDate"
-                          min={new Date().toISOString().split("T")[0]}
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Medical Information */}
-                  <div className="form-section">
-                    <h3 className="form-section-title">Medical Information</h3>
-                    <div className="row g-3">
-                      <div className="col-12">
-                        <label className="form-label">
-                          Do you have any of the following? (Check all that
-                          apply)
-                        </label>
-                        <div className="medical-conditions">
-                          <div className="row g-2">
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="diabetes"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="diabetes"
-                                >
-                                  Diabetes
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="heartDisease"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="heartDisease"
-                                >
-                                  Heart Disease
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="highBP"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="highBP"
-                                >
-                                  High Blood Pressure
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="allergies"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="allergies"
-                                >
-                                  Allergies
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="pregnant"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="pregnant"
-                                >
-                                  Pregnant
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                  id="medications"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="medications"
-                                >
-                                  Taking Medications
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-12">
-                        <label htmlFor="dentalConcerns" className="form-label">
-                          Current Dental Concerns or Symptoms
-                        </label>
-                        <textarea
-                          className="form-control-modern"
-                          id="dentalConcerns"
-                          rows={4}
-                          placeholder="Please describe any pain, discomfort, or specific concerns you'd like us to address..."
-                        ></textarea>
-                      </div>
-                      <div className="col-12">
-                        <label htmlFor="lastVisit" className="form-label">
-                          When was your last dental visit?
-                        </label>
-                        <select className="form-control-modern" id="lastVisit">
-                          <option value="">Select timeframe</option>
-                          <option value="0-6months">0-6 months ago</option>
-                          <option value="6-12months">6-12 months ago</option>
-                          <option value="1-2years">1-2 years ago</option>
-                          <option value="2+years">More than 2 years ago</option>
-                          <option value="never">Never been to a dentist</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Additional Information */}
-                  <div className="form-section">
-                    <h3 className="form-section-title">
-                      Additional Information
-                    </h3>
-                    <div className="row g-3">
-                      <div className="col-12">
-                        <label htmlFor="howHeard" className="form-label">
-                          How did you hear about us?
-                        </label>
-                        <select className="form-control-modern" id="howHeard">
-                          <option value="">Please select</option>
-                          <option value="google">Google Search</option>
-                          <option value="facebook">Facebook</option>
-                          <option value="instagram">Instagram</option>
-                          <option value="friend">Friend/Family Referral</option>
-                          <option value="doctor">GP Referral</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div className="col-12">
-                        <label htmlFor="additionalNotes" className="form-label">
-                          Additional Notes
-                        </label>
-                        <textarea
-                          className="form-control-modern"
-                          id="additionalNotes"
-                          rows={3}
-                          placeholder="Any special requests, accessibility needs, or additional information..."
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Terms and Submit */}
-                  <div className="form-section">
-                    <div className="form-check mb-4">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="terms"
-                        required
-                      />
-                      <label className="form-check-label" htmlFor="terms">
-                        I agree to the{" "}
-                        <Link href="/privacy" className="text-decoration-none">
-                          privacy policy
-                        </Link>{" "}
-                        and consent to my personal data being processed for
-                        appointment booking and dental care. *
-                      </label>
-                    </div>
-
-                    <div className="form-check mb-4">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="marketing"
-                      />
-                      <label className="form-check-label" htmlFor="marketing">
-                        I would like to receive updates about dental health tips
-                        and special offers.
-                      </label>
-                    </div>
-
-                    <div className="text-center">
-                      <button
-                        type="submit"
-                        className="btn-primary-modern btn-lg"
-                      >
-                        <Calendar size={20} />
-                        Book My Appointment
-                      </button>
-                      <p className="small text-subtle mt-3">
-                        We&aposll confirm your appointment within 24 hours via email
-                        or phone.
-                      </p>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Emergency Contact */}
       <section
         className="section-modern"
@@ -669,7 +298,7 @@ export default function Appointment() {
               Need Urgent Dental Care?
             </h2>
             <p className="lead mb-4" style={{ opacity: 0.9 }}>
-              Don&apos;t wait if you&aposre experiencing dental pain or have a dental
+              Don&apos;t wait if you&apos;re experiencing dental pain or have a dental
               emergency. Call us immediately for prompt care.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">

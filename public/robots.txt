@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Specific directives for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block access to admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://zayradental.co.uk/sitemap.xml
+
+# Additional SEO directives
+# Allow access to CSS and JS files for better rendering
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.webp
+Allow: *.svg
+
+# Specific dental service pages optimization
+Allow: /services/
+Allow: /appointment
+Allow: /contact
+Allow: /pricing
+Allow: /about-us
+Allow: /gallery

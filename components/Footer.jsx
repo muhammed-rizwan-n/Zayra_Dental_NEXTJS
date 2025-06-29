@@ -61,9 +61,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-light mb-4" style={{ opacity: 0.9 }}>
-              Your trusted dental practice in Leeds, providing exceptional care
-              with modern technology and a gentle approach. Creating beautiful,
-              healthy smiles for over 15 years.
+              Your trusted dental practice in Leeds, delivering exceptional care
+              through modern technology and a gentle, patient-focused approach —
+              creating beautiful, healthy smiles every day.
             </p>
 
             {/* Review Summary */}

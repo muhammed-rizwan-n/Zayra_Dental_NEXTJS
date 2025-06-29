@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import alignerTypes from "./alignerTypes.json";
 import benefits from "./benefits.json";
 import treatmentSteps from "./treatmentSteps.json";
@@ -16,8 +17,44 @@ import {
   Smartphone,
 } from "lucide-react";
 
-export default function DentalAligners() {
+export const metadata: Metadata = {
+  title:
+    "Dental Aligners Leeds | Invisible Braces | Clear Aligners | Zayra Dental",
+  description:
+    "Invisible dental aligners in Leeds - straighten teeth discreetly! Clear aligners from £1,500. Faster than traditional braces. Free consultation & 3D scan available.",
+  keywords: [
+    "dental aligners Leeds",
+    "invisible braces Leeds",
+    "clear aligners Leeds",
+    "teeth straightening Leeds",
+    "orthodontics Leeds",
+    "invisible orthodontics",
+    "clear braces Leeds",
+    "teeth alignment Leeds",
+    "crooked teeth treatment",
+    "adult braces Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Aligners Leeds | Invisible Braces | Clear Aligners | Zayra Dental",
+    description:
+      "Invisible dental aligners in Leeds - straighten teeth discreetly! Clear aligners from £1,500. Faster than traditional braces.",
+    url: "https://zayradental.co.uk/services/dental-aligners",
+    images: [
+      {
+        url: "/services/dental-aligners.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dental Aligners and Clear Braces Treatment at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/dental-aligners",
+  },
+};
 
+export default function DentalAligners() {
   return (
     <>
       {/* Hero Section */}
@@ -46,10 +83,10 @@ export default function DentalAligners() {
                 </span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Achieve the straight, beautiful smile you&quot;ve always wanted with
-                virtually invisible aligners. Our clear aligner treatments offer
-                a comfortable, convenient alternative to traditional braces with
-                predictable, professional results.
+                Achieve the straight, beautiful smile you&quot;ve always wanted
+                with virtually invisible aligners. Our clear aligner treatments
+                offer a comfortable, convenient alternative to traditional
+                braces with predictable, professional results.
               </p>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
@@ -230,7 +267,7 @@ export default function DentalAligners() {
             </p>
           </div>
 
-          <div className="row g-4">
+          <div className="flex justify-content-center row g-4">
             {treatmentSteps.map((step, index) => (
               <div
                 key={index}
@@ -279,7 +316,7 @@ export default function DentalAligners() {
             </p>
           </div>
 
-          <div className="row g-4">
+          <div className="flex justify-content-center row g-4">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
@@ -455,8 +492,8 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Nobody knew I was wearing aligners! The treatment was so
-                  convenient and the results are amazing.&rdquo;
+                  &ldquo;Nobody knew I was wearing aligners! The treatment was
+                  so convenient and the results are amazing.&rdquo;
                 </p>
                 <div className="fw-semibold">Rachel M.</div>
                 <div className="small text-subtle">8 months treatment</div>
@@ -475,8 +512,10 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  {"Perfect for my busy lifestyle. I could eat normally and\
-                  maintain my oral hygiene easily."}
+                  {
+                    "Perfect for my busy lifestyle. I could eat normally and\
+                  maintain my oral hygiene easily."
+                  }
                 </p>
                 <div className="fw-semibold">David L.</div>
                 <div className="small text-subtle">12 months treatment</div>
@@ -495,8 +534,10 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  {"The 3D preview showed me exactly what my smile would look\
-                  like. The results matched perfectly!"}
+                  {
+                    "The 3D preview showed me exactly what my smile would look\
+                  like. The results matched perfectly!"
+                  }
                 </p>
                 <div className="fw-semibold">Sophie T.</div>
                 <div className="small text-subtle">6 months treatment</div>
@@ -522,8 +563,8 @@ export default function DentalAligners() {
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
                 Book your free smile assessment and discover how clear aligners
-                can give you the straight, confident smile you&quot;ve always wanted
-                - virtually invisibly!
+                can give you the straight, confident smile you&quot;ve always
+                wanted - virtually invisibly!
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">

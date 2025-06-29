@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   MapPin,
   Phone,
@@ -14,6 +15,42 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title:
+    "Contact Dentist Leeds | Book Appointment | Zayra Dental Harehills Lane",
+  description:
+    "Contact Zayra Dental Leeds - Call 0113 248 8398 to book your appointment. Located on Harehills Lane with free parking. Emergency dental care available.",
+  keywords: [
+    "contact dentist Leeds",
+    "book dental appointment Leeds",
+    "dentist Harehills Lane",
+    "emergency dentist Leeds",
+    "Zayra Dental contact",
+    "dental clinic Leeds location",
+    "dental appointment booking",
+    "Leeds dentist phone number",
+    "dental emergency Leeds",
+    "dentist near me Leeds",
+  ],
+  openGraph: {
+    title: "Contact Dentist Leeds | Book Appointment | Zayra Dental",
+    description:
+      "Contact Zayra Dental Leeds - Call 0113 248 8398 to book appointment. Located on Harehills Lane with free parking & emergency care.",
+    url: "https://zayradental.co.uk/contact",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Zayra Dental Leeds - Modern Dental Clinic",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/contact",
+  },
+};
 
 export default function Contact() {
   const contactInfo = {

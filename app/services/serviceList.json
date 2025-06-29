@@ -26,22 +26,22 @@
   },
   {
     "name": "Root Canal Treatment",
-    "img": "/services/dental_treatment.jpeg",
+    "img": "/services/bg-dental.jpg",
     "href": "/services/root-canal"
   },
   {
     "name": "Emergency Dental Care",
-    "img": "/bg-gallery.jpg",
+    "img": "/services/bg-emergency.jpg",
     "href": "/services/emergency-dental-care"
   },
   {
     "name": "Facial Aesthetics",
-    "img": "/bg-gallery.jpg",
+    "img": "/services/facial_aesthetics.jpg",
     "href": "/services/facial-aesthetics"
   },
   {
     "name": "Dental Spa",
-    "img": "/bg-gallery.jpg",
+    "img": "/services/dental_spa.jpg",
     "href": "/services/dental-spa"
   }
 ]

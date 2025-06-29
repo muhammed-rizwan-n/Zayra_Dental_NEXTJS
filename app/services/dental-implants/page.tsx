@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
@@ -10,6 +11,42 @@ import {
   Award,
   Heart,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Implants Leeds | Tooth Replacement | Zayra Dental Implant Specialist",
+  description:
+    "Expert dental implants in Leeds - permanent tooth replacement solution. Single implants from £1,200. 20+ year lifespan. Free consultation. Book your implant assessment today.",
+  keywords: [
+    "dental implants Leeds",
+    "tooth implants Leeds",
+    "dental implant specialist",
+    "single tooth implant",
+    "multiple dental implants",
+    "implant dentist Leeds",
+    "tooth replacement Leeds",
+    "dental implant cost",
+    "missing teeth Leeds",
+    "implant surgery Leeds",
+  ],
+  openGraph: {
+    title: "Dental Implants Leeds | Tooth Replacement | Zayra Dental",
+    description:
+      "Expert dental implants in Leeds - permanent tooth replacement. Single implants from £1,200. 20+ year lifespan. Free consultation available.",
+    url: "https://zayradental.co.uk/services/dental-implants",
+    images: [
+      {
+        url: "/services/dental-implants.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dental Implants Treatment at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/dental-implants",
+  },
+};
 
 export default function DentalImplants() {
   const benefits = [
@@ -446,8 +483,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The implant feels completely natural. I can eat anything I
-                  want and smile with confidence again.&rdquo;
+                  &ldquo;The implant feels completely natural. I can eat
+                  anything I want and smile with confidence again.&rdquo;
                 </p>
                 <div className="fw-semibold">Sarah M.</div>
                 <div className="small text-subtle">Single Implant Patient</div>
@@ -466,8 +503,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Best decision I ever made. The team was professional and the
-                  results exceeded my expectations.&rdquo;
+                  &ldquo;Best decision I ever made. The team was professional
+                  and the results exceeded my expectations.&rdquo;
                 </p>
                 <div className="fw-semibold">Michael R.</div>
                 <div className="small text-subtle">Multiple Implants</div>
@@ -486,8 +523,8 @@ export default function DentalImplants() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;From consultation to final crown, the entire process was
-                  smooth and pain-free.&rdquo;
+                  &ldquo;From consultation to final crown, the entire process
+                  was smooth and pain-free.&rdquo;
                 </p>
                 <div className="fw-semibold">Emma L.</div>
                 <div className="small text-subtle">Full Mouth Restoration</div>

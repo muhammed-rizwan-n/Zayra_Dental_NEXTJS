@@ -329,7 +329,7 @@ export default function GeneralDentistry() {
             </p>
           </div>
 
-          <div className="row g-4">
+          <div className="flex justify-content-center row g-4">
             {whatToExpect.map((step, index) => (
               <div
                 key={index}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Award,
   Users,
@@ -13,40 +14,44 @@ import {
   Eye,
   Lightbulb,
 } from "lucide-react";
+import teamMembers from "./teamMembers.json";
+
+export const metadata: Metadata = {
+  title: "About Dr Reshma Parambil | Expert Dentist Leeds | Zayra Dental",
+  description:
+    "Meet Dr Reshma Parambil, experienced dentist in Leeds with 15+ years expertise in cosmetic & restorative dentistry. GDC registered, patient-focused dental care.",
+  keywords: [
+    "Dr Reshma Parambil dentist",
+    "experienced dentist Leeds",
+    "cosmetic dentist Leeds",
+    "prosthodontist Leeds",
+    "dental team Leeds",
+    "qualified dentist Leeds",
+    "BDS MDS dentist",
+    "restorative dentist Leeds",
+    "about Zayra Dental",
+    "dental practice Leeds team",
+  ],
+  openGraph: {
+    title: "About Dr Reshma Parambil | Expert Dentist Leeds | Zayra Dental",
+    description:
+      "Meet Dr Reshma Parambil, experienced dentist in Leeds with 15+ years expertise in cosmetic & restorative dentistry. Patient-focused dental care.",
+    url: "https://zayradental.co.uk/about-us",
+    images: [
+      {
+        url: "/about-us/reshma_parambil.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Reshma Parambil - Principal Dentist at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/about-us",
+  },
+};
 
 export default function About() {
-  const teamMembers = [
-    {
-      name: "Dr. Reshma Parambil",
-      title: "Principal Dentist & Founder",
-      qualification: "BDS, MDS – Prosthodontics",
-      experience: "15+ Years Experience",
-      specialization: "Cosmetic Dentistry, Full Mouth Rehabilitation",
-      quote: "A confident smile is the most beautiful thing you can wear.",
-      image: "/about-us/reshma_parambil.jpg",
-      expertise: [
-        "Advanced Prosthodontics",
-        "Cosmetic Dentistry",
-        "Restorative Specialist",
-        "Patient-Centered Care",
-      ],
-    },
-    {
-      name: "Dr. Emilio Cecamore",
-      title: "Specialist Orthodontist",
-      qualification: "BDS, MOrth",
-      experience: "12+ Years Experience",
-      specialization: "Dental Aligners, Braces & Smile Correction",
-      quote: "Precision is the key to unlocking a perfect smile.",
-      image: "/about-us/emilio.jpg",
-      expertise: [
-        "Invisalign Specialist",
-        "Orthodontics",
-        "Smile Correction",
-        "Digital Treatment Planning",
-      ],
-    },
-  ];
 
   const values = [
     {
@@ -115,7 +120,7 @@ export default function About() {
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "120px", minHeight: "70vh" }}
+        style={{ paddingTop: "130px",paddingBottom:"30px", minHeight: "70vh" }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
@@ -126,10 +131,10 @@ export default function About() {
                 <span className="text-primary-brown d-block">Leeds</span>
               </h1>
               <p className="lead text-subtle mb-4">
-                At Zayra Dental, we&apos;re on a mission to make high-quality private
-                dental care affordable and accessible for everyone in Leeds. We
-                believe cost should never stand in the way of a healthy,
-                confident smile.
+                At Zayra Dental, we&apos;re on a mission to make high-quality
+                private dental care affordable and accessible for everyone in
+                Leeds. We believe cost should never stand in the way of a
+                healthy, confident smile.
               </p>
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
@@ -143,13 +148,8 @@ export default function About() {
               </div>
 
               {/* Stats */}
-              <div className="row g-4 mt-3">
-                <div className="col-4">
-                  <div className="text-center">
-                    <div className="heading-tertiary text-accent mb-1">15+</div>
-                    <div className="small text-subtle">Years Experience</div>
-                  </div>
-                </div>
+              <div className="flex justify-content-center row g-4 mt-3" style={{display:"none"}}>
+                
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
@@ -173,7 +173,7 @@ export default function About() {
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
-                    src="/gallery/Zayradental_Edits_11.jpg"
+                    src="/about-us/op.jpg"
                     alt="Modern Zayra Dental Clinic Interior"
                     width={600}
                     height={500}
@@ -193,7 +193,7 @@ export default function About() {
           <div className="row align-items-center g-5">
             <div className="col-lg-6" data-aos="fade-right">
               <Image
-                src="/home/waiting_room.jpg"
+                src="/about-us/ab2.jpg"
                 alt="Zayra Dental Reception Area"
                 width={600}
                 height={500}
@@ -209,8 +209,8 @@ export default function About() {
               </h2>
               <p className="text-subtle mb-4">
                 Our clinic is built around comfort, honesty, and care that truly
-                puts patients first. We don&apos;t push unnecessary treatments — just
-                expert dental care that fits your needs and your budget.
+                puts patients first. We don&apos;t push unnecessary treatments —
+                just expert dental care that fits your needs and your budget.
               </p>
               <p className="text-subtle mb-4">
                 With flexible payment options and a welcoming atmosphere, we
@@ -241,7 +241,10 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="section-modern" style={{background: "rgb(255, 200, 123)"}}>
+      <section
+        className="section-modern"
+        style={{ background: "rgba(255, 200, 123, 0.81)" }}
+      >
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">Meet Our Expert Team</span>
@@ -452,8 +455,8 @@ export default function About() {
                     Our Vision
                   </h3>
                   <p style={{ opacity: 0.9 }}>
-                    To be Leeds&apos; most trusted dental practice, known for making
-                    high-quality dental care accessible, affordable, and
+                    To be Leeds&apos; most trusted dental practice, known for
+                    making high-quality dental care accessible, affordable, and
                     anxiety-free for every patient who walks through our doors.
                   </p>
                 </div>
@@ -497,12 +500,12 @@ export default function About() {
         <div className="container-modern">
           <div className="text-center" data-aos="fade-up">
             <h2 className="heading-secondary mb-4">
-              Ready to Experience the Zayra Dental Difference?
+              Ready to Experience the Difference?
             </h2>
             <p className="lead text-subtle mb-4">
               Join over 1000 satisfied patients who trust us with their smiles.
-              Book your consultation today and discover why we&apos;re Leeds&apos;
-              favorite dental practice.
+              Book your consultation today and discover why we&apos;re
+              Leeds&apos; favorite dental practice.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <Link href="/appointment" className="btn-primary-modern">

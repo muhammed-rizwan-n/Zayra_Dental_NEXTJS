@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   ArrowRight,
   Calendar,
@@ -13,6 +14,47 @@ import {
   Zap,
 } from "lucide-react";
 import serviceList from "./serviceList.json";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+  description:
+    "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics, root canal & emergency care. Expert dentist, affordable prices. Book today!",
+  keywords: [
+    "dental services Leeds",
+    "cosmetic dentistry Leeds",
+    "teeth whitening Leeds",
+    "dental implants Leeds",
+    "dental veneers Leeds",
+    "orthodontics Leeds",
+    "dental aligners Leeds",
+    "root canal Leeds",
+    "emergency dental Leeds",
+    "dental check up Leeds",
+    "dental hygienist Leeds",
+    "composite bonding Leeds",
+    "dental crown Leeds",
+    "dental bridge Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+    description:
+      "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics & emergency care. Expert dentist, affordable prices.",
+    url: "https://zayradental.co.uk/services",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Comprehensive Dental Services at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services",
+  },
+};
 
 export default function Services() {
   const serviceCategories = [
@@ -85,12 +127,11 @@ export default function Services() {
   ];
 
   return (
-
     <>
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "120px", minHeight: "70vh" }}
+        style={{ paddingTop: "130px",paddingBottom: "20px", minHeight: "70vh" }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
@@ -122,7 +163,7 @@ export default function Services() {
                   <Award size={18} className="text-accent" />
                   <span className="small">GDC Registered</span>
                 </div>
-                <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center gap-2 d-none">
                   <Clock size={18} className="text-accent" />
                   <span className="small">15+ Years Experience</span>
                 </div>
@@ -137,7 +178,7 @@ export default function Services() {
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
-                    src="/gallery/Zayradental_Edits_02.jpg"
+                    src="/services/bg-contact.jpg"
                     alt="Modern Dental Treatment Room"
                     width={600}
                     height={500}

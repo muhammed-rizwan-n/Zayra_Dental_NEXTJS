@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dr. Reshma Parambil",
+    "title": "Principal Dentist & Founder",
+    "qualification": "BDS, MDS – Prosthodontics",
+    "experience": "15+ Years Experience",
+    "specialization": "Cosmetic Dentistry, Full Mouth Rehabilitation",
+    "quote": "A confident smile is the most beautiful thing you can wear.",
+    "image": "/about-us/reshma_parambil.jpg",
+    "expertise": [
+      "Advanced Prosthodontics",
+      "Cosmetic Dentistry",
+      "Restorative Specialist",
+      "Patient-Centered Care"
+    ]
+  },
+  {
+    "name": "Dr. Emilio Cecamore",
+    "title": "Specialist Orthodontist",
+    "qualification": "BDS, MOrth",
+    "experience": "12+ Years Experience",
+    "specialization": "Dental Aligners, Braces & Smile Correction",
+    "quote": "Precision is the key to unlocking a perfect smile.",
+    "image": "/about-us/emilio.jpg",
+    "expertise": [
+      "Invisalign Specialist",
+      "Orthodontics",
+      "Smile Correction",
+      "Digital Treatment Planning"
+    ]
+  }
+]

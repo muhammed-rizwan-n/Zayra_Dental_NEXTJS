@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
@@ -12,6 +13,43 @@ import {
   Heart,
 } from "lucide-react";
 import pricingData from "./pricing.json";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Prices Leeds | Affordable Dental Treatment Costs | Zayra Dental",
+  description:
+    "Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. No hidden costs. Get your quote today!",
+  keywords: [
+    "dental prices Leeds",
+    "dental costs Leeds",
+    "affordable dentist Leeds",
+    "dental treatment prices",
+    "dental finance Leeds",
+    "cheap dentist Leeds",
+    "dental payment plans",
+    "dental fees Leeds",
+    "private dental costs",
+    "dental price list Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Prices Leeds | Affordable Dental Treatment Costs | Zayra Dental",
+    description:
+      "Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. No hidden costs.",
+    url: "https://zayradental.co.uk/pricing",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Affordable Dental Prices at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/pricing",
+  },
+};
 
 export default function PricingSection() {
   const paymentOptions = [
@@ -52,7 +90,7 @@ export default function PricingSection() {
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "120px", minHeight: "70vh" }}
+        style={{ paddingTop: "120px", paddingBottom:"20px", minHeight: "70vh" }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
@@ -112,8 +150,9 @@ export default function PricingSection() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              We believe everyone deserves access to quality dental care. That&apos;s
-              why we offer flexible payment options to fit your budget.
+              We believe everyone deserves access to quality dental care.
+              That&apos;s why we offer flexible payment options to fit your
+              budget.
             </p>
           </div>
 

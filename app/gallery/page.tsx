@@ -1,12 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Camera,
   ArrowRight,
   Calendar,
-  Eye,
-  Share2,
+  Eye
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title:
+    "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental Photos",
+  description:
+    "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers, implants & smile makeover transformations. Virtual clinic tour available.",
+  keywords: [
+    "dental clinic Leeds photos",
+    "dental before after Leeds",
+    "teeth whitening results",
+    "dental transformation Leeds",
+    "smile makeover Leeds",
+    "dental clinic interior",
+    "dental treatment results",
+    "cosmetic dentistry results",
+    "dental practice Leeds tour",
+    "dental gallery Leeds",
+  ],
+  openGraph: {
+    title:
+      "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental",
+    description:
+      "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
+    url: "https://zayradental.co.uk/gallery",
+    images: [
+      {
+        url: "/gallery/Zayradental_Edits_11.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zayra Dental Clinic Gallery Leeds - Modern Dental Practice",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/gallery",
+  },
+};
 
 export default function Gallery() {
   const galleryCategories = [
@@ -16,12 +53,12 @@ export default function Gallery() {
         "Take a virtual tour of our modern, comfortable dental practice",
       images: [
         {
-          src: "/gallery/Zayradental_Edits_11.jpg",
+          src: "/gallery/Zayradental_Edits_29.jpg",
           alt: "Reception Area",
           category: "interior",
         },
         {
-          src: "/gallery/Zayradental_Edits_02.jpg",
+          src: "/gallery/Zayradental_Edits_13.jpg",
           alt: "Treatment Room",
           category: "interior",
         },
@@ -31,7 +68,7 @@ export default function Gallery() {
           category: "interior",
         },
         {
-          src: "/gallery/file.svg",
+          src: "/gallery/Zayradental_Edits_13.jpg",
           alt: "Modern Equipment",
           category: "interior",
         },
@@ -73,25 +110,22 @@ export default function Gallery() {
           src: "/about-us/reshma_parambil.jpg",
           alt: "Dr. Reshma Parambil",
           category: "team",
-          classname: "custom-focus",
         },
         {
           src: "/about-us/emilio.jpg",
           alt: "Dr. Emilio Cecamore",
           category: "team",
-              className: "custom-focus"
         },
         { src: "/about-us/bg-team.jpg", alt: "Team Photo", category: "team" },
-        { src: "/bg-gallery.jpg", alt: "Staff Meeting", category: "team" },
       ],
     },
   ];
 
   const allImages = galleryCategories.flatMap((category) => category.images);
-
+  
   const stats = [
     { number: "500+", label: "Happy Patients" },
-    { number: "15+", label: "Years Experience" },
+    { number: "5+", label: "Years Experience" },
     { number: "1000+", label: "Successful Treatments" },
     { number: "4.9★", label: "Patient Rating" },
   ];
@@ -115,19 +149,19 @@ export default function Gallery() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take a virtual tour of our state-of-the-art dental practice and
-                see the incredible smile transformations we&apos;ve achieved for our
-                patients. Every picture tells a story of confidence, health, and
-                happiness.
+                see the incredible smile transformations we&apos;ve achieved for
+                our patients. Every picture tells a story of confidence, health,
+                and happiness.
               </p>
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
                   <Calendar size={20} />
                   Book Your Visit
                 </Link>
-                {/* <Link href="/about-us" className="btn-secondary-modern">
+                <Link href="/about-us" className="btn-secondary-modern">
                   <Eye size={20} />
                   Virtual Tour
-                </Link> */}
+                </Link>
               </div>
 
               {/* Stats */}
@@ -187,12 +221,14 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-
+      <p>{allImages.toString()}</p>
       {/* Gallery Categories */}
       {galleryCategories.map((category, categoryIndex) => (
         <section
           key={categoryIndex}
-          className={`section-modern ${categoryIndex % 2 === 1 ? "bg-cream" : ""}`}
+          className={`section-modern ${
+            categoryIndex % 2 === 1 ? "bg-cream" : ""
+          }`}
         >
           <div className="container-modern">
             <div className="text-center mb-5" data-aos="fade-up">
@@ -206,18 +242,18 @@ export default function Gallery() {
               </p>
             </div>
 
-            <div className="row g-4 justify-content-center">
+            <div className="flex justify-content-center row g-4">
               {category.images.map((image, imageIndex) => (
                 <div
                   key={imageIndex}
-                  className="col-12 col-sm-15 col-md-5 col-lg-3 col-xl-3 col-xxl-3" // "col-lg-6 col-xl-3"
+                  className="col-lg-6 col-xl-3"
                   data-aos="fade-up"
                   data-aos-delay={imageIndex * 100}
                 >
                   <div className="card-modern overflow-hidden p-0 h-100">
                     <div
                       className="position-relative overflow-hidden"
-                      style={{ height: "300px"}}
+                      style={{ height: "250px" }}
                     >
                       <Image
                         src={image.src}
@@ -266,7 +302,7 @@ export default function Gallery() {
                             color: "var(--primary-teal)",
                           }}
                         >
-                          <Share2 size={16} />
+                          {/* <Share2 size={16} /> */}
                         </button>
                       </div>
                     </div>
@@ -307,7 +343,9 @@ export default function Gallery() {
             {allImages.map((image, index) => (
               <div
                 key={index}
-                className={`col-lg-${index % 4 === 0 ? "6" : index % 3 === 0 ? "4" : "3"} col-md-6`}
+                className={`col-lg-${
+                  index % 4 === 0 ? "6" : index % 3 === 0 ? "4" : "3"
+                } col-md-6`}
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               >
@@ -318,8 +356,8 @@ export default function Gallery() {
                       index % 5 === 0
                         ? "350px"
                         : index % 3 === 0
-                          ? "280px"
-                          : "220px",
+                        ? "280px"
+                        : "220px",
                   }}
                 >
                   <div className="position-relative h-100 overflow-hidden">
@@ -418,7 +456,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-modern" style={{background: "rgb(249, 243, 255)"}}>
+      <section className="section-modern">
         <div className="container-modern">
           <div className="text-center" data-aos="fade-up">
             <h2 className="heading-secondary mb-4">

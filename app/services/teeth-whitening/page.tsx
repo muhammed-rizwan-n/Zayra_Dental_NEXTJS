@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
@@ -8,6 +9,42 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
+  description:
+    "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results. Book your teeth whitening consultation today.",
+  keywords: [
+    "teeth whitening Leeds",
+    "tooth whitening Leeds",
+    "professional teeth whitening",
+    "teeth bleaching Leeds",
+    "cosmetic dentist Leeds",
+    "teeth whitening cost",
+    "dental whitening Leeds",
+    "laser teeth whitening",
+    "teeth whitening near me",
+    "smile makeover Leeds",
+  ],
+  openGraph: {
+    title:
+      "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
+    description:
+      "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results available.",
+    url: "https://zayradental.co.uk/services/teeth-whitening",
+    images: [
+      {
+        url: "/services/teeth-whitening.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Professional Teeth Whitening Treatment at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/teeth-whitening",
+  },
+};
 
 export default function TeethWhitening() {
   const benefits = [

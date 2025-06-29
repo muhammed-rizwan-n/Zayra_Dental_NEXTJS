@@ -302,7 +302,7 @@ export default function RootCanal() {
             </p>
           </div>
 
-          <div className="row g-4">
+          <div className="flex justify-content-center row g-4">
             {treatmentSteps.map((step, index) => (
               <div
                 key={index}
