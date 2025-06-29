@@ -7,7 +7,6 @@ import {
   Star,
   ArrowRight,
   Phone,
-  Shield,
   Award,
   Heart,
 } from "lucide-react";

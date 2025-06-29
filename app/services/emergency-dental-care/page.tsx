@@ -393,7 +393,7 @@ export default function EmergencyDentalCare() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              When you&apos;re in pain, you need immediate, expert care. We're
+              When you&apos;re in pain, you need immediate, expert care. We&apos;re
               equipped and ready to handle any dental emergency with speed and
               precision.
             </p>

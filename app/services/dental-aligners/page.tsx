@@ -455,8 +455,8 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Nobody knew I was wearing aligners! The treatment was so
-                  convenient and the results are amazing."
+                  &ldquo;Nobody knew I was wearing aligners! The treatment was so
+                  convenient and the results are amazing.&rdquo;
                 </p>
                 <div className="fw-semibold">Rachel M.</div>
                 <div className="small text-subtle">8 months treatment</div>
@@ -475,8 +475,8 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "Perfect for my busy lifestyle. I could eat normally and
-                  maintain my oral hygiene easily."
+                  {"Perfect for my busy lifestyle. I could eat normally and\
+                  maintain my oral hygiene easily."}
                 </p>
                 <div className="fw-semibold">David L.</div>
                 <div className="small text-subtle">12 months treatment</div>
@@ -495,8 +495,8 @@ export default function DentalAligners() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  "The 3D preview showed me exactly what my smile would look
-                  like. The results matched perfectly!"
+                  {"The 3D preview showed me exactly what my smile would look\
+                  like. The results matched perfectly!"}
                 </p>
                 <div className="fw-semibold">Sophie T.</div>
                 <div className="small text-subtle">6 months treatment</div>

@@ -493,7 +493,7 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">"It&apos;s better to extract the tooth"</p>
+                <p className="mb-3">&ldquo;It&apos;s better to extract the tooth&rdquo;</p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Saving your natural tooth is almost
                   always the best option. Root canal treatment has a 95% success
