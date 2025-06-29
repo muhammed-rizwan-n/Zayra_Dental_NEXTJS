@@ -140,14 +140,14 @@ export default function Footer() {
             </h5>
             <ul className="list-unstyled">
               {services.map((service) => (
-                <li key={service} className="mb-2">
-                  <span
-                    className="d-flex align-items-center gap-2"
-                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                <li key={service.name} className="mb-2">
+                  <Link
+                    href={service.href}
+                    className="footer-link d-flex align-items-center gap-2 text-decoration-none"
                   >
                     <ArrowRight size={14} />
-                    {service}
-                  </span>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
