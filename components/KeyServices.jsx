@@ -1,125 +1,227 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight, Sparkles, Shield, Heart } from "lucide-react";
 
 const services = [
   {
     id: 1,
-    name: "Teeth Whitening",
-    img: "/services/dental_bonding.jpg",
-    href: "/services/teeth-whitening",
+    name: "Cosmetic Dentistry",
     description:
-      "Brighten your smile with our safe, effective teeth whitening treatments designed for lasting results.",
+      "Transform your smile with professional teeth whitening, veneers, and cosmetic bonding for stunning, natural-looking results.",
+    img: "/services/dental_bonding.jpg",
+    href: "/services/cosmetic-dentistry",
+    icon: <Sparkles size={24} />,
+    color: "var(--primary-teal)",
+    features: [
+      "Teeth Whitening",
+      "Veneers",
+      "Cosmetic Bonding",
+      "Smile Makeover",
+    ],
   },
   {
     id: 2,
-    name: "Root Canal Therapy",
-    img: "/bg-gallery.jpg",
-    href: "/services/1",
+    name: "Preventive Care",
     description:
-      "Save damaged teeth painlessly with our advanced root canal techniques using modern technology.",
+      "Comprehensive checkups, professional cleanings, and preventive treatments to maintain optimal oral health and prevent future problems.",
+    img: "/bg-gallery.jpg",
+    href: "/services/preventive-care",
+    icon: <Shield size={24} />,
+    color: "var(--primary-brown)",
+    features: [
+      "Regular Checkups",
+      "Professional Cleaning",
+      "Fluoride Treatment",
+      "Oral Health Education",
+    ],
   },
   {
     id: 3,
-    name: "Braces & Aligners",
-    img: "/bg-gallery.jpg",
-    href: "/services/1",
+    name: "Restorative Dentistry",
     description:
-      "Get perfectly aligned teeth with our wide range of traditional braces and invisible aligners.",
+      "Advanced treatments including dental implants, crowns, bridges, and fillings to restore both function and aesthetics of your teeth.",
+    img: "/bg-gallery.jpg",
+    href: "/services/restorative-dentistry",
+    icon: <Heart size={24} />,
+    color: "var(--accent-teal)",
+    features: ["Dental Implants", "Crowns & Bridges", "Root Canal", "Fillings"],
   },
 ];
 
 export default function KeyServices() {
-  const [selectedService, setSelectedService] = useState(null);
-
   return (
-    <section className="py-5 position-relative z-1">
-      <div className="container">
-        <h2 className="text-center fw-bold mb-5" data-aos="fade-down">
-          Our Key Treatments
-        </h2>
+    <section className="section-modern bg-light-modern">
+      <div className="container-modern">
+        <div className="text-center mb-5" data-aos="fade-up">
+          <span className="text-accent fw-medium">Featured Services</span>
+          <h2 className="heading-secondary mt-2 mb-4">
+            Our Most Popular Dental Treatments
+          </h2>
+          <p className="lead text-subtle mx-auto" style={{ maxWidth: "600px" }}>
+            Discover our comprehensive range of dental services designed to keep
+            your smile healthy, beautiful, and confident.
+          </p>
+        </div>
 
         <div className="row g-4">
           {services.map((service, index) => (
+<<<<<<< HEAD
         <div className="col-md-5 col-lg-4" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
           <a href={service.href} className="text-decoration-none">
+=======
+>>>>>>> fda951ef7fff5b1c2b15769802bd7dc64b86bb8c
             <div
-              className="card border-0 text-white service-card h-100"
-              style={{
-                background: `linear-gradient(to top,rgba(0, 0, 0, 0.73),rgba(255, 255, 255, 0)), url(${service.img}) center/cover no-repeat`,
-                borderRadius: "16px",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease"
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = "translateY(-6px)";
-                e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.3)";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = "none";
-                e.currentTarget.style.boxShadow = "none";
-              }}
+              className="col-lg-4 col-md-6"
+              key={service.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              <div className="card-body d-flex align-items-end p-4" style={{ height: "250px" }}>
-                <h5 className="card-title fw-bold">{service.name}</h5>
-              </div>
-            </div>
-          </a>
-        </div>
-      ))}
-              </div>
-
-        {selectedService && (
-          <div
-            className="modal fade show d-block backdrop-blur"
-            tabIndex="-1"
-            role="dialog"
-            onClick={() => setSelectedService(null)}
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
-          >
-            <div
-              className="modal-dialog modal-xl modal-dialog-centered"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="modal-content rounded-5 shadow-lg border-0">
-                <div className="modal-header border-0">
-                  <h5 className="modal-title fs-3 fw-bold">
-                    {selectedService.title}
-                  </h5>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    onClick={() => setSelectedService(null)}
+              <div className="service-card-modern h-100">
+                {/* Service Image */}
+                <div
+                  className="position-relative overflow-hidden"
+                  style={{ height: "220px" }}
+                >
+                  <Image
+                    src={service.img}
+                    alt={service.name}
+                    fill
+                    className="service-image"
+                    style={{ objectFit: "cover" }}
                   />
+
+                  {/* Icon Overlay */}
+                  <div
+                    className="position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background: service.color,
+                      color: "white",
+                      boxShadow: "var(--shadow-soft)",
+                    }}
+                  >
+                    {service.icon}
+                  </div>
                 </div>
-                <div className="modal-body">
-                  <div className="row g-4 align-items-center">
-                    <div className="col-md-6">
-                      <Image
-                        src={selectedService.image}
-                        alt={selectedService.title}
-                        width={600}
-                        height={400}
-                        className="img-fluid rounded-4 shadow"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <p className="fs-5 text-muted">
-                        {selectedService.description}
-                      </p>
-                      <button
-                        className="btn btn-gradient mt-4"
-                        onClick={() => setSelectedService(null)}
-                      >
-                        Close
-                      </button>
+
+                {/* Service Content */}
+                <div className="service-content">
+                  <h3 className="heading-tertiary mb-3">{service.name}</h3>
+                  <p className="text-subtle mb-4">{service.description}</p>
+
+                  {/* Features List */}
+                  <div className="mb-4">
+                    <div className="row g-2">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="col-6">
+                          <div
+                            className="small rounded-pill px-2 py-1 text-center"
+                            style={{
+                              background: `${service.color}20`,
+                              color: service.color,
+                              fontSize: "0.8rem",
+                            }}
+                          >
+                            {feature}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
+
+                  {/* CTA Button */}
+                  <Link
+                    href={service.href}
+                    className="d-inline-flex align-items-center gap-2 text-decoration-none fw-medium"
+                    style={{
+                      color: service.color,
+                      transition: "var(--transition-smooth)",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.transform = "translateX(5px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.transform = "translateX(0)";
+                    }}
+                  >
+                    Learn More
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-5" data-aos="fade-up">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div
+                className="card-modern text-center"
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--primary-teal), var(--accent-teal))",
+                  color: "white",
+                }}
+              >
+                <h3
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Not Sure Which Treatment You Need?
+                </h3>
+                <p className="mb-4" style={{ opacity: 0.9 }}>
+                  Schedule a consultation with our expert team. We'll assess
+                  your oral health and recommend the best treatment plan for
+                  your specific needs.
+                </p>
+                <div className="d-flex flex-wrap gap-3 justify-content-center">
+                  <Link
+                    href="/appointment"
+                    className="btn"
+                    style={{
+                      background: "white",
+                      color: "var(--accent-teal)",
+                      border: "none",
+                      padding: "1rem 2rem",
+                      borderRadius: "50px",
+                      fontWeight: "500",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    Book Free Consultation
+                    <ArrowRight size={18} />
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="btn"
+                    style={{
+                      background: "transparent",
+                      color: "white",
+                      border: "2px solid white",
+                      padding: "1rem 2rem",
+                      borderRadius: "50px",
+                      fontWeight: "500",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    View All Services
+                    <ArrowRight size={18} />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );
