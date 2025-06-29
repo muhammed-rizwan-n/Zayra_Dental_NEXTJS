@@ -3,19 +3,14 @@ import Image from "next/image";
 import zayra_dental from "../public/zayra-dental.png";
 import { FaCheck } from "react-icons/fa";
 import KeyServiceSection from "../components/KeyServices";
+import style from "./page.module.css";
 
 export default function Home() {
   return (
     <>
       <section 
-        className="d-flex align-items-center vh-100 text-white"
-        style={{
-          position: "relative",
-          backgroundImage: `url('./bg-gallery.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-        }}
+        className={`${style['responsive-bg']} d-flex align-items-center vh-100 text-white`}
+        
       >
         {/* Gradient Overlay */}
         <div className="gradient-overlay"></div>
@@ -137,6 +132,8 @@ export default function Home() {
               className="img-fluid rounded shadow"
               width={"300"}
               height={"400"}
+                            data-aos="fade-left"
+              data-aos-delay="100"
               style={{ maxHeight: "350px", objectFit: "cover" }}
             />
           </div>

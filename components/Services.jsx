@@ -64,6 +64,34 @@ export default function ServicesCard({ serviceList }) {
     },
   ];
   return (
+    <>
+       <div className="row g-4">
+      {service.map((service, index) => (
+        <div
+  className="col-md-6 col-lg-4 d-flex"
+  key={index}
+  data-aos="zoom-in"
+  data-aos-delay={index * 100}
+>
+  <a href={service.href} className="text-decoration-none w-100">
+    <div className="service-card enhanced-card position-relative overflow-hidden w-100 rounded-4 shadow-sm">
+      <div
+        className="service-bg position-absolute w-100 h-100"
+        style={{ backgroundImage: `url(${service.img})` }}
+      ></div>
+      <div className="service-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3">
+        <div className="bg-white bg-opacity-75 backdrop-blur rounded-3 w-100 text-center py-3 transition-fade">
+          <h5 className="fw-bold text-dark mb-0">{service.name}</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+      ))}
+      </div>
+
+
     <div className="row g-4">
       {service.map((service, index) => (
         <div
@@ -87,7 +115,11 @@ export default function ServicesCard({ serviceList }) {
             </div>
           </a>
         </div>
+        
       ))}
+      
     </div>
+    </>
+    
   );
 }

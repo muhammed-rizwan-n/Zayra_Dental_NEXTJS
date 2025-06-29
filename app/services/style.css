@@ -1,3 +1,5 @@
+/*
+  
 .service-card {
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -20,5 +22,55 @@
 }
 
 .service-card:hover .overlay {
+  opacity: 1;
+}
+
+  */
+
+  .service-card-modern {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.service-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(7, 9, 15, 0.849);
+}
+
+.service-img {
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(137, 28, 28, 0.6), transparent 40%);
+  z-index: 2;
+}
+
+.service-title-box {
+  z-index: 3;
+  background: rgba(3, 1, 7, 0.461);
+  backdrop-filter: blur(4px);
+}
+
+.service-title-box h5 {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.service-hover-box {
+  z-index: 4;
+  background: rgba(17, 4, 26, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.service-card-modern:hover .service-hover-box {
   opacity: 1;
 }

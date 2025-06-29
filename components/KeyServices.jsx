@@ -39,9 +39,9 @@ export default function KeyServices() {
           Our Key Treatments
         </h2>
 
-        <div className="row g-4 justify-content-center">
+        <div className="row g-4">
           {services.map((service, index) => (
-        <div className="col-md-6 col-lg-5" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
+        <div className="col-md-5 col-lg-4" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
           <a href={service.href} className="text-decoration-none">
             <div
               className="card border-0 text-white service-card h-100"

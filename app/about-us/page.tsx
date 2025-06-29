@@ -54,6 +54,7 @@ export default function About() {
           </h1>
         </div>
       </section>
+
       <section
         className="container-flex px-sm-2"
         style={{ backgroundImage: `url("/home/waiting_room.jpg")` }}
@@ -82,19 +83,11 @@ export default function About() {
               Get to Know Our Clinic
             </h2>
             <p className="lead" data-aos="fade-left" data-aos-delay="200">
-              At Zayra Dental, we’re on a mission to make high-quality private
-              dental care affordable for everyone in Leeds. We believe cost
-              should never stand in the way of a healthy smile.
-            </p>
-            <p className="lead" data-aos="fade-left" data-aos-delay="200">
-              Our clinic is built around comfort, honesty, and care that truly
-              puts patients first. We don’t push unnecessary treatments — just
-              expert dental care that fits your needs and your budget.
-            </p>
-            <p className="lead" data-aos="fade-left" data-aos-delay="200">
-              With flexible payment options and a welcoming atmosphere, we make
-              every visit simple, stress-free, and surprisingly affordable —
-              often less than the price of your daily coffee.
+              At Zayra Dental, we believe everyone deserves access to
+              high-quality dental care that’s both affordable and compassionate.
+              Our mission is simple: to provide private dental treatments that
+              prioritize your comfort, your health, and your budget — right here
+              in the heart of Leeds.
             </p>
 
             <ul
@@ -123,11 +116,82 @@ export default function About() {
         </div>
       </section>
 
+        <section
+                className="container-fluid py-5 px-4"
+                style={{ background: "rgba(93, 0, 93, 0.55)" }}
+              >
+                                    <h2 className="fw-bold mb-4" data-aos="fade-left">
+                      Meet Our Principal Dentist
+                    </h2>
+                <div className="row align-items-center flex-md-row flex-column-reverse"
+                data-aos="fade-left" data-aos-delay="400">
+                  {/* Executive Info */}
+                  <div className="col-lg-7">
+
+                    <h4
+                      className="text-white mb-2"
+                    >
+                      Dr. Reshma Parambil
+                    </h4>
+                    <p
+                      className="text-white mb-2"
+                    >
+                      BDS, MDS – Prosthodontics | 15+ Years of Experience
+                    </p>
+                    <p className="lead" data-aos="fade-left" data-aos-delay="300">
+                      &quot;I believe everyone deserves a healthy, confident
+                      smile—without fear or financial worry.&quot;
+                    </p>
+                    <p>
+                      With over 10 years of experience in general dentistry, Dr. Reshma
+                      brings advanced training in oral and maxillofacial surgery from
+                      Mysore, India, and a strong focus on restorative and cosmetic
+                      dentistry. She has completed a one-year restorative program under
+                      the renowned Dr. Nigel Hargreaves.
+                    </p>
+        
+                    <div className="mt-4" data-aos="fade-left" data-aos-delay="500">
+                      {/* Social Links */}
+                      <a
+                        href="https://linkedin.com/in/dr-aisha-sharma"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="me-3 text-decoration-none text-dark"
+                      >
+                        <i className="fab fa-linkedin fa-lg"></i> LinkedIn
+                      </a>
+                      <a
+                        href="mailto:dr.aisha@brightsmile.com"
+                        className="text-decoration-none text-dark"
+                      >
+                        <i className="fas fa-envelope fa-lg"></i> Email
+                      </a>
+                    </div>
+                  </div>
+                  {/* Executive Photo */}
+                  <div className="col-lg-5 mb-4 mb-lg-0 text-center">
+                    <Image
+                      src="/about-us/reshma_parambil.jpg" // Replace with real image path
+                      alt="Dr. Reshma Parambil"
+                      className="img-fluid rounded shadow"
+                      data-aos="fade-left" data-aos-delay="400"
+                      width={"300"}
+                      height={"400"}
+                      style={{ maxHeight: "350px", objectFit: "cover" }}
+                    />
+                  </div>
+        
+                </div>
+              </section>
+        
       <section className="py-5">
         <div className="container">
           <h2 className="fw-bold text-center mb-5" data-aos="fade-up">
             Meet Our Team
           </h2>
+          <p>
+            Our dedicated team at Zayra Dental is made up of experienced, certified professionals who are passionate about your oral health. From gentle general care to advanced cosmetic treatments, we work together to provide a friendly, stress-free experience — always putting your comfort and confidence first.
+          </p>
           <div className={style["full-width-image"]}>
             <Image
               src={bg}
@@ -311,7 +375,7 @@ export default function About() {
         data-aos="fade-in"
       >
         <div
-          className="container-flex p-5"
+          className="container-flex p-2 py-4 p-md-5"
           style={{
             top: 0,
             left: 0,
@@ -341,11 +405,13 @@ export default function About() {
               },
               {
                 title: "Advanced Technology",
-                content: "Using the latest innovations to ensure precision and comfort."
+                content:
+                  "Using the latest innovations to ensure precision and comfort.",
               },
               {
                 title: "Personalized Approach",
-                content: "Every treatment is tailored to your unique smile and needs."
+                content:
+                  "Every treatment is tailored to your unique smile and needs.",
               },
               {
                 title: "Flexible Scheduling",
@@ -353,10 +419,16 @@ export default function About() {
               },
               {
                 title: "Trust & Transparency",
-                content: "We explain everything — no hidden costs or confusion.",
-              }
+                content:
+                  "We explain everything — no hidden costs or confusion.",
+              },
             ].map((search) => (
-              <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" key={search.title}>
+              <div
+                className="col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                key={search.title}
+              >
                 <div className="p-4 border rounded shadow-sm h-100">
                   <i className="fas fa-hand-holding-heart fa-2x text-primary mb-3"></i>
                   <h5 className="fw-semibold">{search.title}</h5>

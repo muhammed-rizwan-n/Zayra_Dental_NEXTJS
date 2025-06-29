@@ -157,27 +157,40 @@ export default function Services() {
         </h1>
         <div className="row g-4">
           {serviceList.map((service, index) => (
-            <div
-              className="col-md-6 col-lg-4 d-flex"
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-            >
-              <a href={service.href} className="text-decoration-none w-100">
-                <div className="service-card position-relative overflow-hidden w-100">
-                  <div
-                    className="service-bg"
-                    style={{ backgroundImage: `url(${service.img})` }}
-                  ></div>
-                  <div className="service-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-                  <div className="service-title-box position-absolute bottom-0 w-100 text-center">
-                    <h5 className="fw-bold m-0 py-3 px-2 text-white">
-                      {service.name}
-                    </h5>
-                  </div>
-                </div>
-              </a>
-            </div>
+<div
+  className="col-md-6 col-lg-4 d-flex"
+  key={index}
+  data-aos="zoom-in"
+  data-aos-delay={index * 100}
+>
+  <a href={service.href} className="text-decoration-none w-100">
+    <div className="service-card-modern position-relative overflow-hidden w-100 rounded-4 shadow-sm">
+      
+      {/* Background Image with subtle overlay */}
+      <div
+        className="service-img position-absolute top-0 start-0 w-100 h-100"
+        style={{ backgroundImage: `url(${service.img})` }}
+      >
+        <div className="gradient-overlay w-100 h-100"></div>
+      </div>
+
+      {/* Title always visible at bottom */}
+      <div className="service-title-box position-absolute bottom-0 w-100 text-center">
+        <h5 className="fw-semibold text-white m-0 py-3 px-2">{service.name}</h5>
+      </div>
+
+      {/* Hover description (full cover) */}
+      <div className="service-hover-box position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <div className="text-white px-4">
+          <p className="mb-2 small">{service.name}</p>
+          <span className="fw-semibold text-info">Read More →</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
           ))}
         </div>
       </div>

@@ -73,7 +73,7 @@ body {
 section {
   color: white;
 }
-@media (min-width: 901px) {
+@media (min-width: 767.99px) {
   .content-overlay {
     top: 50%;
     left: 30%;
@@ -93,7 +93,7 @@ section {
     z-index: 1;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 767.98px) {
   .content-overlay {
     top: 40%;
     left: 50%;

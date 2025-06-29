@@ -167,3 +167,18 @@ a.secondary {
   }
 }
 
+.responsive-bg {
+          position: relative;
+          background-image: url('/bg-gallery.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+          z-index: 0;
+}
+
+/* Mobile screens */
+@media (max-width: 767.98px) {
+  .responsive-bg {
+    background-image: url('/home/waiting_room.jpg');
+  }
+}
