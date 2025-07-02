@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="d-flex flex-wrap gap-3 mb-5">
                   <Link href="/appointment" className="btn-primary-modern">
                     <Calendar size={20} />
-                    Book Consultation
+                    #Book Consultation
                   </Link>
                   <Link href="/services" className="btn-secondary-modern">
                     Our Services

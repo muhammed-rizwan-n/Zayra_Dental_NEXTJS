@@ -55,15 +55,15 @@ export default function Appointment() {
     {
       title: "Initial Consultation",
       description: "Comprehensive dental exam and treatment planning",
-      duration: "60 minutes",
-      price: "£75",
+      duration: "30 minutes",
+      price: "£50",
       icon: <User size={24} />,
     },
     {
-      title: "General Check-up",
-      description: "Routine dental examination and cleaning",
+      title: "Implant Consultation",
+      description: "First step towards affordable implants.",
       duration: "30 minutes",
-      price: "£45",
+      price: "£50",
       icon: <CheckCircle size={24} />,
     },
     {
@@ -77,7 +77,7 @@ export default function Appointment() {
       title: "Cosmetic Consultation",
       description: "Discuss teeth whitening, veneers, and smile makeovers",
       duration: "45 minutes",
-      price: "£50",
+      price: "£60",
       icon: <Star size={24} />,
     },
   ];
