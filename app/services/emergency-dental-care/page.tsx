@@ -47,14 +47,14 @@ export default function EmergencyDentalCare() {
               </div>
 
               <h1 className="heading-primary mb-4">
-                24/7 Emergency
+                Emergency
                 <span className="text-primary-brown d-block">Dental Care</span>
               </h1>
               <p className="lead text-subtle mb-4">
                 Dental emergencies don&apos;t wait for business hours. Our
                 experienced team provides immediate pain relief and emergency
                 dental treatment when you need it most, with same-day
-                appointments and 24/7 emergency support.
+                appointments and emergency support.
               </p>
 
               {/* Emergency Contact */}
@@ -87,14 +87,8 @@ export default function EmergencyDentalCare() {
               </div>
 
               {/* Key Features */}
-              <div className="row g-4">
+              <div className="d-flex row g-4">
                 <div className="col-4">
-                  <div className="text-center">
-                    <div className="heading-tertiary text-accent mb-1">
-                      24/7
-                    </div>
-                    <div className="small text-subtle">Available</div>
-                  </div>
                 </div>
                 <div className="col-4">
                   <div className="text-center">

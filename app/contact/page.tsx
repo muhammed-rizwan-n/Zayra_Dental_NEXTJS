@@ -104,9 +104,9 @@ export default function Contact() {
     {
       icon: <MessageCircle size={32} />,
       title: "Emergency Care",
-      description: "24/7 emergency dental service",
+      description: "emergency dental service",
       action: "Emergency Line",
-      href: "tel:01132488398",
+      href: "tel:111",
       color: "var(--secondary-brown)",
     },
   ];

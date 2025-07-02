@@ -77,7 +77,7 @@ export default function PricingSection() {
   ];
 
   const benefits = [
-    "No consultation fees for treatment planning",
+    "Consultation fees included in treatment planning",
     "Competitive prices without compromising quality",
     "Payment plans available for treatments over £500",
     "Same-day emergency appointments available",
@@ -331,16 +331,7 @@ export default function PricingSection() {
                   >
                     Emergency Consultation:
                   </span>
-                  <span className="ms-2">£120</span>
-                </div>
-                <div>
-                  <span
-                    className="fw-medium"
-                    style={{ color: "var(--primary-brown)" }}
-                  >
-                    Out-of-hours:
-                  </span>
-                  <span className="ms-2">£180</span>
+                  <span className="ms-2">£100</span>
                 </div>
               </div>
             </div>

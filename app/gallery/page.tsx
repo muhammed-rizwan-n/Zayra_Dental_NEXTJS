@@ -158,10 +158,6 @@ export default function Gallery() {
                   <Calendar size={20} />
                   Book Your Visit
                 </Link>
-                <Link href="/about-us" className="btn-secondary-modern">
-                  <Eye size={20} />
-                  Virtual Tour
-                </Link>
               </div>
 
               {/* Stats */}
@@ -221,7 +217,7 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-      <p>{allImages.toString()}</p>
+
       {/* Gallery Categories */}
       {galleryCategories.map((category, categoryIndex) => (
         <section
