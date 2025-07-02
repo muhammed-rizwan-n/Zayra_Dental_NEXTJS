@@ -95,8 +95,8 @@ export default function About() {
   const certifications = [
     {
       name: "General Dental Council",
-      description: "GDC Registered Practice",
-      logo: "/bg-gallery.jpg",
+      description: "GDC Registered Dentist",
+      logo: "/about-us/gdc_logo.jpeg",
     },
     {
       name: "British Dental Association",
@@ -111,7 +111,7 @@ export default function About() {
     {
       name: "Dental Protection",
       description: "Professional Indemnity",
-      logo: "/bg-gallery.jpg",
+      logo: "/about-us/ddu_logo.png",
     },
   ];
 
