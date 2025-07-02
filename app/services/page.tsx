@@ -469,7 +469,7 @@ export default function Services() {
                 }}
               >
                 <Calendar size={20} />
-                Book Free Consultation
+                Book Consultation
               </Link>
               <Link
                 href="/pricing"
