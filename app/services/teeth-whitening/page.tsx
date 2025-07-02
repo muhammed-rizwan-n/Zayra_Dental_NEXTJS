@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {meta, benefits, beforeAfterSteps, faqs } from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -11,7 +11,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export const metadata: Metadata = meta
+const { benefits, beforeAfterSteps, faqs } = data
+export const metadata: Metadata = data.meta
 
 export default function TeethWhitening() {
   return (

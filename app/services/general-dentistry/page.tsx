@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  services,
-  preventiveBenefits,
-  whatToExpect,
-  oralHealthTips,
-} from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -17,14 +12,18 @@ import {
   Stethoscope,
   Award,
 } from "lucide-react";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 type IconName = "shield" | "checkcircle" | "heart";
 const icons = {
   shield: <Shield size={32} />,
   checkcircle: <CheckCircle size={32} />,
   heart: <Heart size={32} />,
 };
-
+const {
+  services,
+  preventiveBenefits,
+  whatToExpect,
+  oralHealthTips,
+} = data;
 export default function GeneralDentistry() {
   return (
     <>

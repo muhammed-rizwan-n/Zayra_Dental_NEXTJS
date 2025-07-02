@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {alignerTypes , benefits ,treatmentSteps ,treatedConditions } from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -12,6 +12,10 @@ import {
   Eye,
   Smartphone,
 } from "lucide-react";
+const alignerTypes = data.alignerTypes;
+const benefits = data.benefits;
+const treatmentSteps = data.treatmentSteps;
+const treatedConditions = data.treatedConditions;
 
 export const metadata: Metadata = {
   title:

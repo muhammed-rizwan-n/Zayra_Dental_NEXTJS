@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {symptoms, treatmentSteps, benefits, afterCareInstructions} from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -11,7 +11,7 @@ import {
   Heart,
   AlertCircle,
 } from "lucide-react";
-
+const {symptoms, treatmentSteps, benefits, afterCareInstructions} = data;
 export default function RootCanal() {
 
   return (

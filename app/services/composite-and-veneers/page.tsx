@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {treatments, processSteps, beforeAfter} from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -12,6 +12,9 @@ import {
   Palette,
 } from "lucide-react";
 
+const treatments = data.treatments
+const processSteps= data.processSteps
+const beforeAfter =  data.beforeAfter
 export default function CompositeAndVeneers() {
   
 

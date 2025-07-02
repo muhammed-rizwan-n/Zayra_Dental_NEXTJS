@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {meta, implantTypes, treatmentSteps, benefits,candidateRequirements} from "./info.json";
+import data from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -13,7 +13,11 @@ import {
   Heart,
 } from "lucide-react";
 
-export const metadata: Metadata = meta;
+const implantTypes =data.implantTypes;
+const treatmentSteps = data.treatmentSteps;
+const  benefits = data.benefits;
+const candidateRequirements = data.benefits;
+export const metadata: Metadata = data.meta;
 
 export default function DentalImplants() {
 

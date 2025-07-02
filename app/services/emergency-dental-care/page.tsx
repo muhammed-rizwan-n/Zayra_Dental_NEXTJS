@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { emergencyTypes, firstAidTips, whyChooseUs } from "./info.json";
+import data from "./info.json";
 import {
   Clock,
   Star,
@@ -18,7 +18,7 @@ const icons = {
   heart: <Heart size={32} />,
   zap: <Zap size={32} />,
 };
-
+const { emergencyTypes, firstAidTips, whyChooseUs } = data;
 export default function EmergencyDentalCare() {
   return (
     <>
