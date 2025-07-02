@@ -213,12 +213,12 @@ export default function Home() {
                     <Calendar size={32} />
                   </div>
                 </div>
-                <h3 className="heading-tertiary mb-3">Book Online</h3>
+                <h3 className="heading-tertiary mb-3">Send Enquiry</h3>
                 <p className="text-subtle mb-3">
-                  Schedule your appointment online 24/7 at your convenience
+                  Send your Enquiry online 24/7 at your convenience
                 </p>
-                <Link href="/appointment" className="btn-primary-modern">
-                  Book Appointment
+                <Link href="/contact" className="btn-primary-modern">
+                  Contact
                 </Link>
               </div>
             </div>
@@ -280,6 +280,7 @@ export default function Home() {
                     <div className="heading-tertiary text-accent mb-1">15+</div>
                     <div className="small text-subtle">Years Experience</div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -290,7 +291,7 @@ export default function Home() {
                   About Zayra Dental
                 </span>
                 <h2 className="heading-secondary mt-2 mb-4">
-                  Meet Our Expert Principal Dentist
+                  Meet Our Award-Winning Principal Dentist
                 </h2>
               </div>
 
@@ -298,7 +299,7 @@ export default function Home() {
                 <h3 className="heading-tertiary text-primary-brown mb-2">
                   Dr. Reshma Parambil
                 </h3>
-                <p className="text-subtle mb-3">BDS, MDS – Prosthodontics</p>
+                <p className="text-subtle mb-3">BDS, MDS – Oral & Maxillofacial Surgery</p>
                 <blockquote
                   className="border-start border-5 ps-4 mb-4"
                   style={{ borderColor: "var(--primary-teal)" }}
@@ -311,9 +312,9 @@ export default function Home() {
               </div>
 
               <p className="text-subtle mb-4">
-                With over 15 years of experience in general dentistry, Dr.
+                With over 15 years of experience in general and surgical dentistry, Dr.
                 Reshma brings advanced training in oral and maxillofacial
-                surgery from Mysore, India, and specialized expertise in
+                surgery from Mysore, India, Implantology Training in the UK and specialized expertise in
                 restorative and cosmetic dentistry.
               </p>
 
@@ -321,7 +322,7 @@ export default function Home() {
                 <div className="col-sm-6">
                   <div className="d-flex align-items-center gap-2">
                     <CheckCircle size={20} className="text-accent" />
-                    <span>Advanced Prosthodontics</span>
+                    <span>Implantologist Specialist</span>
                   </div>
                 </div>
                 <div className="col-sm-6">
@@ -459,7 +460,7 @@ export default function Home() {
                 icon: <Clock size={40} />,
                 title: "Flexible Hours",
                 description:
-                  "Evening and weekend appointments available to fit your schedule",
+                  "Emergency appointments to suit your needs",
               },
               {
                 icon: <Shield size={40} />,

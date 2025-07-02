@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  services,
+  preventiveBenefits,
+  whatToExpect,
+  oralHealthTips,
+} from "./info.json";
+import {
   Calendar,
   CheckCircle,
   Star,
@@ -11,119 +17,15 @@ import {
   Stethoscope,
   Award,
 } from "lucide-react";
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+type IconName = "shield" | "checkcircle" | "heart";
+const icons = {
+  shield: <Shield size={32} />,
+  checkcircle: <CheckCircle size={32} />,
+  heart: <Heart size={32} />,
+};
 
 export default function GeneralDentistry() {
-  const services = [
-    {
-      service: "Routine Checkups",
-      description:
-        "Comprehensive oral health examination and early problem detection",
-      frequency: "Every 6 months",
-      benefits: [
-        "Early detection",
-        "Preventive care",
-        "Oral health monitoring",
-      ],
-    },
-    {
-      service: "Professional Cleaning",
-      description: "Thorough plaque and tartar removal with polishing",
-      frequency: "Every 6 months",
-      benefits: ["Plaque removal", "Gum health", "Fresh breath"],
-    },
-    {
-      service: "Dental Fillings",
-      description: "Tooth-colored composite fillings for cavity repair",
-      frequency: "As needed",
-      benefits: ["Natural appearance", "Cavity repair", "Tooth preservation"],
-    },
-    {
-      service: "Gum Disease Treatment",
-      description: "Comprehensive periodontal therapy and maintenance",
-      frequency: "As recommended",
-      benefits: ["Gum health", "Infection control", "Tooth preservation"],
-    },
-    {
-      service: "Oral Cancer Screening",
-      description: "Thorough examination for early detection and prevention",
-      frequency: "Annual",
-      benefits: ["Early detection", "Peace of mind", "Preventive care"],
-    },
-    {
-      service: "Digital X-rays",
-      description: "Low-radiation imaging for accurate diagnosis",
-      frequency: "As needed",
-      benefits: ["Accurate diagnosis", "Low radiation", "Immediate results"],
-    },
-  ];
-
-  const preventiveBenefits = [
-    "Early detection prevents costly treatments",
-    "Maintain optimal oral health and fresh breath",
-    "Prevent gum disease and tooth loss",
-    "Identify oral health issues before they become painful",
-    "Professional cleaning removes harmful bacteria",
-    "Monitor changes in your oral health over time",
-  ];
-
-  const whatToExpect = [
-    {
-      step: "1",
-      title: "Health History Review",
-      description:
-        "Discussion of medical history, medications, and any concerns you may have",
-    },
-    {
-      step: "2",
-      title: "Comprehensive Examination",
-      description:
-        "Thorough inspection of teeth, gums, tongue, and oral tissues",
-    },
-    {
-      step: "3",
-      title: "X-rays (if needed)",
-      description:
-        "Digital radiographs to detect problems not visible during examination",
-    },
-    {
-      step: "4",
-      title: "Professional Cleaning",
-      description:
-        "Plaque and tartar removal, polishing, and fluoride treatment",
-    },
-    {
-      step: "5",
-      title: "Treatment Planning",
-      description:
-        "Discussion of findings and recommendations for optimal oral health",
-    },
-  ];
-
-  const oralHealthTips = [
-    {
-      tip: "Brush Twice Daily",
-      description: "Use fluoride toothpaste and brush for at least 2 minutes",
-      icon: <Shield size={24} />,
-    },
-    {
-      tip: "Floss Daily",
-      description: "Clean between teeth where your toothbrush can't reach",
-      icon: <Heart size={24} />,
-    },
-    {
-      tip: "Use Mouthwash",
-      description:
-        "Antimicrobial rinse helps reduce bacteria and freshen breath",
-      icon: <CheckCircle size={24} />,
-    },
-    {
-      tip: "Limit Sugary Foods",
-      description:
-        "Reduce cavity-causing bacteria by limiting sugar and acid intake",
-      icon: <Shield size={24} />,
-    },
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -196,7 +98,7 @@ export default function GeneralDentistry() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -445,7 +347,7 @@ export default function GeneralDentistry() {
                       color: "white",
                     }}
                   >
-                    {tip.icon}
+                    { tip.icon as IconName ? icons[tip.icon as IconName]:""}
                   </div>
                   <h4 className="heading-tertiary mb-3">{tip.tip}</h4>
                   <p className="text-subtle">{tip.description}</p>
@@ -544,8 +446,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Regular cleanings and checkups have kept my teeth healthy for
-                  years. The team is thorough and gentle.&rdquo;
+                  &ldquo;Regular cleanings and checkups have kept my teeth
+                  healthy for years. The team is thorough and gentle.&rdquo;
                 </p>
                 <div className="fw-semibold">Patricia M.</div>
                 <div className="small text-subtle">Long-term Patient</div>
@@ -564,8 +466,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;They caught a cavity early during my routine checkup. Quick
-                  treatment prevented a bigger problem.&rdquo;
+                  &ldquo;They caught a cavity early during my routine checkup.
+                  Quick treatment prevented a bigger problem.&rdquo;
                 </p>
                 <div className="fw-semibold">Andrew R.</div>
                 <div className="small text-subtle">Preventive Care Success</div>
@@ -584,8 +486,8 @@ export default function GeneralDentistry() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;My whole family comes here. Professional, caring staff who
-                  make dental visits comfortable for everyone.&rdquo;
+                  &ldquo;My whole family comes here. Professional, caring staff
+                  who make dental visits comfortable for everyone.&rdquo;
                 </p>
                 <div className="fw-semibold">The Johnson Family</div>
                 <div className="small text-subtle">Family Practice</div>

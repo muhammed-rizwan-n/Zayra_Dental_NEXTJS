@@ -58,9 +58,8 @@ export default function Contact() {
     phone: "0113 248 8398",
     email: "info@zayradental.co.uk",
     hours: {
-      weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
-      saturday: "Saturday: 9:00 AM - 4:00 PM",
-      sunday: "Sunday: Emergency Only",
+      weekdays: "Monday - Thursday: 9:00 AM - 5:00 PM",
+      friday: "Friday: 9:00 AM - 1:00 PM",
     },
   };
 
@@ -326,8 +325,7 @@ export default function Contact() {
                       <h5 className="heading-tertiary mb-2">Opening Hours</h5>
                       <div className="text-subtle">
                         <div>{contactInfo.hours.weekdays}</div>
-                        <div>{contactInfo.hours.saturday}</div>
-                        <div>{contactInfo.hours.sunday}</div>
+                        <div>{contactInfo.hours.friday}</div>
                       </div>
                     </div>
                   </div>

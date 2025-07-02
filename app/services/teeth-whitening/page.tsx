@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import {meta, benefits, beforeAfterSteps, faqs } from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -10,102 +11,9 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
-  description:
-    "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results. Book your teeth whitening consultation today.",
-  keywords: [
-    "teeth whitening Leeds",
-    "tooth whitening Leeds",
-    "professional teeth whitening",
-    "teeth bleaching Leeds",
-    "cosmetic dentist Leeds",
-    "teeth whitening cost",
-    "dental whitening Leeds",
-    "laser teeth whitening",
-    "teeth whitening near me",
-    "smile makeover Leeds",
-  ],
-  openGraph: {
-    title:
-      "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
-    description:
-      "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results available.",
-    url: "https://zayradental.co.uk/services/teeth-whitening",
-    images: [
-      {
-        url: "/services/teeth-whitening.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Professional Teeth Whitening Treatment at Zayra Dental Leeds",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://zayradental.co.uk/services/teeth-whitening",
-  },
-};
+export const metadata: Metadata = meta
 
 export default function TeethWhitening() {
-  const benefits = [
-    "Professional strength whitening up to 8 shades lighter",
-    "Safe, pain-free treatment with minimal sensitivity",
-    "Immediate results visible after first session",
-    "Long-lasting effects with proper maintenance",
-    "Custom-fitted trays for even whitening",
-    "Professional supervision throughout treatment",
-  ];
-
-  const beforeAfterSteps = [
-    {
-      step: "1",
-      title: "Initial Consultation",
-      description:
-        "Comprehensive assessment of your teeth and discussion of your whitening goals",
-    },
-    {
-      step: "2",
-      title: "Custom Tray Creation",
-      description:
-        "Precise impressions taken to create your personalized whitening trays",
-    },
-    {
-      step: "3",
-      title: "Professional Treatment",
-      description:
-        "Application of professional-grade whitening gel under expert supervision",
-    },
-    {
-      step: "4",
-      title: "Results & Maintenance",
-      description:
-        "Reveal your brilliant smile and receive maintenance guidance",
-    },
-  ];
-
-  const faqs = [
-    {
-      question: "How long does teeth whitening last?",
-      answer:
-        "Professional teeth whitening can last 1-3 years depending on your lifestyle, diet, and oral hygiene habits. Regular touch-ups can help maintain your bright smile.",
-    },
-    {
-      question: "Is teeth whitening safe?",
-      answer:
-        "Yes, professional teeth whitening is completely safe when performed by qualified dental professionals. We use clinically proven techniques to minimize sensitivity.",
-    },
-    {
-      question: "Will my teeth be sensitive after whitening?",
-      answer:
-        "Some patients may experience mild sensitivity for 24-48 hours after treatment. We provide special toothpaste and guidance to minimize any discomfort.",
-    },
-    {
-      question: "How many shades whiter can my teeth become?",
-      answer:
-        "Most patients see improvement of 3-8 shades. Results vary based on starting tooth color and individual response to treatment.",
-    },
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -174,7 +82,7 @@ export default function TeethWhitening() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image

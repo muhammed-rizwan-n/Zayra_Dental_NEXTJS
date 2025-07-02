@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import {symptoms, treatmentSteps, benefits, afterCareInstructions} from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -12,91 +13,6 @@ import {
 } from "lucide-react";
 
 export default function RootCanal() {
-  const symptoms = [
-    "Severe toothache when chewing or applying pressure",
-    "Prolonged sensitivity to hot or cold temperatures",
-    "Discoloration of the tooth",
-    "Swelling and tenderness in nearby gums",
-    "A persistent or recurring pimple on the gums",
-    "Sharp pain that wakes you up at night",
-  ];
-
-  const treatmentSteps = [
-    {
-      step: "1",
-      title: "Diagnosis & X-rays",
-      description:
-        "Comprehensive examination and digital X-rays to assess the tooth and surrounding bone",
-      duration: "30 minutes",
-    },
-    {
-      step: "2",
-      title: "Local Anesthesia",
-      description:
-        "Complete numbing of the area to ensure a comfortable, pain-free procedure",
-      duration: "10 minutes",
-    },
-    {
-      step: "3",
-      title: "Cleaning & Disinfection",
-      description:
-        "Careful removal of infected pulp and thorough cleaning of root canals",
-      duration: "45-90 minutes",
-    },
-    {
-      step: "4",
-      title: "Filling & Sealing",
-      description:
-        "Root canals filled with biocompatible material and tooth sealed",
-      duration: "30 minutes",
-    },
-    {
-      step: "5",
-      title: "Crown Placement",
-      description:
-        "Custom crown fitted to restore full function and appearance",
-      duration: "Follow-up visit",
-    },
-  ];
-
-  const benefits = [
-    "Save your natural tooth - avoid extraction",
-    "Eliminate severe pain and infection",
-    "Prevent spread of infection to other teeth",
-    "Maintain proper chewing function",
-    "Preserve jawbone structure",
-    "Cost-effective compared to tooth replacement",
-  ];
-
-  const afterCareInstructions = [
-    {
-      period: "First 24 Hours",
-      instructions: [
-        "Take prescribed pain medication as directed",
-        "Avoid chewing on the treated side",
-        "Apply ice pack for 15 minutes at a time",
-        "Stick to soft foods and lukewarm drinks",
-      ],
-    },
-    {
-      period: "First Week",
-      instructions: [
-        "Continue gentle brushing and flossing",
-        "Avoid hard, sticky, or very hot foods",
-        "Take antibiotics if prescribed",
-        "Attend follow-up appointment",
-      ],
-    },
-    {
-      period: "Long-term Care",
-      instructions: [
-        "Get the permanent crown fitted",
-        "Maintain excellent oral hygiene",
-        "Regular dental check-ups every 6 months",
-        "Avoid chewing ice or hard objects",
-      ],
-    },
-  ];
 
   return (
     <>
@@ -166,7 +82,7 @@ export default function RootCanal() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image

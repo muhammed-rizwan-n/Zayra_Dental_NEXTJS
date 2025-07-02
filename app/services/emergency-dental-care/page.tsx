@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { emergencyTypes, firstAidTips, whyChooseUs } from "./info.json";
 import {
   Clock,
   Star,
@@ -10,104 +11,15 @@ import {
   Shield,
   Zap,
 } from "lucide-react";
+type IconName = 'phone' | 'clock' | 'heart' | 'zap';
+const icons = {
+  phone: <Phone size={32} />,
+  clock: <Clock size={32} />,
+  heart: <Heart size={32} />,
+  zap: <Zap size={32} />,
+};
 
 export default function EmergencyDentalCare() {
-  const emergencyTypes = [
-    {
-      emergency: "Severe Toothache",
-      description:
-        "Intense, throbbing pain that interferes with daily activities",
-      urgency: "Immediate",
-      treatment: "Pain relief, antibiotics, root canal if needed",
-    },
-    {
-      emergency: "Knocked-Out Tooth",
-      description: "Complete tooth displacement due to trauma or accident",
-      urgency: "Within 1 hour",
-      treatment:
-        "Tooth reimplantation if possible, or immediate replacement options",
-    },
-    {
-      emergency: "Broken/Chipped Tooth",
-      description: "Fractured tooth causing pain or sharp edges",
-      urgency: "Same day",
-      treatment: "Bonding, crown, or temporary restoration",
-    },
-    {
-      emergency: "Lost Filling/Crown",
-      description:
-        "Dental restoration has fallen out, exposing sensitive tooth",
-      urgency: "Within 24 hours",
-      treatment: "Temporary or permanent restoration replacement",
-    },
-    {
-      emergency: "Dental Abscess",
-      description: "Serious infection causing swelling and severe pain",
-      urgency: "Immediate",
-      treatment: "Drainage, antibiotics, root canal or extraction",
-    },
-    {
-      emergency: "Bleeding Gums",
-      description: "Persistent, heavy bleeding from gums",
-      urgency: "Same day",
-      treatment: "Deep cleaning, medication, or surgical intervention",
-    },
-  ];
-
-  const firstAidTips = [
-    {
-      situation: "Severe Toothache",
-      steps: [
-        "Rinse mouth with warm salt water",
-        "Take over-the-counter pain reliever",
-        "Apply cold compress to outside of cheek",
-        "Avoid hot or cold foods",
-      ],
-    },
-    {
-      situation: "Knocked-Out Tooth",
-      steps: [
-        "Handle tooth by crown, not root",
-        "Rinse gently if dirty (don't scrub)",
-        "Try to reinsert in socket if possible",
-        "If not possible, store in milk or saliva",
-      ],
-    },
-    {
-      situation: "Broken Tooth",
-      steps: [
-        "Save any broken pieces",
-        "Rinse mouth with warm water",
-        "Apply gauze to control bleeding",
-        "Use cold compress for swelling",
-      ],
-    },
-  ];
-
-  const whyChooseUs = [
-    {
-      feature: "24/7 Emergency Line",
-      description:
-        "Call anytime for immediate guidance and appointment scheduling",
-      icon: <Phone size={32} />,
-    },
-    {
-      feature: "Same-Day Treatment",
-      description: "Emergency appointments available within hours, not days",
-      icon: <Clock size={32} />,
-    },
-    {
-      feature: "Pain Relief Guarantee",
-      description: "We prioritize immediate pain relief and comfort",
-      icon: <Heart size={32} />,
-    },
-    {
-      feature: "Advanced Equipment",
-      description: "Digital X-rays and modern tools for accurate diagnosis",
-      icon: <Zap size={32} />,
-    },
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -203,7 +115,7 @@ export default function EmergencyDentalCare() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -278,8 +190,8 @@ export default function EmergencyDentalCare() {
                           emergency.urgency === "Immediate"
                             ? "#dc3545"
                             : emergency.urgency.includes("hour")
-                              ? "#fd7e14"
-                              : "var(--primary-teal)",
+                            ? "#fd7e14"
+                            : "var(--primary-teal)",
                         color: "white",
                         flexShrink: 0,
                       }}
@@ -298,8 +210,8 @@ export default function EmergencyDentalCare() {
                               emergency.urgency === "Immediate"
                                 ? "#dc3545"
                                 : emergency.urgency.includes("hour")
-                                  ? "#fd7e14"
-                                  : "var(--primary-teal)",
+                                ? "#fd7e14"
+                                : "var(--primary-teal)",
                             color: "white",
                             fontSize: "0.7rem",
                           }}
@@ -393,9 +305,9 @@ export default function EmergencyDentalCare() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              When you&apos;re in pain, you need immediate, expert care. We&apos;re
-              equipped and ready to handle any dental emergency with speed and
-              precision.
+              When you&apos;re in pain, you need immediate, expert care.
+              We&apos;re equipped and ready to handle any dental emergency with
+              speed and precision.
             </p>
           </div>
 
@@ -417,7 +329,7 @@ export default function EmergencyDentalCare() {
                       color: "white",
                     }}
                   >
-                    {feature.icon}
+                    {(feature.icon as IconName)?icons[feature.icon as IconName]:" "}
                   </div>
                   <h4 className="heading-tertiary mb-3">{feature.feature}</h4>
                   <p className="text-subtle">{feature.description}</p>
@@ -555,8 +467,8 @@ export default function EmergencyDentalCare() {
               className="lead text-subtle mx-auto"
               style={{ maxWidth: "600px" }}
             >
-              No surprises when you&apos;re already stressed. Our emergency fees are
-              clearly defined and competitive, with payment plans available.
+              No surprises when you&apos;re already stressed. Our emergency fees
+              are clearly defined and competitive, with payment plans available.
             </p>
           </div>
 
@@ -629,8 +541,8 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Called at 11 PM with excruciating pain. Dr. Reshma met me at
-                  the clinic within 30 minutes and saved my tooth.&rdquo;
+                  &ldquo;Called at 11 PM with excruciating pain. Dr. Reshma met
+                  me at the clinic within 30 minutes and saved my tooth.&rdquo;
                 </p>
                 <div className="fw-semibold">Tom W.</div>
                 <div className="small text-subtle">Emergency Root Canal</div>
@@ -649,8 +561,9 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;My son knocked out his front tooth. They saw us immediately
-                  and saved the tooth. Amazing emergency care!&rdquo;
+                  &ldquo;My son knocked out his front tooth. They saw us
+                  immediately and saved the tooth. Amazing emergency
+                  care!&rdquo;
                 </p>
                 <div className="fw-semibold">Linda P.</div>
                 <div className="small text-subtle">Dental Trauma</div>

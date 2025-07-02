@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import {treatments, processSteps, beforeAfter} from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -12,99 +13,7 @@ import {
 } from "lucide-react";
 
 export default function CompositeAndVeneers() {
-  const treatments = [
-    {
-      type: "Composite Bonding",
-      description:
-        "Quick, affordable repair for chipped, cracked, or discolored teeth",
-      benefits: [
-        "Same-day treatment",
-        "Natural appearance",
-        "Conservative approach",
-        "Affordable option",
-      ],
-      duration: "30-60 minutes per tooth",
-      price: "From £150",
-    },
-    {
-      type: "Porcelain Veneers",
-      description:
-        "Ultra-thin shells that transform your smile with lasting beauty",
-      benefits: [
-        "Hollywood smile",
-        "Stain resistant",
-        "Long-lasting",
-        "Custom designed",
-      ],
-      duration: "2-3 appointments",
-      price: "From £800",
-    },
-    {
-      type: "Composite Veneers",
-      description: "Direct application veneers completed in one visit",
-      benefits: [
-        "Single visit",
-        "Reversible",
-        "Cost-effective",
-        "Immediate results",
-      ],
-      duration: "2-3 hours",
-      price: "From £400",
-    },
-  ];
-
-  const beforeAfter = [
-    {
-      condition: "Chipped Teeth",
-      solution: "Composite bonding restores natural tooth shape and appearance",
-    },
-    {
-      condition: "Discolored Teeth",
-      solution: "Veneers provide permanent whitening and color correction",
-    },
-    {
-      condition: "Gapped Teeth",
-      solution: "Close spaces between teeth for a perfectly aligned smile",
-    },
-    {
-      condition: "Worn Teeth",
-      solution: "Restore length and shape to worn or ground-down teeth",
-    },
-    {
-      condition: "Misshapen Teeth",
-      solution: "Create symmetrical, proportional teeth for a balanced smile",
-    },
-    {
-      condition: "Minor Misalignment",
-      solution: "Correct slight irregularities without orthodontic treatment",
-    },
-  ];
-
-  const processSteps = [
-    {
-      step: "1",
-      title: "Smile Design Consultation",
-      description:
-        "Digital smile preview and treatment planning with color matching",
-    },
-    {
-      step: "2",
-      title: "Tooth Preparation",
-      description:
-        "Minimal preparation to ensure perfect fit and natural appearance",
-    },
-    {
-      step: "3",
-      title: "Custom Creation",
-      description:
-        "Precise fabrication using advanced materials and techniques",
-    },
-    {
-      step: "4",
-      title: "Bonding & Finishing",
-      description: "Expert placement and polishing for seamless integration",
-    },
-  ];
+  
 
   return (
     <>
@@ -176,7 +85,7 @@ export default function CompositeAndVeneers() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image

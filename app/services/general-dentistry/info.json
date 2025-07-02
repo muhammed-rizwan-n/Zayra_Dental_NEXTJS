@@ -1,0 +1,104 @@
+{
+  "services": [
+    {
+      "service": "Routine Checkups",
+      "description": "Comprehensive oral health examination and early problem detection",
+      "frequency": "Every 6 months",
+      "benefits": [
+        "Early detection",
+        "Preventive care",
+        "Oral health monitoring"
+      ]
+    },
+    {
+      "service": "Professional Cleaning",
+      "description": "Thorough plaque and tartar removal with polishing",
+      "frequency": "Every 6 months",
+      "benefits": ["Plaque removal", "Gum health", "Fresh breath"]
+    },
+    {
+      "service": "Dental Fillings",
+      "description": "Tooth-colored composite fillings for cavity repair",
+      "frequency": "As needed",
+      "benefits": ["Natural appearance", "Cavity repair", "Tooth preservation"]
+    },
+    {
+      "service": "Gum Disease Treatment",
+      "description": "Comprehensive periodontal therapy and maintenance",
+      "frequency": "As recommended",
+      "benefits": ["Gum health", "Infection control", "Tooth preservation"]
+    },
+    {
+      "service": "Oral Cancer Screening",
+      "description": "Thorough examination for early detection and prevention",
+      "frequency": "Annual",
+      "benefits": ["Early detection", "Peace of mind", "Preventive care"]
+    },
+    {
+      "service": "Digital X-rays",
+      "description": "Low-radiation imaging for accurate diagnosis",
+      "frequency": "As needed",
+      "benefits": ["Accurate diagnosis", "Low radiation", "Immediate results"]
+    }
+  ],
+
+  "preventiveBenefits": [
+    "Early detection prevents costly treatments",
+    "Maintain optimal oral health and fresh breath",
+    "Prevent gum disease and tooth loss",
+    "Identify oral health issues before they become painful",
+    "Professional cleaning removes harmful bacteria",
+    "Monitor changes in your oral health over time"
+  ],
+
+  "whatToExpect": [
+    {
+      "step": "1",
+      "title": "Health History Review",
+      "description": "Discussion of medical history, medications, and any concerns you may have"
+    },
+    {
+      "step": "2",
+      "title": "Comprehensive Examination",
+      "description": "Thorough inspection of teeth, gums, tongue, and oral tissues"
+    },
+    {
+      "step": "3",
+      "title": "X-rays (if needed)",
+      "description": "Digital radiographs to detect problems not visible during examination"
+    },
+    {
+      "step": "4",
+      "title": "Professional Cleaning",
+      "description": "Plaque and tartar removal, polishing, and fluoride treatment"
+    },
+    {
+      "step": "5",
+      "title": "Treatment Planning",
+      "description": "Discussion of findings and recommendations for optimal oral health"
+    }
+  ],
+
+  "oralHealthTips": [
+    {
+      "tip": "Brush Twice Daily",
+      "description": "Use fluoride toothpaste and brush for at least 2 minutes",
+      "icon": "shield"
+    },
+    {
+      "tip": "Floss Daily",
+      "description": "Clean between teeth where your toothbrush can't reach",
+      "icon": "heart"
+    },
+    {
+      "tip": "Use Mouthwash",
+      "description": "Antimicrobial rinse helps reduce bacteria and freshen breath",
+      "icon": "checkcircle"
+    },
+    {
+      "tip": "Limit Sugary Foods",
+      "description": "Reduce cavity-causing bacteria by limiting sugar and acid intake",
+      "icon": "shield"
+    }
+  ]
+}

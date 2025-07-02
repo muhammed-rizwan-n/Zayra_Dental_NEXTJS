@@ -1,0 +1,93 @@
+{
+  "emergencyTypes": [
+    {
+      "emergency": "Severe Toothache",
+      "description": "Intense, throbbing pain that interferes with daily activities",
+      "urgency": "Immediate",
+      "treatment": "Pain relief, antibiotics, root canal if needed"
+    },
+    {
+      "emergency": "Knocked-Out Tooth",
+      "description": "Complete tooth displacement due to trauma or accident",
+      "urgency": "Within 1 hour",
+      "treatment": "Tooth reimplantation if possible, or immediate replacement options"
+    },
+    {
+      "emergency": "Broken/Chipped Tooth",
+      "description": "Fractured tooth causing pain or sharp edges",
+      "urgency": "Same day",
+      "treatment": "Bonding, crown, or temporary restoration"
+    },
+    {
+      "emergency": "Lost Filling/Crown",
+      "description": "Dental restoration has fallen out, exposing sensitive tooth",
+      "urgency": "Within 24 hours",
+      "treatment": "Temporary or permanent restoration replacement"
+    },
+    {
+      "emergency": "Dental Abscess",
+      "description": "Serious infection causing swelling and severe pain",
+      "urgency": "Immediate",
+      "treatment": "Drainage, antibiotics, root canal or extraction"
+    },
+    {
+      "emergency": "Bleeding Gums",
+      "description": "Persistent, heavy bleeding from gums",
+      "urgency": "Same day",
+      "treatment": "Deep cleaning, medication, or surgical intervention"
+    }
+  ],
+
+  "firstAidTips": [
+    {
+      "situation": "Severe Toothache",
+      "steps": [
+        "Rinse mouth with warm salt water",
+        "Take over-the-counter pain reliever",
+        "Apply cold compress to outside of cheek",
+        "Avoid hot or cold foods"
+      ]
+    },
+    {
+      "situation": "Knocked-Out Tooth",
+      "steps": [
+        "Handle tooth by crown, not root",
+        "Rinse gently if dirty (don't scrub)",
+        "Try to reinsert in socket if possible",
+        "If not possible, store in milk or saliva"
+      ]
+    },
+    {
+      "situation": "Broken Tooth",
+      "steps": [
+        "Save any broken pieces",
+        "Rinse mouth with warm water",
+        "Apply gauze to control bleeding",
+        "Use cold compress for swelling"
+      ]
+    }
+  ],
+
+  "whyChooseUs": [
+    {
+      "feature": "24/7 Emergency Line",
+      "description": "Call anytime for immediate guidance and appointment scheduling",
+      "icon": "phone"
+    },
+    {
+      "feature": "Same-Day Treatment",
+      "description": "Emergency appointments available within hours, not days",
+      "icon": "clock"
+    },
+    {
+      "feature": "Pain Relief Guarantee",
+      "description": "We prioritize immediate pain relief and comfort",
+      "icon": "heart"
+    },
+    {
+      "feature": "Advanced Equipment",
+      "description": "Digital X-rays and modern tools for accurate diagnosis",
+      "icon": "zap"
+    }
+  ]
+}

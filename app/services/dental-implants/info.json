@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Dental Implants Leeds | Tooth Replacement | Zayra Dental Implant Specialist",
+    "description": "Expert dental implants in Leeds - permanent tooth replacement solution. Single implants from £1,200. 20+ year lifespan. Free consultation. Book your implant assessment today.",
+    "keywords": [
+      "dental implants Leeds",
+      "tooth implants Leeds",
+      "dental implant specialist",
+      "single tooth implant",
+      "multiple dental implants",
+      "implant dentist Leeds",
+      "tooth replacement Leeds",
+      "dental implant cost",
+      "missing teeth Leeds",
+      "implant surgery Leeds"
+    ],
+    "openGraph": {
+      "title": "Dental Implants Leeds | Tooth Replacement | Zayra Dental",
+      "description": "Expert dental implants in Leeds - permanent tooth replacement. Single implants from £1,200. 20+ year lifespan. Free consultation available.",
+      "url": "https://zayradental.co.uk/services/dental-implants",
+      "images": [
+        {
+          "url": "/services/dental-implants.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Dental Implants Treatment at Zayra Dental Leeds"
+        }
+      ]
+    },
+    "alternates": {
+      "canonical": "https://zayradental.co.uk/services/dental-implants"
+    }
+  },
+  "implantTypes": [
+    {
+      "type": "Single Tooth Implant",
+      "description": "Replace one missing tooth with a natural-looking implant and crown",
+      "idealFor": "Individual missing teeth",
+      "price": "From £2,500"
+    },
+    {
+      "type": "Multiple Implants",
+      "description": "Replace several missing teeth with strategically placed implants",
+      "idealFor": "Multiple missing teeth",
+      "price": "From £5,000"
+    },
+    {
+      "type": "Full Mouth Restoration",
+      "description": "Complete smile reconstruction with implant-supported dentures",
+      "idealFor": "Extensive tooth loss",
+      "price": "From £15,000"
+    }
+  ],
+  "treatmentSteps": [
+    {
+      "step": "1",
+      "title": "Comprehensive Assessment",
+      "description": "3D imaging and evaluation to create your personalized treatment plan",
+      "duration": "1 hour"
+    },
+    {
+      "step": "2",
+      "title": "Implant Placement",
+      "description": "Precise surgical placement of titanium implant into jawbone",
+      "duration": "1-2 hours"
+    },
+    {
+      "step": "3",
+      "title": "Healing & Integration",
+      "description": "Osseointegration period where implant bonds with natural bone",
+      "duration": "3-6 months"
+    },
+    {
+      "step": "4",
+      "title": "Crown Attachment",
+      "description": "Custom crown designed and attached for perfect fit and appearance",
+      "duration": "2-3 weeks"
+    }
+  ],
+  "benefits": [
+    "Permanent solution that lasts 20+ years with proper care",
+    "Natural look and feel - indistinguishable from real teeth",
+    "Preserves jawbone health and facial structure",
+    "No impact on adjacent healthy teeth",
+    "Improved chewing function and speech clarity",
+    "Boost confidence with a complete, beautiful smile"
+  ],
+  "candidateRequirements": [
+    "Sufficient bone density in the jaw",
+    "Good overall oral health",
+    "Non-smoker or willing to quit",
+    "Realistic expectations about results",
+    "Commitment to excellent oral hygiene",
+    "Healthy gums free from disease"
+  ]
+}

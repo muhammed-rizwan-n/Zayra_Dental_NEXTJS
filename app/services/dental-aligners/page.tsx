@@ -1,11 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import alignerTypes from "./alignerTypes.json";
-import benefits from "./benefits.json";
-import treatmentSteps from "./treatmentSteps.json";
-import treatedConditions from "./treatedConditions.json";
-
+import {alignerTypes , benefits ,treatmentSteps ,treatedConditions } from "./info.json";
 import {
   Calendar,
   CheckCircle,
@@ -125,7 +121,7 @@ export default function DentalAligners() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image

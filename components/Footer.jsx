@@ -80,7 +80,7 @@ export default function Footer() {
                 <span className="fw-semibold">4.9/5</span>
               </div>
               <p className="small mb-0" style={{ opacity: 0.9 }}>
-                Based on 200+ patient reviews
+                Based on Google reviews
               </p>
             </div>
 
@@ -229,9 +229,8 @@ export default function Footer() {
                       fontSize: "0.9rem",
                     }}
                   >
-                    <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
-                    <div>Sat: 9:00 AM - 4:00 PM</div>
-                    <div>Sun: Emergency Only</div>
+                    <div>Mon - Tue: 9:00 AM - 5:00 PM</div>
+                    <div>Fri: 9:00 AM - 1:00 PM</div>
                   </div>
                 </div>
               </div>
@@ -245,6 +244,7 @@ export default function Footer() {
         style={{
           background: "var(--primary-teal)",
           padding: "1rem 0",
+          display: "none"
         }}
       >
         <div className="container-modern">
@@ -319,7 +319,7 @@ export default function Footer() {
                 className="small"
                 style={{ color: "rgba(255, 255, 255, 0.6)" }}
               >
-                GDC Registered Practice
+                CQC Registered Practice
               </span>
               <div
                 className="rounded px-2 py-1"
@@ -329,7 +329,7 @@ export default function Footer() {
                   fontWeight: "500",
                 }}
               >
-                GDC #123456
+                1-7765941135
               </div>
             </div>
           </div>

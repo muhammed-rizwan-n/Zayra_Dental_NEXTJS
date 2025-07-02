@@ -152,9 +152,9 @@ export default function Appointment() {
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
-                      4.9★
+                      5★
                     </div>
-                    <div className="small text-subtle">Patient Rating</div>
+                    <div className="small text-subtle">Private Patient Rating</div>
                   </div>
                 </div>
               </div>
@@ -191,17 +191,11 @@ export default function Appointment() {
                     <div className="hours-grid">
                       <div className="hour-item">
                         <span>Mon - Thu</span>
-                        <span className="time-badge">9:00 AM - 6:00 PM</span>
+                        <span className="time-badge">9:00 AM - 5:00 PM</span>
                       </div>
                       <div className="hour-item">
-                        <span>Saturday</span>
-                        <span className="time-badge">9:00 AM - 4:00 PM</span>
-                      </div>
-                      <div className="hour-item">
-                        <span>Sunday</span>
-                        <span className="time-badge closed">
-                          Emergency Only
-                        </span>
+                        <span>Fri</span>
+                        <span className="time-badge">9:00 AM - 1:00 PM</span>
                       </div>
                     </div>
                   </div>

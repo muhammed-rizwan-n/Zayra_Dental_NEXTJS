@@ -6,29 +6,48 @@ import { useEffect, useState } from "react";
 import { Calendar, Menu, Phone, X } from "lucide-react";
 import logo from "../public/zayra-dental.png";
 
+const navItems = [
+  { label: "About", href: "/about-us" },
+  { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
 
+    function handleScroll() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (window.innerWidth < 992) {
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          navbar.style.top = "-130px"; // Adjust to your navbar height
+        } else {
+          // Scrolling up
+          navbar.style.top = "0";
+        }
+      } else {
+        // Always show on large screens
+        navbar.style.top = "0";
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { label: "About", href: "/about-us" },
-    { label: "Services", href: "/services" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Contact", href: "/contact" },
-  ];
-
   return (
     <nav
+      id="navbar"
       className={`fixed-top navbar-modern ${isScrolled ? "scrolled" : ""}`}
       style={{
         background: isScrolled
