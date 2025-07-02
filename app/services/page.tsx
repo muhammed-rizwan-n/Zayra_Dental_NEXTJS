@@ -83,11 +83,16 @@ export default function Services() {
       ],
     },
     {
-      title: "Orthodontics",
+      title: "Dental Implants",
       icon: <Shield size={32} />,
-      description: "Straighten your teeth with modern alignment solutions",
+      description:
+        "Restore missing teeth with strong, natural-looking dental implants for long-term oral health.",
       color: "var(--accent-teal)",
-      services: ["Dental Aligners", "Braces & Orthodontics"],
+      services: [
+        "Implant Placement",
+        "Full Arch Restoration",
+        "Implant Retained Dentures",
+      ],
     },
     {
       title: "Wellness",
@@ -131,7 +136,11 @@ export default function Services() {
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "130px",paddingBottom: "20px", minHeight: "70vh" }}
+        style={{
+          paddingTop: "130px",
+          paddingBottom: "20px",
+          minHeight: "70vh",
+        }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
