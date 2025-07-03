@@ -17,12 +17,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Zayra Dental - Private Dentist Leeds | Affordable Dental Care",
-    template: "%s | Zayra Dental Leeds",
+    default: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds | Business Awards UK Winner",
+    template: "%s | Award-Winning Zayra Dental Leeds",
   },
   description:
-    "Expert private dental care in Leeds. Affordable dentist offering teeth whitening, dental implants, veneers & more. Book your appointment today. GDC registered practice.",
+    "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering teeth whitening, dental implants, veneers & more. Book your appointment today.",
   keywords: [
+    "award winning dentist Leeds",
+    "Business Awards UK winner",
+    "CQC registered dentist Leeds",
+    "patient centered dental care",
     "dentist Leeds",
     "private dentist Leeds",
     "dental clinic Leeds",
@@ -52,9 +56,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Zayra Dental - Private Dentist Leeds | Affordable Dental Care",
+    title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
     description:
-      "Expert private dental care in Leeds. Affordable dentist offering teeth whitening, dental implants, veneers & more. Book your appointment today.",
+      "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering teeth whitening, dental implants, veneers & more.",
     url: "https://zayradental.co.uk",
     siteName: "Zayra Dental",
     locale: "en_GB",
@@ -70,9 +74,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zayra Dental - Private Dentist Leeds",
+    title: "Award-Winning Zayra Dental - CQC Registered Leeds",
     description:
-      "Expert private dental care in Leeds. Affordable dentist offering comprehensive dental treatments.",
+      "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering comprehensive treatments.",
     images: ["/home/waiting_room.jpg"],
   },
   robots: {
@@ -99,9 +103,9 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "DentalClinic",
-    name: "Zayra Dental",
+    name: "Zayra Dental - Award-Winning CQC Registered Practice",
     description:
-      "Private dental practice in Leeds offering comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
+      "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
     url: "https://zayradental.co.uk",
     logo: "https://zayradental.co.uk/logo.png",
     image: "https://zayradental.co.uk/home/waiting_room.jpg",
@@ -136,7 +140,43 @@ export default function RootLayout({
       name: "Dr. Reshma Parambil",
       jobTitle: "Principal Dentist",
       qualifications: "BDS, MDS – Prosthodontics",
+      awards: ["Business Awards UK - Patient-Centered Dental Care Winner 2024", "Business Awards UK - Rising Star Award Finalist 2024", "Business Awards UK - Dentist of the Year Finalist 2024"],
     },
+    awards: [
+      {
+        "@type": "Award",
+        name: "Patient-Centered Dental Care",
+        awarder: "Business Awards UK",
+        dateAwarded: "2024",
+        description: "Winner for exceptional patient care and satisfaction"
+      },
+      {
+        "@type": "Award",
+        name: "Rising Star Award",
+        awarder: "Business Awards UK",
+        dateAwarded": "2024",
+        description: "Finalist for innovative dental practice and outstanding growth"
+      },
+      {
+        "@type": "Award",
+        name: "Dentist of the Year 2024",
+        awarder: "Business Awards UK",
+        dateAwarded: "2024",
+        description: "Finalist for outstanding clinical expertise and patient care"
+      }
+    ],
+    accreditation: [
+      {
+        "@type": "Organization",
+        name: "Care Quality Commission (CQC)",
+        description: "Regulated healthcare provider"
+      },
+      {
+        "@type": "Organization",
+        name: "General Dental Council (GDC)",
+        description: "Registered dental practice"
+      }
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
