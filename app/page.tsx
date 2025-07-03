@@ -217,7 +217,7 @@ export default function Home() {
                 <p className="text-subtle mb-3">
                   Send your Enquiry online 24/7 at your convenience
                 </p>
-                <Link href="/contact" className="btn-primary-modern">
+                <Link href="/contact#form" className="btn-primary-modern">
                   Contact
                 </Link>
               </div>
@@ -243,7 +243,7 @@ export default function Home() {
                   Located in the heart of Leeds, easily accessible by car or
                   public transport
                 </p>
-                <Link href="/contact" className="btn-secondary-modern">
+                <Link href="/contact#map" className="btn-secondary-modern scroll-fix">
                   Get Directions
                 </Link>
               </div>

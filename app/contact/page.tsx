@@ -139,8 +139,8 @@ export default function Contact() {
                   Call Now
                 </Link>
                 <Link href="#form" className="btn-secondary-modern">
-                  <Calendar size={20} />
-                  Any Queries
+                  <Mail size={20} />
+                  Send Message
                 </Link>
               </div>
                               
@@ -165,7 +165,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div id="map" className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="card-elevated">
                 <iframe
                   title="Zayra Dental Clinic Location"
@@ -457,7 +457,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="mb-3">
+                  <div className="col-md-6 mb-3">
                     <label htmlFor="subject" className="form-label fw-medium">
                       Subject *
                     </label>
@@ -468,7 +468,7 @@ export default function Contact() {
                     >
                       <option value="">Select a subject</option>
                       <option value="appointment">Book an Appointment</option>
-                      <option value="consultation">Free Consultation</option>
+                      <option value="consultation">About Consultation</option>
                       <option value="emergency">Dental Emergency</option>
                       <option value="information">General Information</option>
                       <option value="pricing">Pricing Inquiry</option>
@@ -476,7 +476,7 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  <div className="mb-4">
+                  <div className="col-md-7 mb-4">
                     <label htmlFor="message" className="form-label fw-medium">
                       Message *
                     </label>

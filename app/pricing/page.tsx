@@ -317,8 +317,7 @@ export default function PricingSection() {
                     Emergency Dental Care
                   </h3>
                   <p className="text-subtle mb-0">
-                    Same-day emergency appointments available • Out-of-hours
-                    service • Pain relief guaranteed
+                    Same-day emergency appointments available • Pain relief guaranteed
                   </p>
                 </div>
               </div>
@@ -368,7 +367,7 @@ export default function PricingSection() {
               color: "white",
             }}
           >
-            <div className="row align-items-center">
+            <div className="row align-items-center d-flex justify-content-center">
               <div className="col-lg-8">
                 <h2
                   className="heading-secondary mb-3"
@@ -377,7 +376,7 @@ export default function PricingSection() {
                   Need a Personalized Treatment Quote?
                 </h2>
                 <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                  Every smile is unique. Book a free consultation to get a
+                  Every smile is unique. Book a consultation to get a
                   personalized treatment plan and accurate pricing based on your
                   specific needs.
                 </p>
@@ -393,7 +392,7 @@ export default function PricingSection() {
                     }}
                   >
                     <Calendar size={20} />
-                    Book Free Consultation
+                    Book Consultation
                   </Link>
                   <a
                     href="tel:01132488398"
@@ -413,7 +412,7 @@ export default function PricingSection() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-4 d-none d-lg-block">
+              {/* <div className="col-lg-4 d-lg-block">
                 <div className="text-center">
                   <div className="d-flex justify-content-center gap-4">
                     <div>
@@ -442,7 +441,7 @@ export default function PricingSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

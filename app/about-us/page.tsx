@@ -101,12 +101,12 @@ export default function About() {
     {
       name: "British Dental Association",
       description: "BDA Member Practice",
-      logo: "/bg-gallery.jpg",
+      logo: "/about-us/bda_logo.jpeg",
     },
     {
       name: "Care Quality Commission",
       description: "CQC Regulated",
-      logo: "/bg-gallery.jpg",
+      logo: "/about-us/cqc_logo.jpeg",
     },
     {
       name: "Dental Protection",
@@ -509,7 +509,7 @@ export default function About() {
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <Link href="/appointment" className="btn-primary-modern">
-                Book Free Consultation
+                Book Consultation
                 <ArrowRight size={20} />
               </Link>
               <a href="tel:01132488398" className="btn-secondary-modern">
