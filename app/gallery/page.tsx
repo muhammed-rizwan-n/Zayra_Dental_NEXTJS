@@ -74,33 +74,33 @@ export default function Gallery() {
         },
       ],
     },
-    {
-      title: "Before & After",
-      description:
-        "See the amazing transformations we've achieved for our patients",
-      images: [
-        {
-          src: "/services/dental_bonding.jpg",
-          alt: "Dental Bonding Results",
-          category: "results",
-        },
-        {
-          src: "/services/teeth_white.jpg",
-          alt: "Teeth Whitening Results",
-          category: "results",
-        },
-        {
-          src: "/services/dental_aligners.jpeg",
-          alt: "Aligner Treatment",
-          category: "results",
-        },
-        {
-          src: "/services/dental_implant.jpeg",
-          alt: "Dental Implant",
-          category: "results",
-        },
-      ],
-    },
+    // {
+    //   title: "Before & After",
+    //   description:
+    //     "See the amazing transformations we've achieved for our patients",
+    //   images: [
+    //     {
+    //       src: "/services/dental_bonding.jpg",
+    //       alt: "Dental Bonding Results",
+    //       category: "results",
+    //     },
+    //     {
+    //       src: "/services/teeth_white.jpg",
+    //       alt: "Teeth Whitening Results",
+    //       category: "results",
+    //     },
+    //     {
+    //       src: "/services/dental_aligners.jpeg",
+    //       alt: "Aligner Treatment",
+    //       category: "results",
+    //     },
+    //     {
+    //       src: "/services/dental_implant.jpeg",
+    //       alt: "Dental Implant",
+    //       category: "results",
+    //     },
+    //   ],
+    // },
     {
       title: "Our Team",
       description:
@@ -340,7 +340,7 @@ export default function Gallery() {
               <div
                 key={index}
                 className={`col-lg-${
-                  index % 4 === 0 ? "6" : index % 3 === 0 ? "4" : "3"
+                  index % 5 === 0 ? "6" : index % 3 === 0 ? "4" : "3"
                 } col-md-6`}
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
@@ -351,9 +351,9 @@ export default function Gallery() {
                     height:
                       index % 5 === 0
                         ? "350px"
-                        : index % 3 === 0
-                        ? "280px"
-                        : "220px",
+                        : index % 2 === 0
+                        ? "380px"
+                        : "320px",
                   }}
                 >
                   <div className="position-relative h-100 overflow-hidden">
