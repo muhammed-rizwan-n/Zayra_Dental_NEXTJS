@@ -16,10 +16,13 @@ import pricingData from "./pricing.json";
 
 export const metadata: Metadata = {
   title:
-    "Dental Prices Leeds | Affordable Dental Treatment Costs | Zayra Dental",
+    "Award-Winning Dental Prices Leeds | Affordable CQC Registered Treatment Costs | Zayra Dental",
   description:
-    "Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. No hidden costs. Get your quote today!",
+    "Business Awards UK Winner! Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. CQC registered practice. No hidden costs. Get your quote today!",
   keywords: [
+    "award winning dental prices Leeds",
+    "CQC registered dentist Leeds",
+    "Business Awards UK winner",
     "dental prices Leeds",
     "dental costs Leeds",
     "affordable dentist Leeds",
@@ -30,12 +33,13 @@ export const metadata: Metadata = {
     "dental fees Leeds",
     "private dental costs",
     "dental price list Leeds",
+    "patient centered dental care",
   ],
   openGraph: {
     title:
-      "Dental Prices Leeds | Affordable Dental Treatment Costs | Zayra Dental",
+      "Award-Winning Dental Prices Leeds | CQC Registered Affordable Treatment Costs",
     description:
-      "Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. No hidden costs.",
+      "Business Awards UK Winner! Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. CQC registered practice.",
     url: "https://zayradental.co.uk/pricing",
     images: [
       {
@@ -90,7 +94,11 @@ export default function PricingSection() {
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "120px", paddingBottom:"20px", minHeight: "70vh" }}
+        style={{
+          paddingTop: "120px",
+          paddingBottom: "20px",
+          minHeight: "70vh",
+        }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
@@ -317,7 +325,8 @@ export default function PricingSection() {
                     Emergency Dental Care
                   </h3>
                   <p className="text-subtle mb-0">
-                    Same-day emergency appointments available • Pain relief guaranteed
+                    Same-day emergency appointments available • Pain relief
+                    guaranteed
                   </p>
                 </div>
               </div>

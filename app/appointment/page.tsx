@@ -16,11 +16,13 @@ import "./style.css";
 
 export const metadata: Metadata = {
   title:
-    "Book Dental Appointment Leeds Online | Zayra Dental Appointment Booking",
+    "Book Award-Winning Dental Appointment Leeds Online | CQC Registered Zayra Dental",
   description:
-    "Book your dental appointment online in Leeds. Quick & easy booking for dental check-ups, teeth whitening, implants & emergency care. Same-day appointments available.",
+    "Book appointment with Business Awards UK Winner! Quick & easy online booking for dental check-ups, teeth whitening, implants & emergency care. CQC registered practice. Same-day appointments available.",
   keywords: [
-    "book dental appointment Leeds",
+    "book award winning dental appointment Leeds",
+    "CQC registered dentist Leeds",
+    "Business Awards UK winner",
     "online dental booking Leeds",
     "dental appointment booking",
     "dentist appointment Leeds",
@@ -30,11 +32,13 @@ export const metadata: Metadata = {
     "dental check up booking",
     "Leeds dentist booking online",
     "dental appointment Harehills",
+    "patient centered dental care",
   ],
   openGraph: {
-    title: "Book Dental Appointment Leeds Online | Zayra Dental",
+    title:
+      "Book Award-Winning Dental Appointment Leeds Online | CQC Registered Zayra Dental",
     description:
-      "Book your dental appointment online in Leeds. Quick & easy booking for check-ups, teeth whitening, implants & emergency care.",
+      "Book appointment with Business Awards UK Winner! Quick & easy online booking for check-ups, teeth whitening, implants & emergency care. CQC registered practice.",
     url: "https://zayradental.co.uk/appointment",
     images: [
       {
@@ -124,8 +128,8 @@ export default function Appointment() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take the first step towards a healthier, more confident smile.
-                Book your appointment online or call us directly - we&apos;re here to
-                make your dental care convenient and stress-free.
+                Book your appointment online or call us directly - we&apos;re
+                here to make your dental care convenient and stress-free.
               </p>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
@@ -151,10 +155,10 @@ export default function Appointment() {
                 </div>
                 <div className="col-4">
                   <div className="text-center">
-                    <div className="heading-tertiary text-accent mb-1">
-                      5★
+                    <div className="heading-tertiary text-accent mb-1">5★</div>
+                    <div className="small text-subtle">
+                      Private Patient Rating
                     </div>
-                    <div className="small text-subtle">Private Patient Rating</div>
                   </div>
                 </div>
               </div>
@@ -238,7 +242,10 @@ export default function Appointment() {
       </section>
 
       {/* Appointment Types */}
-      <section className="section-modern" style={{background: "rgb(255, 222, 185)"}}>
+      <section
+        className="section-modern"
+        style={{ background: "rgb(255, 222, 185)" }}
+      >
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">Treatment Options</span>
@@ -292,8 +299,8 @@ export default function Appointment() {
               Need Urgent Dental Care?
             </h2>
             <p className="lead mb-4" style={{ opacity: 0.9 }}>
-              Don&apos;t wait if you&apos;re experiencing dental pain or have a dental
-              emergency. Call us immediately for prompt care.
+              Don&apos;t wait if you&apos;re experiencing dental pain or have a
+              dental emergency. Call us immediately for prompt care.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <a

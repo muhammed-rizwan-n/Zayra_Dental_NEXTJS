@@ -1,0 +1,78 @@
+{
+  "serviceInfo": {
+    "title": "Dental Spa",
+    "subtitle": "Luxury Dental Care with Spa Comfort",
+    "description": "Transform your dental visit into a luxury spa experience with premium care in a relaxing, comfortable environment designed to pamper you.",
+    "benefits": [
+      "Spa-like relaxing environment",
+      "Aromatherapy and comfort amenities",
+      "Extended appointment times",
+      "Gentle, pain-free techniques",
+      "Premium dental treatments",
+      "Stress-free experience"
+    ],
+    "duration": "60-180 minutes",
+    "experience": "Luxury comfort",
+    "suitability": "Perfect for dental anxiety or special occasions"
+  },
+
+  "spaServices": [
+    {
+      "name": "Relaxation Dentistry",
+      "description": "All dental treatments in spa-like environment",
+      "amenities": [
+        "Aromatherapy",
+        "Soft music",
+        "Comfort blankets",
+        "Refreshments"
+      ]
+    },
+    {
+      "name": "Premium Cleaning Spa",
+      "description": "Comprehensive cleaning with luxury comfort",
+      "amenities": [
+        "Extended time",
+        "Gentle techniques",
+        "Comfort care",
+        "Aftercare kit"
+      ]
+    },
+    {
+      "name": "Whitening Spa Experience",
+      "description": "Professional whitening in relaxing setting",
+      "amenities": [
+        "Comfort setup",
+        "Entertainment",
+        "Relaxation time",
+        "Premium results"
+      ]
+    }
+  ],
+
+  "packages": [
+    {
+      "name": "Spa Clean & Polish",
+      "duration": "90 minutes",
+      "ideal": "Regular maintenance with luxury"
+    },
+    {
+      "name": "Smile Renewal Spa",
+      "duration": "2 hours",
+      "ideal": "Special occasions and events"
+    },
+    {
+      "name": "Complete Wellness Package",
+      "duration": "3 hours",
+      "ideal": "Complete oral health reset"
+    }
+  ],
+
+  "amenities": [
+    "Aromatherapy diffusers",
+    "Soft lighting and music",
+    "Comfort blankets and pillows",
+    "Complimentary refreshments",
+    "Relaxation areas",
+    "Premium aftercare kits"
+  ]
+}

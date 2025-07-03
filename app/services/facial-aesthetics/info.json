@@ -1,0 +1,52 @@
+{
+  "serviceInfo": {
+    "title": "Facial Aesthetics",
+    "subtitle": "Professional Anti-Wrinkle Treatments & Dermal Fillers",
+    "description": "Enhance your natural beauty with our professional facial aesthetic treatments. Our expert team provides safe, effective anti-wrinkle treatments and dermal fillers.",
+    "benefits": [
+      "Reduce fine lines and wrinkles",
+      "Restore facial volume",
+      "Enhance natural features",
+      "Boost confidence",
+      "Natural-looking results",
+      "Minimal downtime"
+    ],
+    "duration": "30-60 minutes",
+    "recovery": "Minimal downtime",
+    "longevity": "3-12 months depending on treatment"
+  },
+
+  "treatments": [
+    {
+      "name": "Anti-Wrinkle Injections",
+      "description": "Precision treatment to smooth fine lines and wrinkles",
+      "areas": ["Forehead", "Crow's feet", "Frown lines", "Brow lift"]
+    },
+    {
+      "name": "Dermal Fillers",
+      "description": "Restore volume and enhance facial contours",
+      "areas": ["Lips", "Cheeks", "Nasolabial folds", "Marionette lines"]
+    },
+    {
+      "name": "Skin Rejuvenation",
+      "description": "Advanced treatments for skin texture and tone",
+      "areas": ["Full face", "Neck", "Décolletage", "Hands"]
+    }
+  ],
+
+  "suitableFor": [
+    "Adults seeking facial enhancement",
+    "Those with fine lines and wrinkles",
+    "Patients wanting volume restoration",
+    "Anyone seeking natural-looking results",
+    "Those wanting minimal downtime treatments"
+  ],
+
+  "aftercare": [
+    "Avoid touching treated areas for 24 hours",
+    "No strenuous exercise for 24-48 hours",
+    "Avoid alcohol for 24 hours",
+    "Stay upright for 4 hours post-treatment",
+    "Follow-up appointment as recommended"
+  ]
+}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import data from "./info.json";
+import type { Metadata } from "next";
 import {
   Clock,
   Star,
@@ -10,15 +10,46 @@ import {
   Heart,
   Shield,
   Zap,
+  Users,
 } from "lucide-react";
-type IconName = 'phone' | 'clock' | 'heart' | 'zap';
-const icons = {
-  phone: <Phone size={32} />,
-  clock: <Clock size={32} />,
-  heart: <Heart size={32} />,
-  zap: <Zap size={32} />,
+
+export const metadata: Metadata = {
+  title:
+    "Emergency Dental Care Leeds | 24/7 Urgent Dental Treatment | Zayra Dental",
+  description:
+    "Emergency dental care in Leeds within 24 hours. Expert treatment for toothache, broken teeth, dental abscesses & lost crowns. CQC registered, award-winning practice.",
+  keywords: [
+    "emergency dentist Leeds",
+    "urgent dental care Leeds",
+    "dental emergency Leeds",
+    "toothache relief Leeds",
+    "broken tooth repair Leeds",
+    "dental abscess treatment",
+    "lost crown replacement",
+    "24 hour dentist Leeds",
+    "same day dental appointment",
+    "dental pain relief Leeds",
+  ],
+  openGraph: {
+    title:
+      "Emergency Dental Care Leeds | 24/7 Urgent Dental Treatment | Zayra Dental",
+    description:
+      "Emergency dental care in Leeds within 24 hours. Expert treatment for toothache, broken teeth & dental emergencies. Award-winning practice.",
+    url: "https://zayradental.co.uk/services/emergency-dental-care",
+    images: [
+      {
+        url: "/services/bg-emergency.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Emergency Dental Care Leeds - Zayra Dental",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/emergency-dental-care",
+  },
 };
-const { emergencyTypes, firstAidTips, whyChooseUs } = data;
+
 export default function EmergencyDentalCare() {
   return (
     <>
@@ -51,10 +82,9 @@ export default function EmergencyDentalCare() {
                 <span className="text-primary-brown d-block">Dental Care</span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Dental emergencies don&apos;t wait for business hours. Our
-                experienced team provides immediate pain relief and emergency
-                dental treatment when you need it most, with same-day
-                appointments and emergency support.
+                At Zayra Dental, we understand dental emergencies don&apos;t
+                wait for business hours. Our experienced team provides immediate
+                relief and expert emergency treatment when you need it most.
               </p>
 
               {/* Emergency Contact */}
@@ -87,33 +117,43 @@ export default function EmergencyDentalCare() {
               </div>
 
               {/* Key Features */}
-              <div className="d-flex row g-4">
-                <div className="col-4">
-                </div>
+              <div className="row g-4">
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
-                      &lt; 1hr
+                      24hr
                     </div>
-                    <div className="small text-subtle">Response Time</div>
+                    <div className="small text-subtle">Appointment Goal</div>
                   </div>
                 </div>
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
-                      100%
+                      Fast
                     </div>
                     <div className="small text-subtle">Pain Relief</div>
+                  </div>
+                </div>
+                <div className="col-4">
+                  <div className="text-center">
+                    <div className="heading-tertiary text-accent mb-1">
+                      Expert
+                    </div>
+                    <div className="small text-subtle">Care</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
-                    src="/services/dental_treatment.jpeg"
+                    src="/services/bg-emergency.jpg"
                     alt="Emergency Dental Treatment"
                     width={600}
                     height={500}
@@ -122,167 +162,258 @@ export default function EmergencyDentalCare() {
                     priority
                   />
                 </div>
-
-                {/* Emergency Badge */}
-                <div
-                  className="card-modern position-absolute d-none d-md-block"
-                  style={{
-                    bottom: "20px",
-                    left: "20px",
-                    padding: "1rem",
-                    background: "#dc3545",
-                    color: "white",
-                  }}
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <div className="text-center">
-                    <Clock size={32} className="mb-2" />
-                    <div className="fw-medium">Same Day</div>
-                    <div className="small">Emergency Care</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency Types */}
+      {/* Our Approach Section */}
       <section className="section-modern bg-cream">
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Common Emergencies</span>
+            <span className="text-accent fw-medium">
+              Our Emergency Approach
+            </span>
             <h2 className="heading-secondary mt-2 mb-4">
-              Dental Emergencies We Treat
+              How We Handle Dental Emergencies
             </h2>
-            <p
-              className="lead text-subtle mx-auto"
-              style={{ maxWidth: "600px" }}
-            >
-              We handle all types of dental emergencies with expertise and
-              urgency, providing immediate relief and comprehensive treatment.
-            </p>
           </div>
 
-          <div className="row g-4">
-            {emergencyTypes.map((emergency, index) => (
-              <div
-                key={index}
-                className="col-lg-6"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="card-modern h-100">
-                  <div className="d-flex align-items-start gap-3">
-                    <div
-                      className="rounded-circle d-inline-flex align-items-center justify-content-center"
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        background:
-                          emergency.urgency === "Immediate"
-                            ? "#dc3545"
-                            : emergency.urgency.includes("hour")
-                            ? "#fd7e14"
-                            : "var(--primary-teal)",
-                        color: "white",
-                        flexShrink: 0,
-                      }}
-                    >
-                      <AlertTriangle size={28} />
-                    </div>
-                    <div className="flex-grow-1">
-                      <div className="d-flex justify-content-between align-items-start mb-2">
-                        <h5 className="fw-semibold mb-0">
-                          {emergency.emergency}
-                        </h5>
-                        <span
-                          className="badge rounded-pill"
-                          style={{
-                            background:
-                              emergency.urgency === "Immediate"
-                                ? "#dc3545"
-                                : emergency.urgency.includes("hour")
-                                ? "#fd7e14"
-                                : "var(--primary-teal)",
-                            color: "white",
-                            fontSize: "0.7rem",
-                          }}
-                        >
-                          {emergency.urgency}
-                        </span>
-                      </div>
-                      <p className="text-subtle mb-2">
-                        {emergency.description}
-                      </p>
-                      <div className="small">
-                        <strong>Treatment: </strong>
-                        <span className="text-subtle">
-                          {emergency.treatment}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6" data-aos="fade-right">
+              <Image
+                src="/gallery/Zayradental_Edits_13.jpg"
+                alt="Emergency Treatment Room"
+                width={600}
+                height={500}
+                className="img-fluid rounded-modern shadow-modern"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+
+            <div className="col-lg-6" data-aos="fade-left">
+              <p className="text-subtle mb-4">
+                At Zayra Dental, we care about emergencies and ensure that our
+                patients are not left out when they are in pain or a similar
+                difficulty. With our best practice, regular appointments and
+                preventive treatments in time, we ensure that the chances of our
+                patients having dental emergencies is significantly reduced.
+              </p>
+              <p className="text-subtle mb-4">
+                We always try our best to accommodate new patients into the
+                reserved slots for emergency care. At Zayra best dentist Leeds
+                our mission is to provide affordable dental care to all those
+                who need it most.
+              </p>
+              <p className="text-subtle mb-4">
+                We keep our waiting times at the lowest in an attempt to see
+                every patient with urgent needs within 24 hours. However, there
+                may be times when this is not possible. Our modern telephone
+                system is equipped to have a video call and consultation with
+                the dentist.
+              </p>
+              <p className="text-subtle mb-4">
+                A lot of the problems could be dealt with advice and medications
+                and the surgical treatment can be postponed when the condition
+                settle down.
+              </p>
+
+              <div className="d-flex flex-wrap gap-2 mb-4">
+                <span
+                  className="badge rounded-pill px-3 py-2"
+                  style={{
+                    background: "var(--primary-teal)",
+                    color: "white",
+                  }}
+                >
+                  CQC Registered
+                </span>
+                <span
+                  className="badge rounded-pill px-3 py-2"
+                  style={{
+                    background: "var(--primary-brown)",
+                    color: "white",
+                  }}
+                >
+                  Award Winning
+                </span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* First Aid Tips */}
+      {/* Common Emergencies */}
       <section className="section-modern">
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Emergency First Aid</span>
+            <span className="text-accent fw-medium">Common Emergencies</span>
             <h2 className="heading-secondary mt-2 mb-4">
-              What to Do Before You Arrive
+              Emergency Dental Conditions We Treat
             </h2>
-            <p
-              className="lead text-subtle mx-auto"
-              style={{ maxWidth: "600px" }}
-            >
-              These immediate steps can help manage pain and prevent further
-              damage while you&apos;re on your way to our clinic.
-            </p>
           </div>
 
           <div className="row g-4">
-            {firstAidTips.map((tip, index) => (
-              <div
-                key={index}
-                className="col-lg-4"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="card-modern h-100">
-                  <div className="text-center mb-3">
-                    <div
-                      className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                      style={{
-                        width: "70px",
-                        height: "70px",
-                        background: "var(--accent-teal)",
-                        color: "white",
-                      }}
-                    >
-                      <Shield size={32} />
-                    </div>
+            {/* Toothache */}
+            <div className="col-lg-6" data-aos="fade-up">
+              <div className="card-modern h-100">
+                <div className="d-flex align-items-start gap-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      background: "#dc3545",
+                      color: "white",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <AlertTriangle size={28} />
                   </div>
-                  <h4 className="heading-tertiary mb-3 text-center">
-                    {tip.situation}
-                  </h4>
-                  <ol className="ps-3">
-                    {tip.steps.map((step, stepIndex) => (
-                      <li key={stepIndex} className="mb-2 small">
-                        {step}
-                      </li>
-                    ))}
-                  </ol>
+                  <div className="flex-grow-1">
+                    <h5 className="fw-semibold mb-3">Toothache</h5>
+                    <p className="text-subtle mb-3">
+                      Toothache is the commonest dental emergency. Toothache can
+                      be caused by several reasons including but not limited to
+                      tooth decay, dental abscess, cracked or damaged tooth, a
+                      loose or broken filling.
+                    </p>
+                    <p className="text-subtle mb-3">
+                      Unless it is associated with swelling, most causes of
+                      toothache can get some relief with pain relief medicines.
+                      The best way to prevent toothaches is to have regular
+                      dental check-ups and brushing your teeth twice a day.
+                    </p>
+                    <p className="text-subtle">
+                      Regular use of dental floss and interdental brushes are
+                      also very important.
+                    </p>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Abscesses and Swellings */}
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div className="card-modern h-100">
+                <div className="d-flex align-items-start gap-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      background: "#fd7e14",
+                      color: "white",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Shield size={28} />
+                  </div>
+                  <div className="flex-grow-1">
+                    <h5 className="fw-semibold mb-3">
+                      Abscesses and Swellings
+                    </h5>
+                    <p className="text-subtle mb-3">
+                      A dental abscess is a collection of pus inside the teeth,
+                      gums or bone and is caused by infection. Whether or not
+                      painful they are one of the few reasons to go to emergency
+                      department if you can&apos;t get a dentist appointment.
+                    </p>
+                    <p className="text-subtle mb-3">
+                      A dental abscess will need emergency treatment to address
+                      the infection and permanent treatment to either remove or
+                      preserve the tooth.
+                    </p>
+                    <p className="text-subtle">
+                      At Zayra private dentist Leeds, our team works hard to
+                      ensure that all our patients are seen in time and best
+                      quality emergency dental care provided.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Broken Tooth */}
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div className="card-modern h-100">
+                <div className="d-flex align-items-start gap-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      background: "var(--primary-teal)",
+                      color: "white",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Heart size={28} />
+                  </div>
+                  <div className="flex-grow-1">
+                    <h5 className="fw-semibold mb-3">Broken Tooth</h5>
+                    <p className="text-subtle mb-3">
+                      A broken tooth is not only unsightly but can also be
+                      painful. We can help you fix this very quickly. Although
+                      getting an NHS appointment is a good idea, you don&apos;t
+                      have to live with the burden for several days.
+                    </p>
+                    <p className="text-subtle mb-3">
+                      There are several inexpensive ways to address a broken
+                      tooth. We always aim to see you within 24 hours.
+                    </p>
+                    <p className="text-subtle">
+                      Root canal treatment isn&apos;t always necessary for
+                      cracked and chipped teeth. Where there&apos;s no pain or
+                      infection, cracks can be filled and bound together, while
+                      a broken tooth will be fixed with a crown.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Lost Crown */}
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div className="card-modern h-100">
+                <div className="d-flex align-items-start gap-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      background: "var(--primary-brown)",
+                      color: "white",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Zap size={28} />
+                  </div>
+                  <div className="flex-grow-1">
+                    <h5 className="fw-semibold mb-3">Lost Crown</h5>
+                    <p className="text-subtle mb-3">
+                      Most people have dental crowns to protect a
+                      cracked/chipped but still intact tooth, to insulate a
+                      tooth following a root canal, or to try and save a decayed
+                      tooth that cannot hold a filling.
+                    </p>
+                    <p className="text-subtle mb-3">
+                      If your crown comes off it is important to act quickly. If
+                      your dental crown falls off, the underlying tooth is at
+                      risk, but the crown can be replaced without further damage
+                      to the tooth.
+                    </p>
+                    <p className="text-subtle">
+                      At Zayra dental Leeds we treat this as an emergency and
+                      will aim to see you in the next 24 hours. Please call now
+                      to book an appointment if your crown has come off the
+                      tooth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -295,136 +426,11 @@ export default function EmergencyDentalCare() {
             <h2 className="heading-secondary mt-2 mb-4">
               Why Choose Zayra Dental for Emergencies?
             </h2>
-            <p
-              className="lead text-subtle mx-auto"
-              style={{ maxWidth: "600px" }}
-            >
-              When you&apos;re in pain, you need immediate, expert care.
-              We&apos;re equipped and ready to handle any dental emergency with
-              speed and precision.
-            </p>
-          </div>
-
-          <div className="row g-4">
-            {whyChooseUs.map((feature, index) => (
-              <div
-                key={index}
-                className="col-lg-3 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="card-modern text-center h-100">
-                  <div
-                    className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      background: "var(--primary-brown)",
-                      color: "white",
-                    }}
-                  >
-                    {(feature.icon as IconName)?icons[feature.icon as IconName]:" "}
-                  </div>
-                  <h4 className="heading-tertiary mb-3">{feature.feature}</h4>
-                  <p className="text-subtle">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Emergency Protocol */}
-      <section className="section-modern">
-        <div className="container-modern">
-          <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Our Process</span>
-            <h2 className="heading-secondary mt-2 mb-4">
-              How We Handle Your Emergency
-            </h2>
           </div>
 
           <div className="row g-4">
             <div className="col-lg-3 col-md-6" data-aos="fade-up">
-              <div className="text-center">
-                <div
-                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    background: "#dc3545",
-                    color: "white",
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                  }}
-                >
-                  1
-                </div>
-                <h5 className="fw-semibold mb-3">Emergency Call</h5>
-                <p className="text-subtle">
-                  Call our 24/7 emergency line for immediate guidance and
-                  appointment scheduling
-                </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className="text-center">
-                <div
-                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    background: "#fd7e14",
-                    color: "white",
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                  }}
-                >
-                  2
-                </div>
-                <h5 className="fw-semibold mb-3">Immediate Assessment</h5>
-                <p className="text-subtle">
-                  Quick triage to prioritize your case and provide first aid
-                  instructions
-                </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div className="text-center">
-                <div
-                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    background: "var(--primary-teal)",
-                    color: "white",
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                  }}
-                >
-                  3
-                </div>
-                <h5 className="fw-semibold mb-3">Emergency Treatment</h5>
-                <p className="text-subtle">
-                  Immediate pain relief and comprehensive treatment to resolve
-                  the emergency
-                </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div className="text-center">
+              <div className="card-modern text-center h-100">
                 <div
                   className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style={{
@@ -432,81 +438,91 @@ export default function EmergencyDentalCare() {
                     height: "80px",
                     background: "var(--primary-brown)",
                     color: "white",
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
                   }}
                 >
-                  4
+                  <Clock size={32} />
                 </div>
-                <h5 className="fw-semibold mb-3">Follow-up Care</h5>
+                <h4 className="heading-tertiary mb-3">24 Hour Response</h4>
                 <p className="text-subtle">
-                  Ongoing care plan to ensure complete healing and prevent
-                  future emergencies
+                  We aim to see emergency patients within 24 hours with video
+                  consultation available
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Emergency Pricing */}
-      <section className="section-modern bg-cream">
-        <div className="container-modern">
-          <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Emergency Pricing</span>
-            <h2 className="heading-secondary mt-2 mb-4">
-              Transparent Emergency Fees
-            </h2>
-            <p
-              className="lead text-subtle mx-auto"
-              style={{ maxWidth: "600px" }}
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
-              No surprises when you&apos;re already stressed. Our emergency fees
-              are clearly defined and competitive, with payment plans available.
-            </p>
-          </div>
-
-          <div className="row g-4 justify-content-center">
-            <div className="col-lg-4" data-aos="fade-up">
               <div className="card-modern text-center h-100">
-                <h5 className="text-accent mb-3">Emergency Consultation</h5>
-                <div className="heading-secondary text-primary-brown mb-3">
-                  £120
+                <div
+                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                  style={{
+                    width: "80px",
+                    height: "80px",
+                    background: "var(--primary-teal)",
+                    color: "white",
+                  }}
+                >
+                  <Heart size={32} />
                 </div>
-                <ul className="list-unstyled text-subtle small">
-                  <li>• Immediate pain assessment</li>
-                  <li>• Digital X-rays if needed</li>
-                  <li>• Emergency treatment plan</li>
-                  <li>• Prescription medications</li>
-                </ul>
+                <h4 className="heading-tertiary mb-3">Pain Relief Priority</h4>
+                <p className="text-subtle">
+                  Immediate pain management and medication advice while you wait
+                </p>
               </div>
             </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="card-modern text-center h-100">
-                <h5 className="text-accent mb-3">Out-of-Hours Emergency</h5>
-                <div className="heading-secondary text-primary-brown mb-3">
-                  £180
+                <div
+                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                  style={{
+                    width: "80px",
+                    height: "80px",
+                    background: "var(--accent-teal)",
+                    color: "white",
+                  }}
+                >
+                  <Shield size={32} />
                 </div>
-                <ul className="list-unstyled text-subtle small">
-                  <li>• Evenings, weekends, holidays</li>
-                  <li>• Same emergency consultation</li>
-                  <li>• Immediate pain relief</li>
-                  <li>• Emergency treatment if needed</li>
-                </ul>
+                <h4 className="heading-tertiary mb-3">Expert Treatment</h4>
+                <p className="text-subtle">
+                  Experienced team with advanced training in emergency dental
+                  care
+                </p>
               </div>
             </div>
-          </div>
 
-          <div
-            className="text-center mt-4"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <p className="text-subtle small">
-              *Treatment costs are additional and will be discussed before any
-              procedures. Payment plans available for emergency treatments over
-              £500.
-            </p>
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="card-modern text-center h-100">
+                <div
+                  className="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                  style={{
+                    width: "80px",
+                    height: "80px",
+                    background: "#dc3545",
+                    color: "white",
+                  }}
+                >
+                  <Users size={32} />
+                </div>
+                <h4 className="heading-tertiary mb-3">Patient Focused</h4>
+                <p className="text-subtle">
+                  No unnecessary treatments - just expert care for your
+                  emergency
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -535,11 +551,12 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Called at 11 PM with excruciating pain. Dr. Reshma met
-                  me at the clinic within 30 minutes and saved my tooth.&rdquo;
+                  &ldquo;Called with severe toothache on weekend. Dr. Reshma
+                  gave excellent advice over the phone and saw me first thing
+                  Monday morning.&rdquo;
                 </p>
-                <div className="fw-semibold">Tom W.</div>
-                <div className="small text-subtle">Emergency Root Canal</div>
+                <div className="fw-semibold">Sarah M.</div>
+                <div className="small text-subtle">Emergency Toothache</div>
               </div>
             </div>
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -555,12 +572,12 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;My son knocked out his front tooth. They saw us
-                  immediately and saved the tooth. Amazing emergency
-                  care!&rdquo;
+                  &ldquo;Broke my tooth on Friday evening. Got an emergency
+                  appointment and had it fixed beautifully. Professional and
+                  caring service.&rdquo;
                 </p>
-                <div className="fw-semibold">Linda P.</div>
-                <div className="small text-subtle">Dental Trauma</div>
+                <div className="fw-semibold">David K.</div>
+                <div className="small text-subtle">Broken Tooth Repair</div>
               </div>
             </div>
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -576,10 +593,11 @@ export default function EmergencyDentalCare() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Weekend emergency with severe abscess. They treated me
-                  immediately and the infection cleared up quickly.&rdquo;
+                  &ldquo;Dental abscess treated quickly and efficiently. The
+                  video consultation helped manage my pain until I could get to
+                  the clinic.&rdquo;
                 </p>
-                <div className="fw-semibold">Robert K.</div>
+                <div className="fw-semibold">Emma L.</div>
                 <div className="small text-subtle">Dental Abscess</div>
               </div>
             </div>
@@ -607,35 +625,41 @@ export default function EmergencyDentalCare() {
                     Don&apos;t Wait - Get Emergency Care Now!
                   </h2>
                   <p className="lead mb-0" style={{ opacity: 0.9 }}>
-                    Dental emergencies require immediate attention. Every minute
-                    counts when you&apos;re in pain.
+                    Dental emergencies require immediate attention. Call us for
+                    expert advice and emergency appointments.
                   </p>
                 </div>
               </div>
 
-              <div className="d-flex align-items-center gap-4">
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    24/7
-                  </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Emergency Line
-                  </div>
-                </div>
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    &lt; 30min
-                  </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Response Time
+              <div className="row g-3">
+                <div className="col-md-4">
+                  <div className="text-center">
+                    <div className="h4 mb-1" style={{ color: "white" }}>
+                      Award Winning
+                    </div>
+                    <div className="small" style={{ opacity: 0.9 }}>
+                      CQC Registered Practice
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    Same Day
+                <div className="col-md-4">
+                  <div className="text-center">
+                    <div className="h4 mb-1" style={{ color: "white" }}>
+                      24 Hour Goal
+                    </div>
+                    <div className="small" style={{ opacity: 0.9 }}>
+                      Emergency Appointments
+                    </div>
                   </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Treatment
+                </div>
+                <div className="col-md-4">
+                  <div className="text-center">
+                    <div className="h4 mb-1" style={{ color: "white" }}>
+                      Video Consultation
+                    </div>
+                    <div className="small" style={{ opacity: 0.9 }}>
+                      Available
+                    </div>
                   </div>
                 </div>
               </div>
@@ -661,7 +685,7 @@ export default function EmergencyDentalCare() {
                 Call 0113 248 8398
               </a>
               <div className="small text-center" style={{ opacity: 0.9 }}>
-                Available 24 hours a day, 7 days a week
+                Call for emergency advice and appointments
               </div>
             </div>
           </div>

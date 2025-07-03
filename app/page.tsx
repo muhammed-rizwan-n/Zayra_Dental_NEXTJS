@@ -17,10 +17,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+  title:
+    "Award-Winning Private Dentist Leeds | Zayra Dental - CQC Registered Expert Care",
   description:
-    "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening, dental implants & emergency dental services. Book online today!",
+    "Business Awards UK Winner! CQC registered private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening, dental implants & emergency dental services. Book online today!",
   keywords: [
+    "award winning dentist Leeds",
+    "CQC registered dentist Leeds",
     "private dentist Leeds",
     "dentist Leeds",
     "cosmetic dentist Leeds",
@@ -30,14 +33,17 @@ export const metadata: Metadata = {
     "affordable dentist Leeds",
     "dental clinic Leeds",
     "Dr Reshma Parambil",
+    "Business Awards UK winner",
+    "patient centered dental care",
     "Harehills Lane dentist",
     "dental check up Leeds",
     "root canal Leeds",
   ],
   openGraph: {
-    title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+    title:
+      "Award-Winning Private Dentist Leeds | Zayra Dental - CQC Registered",
     description:
-      "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
+      "Business Awards UK Winner! CQC registered private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
     url: "https://zayradental.co.uk",
     images: [
       {
@@ -50,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Private Dentist Leeds | Zayra Dental",
+    title: "Award-Winning Private Dentist Leeds | Zayra Dental",
     description:
-      "Award-winning private dentist in Leeds. Affordable dental care, cosmetic dentistry & emergency services.",
+      "Business Awards UK Winner! CQC registered private dentist in Leeds. Affordable dental care, cosmetic dentistry & emergency services.",
     images: ["/home/waiting_room.jpg"],
   },
   alternates: {
@@ -112,7 +118,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -164,7 +174,7 @@ export default function Home() {
 
       {/* Quick Action Cards */}
       <section className="section-modern bg-cream overflow-y-hidden">
-        <div className="container-modern" >
+        <div className="container-modern">
           <div className="row g-4">
             <div className="col-md-4" data-aos="fade-up">
               <div className="card-modern text-center h-100">
@@ -243,7 +253,10 @@ export default function Home() {
                   Located in the heart of Leeds, easily accessible by car or
                   public transport
                 </p>
-                <Link href="/contact#map" className="btn-secondary-modern scroll-fix">
+                <Link
+                  href="/contact#map"
+                  className="btn-secondary-modern scroll-fix"
+                >
                   Get Directions
                 </Link>
               </div>
@@ -280,7 +293,6 @@ export default function Home() {
                     <div className="heading-tertiary text-accent mb-1">15+</div>
                     <div className="small text-subtle">Years Experience</div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -299,7 +311,9 @@ export default function Home() {
                 <h3 className="heading-tertiary text-primary-brown mb-2">
                   Dr. Reshma Parambil
                 </h3>
-                <p className="text-subtle mb-3">BDS, MDS – Oral & Maxillofacial Surgery</p>
+                <p className="text-subtle mb-3">
+                  BDS, MDS – Oral & Maxillofacial Surgery
+                </p>
                 <blockquote
                   className="border-start border-5 ps-4 mb-4"
                   style={{ borderColor: "var(--primary-teal)" }}
@@ -312,10 +326,11 @@ export default function Home() {
               </div>
 
               <p className="text-subtle mb-4">
-                With over 15 years of experience in general and surgical dentistry, Dr.
-                Reshma brings advanced training in oral and maxillofacial
-                surgery from Mysore, India, Implantology Training in the UK and specialized expertise in
-                restorative and cosmetic dentistry.
+                With over 15 years of experience in general and surgical
+                dentistry, Dr. Reshma brings advanced training in oral and
+                maxillofacial surgery from Mysore, India, Implantology Training
+                in the UK and specialized expertise in restorative and cosmetic
+                dentistry.
               </p>
 
               <div className="row g-3 mb-4">
@@ -349,6 +364,160 @@ export default function Home() {
                 Learn More About Us
                 <ArrowRight size={20} />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className="section-modern bg-white">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Recognition & Awards</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              Award-Winning Dental Excellence
+            </h2>
+            <p
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
+            >
+              We&apos;re proud to be recognized by Business Awards UK for our
+              outstanding patient-centered care and professional excellence in
+              dentistry.
+            </p>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            <div className="col-lg-5" data-aos="fade-up">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #FFD700, #FFA500)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Award size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    WINNER 2024
+                  </div>
+                </div>
+                <h3
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Patient-Centered Dental Care
+                </h3>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Recognized by Business Awards UK for exceptional patient care,
+                  comfort, and satisfaction in dental practice.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Star size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    FINALIST 2024
+                  </div>
+                </div>
+                <h3
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Rising Star Award
+                </h3>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Finalist recognition for innovative dental practice and
+                  outstanding growth in patient care excellence.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-5" data-aos="fade-up" data-aos-delay="400">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Users size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    FINALIST 2024
+                  </div>
+                </div>
+                <h3
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Dentist of the Year 2024
+                </h3>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Dr. Reshma Parambil recognized as finalist for outstanding
+                  clinical expertise and patient care dedication.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="text-center mt-5"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div className="d-flex flex-wrap gap-4 justify-content-center align-items-center text-subtle">
+              <div className="d-flex align-items-center gap-2">
+                <Shield size={18} className="text-accent" />
+                <span className="small">CQC Registered</span>
+              </div>
+              <div className="d-flex align-items-center gap-2">
+                <Award size={18} className="text-accent" />
+                <span className="small">Business Awards UK Winner</span>
+              </div>
+              <div className="d-flex align-items-center gap-2">
+                <CheckCircle size={18} className="text-accent" />
+                <span className="small">GDC Registered</span>
+              </div>
             </div>
           </div>
         </div>
@@ -459,8 +628,7 @@ export default function Home() {
               {
                 icon: <Clock size={40} />,
                 title: "Flexible Hours",
-                description:
-                  "Emergency appointments to suit your needs",
+                description: "Emergency appointments to suit your needs",
               },
               {
                 icon: <Shield size={40} />,
