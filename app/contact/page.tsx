@@ -169,7 +169,7 @@ export default function Contact() {
                 <iframe
                   title="Zayra Dental Clinic Location"
                   src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d127.90075552939904!2d-1.4995775816851713!3d53.80214847687533!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDQ4JzA3LjkiTiAxwrAyOSc1OC4xIlc!5e1!3m2!1sen!2sin!4v1751505544205!5m2!1sen!2sin"
-                  width="600"
+                  width="100%"
                   height="450"
                   style={{ border: 0, borderRadius: "15px" }}
                   loading="lazy"
