@@ -18,11 +18,13 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Contact Dentist Leeds | Book Appointment | Zayra Dental Harehills Lane",
+    "Contact Award-Winning Dentist Leeds | Book Appointment | CQC Registered Zayra Dental",
   description:
-    "Contact Zayra Dental Leeds - Call 0113 248 8398 to book your appointment. Located on Harehills Lane with free parking. Emergency dental care available.",
+    "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice on Harehills Lane with free parking. Emergency dental care available.",
   keywords: [
-    "contact dentist Leeds",
+    "contact award winning dentist Leeds",
+    "CQC registered dentist Leeds",
+    "Business Awards UK winner",
     "book dental appointment Leeds",
     "dentist Harehills Lane",
     "emergency dentist Leeds",
@@ -32,11 +34,12 @@ export const metadata: Metadata = {
     "Leeds dentist phone number",
     "dental emergency Leeds",
     "dentist near me Leeds",
+    "patient centered dental care",
   ],
   openGraph: {
-    title: "Contact Dentist Leeds | Book Appointment | Zayra Dental",
+    title: "Contact Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
     description:
-      "Contact Zayra Dental Leeds - Call 0113 248 8398 to book appointment. Located on Harehills Lane with free parking & emergency care.",
+      "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice with free parking & emergency care.",
     url: "https://zayradental.co.uk/contact",
     images: [
       {
@@ -143,7 +146,6 @@ export default function Contact() {
                   Send Message
                 </Link>
               </div>
-                              
 
               {/* Emergency Notice */}
               <div
@@ -165,7 +167,12 @@ export default function Contact() {
               </div>
             </div>
 
-            <div id="map" className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              id="map"
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="card-elevated">
                 <iframe
                   title="Zayra Dental Clinic Location"
