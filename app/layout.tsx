@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds | Business Awards UK Winner",
+    default:
+      "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds | Business Awards UK Winner",
     template: "%s | Award-Winning Zayra Dental Leeds",
   },
   description:
@@ -140,7 +141,11 @@ export default function RootLayout({
       name: "Dr. Reshma Parambil",
       jobTitle: "Principal Dentist",
       qualifications: "BDS, MDS – Prosthodontics",
-      awards: ["Business Awards UK - Patient-Centered Dental Care Winner 2024", "Business Awards UK - Rising Star Award Finalist 2024", "Business Awards UK - Dentist of the Year Finalist 2024"],
+      awards: [
+        "Business Awards UK - Patient-Centered Dental Care Winner 2024",
+        "Business Awards UK - Rising Star Award Finalist 2024",
+        "Business Awards UK - Dentist of the Year Finalist 2024",
+      ],
     },
     awards: [
       {
@@ -148,34 +153,36 @@ export default function RootLayout({
         name: "Patient-Centered Dental Care",
         awarder: "Business Awards UK",
         dateAwarded: "2024",
-        description: "Winner for exceptional patient care and satisfaction"
+        description: "Winner for exceptional patient care and satisfaction",
       },
       {
         "@type": "Award",
         name: "Rising Star Award",
         awarder: "Business Awards UK",
-        dateAwarded": "2024",
-        description: "Finalist for innovative dental practice and outstanding growth"
+        dateAwarded: "2024",
+        description:
+          "Finalist for innovative dental practice and outstanding growth",
       },
       {
         "@type": "Award",
         name: "Dentist of the Year 2024",
         awarder: "Business Awards UK",
         dateAwarded: "2024",
-        description: "Finalist for outstanding clinical expertise and patient care"
-      }
+        description:
+          "Finalist for outstanding clinical expertise and patient care",
+      },
     ],
     accreditation: [
       {
         "@type": "Organization",
         name: "Care Quality Commission (CQC)",
-        description: "Regulated healthcare provider"
+        description: "Regulated healthcare provider",
       },
       {
         "@type": "Organization",
         name: "General Dental Council (GDC)",
-        description: "Registered dental practice"
-      }
+        description: "Registered dental practice",
+      },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
