@@ -17,11 +17,15 @@ import {
 import teamMembers from "./teamMembers.json";
 
 export const metadata: Metadata = {
-  title: "About Dr Reshma Parambil | Expert Dentist Leeds | Zayra Dental",
+  title:
+    "About Dr Reshma Parambil | Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
   description:
-    "Meet Dr Reshma Parambil, experienced dentist in Leeds with 15+ years expertise in cosmetic & restorative dentistry. GDC registered, patient-focused dental care.",
+    "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care in Leeds.",
   keywords: [
     "Dr Reshma Parambil dentist",
+    "award winning dentist Leeds",
+    "Business Awards UK winner",
+    "CQC registered dentist",
     "experienced dentist Leeds",
     "cosmetic dentist Leeds",
     "prosthodontist Leeds",
@@ -31,11 +35,13 @@ export const metadata: Metadata = {
     "restorative dentist Leeds",
     "about Zayra Dental",
     "dental practice Leeds team",
+    "patient centered dental care",
   ],
   openGraph: {
-    title: "About Dr Reshma Parambil | Expert Dentist Leeds | Zayra Dental",
+    title:
+      "About Dr Reshma Parambil | Award-Winning Dentist Leeds | Zayra Dental",
     description:
-      "Meet Dr Reshma Parambil, experienced dentist in Leeds with 15+ years expertise in cosmetic & restorative dentistry. Patient-focused dental care.",
+      "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care.",
     url: "https://zayradental.co.uk/about-us",
     images: [
       {
