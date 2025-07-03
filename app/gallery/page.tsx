@@ -5,14 +5,17 @@ import {
   Camera,
   ArrowRight,
   Calendar,
-  Eye
+  Eye,
+  X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title:
     "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental Photos",
   description:
-    "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers, implants & smile makeover transformations. Virtual clinic tour available.",
+    "See our award-winning modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers, implants & smile makeover transformations. Virtual clinic tour available.",
   keywords: [
     "dental clinic Leeds photos",
     "dental before after Leeds",
@@ -24,19 +27,21 @@ export const metadata: Metadata = {
     "cosmetic dentistry results",
     "dental practice Leeds tour",
     "dental gallery Leeds",
+    "CQC registered dentist",
+    "award winning dental practice",
   ],
   openGraph: {
     title:
       "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental",
     description:
-      "See our modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
+      "See our award-winning modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
     url: "https://zayradental.co.uk/gallery",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
         width: 1200,
         height: 630,
-        alt: "Zayra Dental Clinic Gallery Leeds - Modern Dental Practice",
+        alt: "Zayra Dental Clinic Gallery Leeds - Award-Winning Modern Dental Practice",
       },
     ],
   },
@@ -46,92 +51,227 @@ export const metadata: Metadata = {
 };
 
 export default function Gallery() {
-  const galleryCategories = [
-    {
-      title: "Clinic Interior",
-      description:
-        "Take a virtual tour of our modern, comfortable dental practice",
-      images: [
-        {
-          src: "/gallery/Zayradental_Edits_29.jpg",
-          alt: "Reception Area",
-          category: "interior",
-        },
-        {
-          src: "/gallery/Zayradental_Edits_13.jpg",
-          alt: "Treatment Room",
-          category: "interior",
-        },
-        {
-          src: "/home/waiting_room.jpg",
-          alt: "Waiting Area",
-          category: "interior",
-        },
-        {
-          src: "/gallery/Zayradental_Edits_13.jpg",
-          alt: "Modern Equipment",
-          category: "interior",
-        },
-      ],
-    },
-    // {
-    //   title: "Before & After",
-    //   description:
-    //     "See the amazing transformations we've achieved for our patients",
-    //   images: [
-    //     {
-    //       src: "/services/dental_bonding.jpg",
-    //       alt: "Dental Bonding Results",
-    //       category: "results",
-    //     },
-    //     {
-    //       src: "/services/teeth_white.jpg",
-    //       alt: "Teeth Whitening Results",
-    //       category: "results",
-    //     },
-    //     {
-    //       src: "/services/dental_aligners.jpeg",
-    //       alt: "Aligner Treatment",
-    //       category: "results",
-    //     },
-    //     {
-    //       src: "/services/dental_implant.jpeg",
-    //       alt: "Dental Implant",
-    //       category: "results",
-    //     },
-    //   ],
-    // },
-    {
-      title: "Our Team",
-      description:
-        "Meet the friendly professionals who will take care of your smile",
-      images: [
-        {
-          src: "/about-us/reshma_parambil.jpg",
-          alt: "Dr. Reshma Parambil",
-          category: "team",
-        },
-        {
-          src: "/about-us/emilio.jpg",
-          alt: "Dr. Emilio Cecamore",
-          category: "team",
-        },
-        { src: "/about-us/bg-team.jpg", alt: "Team Photo", category: "team" },
-      ],
-    },
+  const clinicInterior = {
+    title: "Clinical Interior & Treatment Rooms",
+    description:
+      "Modern facilities with multiple treatment rooms and state-of-the-art equipment",
+    images: [
+      {
+        src: "/gallery/Zayradental_Edits_29.jpg",
+        alt: "Modern Reception Area - Award-winning dental practice",
+        category: "Reception",
+      },
+      {
+        src: "/gallery/Zayradental_Edits_13.jpg",
+        alt: "Treatment Room 1 - State-of-the-art equipment",
+        category: "Treatment Room",
+      },
+      {
+        src: "/home/waiting_room.jpg",
+        alt: "Comfortable Waiting Area - Patient comfort focused",
+        category: "Patient Area",
+      },
+      {
+        src: "/gallery/Zayradental_Edits_11.jpg",
+        alt: "Treatment Room 2 - Advanced dental technology",
+        category: "Treatment Room",
+      },
+      {
+        src: "/about-us/op.jpg",
+        alt: "Treatment Room 3 - Modern dental suite",
+        category: "Treatment Room",
+      },
+      {
+        src: "/about-us/ab2.jpg",
+        alt: "Clinical Area - Professional environment",
+        category: "Clinical",
+      },
+    ],
+  };
+
+  const ourTeam = {
+    title: "Our Professional Team",
+    description:
+      "Meet the expert dental professionals providing award-winning care",
+    images: [
+      {
+        src: "/about-us/reshma_parambil.jpg",
+        alt: "Dr. Reshma Parambil - Principal Dentist & Award Winner",
+        category: "Principal Dentist",
+      },
+      {
+        src: "/about-us/emilio.jpg",
+        alt: "Dr. Emilio Cecamore - Associate Dentist",
+        category: "Associate Dentist",
+      },
+      {
+        src: "/about-us/bg-team.jpg",
+        alt: "Dental Team - Professional care providers",
+        category: "Team",
+      },
+    ],
+  };
+
+  const treatmentResults = {
+    title: "Treatment Results & Procedures",
+    description: "Showcasing our expertise in various dental treatments",
+    images: [
+      {
+        src: "/services/dental_bonding.jpg",
+        alt: "Dental Bonding Results - Cosmetic dentistry",
+        category: "Cosmetic",
+      },
+      {
+        src: "/services/teeth_white.jpg",
+        alt: "Teeth Whitening Results - Professional whitening",
+        category: "Whitening",
+      },
+      {
+        src: "/services/dental_aligners.jpeg",
+        alt: "Dental Aligners Treatment - Orthodontics",
+        category: "Orthodontics",
+      },
+      {
+        src: "/services/dental_implant.jpeg",
+        alt: "Dental Implant Procedure - Restorative dentistry",
+        category: "Implants",
+      },
+      {
+        src: "/services/facial_aesthetics.jpg",
+        alt: "Facial Aesthetics Treatment - Professional care",
+        category: "Aesthetics",
+      },
+      {
+        src: "/services/dental_spa.jpg",
+        alt: "Dental Spa Experience - Luxury comfort",
+        category: "Spa",
+      },
+    ],
+  };
+
+  const allImages = [
+    ...clinicInterior.images,
+    ...ourTeam.images,
+    ...treatmentResults.images,
   ];
 
-  const allImages = galleryCategories.flatMap((category) => category.images);
-  
   const stats = [
-    { number: "500+", label: "Happy Patients" },
-    { number: "5+", label: "Years Experience" },
-    { number: "1000+", label: "Successful Treatments" },
+    { number: "1000+", label: "Happy Patients" },
+    { number: "15+", label: "Years Experience" },
+    { number: "5000+", label: "Successful Treatments" },
     { number: "4.9★", label: "Patient Rating" },
   ];
 
   return (
     <>
+      {/* Lightbox Styles */}
+      <style jsx>{`
+        .gallery-image {
+          cursor: pointer;
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+        .gallery-image:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-card:hover .gallery-overlay {
+          opacity: 1;
+        }
+        .gallery-overlay {
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          display: none;
+          z-index: 9999;
+          align-items: center;
+          justify-content: center;
+        }
+        .lightbox.active {
+          display: flex;
+        }
+        .lightbox-content {
+          position: relative;
+          max-width: 90%;
+          max-height: 90%;
+        }
+        .lightbox-image {
+          max-width: 100%;
+          max-height: 80vh;
+          object-fit: contain;
+        }
+        .lightbox-close {
+          position: absolute;
+          top: -40px;
+          right: 0;
+          color: white;
+          background: none;
+          border: none;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 10000;
+        }
+        .lightbox-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255, 255, 255, 0.2);
+          border: none;
+          color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.3s ease;
+        }
+        .lightbox-nav:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+        .lightbox-prev {
+          left: -70px;
+        }
+        .lightbox-next {
+          right: -70px;
+        }
+        .lightbox-info {
+          position: absolute;
+          bottom: -50px;
+          left: 0;
+          right: 0;
+          color: white;
+          text-align: center;
+        }
+        .masonry-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1rem;
+          grid-auto-rows: 10px;
+        }
+        .masonry-item {
+          grid-row-end: span var(--row-span);
+        }
+        .masonry-item:nth-child(3n) {
+          --row-span: 35;
+        }
+        .masonry-item:nth-child(3n + 1) {
+          --row-span: 40;
+        }
+        .masonry-item:nth-child(3n + 2) {
+          --row-span: 30;
+        }
+      `}</style>
+
       {/* Hero Section */}
       <section
         className="hero-modern"
@@ -142,16 +282,16 @@ export default function Gallery() {
             <div className="col-lg-6" data-aos="fade-right">
               <span className="text-accent fw-medium">Our Gallery</span>
               <h1 className="heading-primary mt-2 mb-4">
-                See Our Modern Clinic &
+                Award-Winning Clinic &
                 <span className="text-primary-brown d-block">
                   Amazing Results
                 </span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Take a virtual tour of our state-of-the-art dental practice and
-                see the incredible smile transformations we&apos;ve achieved for
-                our patients. Every picture tells a story of confidence, health,
-                and happiness.
+                Take a virtual tour of our CQC registered, award-winning dental
+                practice and see the incredible smile transformations we&apos;ve
+                achieved. Every picture tells a story of confidence, health, and
+                professional excellence.
               </p>
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
@@ -160,7 +300,7 @@ export default function Gallery() {
                 </Link>
               </div>
 
-              {/* Stats */}
+              {/* Updated Stats */}
               <div className="row g-3 mt-4">
                 {stats.map((stat, index) => (
                   <div key={index} className="col-6 col-lg-3">
@@ -180,7 +320,7 @@ export default function Gallery() {
                 <div className="card-elevated">
                   <Image
                     src="/gallery/Zayradental_Edits_11.jpg"
-                    alt="Zayra Dental Reception Area"
+                    alt="Award-Winning Zayra Dental Reception Area"
                     width={600}
                     height={500}
                     className="img-fluid rounded-modern"
@@ -218,100 +358,303 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Gallery Categories */}
-      {galleryCategories.map((category, categoryIndex) => (
-        <section
-          key={categoryIndex}
-          className={`section-modern ${
-            categoryIndex % 2 === 1 ? "bg-cream" : ""
-          }`}
-        >
-          <div className="container-modern">
-            <div className="text-center mb-5" data-aos="fade-up">
-              <span className="text-accent fw-medium">Gallery</span>
-              <h2 className="heading-secondary mt-2 mb-4">{category.title}</h2>
-              <p
-                className="lead text-subtle mx-auto"
-                style={{ maxWidth: "600px" }}
+      {/* Clinical Interior Section */}
+      <section className="section-modern bg-cream">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Clinical Interior</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              {clinicInterior.title}
+            </h2>
+            <p
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
+            >
+              {clinicInterior.description}
+            </p>
+          </div>
+
+          <div className="row g-4">
+            {clinicInterior.images.map((image, imageIndex) => (
+              <div
+                key={imageIndex}
+                className="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay={imageIndex * 100}
               >
-                {category.description}
-              </p>
-            </div>
+                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
+                  <div
+                    className="position-relative overflow-hidden"
+                    style={{ height: "280px" }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="gallery-image"
+                      style={{ objectFit: "cover" }}
+                      onClick={() => {
+                        const lightbox = document.getElementById("lightbox");
+                        const lightboxImage =
+                          document.getElementById("lightbox-image");
+                        const lightboxCaption =
+                          document.getElementById("lightbox-caption");
+                        const lightboxCategory =
+                          document.getElementById("lightbox-category");
 
-            <div className="flex justify-content-center row g-4">
-              {category.images.map((image, imageIndex) => (
-                <div
-                  key={imageIndex}
-                  className="col-lg-6 col-xl-3"
-                  data-aos="fade-up"
-                  data-aos-delay={imageIndex * 100}
-                >
-                  <div className="card-modern overflow-hidden p-0 h-100">
+                        if (
+                          lightbox &&
+                          lightboxImage &&
+                          lightboxCaption &&
+                          lightboxCategory
+                        ) {
+                          lightboxImage.src = image.src;
+                          lightboxImage.alt = image.alt;
+                          lightboxCaption.textContent = image.alt;
+                          lightboxCategory.textContent = image.category;
+                          lightbox.dataset.currentIndex = String(
+                            allImages.findIndex((img) => img.src === image.src),
+                          );
+                          lightbox.classList.add("active");
+                          document.body.style.overflow = "hidden";
+                        }
+                      }}
+                    />
+
+                    {/* Hover Overlay */}
                     <div
-                      className="position-relative overflow-hidden"
-                      style={{ height: "250px" }}
+                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                      style={{
+                        background: "rgba(115, 175, 170, 0.9)",
+                      }}
                     >
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="img-fluid"
-                        style={{
-                          objectFit: "cover",
-                          transition: "var(--transition-smooth)",
-                        }}
-                      />
-
-                      {/* Hover Overlay */}
-                      {/* <div
-                        className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0"
-                        style={{
-                          background: "rgba(115, 175, 170, 0.9)",
-                          transition: "var(--transition-smooth)",
-                        }}
-                      >
-                        <div className="text-center text-white">
-                          <Maximize2 size={32} className="mb-2" />
-                          <div className="fw-medium">View Full Size</div>
-                        </div>
-                      </div> */}
-                    </div>
-
-                    <div className="p-3">
-                      <h5 className="fw-semibold mb-2">{image.alt}</h5>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <span
-                          className="badge rounded-pill"
-                          style={{
-                            background: "var(--primary-teal)",
-                            color: "white",
-                            fontSize: "0.75rem",
-                          }}
-                        >
-                          {image.category}
-                        </span>
-                        <button
-                          className="btn btn-sm"
-                          style={{
-                            background: "transparent",
-                            border: "none",
-                            color: "var(--primary-teal)",
-                          }}
-                        >
-                          {/* <Share2 size={16} /> */}
-                        </button>
+                      <div className="text-center text-white">
+                        <Eye size={32} className="mb-2" />
+                        <div className="fw-medium">View Full Size</div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
 
-      {/* Interactive Gallery Grid */}
+                  <div className="p-3">
+                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span
+                        className="badge rounded-pill"
+                        style={{
+                          background: "var(--primary-teal)",
+                          color: "white",
+                          fontSize: "0.75rem",
+                        }}
+                      >
+                        {image.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="section-modern">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Our Team</span>
+            <h2 className="heading-secondary mt-2 mb-4">{ourTeam.title}</h2>
+            <p
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
+            >
+              {ourTeam.description}
+            </p>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            {ourTeam.images.map((image, imageIndex) => (
+              <div
+                key={imageIndex}
+                className="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay={imageIndex * 100}
+              >
+                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
+                  <div
+                    className="position-relative overflow-hidden"
+                    style={{ height: "350px" }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="gallery-image"
+                      style={{ objectFit: "cover" }}
+                      onClick={() => {
+                        const lightbox = document.getElementById("lightbox");
+                        const lightboxImage =
+                          document.getElementById("lightbox-image");
+                        const lightboxCaption =
+                          document.getElementById("lightbox-caption");
+                        const lightboxCategory =
+                          document.getElementById("lightbox-category");
+
+                        if (
+                          lightbox &&
+                          lightboxImage &&
+                          lightboxCaption &&
+                          lightboxCategory
+                        ) {
+                          lightboxImage.src = image.src;
+                          lightboxImage.alt = image.alt;
+                          lightboxCaption.textContent = image.alt;
+                          lightboxCategory.textContent = image.category;
+                          lightbox.dataset.currentIndex = String(
+                            allImages.findIndex((img) => img.src === image.src),
+                          );
+                          lightbox.classList.add("active");
+                          document.body.style.overflow = "hidden";
+                        }
+                      }}
+                    />
+
+                    {/* Hover Overlay */}
+                    <div
+                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                      style={{
+                        background: "rgba(182, 119, 88, 0.9)",
+                      }}
+                    >
+                      <div className="text-center text-white">
+                        <Eye size={32} className="mb-2" />
+                        <div className="fw-medium">View Full Size</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3">
+                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span
+                        className="badge rounded-pill"
+                        style={{
+                          background: "var(--primary-brown)",
+                          color: "white",
+                          fontSize: "0.75rem",
+                        }}
+                      >
+                        {image.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Treatment Results Section */}
       <section className="section-modern bg-light-modern">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Treatment Gallery</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              {treatmentResults.title}
+            </h2>
+            <p
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
+            >
+              {treatmentResults.description}
+            </p>
+          </div>
+
+          <div className="row g-4">
+            {treatmentResults.images.map((image, imageIndex) => (
+              <div
+                key={imageIndex}
+                className="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay={imageIndex * 100}
+              >
+                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
+                  <div
+                    className="position-relative overflow-hidden"
+                    style={{ height: "250px" }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="gallery-image"
+                      style={{ objectFit: "cover" }}
+                      onClick={() => {
+                        const lightbox = document.getElementById("lightbox");
+                        const lightboxImage =
+                          document.getElementById("lightbox-image");
+                        const lightboxCaption =
+                          document.getElementById("lightbox-caption");
+                        const lightboxCategory =
+                          document.getElementById("lightbox-category");
+
+                        if (
+                          lightbox &&
+                          lightboxImage &&
+                          lightboxCaption &&
+                          lightboxCategory
+                        ) {
+                          lightboxImage.src = image.src;
+                          lightboxImage.alt = image.alt;
+                          lightboxCaption.textContent = image.alt;
+                          lightboxCategory.textContent = image.category;
+                          lightbox.dataset.currentIndex = String(
+                            allImages.findIndex((img) => img.src === image.src),
+                          );
+                          lightbox.classList.add("active");
+                          document.body.style.overflow = "hidden";
+                        }
+                      }}
+                    />
+
+                    {/* Hover Overlay */}
+                    <div
+                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                      style={{
+                        background: "rgba(55, 119, 122, 0.9)",
+                      }}
+                    >
+                      <div className="text-center text-white">
+                        <Eye size={32} className="mb-2" />
+                        <div className="fw-medium">View Full Size</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3">
+                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span
+                        className="badge rounded-pill"
+                        style={{
+                          background: "var(--accent-teal)",
+                          color: "white",
+                          fontSize: "0.75rem",
+                        }}
+                      >
+                        {image.category}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Gallery Grid */}
+      <section className="section-modern">
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="text-accent fw-medium">Complete Gallery</span>
@@ -323,59 +666,60 @@ export default function Gallery() {
               style={{ maxWidth: "600px" }}
             >
               Browse through our complete collection of clinic photos, treatment
-              results, and team pictures to get a comprehensive view of Zayra
-              Dental.
+              results, and team pictures. Click any image to view in full size.
             </p>
           </div>
 
           {/* Masonry-style Gallery Grid */}
-          <div
-            className="row g-3"
-            style={{
-              columnCount: "auto",
-              columnFill: "balance",
-            }}
-          >
+          <div className="masonry-grid">
             {allImages.map((image, index) => (
               <div
                 key={index}
-                className={`col-lg-${
-                  index % 5 === 0 ? "6" : index % 3 === 0 ? "4" : "3"
-                } col-md-6`}
+                className="masonry-item"
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               >
-                <div
-                  className="card-modern overflow-hidden p-0 mb-3"
-                  style={{
-                    height:
-                      index % 5 === 0
-                        ? "350px"
-                        : index % 2 === 0
-                        ? "380px"
-                        : "320px",
-                  }}
-                >
-                  <div className="position-relative h-100 overflow-hidden">
+                <div className="card-modern overflow-hidden p-0 mb-3 gallery-card">
+                  <div className="position-relative overflow-hidden">
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      fill
-                      className="img-fluid"
-                      style={{
-                        objectFit: "cover",
-                        transition: "var(--transition-smooth)",
-                        cursor: "pointer",
+                      width={400}
+                      height={300}
+                      className="gallery-image w-100"
+                      style={{ objectFit: "cover", height: "auto" }}
+                      onClick={() => {
+                        const lightbox = document.getElementById("lightbox");
+                        const lightboxImage =
+                          document.getElementById("lightbox-image");
+                        const lightboxCaption =
+                          document.getElementById("lightbox-caption");
+                        const lightboxCategory =
+                          document.getElementById("lightbox-category");
+
+                        if (
+                          lightbox &&
+                          lightboxImage &&
+                          lightboxCaption &&
+                          lightboxCategory
+                        ) {
+                          lightboxImage.src = image.src;
+                          lightboxImage.alt = image.alt;
+                          lightboxCaption.textContent = image.alt;
+                          lightboxCategory.textContent = image.category;
+                          lightbox.dataset.currentIndex = String(index);
+                          lightbox.classList.add("active");
+                          document.body.style.overflow = "hidden";
+                        }
                       }}
                     />
 
                     {/* Hover Effect */}
                     <div
-                      className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end opacity-0"
+                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end"
                       style={{
                         background:
                           "linear-gradient(transparent, rgba(0,0,0,0.7))",
-                        transition: "var(--transition-smooth)",
                       }}
                     >
                       <div className="p-3 text-white w-100">
@@ -421,8 +765,8 @@ export default function Gallery() {
                     Want to See More?
                   </h3>
                   <p className="mb-0" style={{ opacity: 0.9 }}>
-                    Visit our clinic for a personal tour and see our facilities
-                    firsthand
+                    Visit our award-winning clinic for a personal tour and
+                    experience our facilities firsthand
                   </p>
                 </div>
               </div>
@@ -452,7 +796,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-modern">
+      <section className="section-modern bg-cream">
         <div className="container-modern">
           <div className="text-center" data-aos="fade-up">
             <h2 className="heading-secondary mb-4">
@@ -460,8 +804,8 @@ export default function Gallery() {
             </h2>
             <p className="lead text-subtle mb-4">
               Join hundreds of satisfied patients who have transformed their
-              smiles at Zayra Dental. Your perfect smile journey starts with a
-              simple consultation.
+              smiles at our award-winning dental practice. Your perfect smile
+              journey starts with a simple consultation.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <Link href="/appointment" className="btn-primary-modern">
@@ -476,6 +820,108 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      <div
+        id="lightbox"
+        className="lightbox"
+        onClick={(e) => {
+          if (e.target.id === "lightbox") {
+            e.target.classList.remove("active");
+            document.body.style.overflow = "auto";
+          }
+        }}
+      >
+        <div className="lightbox-content">
+          <button
+            className="lightbox-close"
+            onClick={() => {
+              const lightbox = document.getElementById("lightbox");
+              if (lightbox) {
+                lightbox.classList.remove("active");
+                document.body.style.overflow = "auto";
+              }
+            }}
+          >
+            <X size={24} />
+          </button>
+
+          <button
+            className="lightbox-nav lightbox-prev"
+            onClick={() => {
+              const lightbox = document.getElementById("lightbox");
+              const lightboxImage = document.getElementById("lightbox-image");
+              const lightboxCaption =
+                document.getElementById("lightbox-caption");
+              const lightboxCategory =
+                document.getElementById("lightbox-category");
+
+              if (
+                lightbox &&
+                lightboxImage &&
+                lightboxCaption &&
+                lightboxCategory
+              ) {
+                const currentIndex = parseInt(
+                  lightbox.dataset.currentIndex || "0",
+                );
+                const newIndex =
+                  currentIndex > 0 ? currentIndex - 1 : allImages.length - 1;
+                const newImage = allImages[newIndex];
+
+                lightboxImage.src = newImage.src;
+                lightboxImage.alt = newImage.alt;
+                lightboxCaption.textContent = newImage.alt;
+                lightboxCategory.textContent = newImage.category;
+                lightbox.dataset.currentIndex = String(newIndex);
+              }
+            }}
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button
+            className="lightbox-nav lightbox-next"
+            onClick={() => {
+              const lightbox = document.getElementById("lightbox");
+              const lightboxImage = document.getElementById("lightbox-image");
+              const lightboxCaption =
+                document.getElementById("lightbox-caption");
+              const lightboxCategory =
+                document.getElementById("lightbox-category");
+
+              if (
+                lightbox &&
+                lightboxImage &&
+                lightboxCaption &&
+                lightboxCategory
+              ) {
+                const currentIndex = parseInt(
+                  lightbox.dataset.currentIndex || "0",
+                );
+                const newIndex =
+                  currentIndex < allImages.length - 1 ? currentIndex + 1 : 0;
+                const newImage = allImages[newIndex];
+
+                lightboxImage.src = newImage.src;
+                lightboxImage.alt = newImage.alt;
+                lightboxCaption.textContent = newImage.alt;
+                lightboxCategory.textContent = newImage.category;
+                lightbox.dataset.currentIndex = String(newIndex);
+              }
+            }}
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          <img id="lightbox-image" alt="" className="lightbox-image" />
+
+          <div className="lightbox-info">
+            <div id="lightbox-caption" className="fw-medium mb-1"></div>
+            <div id="lightbox-category" className="small opacity-75"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
