@@ -17,10 +17,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+  title:
+    "Award-Winning Private Dentist Leeds | Zayra Dental - CQC Registered Expert Care",
   description:
-    "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening, dental implants & emergency dental services. Book online today!",
+    "Business Awards UK Winner! CQC registered private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening, dental implants & emergency dental services. Book online today!",
   keywords: [
+    "award winning dentist Leeds",
+    "CQC registered dentist Leeds",
     "private dentist Leeds",
     "dentist Leeds",
     "cosmetic dentist Leeds",
@@ -30,14 +33,17 @@ export const metadata: Metadata = {
     "affordable dentist Leeds",
     "dental clinic Leeds",
     "Dr Reshma Parambil",
+    "Business Awards UK winner",
+    "patient centered dental care",
     "Harehills Lane dentist",
     "dental check up Leeds",
     "root canal Leeds",
   ],
   openGraph: {
-    title: "Private Dentist Leeds | Zayra Dental - Expert Dental Care",
+    title:
+      "Award-Winning Private Dentist Leeds | Zayra Dental - CQC Registered",
     description:
-      "Award-winning private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
+      "Business Awards UK Winner! CQC registered private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
     url: "https://zayradental.co.uk",
     images: [
       {
@@ -50,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Private Dentist Leeds | Zayra Dental",
+    title: "Award-Winning Private Dentist Leeds | Zayra Dental",
     description:
-      "Award-winning private dentist in Leeds. Affordable dental care, cosmetic dentistry & emergency services.",
+      "Business Awards UK Winner! CQC registered private dentist in Leeds. Affordable dental care, cosmetic dentistry & emergency services.",
     images: ["/home/waiting_room.jpg"],
   },
   alternates: {
