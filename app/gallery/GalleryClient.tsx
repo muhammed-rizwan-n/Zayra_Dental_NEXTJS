@@ -136,7 +136,7 @@ export default function GalleryClient({
           })}
         </div>
 
-        {/* Lightbox */}
+        {/* Lightbox for Masonry */}
         {lightboxOpen && (
           <div
             style={{
@@ -229,15 +229,20 @@ export default function GalleryClient({
                 <ChevronRight size={24} />
               </button>
 
-              <img
-                src={currentImages[currentImageIndex]?.src}
-                alt={currentImages[currentImageIndex]?.alt}
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "80vh",
-                  objectFit: "contain",
-                }}
-              />
+              <div
+                style={{ position: "relative", width: "100%", height: "80vh" }}
+              >
+                <Image
+                  src={
+                    currentImages[currentImageIndex]?.src || "/placeholder.jpg"
+                  }
+                  alt={currentImages[currentImageIndex]?.alt || ""}
+                  fill
+                  style={{
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
 
               <div
                 style={{
@@ -342,7 +347,7 @@ export default function GalleryClient({
         ))}
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox for Regular Grid */}
       {lightboxOpen && (
         <div
           style={{
@@ -445,15 +450,20 @@ export default function GalleryClient({
               <ChevronRight size={24} />
             </button>
 
-            <img
-              src={currentImages[currentImageIndex]?.src}
-              alt={currentImages[currentImageIndex]?.alt}
-              style={{
-                maxWidth: "100%",
-                maxHeight: "80vh",
-                objectFit: "contain",
-              }}
-            />
+            <div
+              style={{ position: "relative", width: "100%", height: "80vh" }}
+            >
+              <Image
+                src={
+                  currentImages[currentImageIndex]?.src || "/placeholder.jpg"
+                }
+                alt={currentImages[currentImageIndex]?.alt || ""}
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
 
             <div
               style={{
