@@ -1,15 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {
-  Camera,
-  ArrowRight,
-  Calendar,
-  Eye,
-  X,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Camera, ArrowRight, Calendar, Eye } from "lucide-react";
+import GalleryClient from "./GalleryClient";
 
 export const metadata: Metadata = {
   title:
@@ -164,114 +157,6 @@ export default function Gallery() {
 
   return (
     <>
-      {/* Lightbox Styles */}
-      <style jsx>{`
-        .gallery-image {
-          cursor: pointer;
-          transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-        }
-        .gallery-image:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-        .gallery-card:hover .gallery-overlay {
-          opacity: 1;
-        }
-        .gallery-overlay {
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-        .lightbox {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.9);
-          display: none;
-          z-index: 9999;
-          align-items: center;
-          justify-content: center;
-        }
-        .lightbox.active {
-          display: flex;
-        }
-        .lightbox-content {
-          position: relative;
-          max-width: 90%;
-          max-height: 90%;
-        }
-        .lightbox-image {
-          max-width: 100%;
-          max-height: 80vh;
-          object-fit: contain;
-        }
-        .lightbox-close {
-          position: absolute;
-          top: -40px;
-          right: 0;
-          color: white;
-          background: none;
-          border: none;
-          font-size: 2rem;
-          cursor: pointer;
-          z-index: 10000;
-        }
-        .lightbox-nav {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.2);
-          border: none;
-          color: white;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background 0.3s ease;
-        }
-        .lightbox-nav:hover {
-          background: rgba(255, 255, 255, 0.3);
-        }
-        .lightbox-prev {
-          left: -70px;
-        }
-        .lightbox-next {
-          right: -70px;
-        }
-        .lightbox-info {
-          position: absolute;
-          bottom: -50px;
-          left: 0;
-          right: 0;
-          color: white;
-          text-align: center;
-        }
-        .masonry-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 1rem;
-          grid-auto-rows: 10px;
-        }
-        .masonry-item {
-          grid-row-end: span var(--row-span);
-        }
-        .masonry-item:nth-child(3n) {
-          --row-span: 35;
-        }
-        .masonry-item:nth-child(3n + 1) {
-          --row-span: 40;
-        }
-        .masonry-item:nth-child(3n + 2) {
-          --row-span: 30;
-        }
-      `}</style>
-
       {/* Hero Section */}
       <section
         className="hero-modern"
@@ -374,86 +259,11 @@ export default function Gallery() {
             </p>
           </div>
 
-          <div className="row g-4">
-            {clinicInterior.images.map((image, imageIndex) => (
-              <div
-                key={imageIndex}
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay={imageIndex * 100}
-              >
-                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
-                  <div
-                    className="position-relative overflow-hidden"
-                    style={{ height: "280px" }}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="gallery-image"
-                      style={{ objectFit: "cover" }}
-                      onClick={() => {
-                        const lightbox = document.getElementById("lightbox");
-                        const lightboxImage =
-                          document.getElementById("lightbox-image");
-                        const lightboxCaption =
-                          document.getElementById("lightbox-caption");
-                        const lightboxCategory =
-                          document.getElementById("lightbox-category");
-
-                        if (
-                          lightbox &&
-                          lightboxImage &&
-                          lightboxCaption &&
-                          lightboxCategory
-                        ) {
-                          lightboxImage.src = image.src;
-                          lightboxImage.alt = image.alt;
-                          lightboxCaption.textContent = image.alt;
-                          lightboxCategory.textContent = image.category;
-                          lightbox.dataset.currentIndex = String(
-                            allImages.findIndex((img) => img.src === image.src),
-                          );
-                          lightbox.classList.add("active");
-                          document.body.style.overflow = "hidden";
-                        }
-                      }}
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-                      style={{
-                        background: "rgba(115, 175, 170, 0.9)",
-                      }}
-                    >
-                      <div className="text-center text-white">
-                        <Eye size={32} className="mb-2" />
-                        <div className="fw-medium">View Full Size</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-3">
-                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <span
-                        className="badge rounded-pill"
-                        style={{
-                          background: "var(--primary-teal)",
-                          color: "white",
-                          fontSize: "0.75rem",
-                        }}
-                      >
-                        {image.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryClient
+            images={clinicInterior.images}
+            allImages={allImages}
+            sectionColor="var(--primary-teal)"
+          />
         </div>
       </section>
 
@@ -471,86 +281,13 @@ export default function Gallery() {
             </p>
           </div>
 
-          <div className="row g-4 justify-content-center">
-            {ourTeam.images.map((image, imageIndex) => (
-              <div
-                key={imageIndex}
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay={imageIndex * 100}
-              >
-                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
-                  <div
-                    className="position-relative overflow-hidden"
-                    style={{ height: "350px" }}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="gallery-image"
-                      style={{ objectFit: "cover" }}
-                      onClick={() => {
-                        const lightbox = document.getElementById("lightbox");
-                        const lightboxImage =
-                          document.getElementById("lightbox-image");
-                        const lightboxCaption =
-                          document.getElementById("lightbox-caption");
-                        const lightboxCategory =
-                          document.getElementById("lightbox-category");
-
-                        if (
-                          lightbox &&
-                          lightboxImage &&
-                          lightboxCaption &&
-                          lightboxCategory
-                        ) {
-                          lightboxImage.src = image.src;
-                          lightboxImage.alt = image.alt;
-                          lightboxCaption.textContent = image.alt;
-                          lightboxCategory.textContent = image.category;
-                          lightbox.dataset.currentIndex = String(
-                            allImages.findIndex((img) => img.src === image.src),
-                          );
-                          lightbox.classList.add("active");
-                          document.body.style.overflow = "hidden";
-                        }
-                      }}
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-                      style={{
-                        background: "rgba(182, 119, 88, 0.9)",
-                      }}
-                    >
-                      <div className="text-center text-white">
-                        <Eye size={32} className="mb-2" />
-                        <div className="fw-medium">View Full Size</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-3">
-                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <span
-                        className="badge rounded-pill"
-                        style={{
-                          background: "var(--primary-brown)",
-                          color: "white",
-                          fontSize: "0.75rem",
-                        }}
-                      >
-                        {image.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryClient
+            images={ourTeam.images}
+            allImages={allImages}
+            sectionColor="var(--primary-brown)"
+            imageHeight="350px"
+            justify="center"
+          />
         </div>
       </section>
 
@@ -570,86 +307,11 @@ export default function Gallery() {
             </p>
           </div>
 
-          <div className="row g-4">
-            {treatmentResults.images.map((image, imageIndex) => (
-              <div
-                key={imageIndex}
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay={imageIndex * 100}
-              >
-                <div className="card-modern overflow-hidden p-0 h-100 gallery-card">
-                  <div
-                    className="position-relative overflow-hidden"
-                    style={{ height: "250px" }}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="gallery-image"
-                      style={{ objectFit: "cover" }}
-                      onClick={() => {
-                        const lightbox = document.getElementById("lightbox");
-                        const lightboxImage =
-                          document.getElementById("lightbox-image");
-                        const lightboxCaption =
-                          document.getElementById("lightbox-caption");
-                        const lightboxCategory =
-                          document.getElementById("lightbox-category");
-
-                        if (
-                          lightbox &&
-                          lightboxImage &&
-                          lightboxCaption &&
-                          lightboxCategory
-                        ) {
-                          lightboxImage.src = image.src;
-                          lightboxImage.alt = image.alt;
-                          lightboxCaption.textContent = image.alt;
-                          lightboxCategory.textContent = image.category;
-                          lightbox.dataset.currentIndex = String(
-                            allImages.findIndex((img) => img.src === image.src),
-                          );
-                          lightbox.classList.add("active");
-                          document.body.style.overflow = "hidden";
-                        }
-                      }}
-                    />
-
-                    {/* Hover Overlay */}
-                    <div
-                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-                      style={{
-                        background: "rgba(55, 119, 122, 0.9)",
-                      }}
-                    >
-                      <div className="text-center text-white">
-                        <Eye size={32} className="mb-2" />
-                        <div className="fw-medium">View Full Size</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-3">
-                    <h6 className="fw-semibold mb-2">{image.alt}</h6>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <span
-                        className="badge rounded-pill"
-                        style={{
-                          background: "var(--accent-teal)",
-                          color: "white",
-                          fontSize: "0.75rem",
-                        }}
-                      >
-                        {image.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryClient
+            images={treatmentResults.images}
+            allImages={allImages}
+            sectionColor="var(--accent-teal)"
+          />
         </div>
       </section>
 
@@ -671,67 +333,12 @@ export default function Gallery() {
           </div>
 
           {/* Masonry-style Gallery Grid */}
-          <div className="masonry-grid">
-            {allImages.map((image, index) => (
-              <div
-                key={index}
-                className="masonry-item"
-                data-aos="fade-up"
-                data-aos-delay={index * 50}
-              >
-                <div className="card-modern overflow-hidden p-0 mb-3 gallery-card">
-                  <div className="position-relative overflow-hidden">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={400}
-                      height={300}
-                      className="gallery-image w-100"
-                      style={{ objectFit: "cover", height: "auto" }}
-                      onClick={() => {
-                        const lightbox = document.getElementById("lightbox");
-                        const lightboxImage =
-                          document.getElementById("lightbox-image");
-                        const lightboxCaption =
-                          document.getElementById("lightbox-caption");
-                        const lightboxCategory =
-                          document.getElementById("lightbox-category");
-
-                        if (
-                          lightbox &&
-                          lightboxImage &&
-                          lightboxCaption &&
-                          lightboxCategory
-                        ) {
-                          lightboxImage.src = image.src;
-                          lightboxImage.alt = image.alt;
-                          lightboxCaption.textContent = image.alt;
-                          lightboxCategory.textContent = image.category;
-                          lightbox.dataset.currentIndex = String(index);
-                          lightbox.classList.add("active");
-                          document.body.style.overflow = "hidden";
-                        }
-                      }}
-                    />
-
-                    {/* Hover Effect */}
-                    <div
-                      className="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end"
-                      style={{
-                        background:
-                          "linear-gradient(transparent, rgba(0,0,0,0.7))",
-                      }}
-                    >
-                      <div className="p-3 text-white w-100">
-                        <div className="fw-medium">{image.alt}</div>
-                        <div className="small opacity-75">{image.category}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryClient
+            images={allImages}
+            allImages={allImages}
+            isMasonry={true}
+            sectionColor="var(--primary-teal)"
+          />
         </div>
       </section>
 
@@ -820,108 +427,6 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-
-      {/* Lightbox */}
-      <div
-        id="lightbox"
-        className="lightbox"
-        onClick={(e) => {
-          if (e.target.id === "lightbox") {
-            e.target.classList.remove("active");
-            document.body.style.overflow = "auto";
-          }
-        }}
-      >
-        <div className="lightbox-content">
-          <button
-            className="lightbox-close"
-            onClick={() => {
-              const lightbox = document.getElementById("lightbox");
-              if (lightbox) {
-                lightbox.classList.remove("active");
-                document.body.style.overflow = "auto";
-              }
-            }}
-          >
-            <X size={24} />
-          </button>
-
-          <button
-            className="lightbox-nav lightbox-prev"
-            onClick={() => {
-              const lightbox = document.getElementById("lightbox");
-              const lightboxImage = document.getElementById("lightbox-image");
-              const lightboxCaption =
-                document.getElementById("lightbox-caption");
-              const lightboxCategory =
-                document.getElementById("lightbox-category");
-
-              if (
-                lightbox &&
-                lightboxImage &&
-                lightboxCaption &&
-                lightboxCategory
-              ) {
-                const currentIndex = parseInt(
-                  lightbox.dataset.currentIndex || "0",
-                );
-                const newIndex =
-                  currentIndex > 0 ? currentIndex - 1 : allImages.length - 1;
-                const newImage = allImages[newIndex];
-
-                lightboxImage.src = newImage.src;
-                lightboxImage.alt = newImage.alt;
-                lightboxCaption.textContent = newImage.alt;
-                lightboxCategory.textContent = newImage.category;
-                lightbox.dataset.currentIndex = String(newIndex);
-              }
-            }}
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            className="lightbox-nav lightbox-next"
-            onClick={() => {
-              const lightbox = document.getElementById("lightbox");
-              const lightboxImage = document.getElementById("lightbox-image");
-              const lightboxCaption =
-                document.getElementById("lightbox-caption");
-              const lightboxCategory =
-                document.getElementById("lightbox-category");
-
-              if (
-                lightbox &&
-                lightboxImage &&
-                lightboxCaption &&
-                lightboxCategory
-              ) {
-                const currentIndex = parseInt(
-                  lightbox.dataset.currentIndex || "0",
-                );
-                const newIndex =
-                  currentIndex < allImages.length - 1 ? currentIndex + 1 : 0;
-                const newImage = allImages[newIndex];
-
-                lightboxImage.src = newImage.src;
-                lightboxImage.alt = newImage.alt;
-                lightboxCaption.textContent = newImage.alt;
-                lightboxCategory.textContent = newImage.category;
-                lightbox.dataset.currentIndex = String(newIndex);
-              }
-            }}
-          >
-            <ChevronRight size={24} />
-          </button>
-
-          <img id="lightbox-image" alt="" className="lightbox-image" />
-
-          <div className="lightbox-info">
-            <div id="lightbox-caption" className="fw-medium mb-1"></div>
-            <div id="lightbox-category" className="small opacity-75"></div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
