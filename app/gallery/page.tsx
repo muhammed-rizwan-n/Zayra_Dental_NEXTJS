@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Camera, ArrowRight, Calendar, Eye } from "lucide-react";
 import GalleryClient from "./GalleryClient";
+import "./style.css";
 
 export const metadata: Metadata = {
   title:
