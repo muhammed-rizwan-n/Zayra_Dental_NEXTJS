@@ -88,7 +88,7 @@ export default function Contact() {
     {
       icon: <Calendar size={32} />,
       title: "Book Appointment",
-      description: "Schedule your visit online",
+      description: "Schedule your visit by Call",
       action: "Book Now",
       href: "/appointment",
       color: "var(--primary-brown)",
@@ -104,7 +104,7 @@ export default function Contact() {
     {
       icon: <MessageCircle size={32} />,
       title: "Emergency Care",
-      description: "emergency dental service",
+      description: "Emergency dental service",
       action: "Emergency Line",
       href: "tel:111",
       color: "var(--secondary-brown)",
@@ -134,15 +134,16 @@ export default function Contact() {
 
               {/* Quick Contact Options */}
               <div className="d-flex flex-wrap gap-3 mb-4">
-                <a href="tel:01132488398" className="btn-primary-modern">
+                <Link href="tel:01132488398" className="btn-primary-modern">
                   <Phone size={20} />
                   Call Now
-                </a>
+                </Link>
                 <Link href="#form" className="btn-secondary-modern">
                   <Calendar size={20} />
                   Any Queries
                 </Link>
               </div>
+                              
 
               {/* Emergency Notice */}
               <div
@@ -164,7 +165,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="card-elevated">
                 <iframe
                   title="Zayra Dental Clinic Location"

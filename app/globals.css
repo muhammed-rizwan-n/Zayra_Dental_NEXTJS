@@ -265,7 +265,6 @@ body {
 }
 
 .hero-modern::before {
-  content: "";
   position: absolute;
   top: -50%;
   right: -50%;

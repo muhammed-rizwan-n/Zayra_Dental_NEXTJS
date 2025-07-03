@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="d-flex flex-wrap gap-3 mb-5">
                   <Link href="/appointment" className="btn-primary-modern">
                     <Calendar size={20} />
-                    #Book Consultation
+                    Schedule Appointment
                   </Link>
                   <Link href="/services" className="btn-secondary-modern">
                     Our Services
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
