@@ -138,9 +138,9 @@ export default function Contact() {
                   <Phone size={20} />
                   Call Now
                 </a>
-                <Link href="/appointment" className="btn-secondary-modern">
+                <Link href="#form" className="btn-secondary-modern">
                   <Calendar size={20} />
-                  Book Online
+                  Any Queries
                 </Link>
               </div>
 
@@ -389,7 +389,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="col-lg-7" data-aos="fade-left">
+            <div id="form" className="col-lg-7 scroll-fix" data-aos="fade-left">
               <div className="card-modern h-100">
                 <span className="text-accent fw-medium">Send Us a Message</span>
                 <h2 className="heading-secondary mt-2 mb-4">

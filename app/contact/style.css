@@ -19,3 +19,7 @@ a {
 a:hover {
   color: #084298;
 }
+
+section-form {
+  scroll-margin-top: 150px; /* Equal to or slightly more than navbar height */
+}

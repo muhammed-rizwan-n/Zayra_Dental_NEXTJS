@@ -545,3 +545,7 @@ body {
     scroll-behavior: smooth;
   }
 }
+
+.scroll-fix {
+  scroll-margin-top: 100px; /* Slightly larger than navbar */
+}
