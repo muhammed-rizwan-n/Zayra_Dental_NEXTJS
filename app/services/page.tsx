@@ -17,10 +17,13 @@ import serviceList from "./serviceList.json";
 
 export const metadata: Metadata = {
   title:
-    "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+    "Award-Winning Dental Services Leeds | CQC Registered Cosmetic Dentistry, Implants & Teeth Whitening",
   description:
-    "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics, root canal & emergency care. Expert dentist, affordable prices. Book today!",
+    "Business Awards UK Winner! Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics, root canal & emergency care. CQC registered expert dentist, affordable prices. Book today!",
   keywords: [
+    "award winning dental services Leeds",
+    "CQC registered dentist Leeds",
+    "Business Awards UK winner",
     "dental services Leeds",
     "cosmetic dentistry Leeds",
     "teeth whitening Leeds",
@@ -35,12 +38,13 @@ export const metadata: Metadata = {
     "composite bonding Leeds",
     "dental crown Leeds",
     "dental bridge Leeds",
+    "patient centered dental care",
   ],
   openGraph: {
     title:
-      "Dental Services Leeds | Cosmetic Dentistry, Implants & Teeth Whitening",
+      "Award-Winning Dental Services Leeds | CQC Registered Cosmetic Dentistry & Implants",
     description:
-      "Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics & emergency care. Expert dentist, affordable prices.",
+      "Business Awards UK Winner! Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics & emergency care. CQC registered expert dentist.",
     url: "https://zayradental.co.uk/services",
     images: [
       {
