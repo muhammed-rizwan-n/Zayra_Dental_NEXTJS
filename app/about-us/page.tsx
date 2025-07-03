@@ -52,7 +52,6 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-
   const values = [
     {
       icon: <Heart size={32} />,
@@ -120,7 +119,11 @@ export default function About() {
       {/* Hero Section */}
       <section
         className="hero-modern"
-        style={{ paddingTop: "130px",paddingBottom:"30px", minHeight: "70vh" }}
+        style={{
+          paddingTop: "130px",
+          paddingBottom: "30px",
+          minHeight: "70vh",
+        }}
       >
         <div className="container-modern">
           <div className="row align-items-center">
@@ -148,8 +151,10 @@ export default function About() {
               </div>
 
               {/* Stats */}
-              <div className="flex justify-content-center row g-4 mt-3" style={{display:"none"}}>
-                
+              <div
+                className="flex justify-content-center row g-4 mt-3"
+                style={{ display: "none" }}
+              >
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">
@@ -169,7 +174,11 @@ export default function About() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -333,6 +342,162 @@ export default function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className="section-modern bg-white">
+        <div className="container-modern">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="text-accent fw-medium">Recognition & Awards</span>
+            <h2 className="heading-secondary mt-2 mb-4">
+              Celebrating Our Achievements
+            </h2>
+            <p
+              className="lead text-subtle mx-auto"
+              style={{ maxWidth: "600px" }}
+            >
+              Our commitment to excellence has been recognized by Business
+              Awards UK, highlighting our dedication to patient-centered care
+              and professional standards.
+            </p>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            <div className="col-lg-4" data-aos="fade-up">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #FFD700, #FFA500)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Award size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    WINNER 2024
+                  </div>
+                </div>
+                <h4
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Patient-Centered Dental Care
+                </h4>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Winner at Business Awards UK for exceptional patient care,
+                  comfort, and satisfaction.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Star size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    FINALIST 2024
+                  </div>
+                </div>
+                <h4
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Rising Star Award
+                </h4>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Finalist for innovative practice and outstanding growth in
+                  patient care excellence.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div
+                className="card-modern text-center h-100"
+                style={{
+                  background: "linear-gradient(135deg, #C0C0C0, #A9A9A9)",
+                  color: "white",
+                }}
+              >
+                <div className="mb-3">
+                  <Users size={60} className="mb-3" />
+                  <div
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.2)",
+                      color: "white",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    FINALIST 2024
+                  </div>
+                </div>
+                <h4
+                  className="heading-tertiary mb-3"
+                  style={{ color: "white" }}
+                >
+                  Dentist of the Year 2024
+                </h4>
+                <p className="mb-3" style={{ opacity: 0.9 }}>
+                  Dr. Reshma Parambil finalist for outstanding clinical
+                  expertise and patient dedication.
+                </p>
+                <div className="small" style={{ opacity: 0.8 }}>
+                  Business Awards UK • 2024
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="text-center mt-5"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <blockquote
+              className="border-start border-5 ps-4 mx-auto"
+              style={{
+                borderColor: "var(--primary-teal)",
+                maxWidth: "600px",
+              }}
+            >
+              <p className="fst-italic lead mb-3">
+                &quot;These awards reflect our team&apos;s unwavering commitment
+                to providing exceptional dental care that truly puts our
+                patients first.&quot;
+              </p>
+              <cite className="fw-medium">
+                — Dr. Reshma Parambil, Principal Dentist
+              </cite>
+            </blockquote>
           </div>
         </div>
       </section>
