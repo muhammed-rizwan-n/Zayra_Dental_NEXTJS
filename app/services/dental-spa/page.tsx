@@ -10,10 +10,8 @@ import {
   Sparkles,
   Heart,
   Shield,
-  Users,
   Clock,
   Leaf,
-  Zap,
 } from "lucide-react";
 
 export const metadata: Metadata = {

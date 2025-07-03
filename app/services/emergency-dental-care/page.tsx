@@ -10,9 +10,7 @@ import {
   Heart,
   Shield,
   Zap,
-  CheckCircle,
   Users,
-  Calendar,
 } from "lucide-react";
 
 export const metadata: Metadata = {

@@ -13,6 +13,7 @@ import {
   Target,
   Eye,
   Lightbulb,
+  Star,
 } from "lucide-react";
 import teamMembers from "./teamMembers.json";
 
