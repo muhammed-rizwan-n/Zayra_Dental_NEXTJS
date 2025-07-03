@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Eye, X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -56,84 +56,101 @@ export default function GalleryClient({
     setCurrentImageIndex(newIndex);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") goToPrevious();
-    if (e.key === "ArrowRight") goToNext();
-  };
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!lightboxOpen) return;
+
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") goToPrevious();
+      if (e.key === "ArrowRight") goToNext();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxOpen, currentImageIndex, currentImages.length]);
 
   const justifyClass = justify === "center" ? "justify-content-center" : "";
 
   if (isMasonry) {
     return (
       <>
+        {/* Improved masonry grid with better spacing */}
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "1rem",
-            gridAutoRows: "10px",
+            columnCount: "auto",
+            columnWidth: "300px",
+            columnGap: "1rem",
+            width: "100%",
           }}
         >
-          {images.map((image, index) => {
-            const rowSpan = index % 5 === 0 ? 35 : index % 2 === 0 ? 38 : 30;
-            return (
+          {images.map((image, index) => (
+            <div
+              key={index}
+              style={{
+                breakInside: "avoid",
+                marginBottom: "1rem",
+                display: "inline-block",
+                width: "100%",
+              }}
+              data-aos="fade-up"
+              data-aos-delay={index * 50}
+            >
               <div
-                key={index}
-                style={{ gridRowEnd: `span ${rowSpan}` }}
-                data-aos="fade-up"
-                data-aos-delay={index * 50}
+                className="card-modern overflow-hidden p-0"
+                style={{
+                  cursor: "pointer",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                }}
+                onClick={() => openLightbox(image, allImages)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-5px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 25px rgba(0,0,0,0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "var(--shadow-soft)";
+                }}
               >
-                <div
-                  className="card-modern overflow-hidden p-0 mb-3"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => openLightbox(image, allImages)}
-                >
-                  <div className="position-relative overflow-hidden">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={400}
-                      height={300}
-                      className="w-100"
-                      style={{
-                        objectFit: "cover",
-                        height: "auto",
-                        transition: "transform 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "scale(1.05)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "scale(1)";
-                      }}
-                    />
+                <div className="position-relative overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={400}
+                    height={300}
+                    className="w-100"
+                    style={{
+                      objectFit: "cover",
+                      height: "auto",
+                      display: "block",
+                    }}
+                  />
 
-                    {/* Hover Effect */}
-                    <div
-                      className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end opacity-0"
-                      style={{
-                        background:
-                          "linear-gradient(transparent, rgba(0,0,0,0.7))",
-                        transition: "opacity 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.opacity = "1";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.opacity = "0";
-                      }}
-                    >
-                      <div className="p-3 text-white w-100">
-                        <div className="fw-medium">{image.alt}</div>
-                        <div className="small opacity-75">{image.category}</div>
-                      </div>
+                  {/* Hover Effect */}
+                  <div
+                    className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end opacity-0"
+                    style={{
+                      background:
+                        "linear-gradient(transparent, rgba(0,0,0,0.7))",
+                      transition: "opacity 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "0";
+                    }}
+                  >
+                    <div className="p-3 text-white w-100">
+                      <div className="fw-medium">{image.alt}</div>
+                      <div className="small opacity-75">{image.category}</div>
                     </div>
                   </div>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {/* Lightbox for Masonry */}
@@ -145,51 +162,185 @@ export default function GalleryClient({
               left: 0,
               width: "100%",
               height: "100%",
-              background: "rgba(0,0,0,0.9)",
+              background: "rgba(0,0,0,0.95)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               zIndex: 9999,
+              padding: "20px",
             }}
             onClick={closeLightbox}
-            onKeyDown={handleKeyDown}
-            tabIndex={0}
           >
             <div
               style={{
                 position: "relative",
-                maxWidth: "90%",
-                maxHeight: "90%",
+                maxWidth: "95%",
+                maxHeight: "95%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
+              {/* Close button */}
               <button
                 style={{
                   position: "absolute",
-                  top: "-40px",
+                  top: "-50px",
                   right: "0",
                   color: "white",
-                  background: "none",
+                  background: "rgba(255,255,255,0.2)",
                   border: "none",
-                  fontSize: "2rem",
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
                   cursor: "pointer",
-                  zIndex: 10000,
+                  zIndex: 10001,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                onClick={closeLightbox}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeLightbox();
+                }}
               >
-                <X size={24} />
+                <X size={20} />
               </button>
 
+              {/* Previous button */}
               <button
                 style={{
                   position: "absolute",
                   top: "50%",
-                  left: "-70px",
+                  left: "-60px",
                   transform: "translateY(-50%)",
                   background: "rgba(255,255,255,0.2)",
                   border: "none",
                   color: "white",
                   width: "50px",
                   height: "50px",
+                  borderRadius: "50%",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "background 0.3s ease",
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToPrevious();
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+                }}
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Next button */}
+              <button
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  right: "-60px",
+                  transform: "translateY(-50%)",
+                  background: "rgba(255,255,255,0.2)",
+                  border: "none",
+                  color: "white",
+                  width: "50px",
+                  height: "50px",
+                  borderRadius: "50%",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "background 0.3s ease",
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToNext();
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+                }}
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              {/* Image container */}
+              <div
+                style={{
+                  position: "relative",
+                  maxWidth: "100%",
+                  maxHeight: "85vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={currentImages[currentImageIndex]?.src || ""}
+                  alt={currentImages[currentImageIndex]?.alt || ""}
+                  width={1200}
+                  height={800}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "85vh",
+                    objectFit: "contain",
+                    width: "auto",
+                    height: "auto",
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </div>
+
+              {/* Image info */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "-60px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  color: "white",
+                  textAlign: "center",
+                  maxWidth: "90%",
+                }}
+              >
+                <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
+                  {currentImages[currentImageIndex]?.alt}
+                </div>
+                <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
+                  {currentImages[currentImageIndex]?.category}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile navigation */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: "20px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                display: "flex",
+                gap: "10px",
+                zIndex: 10001,
+              }}
+              className="d-md-none"
+            >
+              <button
+                style={{
+                  background: "rgba(255,255,255,0.2)",
+                  border: "none",
+                  color: "white",
+                  width: "40px",
+                  height: "40px",
                   borderRadius: "50%",
                   cursor: "pointer",
                   display: "flex",
@@ -201,20 +352,15 @@ export default function GalleryClient({
                   goToPrevious();
                 }}
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft size={20} />
               </button>
-
               <button
                 style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "-70px",
-                  transform: "translateY(-50%)",
                   background: "rgba(255,255,255,0.2)",
                   border: "none",
                   color: "white",
-                  width: "50px",
-                  height: "50px",
+                  width: "40px",
+                  height: "40px",
                   borderRadius: "50%",
                   cursor: "pointer",
                   display: "flex",
@@ -226,41 +372,8 @@ export default function GalleryClient({
                   goToNext();
                 }}
               >
-                <ChevronRight size={24} />
+                <ChevronRight size={20} />
               </button>
-
-              <div
-                style={{ position: "relative", width: "100%", height: "80vh" }}
-              >
-                <Image
-                  src={
-                    currentImages[currentImageIndex]?.src || "/placeholder.jpg"
-                  }
-                  alt={currentImages[currentImageIndex]?.alt || ""}
-                  fill
-                  style={{
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "-50px",
-                  left: 0,
-                  right: 0,
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
-                  {currentImages[currentImageIndex]?.alt}
-                </div>
-                <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
-                  {currentImages[currentImageIndex]?.category}
-                </div>
-              </div>
             </div>
           </div>
         )}
@@ -280,7 +393,10 @@ export default function GalleryClient({
           >
             <div
               className="card-modern overflow-hidden p-0 h-100"
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              }}
               onClick={() => openLightbox(image, allImages)}
             >
               <div
@@ -293,16 +409,21 @@ export default function GalleryClient({
                   fill
                   style={{
                     objectFit: "cover",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    transition: "transform 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-5px)";
-                    e.currentTarget.parentElement!.style.boxShadow =
+                    e.currentTarget.style.transform = "scale(1.05)";
+                    e.currentTarget.parentElement!.parentElement!.style.transform =
+                      "translateY(-5px)";
+                    e.currentTarget.parentElement!.parentElement!.style.boxShadow =
                       "0 15px 35px rgba(0,0,0,0.1)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.parentElement!.style.boxShadow = "none";
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.parentElement!.parentElement!.style.transform =
+                      "translateY(0)";
+                    e.currentTarget.parentElement!.parentElement!.style.boxShadow =
+                      "var(--shadow-soft)";
                   }}
                 />
 
@@ -356,41 +477,57 @@ export default function GalleryClient({
             left: 0,
             width: "100%",
             height: "100%",
-            background: "rgba(0,0,0,0.9)",
+            background: "rgba(0,0,0,0.95)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             zIndex: 9999,
+            padding: "20px",
           }}
           onClick={closeLightbox}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
         >
           <div
-            style={{ position: "relative", maxWidth: "90%", maxHeight: "90%" }}
+            style={{
+              position: "relative",
+              maxWidth: "95%",
+              maxHeight: "95%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
+            {/* Close button */}
             <button
               style={{
                 position: "absolute",
-                top: "-40px",
+                top: "-50px",
                 right: "0",
                 color: "white",
-                background: "none",
+                background: "rgba(255,255,255,0.2)",
                 border: "none",
-                fontSize: "2rem",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
                 cursor: "pointer",
-                zIndex: 10000,
+                zIndex: 10001,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-              onClick={closeLightbox}
+              onClick={(e) => {
+                e.stopPropagation();
+                closeLightbox();
+              }}
             >
-              <X size={24} />
+              <X size={20} />
             </button>
 
+            {/* Previous button */}
             <button
               style={{
                 position: "absolute",
                 top: "50%",
-                left: "-70px",
+                left: "-60px",
                 transform: "translateY(-50%)",
                 background: "rgba(255,255,255,0.2)",
                 border: "none",
@@ -418,11 +555,12 @@ export default function GalleryClient({
               <ChevronLeft size={24} />
             </button>
 
+            {/* Next button */}
             <button
               style={{
                 position: "absolute",
                 top: "50%",
-                right: "-70px",
+                right: "-60px",
                 transform: "translateY(-50%)",
                 background: "rgba(255,255,255,0.2)",
                 border: "none",
@@ -450,29 +588,43 @@ export default function GalleryClient({
               <ChevronRight size={24} />
             </button>
 
+            {/* Image container */}
             <div
-              style={{ position: "relative", width: "100%", height: "80vh" }}
+              style={{
+                position: "relative",
+                maxWidth: "100%",
+                maxHeight: "85vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <Image
-                src={
-                  currentImages[currentImageIndex]?.src || "/placeholder.jpg"
-                }
+                src={currentImages[currentImageIndex]?.src || ""}
                 alt={currentImages[currentImageIndex]?.alt || ""}
-                fill
+                width={1200}
+                height={800}
                 style={{
+                  maxWidth: "100%",
+                  maxHeight: "85vh",
                   objectFit: "contain",
+                  width: "auto",
+                  height: "auto",
                 }}
+                onClick={(e) => e.stopPropagation()}
               />
             </div>
 
+            {/* Image info */}
             <div
               style={{
                 position: "absolute",
-                bottom: "-50px",
-                left: 0,
-                right: 0,
+                bottom: "-60px",
+                left: "50%",
+                transform: "translateX(-50%)",
                 color: "white",
                 textAlign: "center",
+                maxWidth: "90%",
               }}
             >
               <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
@@ -482,6 +634,61 @@ export default function GalleryClient({
                 {currentImages[currentImageIndex]?.category}
               </div>
             </div>
+          </div>
+
+          {/* Mobile navigation */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "20px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              gap: "10px",
+              zIndex: 10001,
+            }}
+            className="d-md-none"
+          >
+            <button
+              style={{
+                background: "rgba(255,255,255,0.2)",
+                border: "none",
+                color: "white",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrevious();
+              }}
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              style={{
+                background: "rgba(255,255,255,0.2)",
+                border: "none",
+                color: "white",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
       )}
