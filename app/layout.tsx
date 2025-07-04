@@ -228,24 +228,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
-        {/* Critical CSS inline */}
+        {/* Minimal critical CSS for instant rendering */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            html{scroll-behavior:smooth}
-            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;margin:0;padding:0}
             .hero-modern{padding-top:120px;min-height:80vh}
-            .heading-primary{font-family:"Playfair Display",serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#473a2f}
-            .heading-secondary{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;line-height:1.3;letter-spacing:-0.01em;color:#473a2f}
-            .btn-primary-modern{background:#b67758;color:white;padding:0.875rem 2rem;border-radius:50px;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.3s ease;border:none}
-            .text-accent{color:#37777a}
-            .text-primary-brown{color:#b67758}
-            .text-subtle{color:#6f6259}
             .container-modern{max-width:1200px;margin:0 auto;padding:0 1rem}
-            .section-modern{padding:5rem 0}
-            .card-modern{background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:none;transition:all 0.3s ease}
-            .bg-cream{background:#fcf4f0}
-            .bg-light-modern{background:#f7f5f2}
           `,
           }}
         />
