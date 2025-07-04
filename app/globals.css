@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+/* Google Fonts loaded via preconnect in layout.tsx for better performance */
 
 :root {
   /* Brand Colors - Warm and Professional */
@@ -44,7 +44,6 @@ html {
 }
 
 body {
-  
   font-family: var(--font-body);
   color: var(--text-primary);
   background: var(--bg-white);
@@ -133,7 +132,11 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right, rgb(249, 10, 253), rgba(255, 255, 255, 0.33));
+    background: linear-gradient(
+      to right,
+      rgb(249, 10, 253),
+      rgba(255, 255, 255, 0.33)
+    );
     z-index: 1;
   }
 }
@@ -153,7 +156,11 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to top, rgb(249, 10, 253), rgba(255, 255, 255, 0.33));
+    background: linear-gradient(
+      to top,
+      rgb(249, 10, 253),
+      rgba(255, 255, 255, 0.33)
+    );
     z-index: 1;
   }
 }
