@@ -227,6 +227,27 @@ export default function RootLayout({
         />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/services/dental_treatment.jpeg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/services/bg-emergency.jpg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/services/dental_bonding.jpg"
+          as="image"
+          type="image/jpeg"
+        />
 
         {/* Minimal critical CSS for instant rendering */}
         <style
