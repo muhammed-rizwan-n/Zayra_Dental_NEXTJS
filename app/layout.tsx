@@ -5,11 +5,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
-
-// Load Bootstrap asynchronously
-if (typeof window !== "undefined") {
-  import("bootstrap/dist/css/bootstrap.min.css");
-}
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
