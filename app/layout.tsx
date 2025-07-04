@@ -206,6 +206,7 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
+        <meta name="google-site-verification" content="OrNCapr7kK95PzWbNlwvBm0p4yh7aI5hgObcC7wmafs" />
         <link rel="canonical" href="https://zayradental.co.uk" />
         <meta name="geo.region" content="GB-ENG" />
         <meta name="geo.placename" content="Leeds" />
