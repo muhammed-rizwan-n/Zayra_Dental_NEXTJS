@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   trailingSlash: false,
-  swcMinify: true,
 };
 
 export default nextConfig;
