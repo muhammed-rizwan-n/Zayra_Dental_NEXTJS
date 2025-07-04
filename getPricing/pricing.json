@@ -1,0 +1,628 @@
+[
+  {
+    "category": "General Dentistry",
+    "treatments": [
+      {
+        "name": "Examination",
+        "description": "",
+        "price": "60.00",
+        "surface": []
+      },
+      {
+        "name": "Routine Exam",
+        "description": "",
+        "price": "45.00",
+        "surface": []
+      },
+      {
+        "name": "X-Ray",
+        "description": "",
+        "price": "10.00",
+        "surface": []
+      },
+      {
+        "name": "Colour Photo",
+        "description": "",
+        "price": "10.00",
+        "surface": []
+      },
+      {
+        "name": "Scale and Polish",
+        "description": "",
+        "price": "85.00",
+        "surface": []
+      },
+      {
+        "name": "Fluoride Varnish Application",
+        "description": "",
+        "price": "15.00",
+        "surface": []
+      },
+      {
+        "name": "Arrest of Bleeding",
+        "description": "",
+        "price": "52.90",
+        "surface": []
+      },
+      {
+        "name": "Prescription",
+        "description": "",
+        "price": "25.00",
+        "surface": []
+      },
+      {
+        "name": "Removal Sutures",
+        "description": "",
+        "price": "30.00",
+        "surface": []
+      },
+      {
+        "name": "Direct Access Hygienist",
+        "description": "",
+        "price": "100.00",
+        "surface": []
+      },
+      {
+        "name": "Hygiene Appointment",
+        "description": "",
+        "price": "90.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Fillings",
+    "treatments": [
+      {
+        "name": "Amalgam Filling",
+        "description": "",
+        "price": "100.00",
+        "surface": ["120.00", "140.00", "150.00", "170.00"]
+      },
+      {
+        "name": "Composite Filling",
+        "description": "",
+        "price": "125.00",
+        "surface": ["130.00", "150.00", "180.00", "225.00"]
+      },
+      {
+        "name": "Glass Ionomer Filling",
+        "description": "",
+        "price": "85.00",
+        "surface": ["90.00", "110.00", "115.00", "120.00"]
+      },
+      {
+        "name": "Gold Filling",
+        "description": "",
+        "price": "170.60",
+        "surface": ["175.60", "201.00", "234.10", "251.30"]
+      },
+      {
+        "name": "Temporary Filling",
+        "description": "",
+        "price": "90.00",
+        "surface": ["67.40", "76.70", "76.70", "76.70"]
+      },
+      {
+        "name": "Urgent Filling",
+        "description": "",
+        "price": "100.00",
+        "surface": ["0.00", "0.00", "0.00", "0.00"]
+      }
+    ]
+  },
+  {
+    "category": "Crowns & Inlays",
+    "treatments": [
+      {
+        "name": "Cerec Crown",
+        "description": "",
+        "price": "760.40",
+        "surface": []
+      },
+      {
+        "name": "Composite Inlay",
+        "description": "",
+        "price": "380.00",
+        "surface": ["243.30", "267.10", "292.30", "334.60"]
+      },
+      {
+        "name": "Porcelain Inlay",
+        "description": "",
+        "price": "350.00",
+        "surface": ["243.30", "267.10", "292.30", "334.60"]
+      },
+      {
+        "name": "Gold Inlay",
+        "description": "",
+        "price": "251.30",
+        "surface": ["251.30", "292.30", "334.60", "377.00"]
+      },
+      {
+        "name": "Metal Inlay",
+        "description": "",
+        "price": "400.00",
+        "surface": ["502.60", "585.80", "585.80", "752.60"]
+      },
+      {
+        "name": "Porcelain Onlay",
+        "description": "",
+        "price": "350.00",
+        "surface": []
+      },
+      {
+        "name": "Cerec Onlay",
+        "description": "",
+        "price": "502.60",
+        "surface": []
+      },
+      {
+        "name": "Gold Onlay",
+        "description": "",
+        "price": "600.00",
+        "surface": []
+      },
+      {
+        "name": "Metal Onlay",
+        "description": "",
+        "price": "425.00",
+        "surface": []
+      },
+      {
+        "name": "Semi-Precious Onlay",
+        "description": "",
+        "price": "531.60",
+        "surface": []
+      },
+      {
+        "name": "Semi-Precious Inlay",
+        "description": "",
+        "price": "456.30",
+        "surface": ["0.00", "0.00", "0.00", "0.00"]
+      }
+    ]
+  },
+  {
+    "category": "Crowns",
+    "treatments": [
+      {
+        "name": "Crown",
+        "description": "",
+        "price": "500.00",
+        "surface": []
+      },
+      {
+        "name": "Full Gold Crown",
+        "description": "",
+        "price": "950.00",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Bonded Crown",
+        "description": "",
+        "price": "550.00",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Jacket Crown",
+        "description": "",
+        "price": "550.00",
+        "surface": []
+      },
+      {
+        "name": "Pressed Crown",
+        "description": "",
+        "price": "736.70",
+        "surface": []
+      },
+      {
+        "name": "Semi-Precious Crown",
+        "description": "",
+        "price": "456.30",
+        "surface": []
+      },
+      {
+        "name": "Emax Crown",
+        "description": "",
+        "price": "600.00",
+        "surface": []
+      },
+      {
+        "name": "Metal Crown",
+        "description": "",
+        "price": "490.00",
+        "surface": []
+      },
+      {
+        "name": "Zirconia Crown",
+        "description": "",
+        "price": "650.00",
+        "surface": []
+      },
+      {
+        "name": "Lava Crown",
+        "description": "",
+        "price": "650.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Root Canal Treatment (RCT)",
+    "treatments": [
+      {
+        "name": "Root Filling",
+        "description": "",
+        "price": "500.00",
+        "surface": []
+      },
+      {
+        "name": "MOLAR RCT",
+        "description": "",
+        "price": "557.10",
+        "surface": []
+      },
+      {
+        "name": "PREMOLAR RCT",
+        "description": "",
+        "price": "350.00",
+        "surface": []
+      },
+      {
+        "name": "INCISOR RCT",
+        "description": "",
+        "price": "300.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Dentures",
+    "treatments": [
+      {
+        "name": "Upper Acrylic Denture",
+        "description": "",
+        "price": "585.00",
+        "surface": []
+      },
+      {
+        "name": "Lower Acrylic Denture",
+        "description": "",
+        "price": "585.00",
+        "surface": []
+      },
+      {
+        "name": "Upper Metal Denture",
+        "description": "",
+        "price": "1216.70",
+        "surface": []
+      },
+      {
+        "name": "Lower Metal Denture",
+        "description": "",
+        "price": "1000.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Acrylic Upper",
+        "description": "",
+        "price": "580.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Acrylic Lower",
+        "description": "",
+        "price": "580.00",
+        "surface": []
+      },
+      {
+        "name": "Chrome Denture Upper",
+        "description": "",
+        "price": "1200.00",
+        "surface": []
+      },
+      {
+        "name": "Chrome Denture Lower",
+        "description": "",
+        "price": "1293.40",
+        "surface": []
+      },
+      {
+        "name": "Implant Retained Denture",
+        "description": "",
+        "price": "5000.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Implants",
+    "treatments": [
+      {
+        "name": "Implant",
+        "description": "",
+        "price": "1500.00",
+        "surface": []
+      },
+      {
+        "name": "Implant Crown",
+        "description": "",
+        "price": "1200.00",
+        "surface": []
+      },
+      {
+        "name": "Implant Consultation",
+        "description": "",
+        "price": "50.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Orthodontics",
+    "treatments": [
+      {
+        "name": "Orthodontic Retainer",
+        "description": "",
+        "price": "180.00",
+        "surface": []
+      },
+      {
+        "name": "Ortho Splint",
+        "description": "",
+        "price": "200.00",
+        "surface": []
+      },
+      {
+        "name": "Perio Splint",
+        "description": "",
+        "price": "497.60",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Extractions & Surgical",
+    "treatments": [
+      {
+        "name": "Extraction",
+        "description": "",
+        "price": "125.00",
+        "surface": []
+      },
+      {
+        "name": "Urgent Extraction",
+        "description": "",
+        "price": "150.00",
+        "surface": []
+      },
+      {
+        "name": "EXTRACTION WISDOM TOOTH",
+        "description": "",
+        "price": "290.00",
+        "surface": []
+      },
+      {
+        "name": "SURGICAL EXTRACTION",
+        "description": "",
+        "price": "264.50",
+        "surface": []
+      },
+      {
+        "name": "Non-Surgical Periodontal Treatment",
+        "description": "",
+        "price": "150.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Bridges & Retainers",
+    "treatments": [
+      {
+        "name": "Gold Pontic",
+        "description": "",
+        "price": "953.60",
+        "surface": []
+      },
+      {
+        "name": "Gold Retainer",
+        "description": "",
+        "price": "334.60",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Bonded Pontic",
+        "description": "",
+        "price": "550.00",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Bonded Retainer",
+        "description": "",
+        "price": "550.00",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Pontic",
+        "description": "",
+        "price": "500.00",
+        "surface": []
+      },
+      {
+        "name": "Porcelain Retainer",
+        "description": "",
+        "price": "500.00",
+        "surface": []
+      },
+      {
+        "name": "Maryland Retainer",
+        "description": "",
+        "price": "450.00",
+        "surface": []
+      },
+      {
+        "name": "Maryland Pontic",
+        "description": "",
+        "price": "450.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Repairs & Adjustments",
+    "treatments": [
+      {
+        "name": "Bridge Repair",
+        "description": "",
+        "price": "250.30",
+        "surface": []
+      },
+      {
+        "name": "Denture Repair Lower Acrylic",
+        "description": "",
+        "price": "150.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Repair Lower Metal",
+        "description": "",
+        "price": "250.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Repair Upper Acrylic",
+        "description": "",
+        "price": "150.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Repair Upper Metal",
+        "description": "",
+        "price": "250.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Addition",
+        "description": "",
+        "price": "120.00",
+        "surface": []
+      },
+      {
+        "name": "Denture Reline",
+        "description": "",
+        "price": "91.30",
+        "surface": []
+      },
+      {
+        "name": "Laboratory Post",
+        "description": "",
+        "price": "250.00",
+        "surface": []
+      },
+      {
+        "name": "Core Post",
+        "description": "",
+        "price": "225.00",
+        "surface": []
+      },
+      {
+        "name": "Dentine Pin",
+        "description": "",
+        "price": "290.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Veneers",
+    "treatments": [
+      {
+        "name": "Veneer Composite",
+        "description": "",
+        "price": "375.00",
+        "surface": []
+      },
+      {
+        "name": "Veneer Porcelain",
+        "description": "",
+        "price": "650.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Preventative & Misc",
+    "treatments": [
+      {
+        "name": "Preventative Resin Restoration",
+        "description": "",
+        "price": "60.00",
+        "surface": []
+      },
+      {
+        "name": "Night Guard",
+        "description": "",
+        "price": "250.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Cosmetic Dentistry",
+    "treatments": [
+      {
+        "name": "Tooth Whitening",
+        "description": "",
+        "price": "295.00",
+        "surface": []
+      },
+      {
+        "name": "Aligner/Cosmetic Consultation",
+        "description": "",
+        "price": "63.20",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Consultations & Appointments",
+    "treatments": [
+      {
+        "name": "Implant Consultation",
+        "description": "",
+        "price": "50.00",
+        "surface": []
+      },
+      {
+        "name": "Regulation 11 Replace 1 Appliance",
+        "description": "",
+        "price": "0.00",
+        "surface": []
+      },
+      {
+        "name": "Regulation 11 Replace 2 Appliances",
+        "description": "",
+        "price": "0.00",
+        "surface": []
+      }
+    ]
+  },
+  {
+    "category": "Emergency & Urgent Care",
+    "treatments": [
+      {
+        "name": "Temp",
+        "description": "",
+        "price": "91.30",
+        "surface": []
+      },
+      {
+        "name": "Urgent Treatment",
+        "description": "",
+        "price": "100.00",
+        "surface": []
+      }
+    ]
+  }
+]

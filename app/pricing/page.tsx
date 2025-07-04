@@ -210,12 +210,12 @@ export default function PricingSection() {
             </p>
           </div>
 
-          {pricingData.map((category, index) => (
+          {Object.entries(pricingData).map(([name, treatments]) => (
             <div
-              key={index}
+              key={name}
               className="mb-5"
               data-aos="fade-up"
-              data-aos-delay={index * 100}
+              data-aos-delay={100}
             >
               <div className="card-modern">
                 <div
@@ -233,48 +233,49 @@ export default function PricingSection() {
                   >
                     <Heart size={24} />
                   </div>
-                  <h3 className="heading-tertiary mb-0">{category.category}</h3>
+                  <h3 className="heading-tertiary mb-0">{name}</h3>
                 </div>
 
                 <div className="p-4">
                   <div className="row g-4">
-                    {category.treatments.map((treatment, treatmentIndex) => (
-                      <div key={treatmentIndex} className="col-lg-6">
-                        <div
-                          className="d-flex justify-content-between align-items-start p-3 rounded"
-                          style={{
-                            background: "var(--bg-white)",
-                            border: "1px solid var(--bg-light-gray)",
-                            transition: "var(--transition-smooth)",
-                          }}
-                        >
-                          <div className="flex-grow-1">
-                            <h5 className="fw-semibold mb-2">
-                              {treatment.name}
-                            </h5>
-                            <p className="text-subtle small mb-0">
-                              {treatment.description}
-                            </p>
-                          </div>
-                          <div className="text-end ms-3">
-                            <div
-                              className="fw-bold fs-5"
-                              style={{ color: "var(--primary-brown)" }}
-                            >
-                              £{treatment.price}
+                    {Object.entries(treatments).map(
+                      ([treatment, treatmentDetails]) => (
+                        <div key={treatment} className="col-lg-6">
+                          <div
+                            className="d-flex justify-content-between align-items-start p-3 rounded"
+                            style={{
+                              background: "var(--bg-white)",
+                              border: "1px solid var(--bg-light-gray)",
+                              transition: "var(--transition-smooth)",
+                            }}
+                          >
+                            <div className="flex-grow-1">
+                              <h5 className="fw-semibold mb-2">
+                                {treatment}
+                              </h5>
+                              <p className="text-subtle small mb-0">
+                                {treatmentDetails.description}
+                              </p>
                             </div>
-                            <div className="small text-subtle">from</div>
+                            <div className="text-end ms-3">
+                              <div
+                                className="fw-bold fs-5"
+                                style={{ color: "var(--primary-brown)" }}
+                              >
+                                £{treatmentDetails.price}
+                              </div>
+                              <div className="small text-subtle">from</div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
                 </div>
               </div>
             </div>
           ))}
 
-          {/* Additional Information */}
           <div className="card-modern mt-5" data-aos="fade-up">
             <div className="row align-items-center">
               <div className="col-lg-8">
