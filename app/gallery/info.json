@@ -50,6 +50,16 @@
         "category": "Associate Dentist"
       },
       {
+        "alt": "Dr. Malgorzata Lewalsk - Dental Nurse",
+        "src": "/about-us/Malgorzata Lewalsk.png",
+        "category": "Dental Nurse"
+      },
+      {
+        "alt": "Dr. Madeleine Sloan - Trainee",
+        "src": "/about-us/Madeleine Sloan.jpg",
+        "category": "Trainee"
+      },
+      {
         "src": "/about-us/bg-team.jpg",
         "alt": "Dental Team - Professional care providers",
         "category": "Team"

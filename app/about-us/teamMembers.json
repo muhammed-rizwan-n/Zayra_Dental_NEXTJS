@@ -28,5 +28,27 @@
       "Digital Smile Design",
       "Aligners & Braces"
     ]
+  },
+  {
+    "name": "Dr. Malgorzata Lewalsk",
+    "title": "Dental Nurse",
+    "image": "/about-us/Malgorzata Lewalsk.png",
+    "expertise": [
+      "Dental Implants & Full Arch Restorations",
+      "Fixed & Removable Orthodontics",
+      "Digital Smile Design",
+      "Aligners & Braces"
+    ]
+  },
+  {
+    "name": "Dr. Madeleine Sloan",
+    "title": "Trainee",
+    "image": "/about-us/Madeleine Sloan.jpg",
+    "expertise": [
+      "Dental Implants & Full Arch Restorations",
+      "Fixed & Removable Orthodontics",
+      "Digital Smile Design",
+      "Aligners & Braces"
+    ]
   }
 ]

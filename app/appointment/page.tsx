@@ -61,7 +61,7 @@ export default function Appointment() {
       title: "Initial Consultation",
       description: "Comprehensive dental exam and treatment planning",
       duration: "30 minutes",
-      price: `£${pricing['Implants']['Implant Consultation']['price']}`,
+      price: `£?${pricing['Implants']['Implant Consultation']['price']}`,
       icon: <User size={24} />,
     },
     {
@@ -165,7 +165,7 @@ export default function Appointment() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="appointment-quick-info">
                 <div className="card-elevated">
                   <div className="text-center mb-4">
@@ -179,8 +179,9 @@ export default function Appointment() {
                         <h4>Call Direct</h4>
                         <p>Speak to our team now</p>
                         <a
+                        
                           href="tel:01132488398"
-                          className="quick-contact-link"
+                          className="btn-primary-modern"
                         >
                           0113 248 8398
                         </a>
@@ -195,11 +196,11 @@ export default function Appointment() {
                     </div>
                     <div className="hours-grid">
                       <div className="hour-item">
-                        <span>Mon - Thu</span>
+                        <span>Monday - Thursday</span>
                         <span className="time-badge">9:00 AM - 5:00 PM</span>
                       </div>
                       <div className="hour-item">
-                        <span>Fri</span>
+                        <span>Friday</span>
                         <span className="time-badge">9:00 AM - 1:00 PM</span>
                       </div>
                     </div>
