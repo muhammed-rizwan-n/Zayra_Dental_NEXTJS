@@ -161,7 +161,7 @@ export default function GalleryClient({
               top: 0,
               left: 0,
               width: "100%",
-              height: "100%",
+              height: "100vh",
               background: "rgba(0,0,0,0.95)",
               display: "flex",
               alignItems: "center",
@@ -181,34 +181,9 @@ export default function GalleryClient({
                 justifyContent: "center",
               }}
             >
-              {/* Close button */}
-              <button
-                style={{
-                  position: "absolute",
-                  top: "-50px",
-                  right: "0",
-                  color: "white",
-                  background: "rgba(255,255,255,0.2)",
-                  border: "none",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  cursor: "pointer",
-                  zIndex: 10001,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  closeLightbox();
-                }}
-              >
-                <X size={20} />
-              </button>
-
               {/* Previous button */}
               <button
+                className="d-none d-md-flex"
                 style={{
                   position: "absolute",
                   top: "50%",
@@ -242,6 +217,7 @@ export default function GalleryClient({
 
               {/* Next button */}
               <button
+                className="d-none d-md-flex"
                 style={{
                   position: "absolute",
                   top: "50%",
@@ -278,8 +254,9 @@ export default function GalleryClient({
                 style={{
                   position: "relative",
                   maxWidth: "100%",
-                  maxHeight: "85vh",
+                  maxHeight: "80vh",
                   display: "flex",
+                  flexFlow: "row",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
@@ -291,32 +268,29 @@ export default function GalleryClient({
                   height={800}
                   style={{
                     maxWidth: "100%",
-                    maxHeight: "85vh",
+                    maxHeight: "75vh",
                     objectFit: "contain",
                     width: "auto",
                     height: "auto",
                   }}
                   onClick={(e) => e.stopPropagation()}
                 />
-              </div>
-
-              {/* Image info */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "-60px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  color: "white",
-                  textAlign: "center",
-                  maxWidth: "90%",
-                }}
-              >
-                <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
-                  {currentImages[currentImageIndex]?.alt}
-                </div>
-                <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
-                  {currentImages[currentImageIndex]?.category}
+                {/* Image info */}
+                <div
+                  style={{
+                    position: "absolute",
+                    transform: "translateX(-50%)",
+                    color: "white",
+                    textAlign: "center",
+                    maxWidth: "90%",
+                  }}
+                >
+                  <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
+                    {currentImages[currentImageIndex]?.alt}
+                  </div>
+                  <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
+                    {currentImages[currentImageIndex]?.category}
+                  </div>
                 </div>
               </div>
             </div>
@@ -431,7 +405,13 @@ export default function GalleryClient({
                 <div
                   className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0"
                   style={{
-                    background: `rgba(${sectionColor === "var(--primary-teal)" ? "115, 175, 170" : sectionColor === "var(--primary-brown)" ? "182, 119, 88" : "55, 119, 122"}, 0.9)`,
+                    background: `rgba(${
+                      sectionColor === "var(--primary-teal)"
+                        ? "115, 175, 170"
+                        : sectionColor === "var(--primary-brown)"
+                        ? "182, 119, 88"
+                        : "55, 119, 122"
+                    }, 0.9)`,
                     transition: "opacity 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
@@ -476,7 +456,7 @@ export default function GalleryClient({
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%",
+            height: "100vh",
             background: "rgba(0,0,0,0.95)",
             display: "flex",
             alignItems: "center",
@@ -496,34 +476,9 @@ export default function GalleryClient({
               justifyContent: "center",
             }}
           >
-            {/* Close button */}
-            <button
-              style={{
-                position: "absolute",
-                top: "-50px",
-                right: "0",
-                color: "white",
-                background: "rgba(255,255,255,0.2)",
-                border: "none",
-                width: "40px",
-                height: "40px",
-                borderRadius: "50%",
-                cursor: "pointer",
-                zIndex: 10001,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                closeLightbox();
-              }}
-            >
-              <X size={20} />
-            </button>
-
             {/* Previous button */}
             <button
+              className="d-none d-md-flex"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -557,6 +512,7 @@ export default function GalleryClient({
 
             {/* Next button */}
             <button
+              className="d-none d-md-flex"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -595,6 +551,8 @@ export default function GalleryClient({
                 maxWidth: "100%",
                 maxHeight: "85vh",
                 display: "flex",
+                flexFlow: "column",
+                width: "85vw",
                 alignItems: "center",
                 justifyContent: "center",
               }}
@@ -602,36 +560,31 @@ export default function GalleryClient({
               <Image
                 src={currentImages[currentImageIndex]?.src || ""}
                 alt={currentImages[currentImageIndex]?.alt || ""}
-                width={1200}
-                height={800}
+                width={600}
+                height={500}
                 style={{
                   maxWidth: "100%",
-                  maxHeight: "85vh",
+                  maxHeight: "75vh",
                   objectFit: "contain",
-                  width: "auto",
+                  width: "80vw",
                   height: "auto",
                 }}
                 onClick={(e) => e.stopPropagation()}
               />
-            </div>
-
-            {/* Image info */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: "-60px",
-                left: "50%",
-                transform: "translateX(-50%)",
-                color: "white",
-                textAlign: "center",
-                maxWidth: "90%",
-              }}
-            >
-              <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
-                {currentImages[currentImageIndex]?.alt}
-              </div>
-              <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
-                {currentImages[currentImageIndex]?.category}
+              {/* Image info */}
+              <div
+                style={{
+                  color: "white",
+                  textAlign: "center",
+                  maxWidth: "90%",
+                }}
+              >
+                <div style={{ fontWeight: 500, marginBottom: "0.25rem" }}>
+                  {currentImages[currentImageIndex]?.alt}
+                </div>
+                <div style={{ fontSize: "0.875rem", opacity: 0.75 }}>
+                  {currentImages[currentImageIndex]?.category}
+                </div>
               </div>
             </div>
           </div>

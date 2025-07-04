@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Camera, ArrowRight, Calendar, Eye } from "lucide-react";
 import GalleryClient from "./GalleryClient";
 import "./style.css";
+import data from "./info.json";
 
 export const metadata: Metadata = {
   title:
@@ -45,116 +46,12 @@ export const metadata: Metadata = {
 };
 
 export default function Gallery() {
-  const clinicInterior = {
-    title: "Clinical Interior & Treatment Rooms",
-    description:
-      "Modern facilities with multiple treatment rooms and state-of-the-art equipment",
-    images: [
-      {
-        src: "/gallery/Zayradental_Edits_29.jpg",
-        alt: "Modern Reception Area - Award-winning dental practice",
-        category: "Reception",
-      },
-      {
-        src: "/gallery/Zayradental_Edits_13.jpg",
-        alt: "Treatment Room 1 - State-of-the-art equipment",
-        category: "Treatment Room",
-      },
-      {
-        src: "/home/waiting_room.jpg",
-        alt: "Comfortable Waiting Area - Patient comfort focused",
-        category: "Patient Area",
-      },
-      {
-        src: "/gallery/Zayradental_Edits_11.jpg",
-        alt: "Treatment Room 2 - Advanced dental technology",
-        category: "Treatment Room",
-      },
-      {
-        src: "/about-us/op.jpg",
-        alt: "Treatment Room 3 - Modern dental suite",
-        category: "Treatment Room",
-      },
-      {
-        src: "/about-us/ab2.jpg",
-        alt: "Clinical Area - Professional environment",
-        category: "Clinical",
-      },
-    ],
-  };
-
-  const ourTeam = {
-    title: "Our Professional Team",
-    description:
-      "Meet the expert dental professionals providing award-winning care",
-    images: [
-      {
-        src: "/about-us/reshma_parambil.jpg",
-        alt: "Dr. Reshma Parambil - Principal Dentist & Award Winner",
-        category: "Principal Dentist",
-      },
-      {
-        src: "/about-us/emilio.jpg",
-        alt: "Dr. Emilio Cecamore - Associate Dentist",
-        category: "Associate Dentist",
-      },
-      {
-        src: "/about-us/bg-team.jpg",
-        alt: "Dental Team - Professional care providers",
-        category: "Team",
-      },
-    ],
-  };
-
-  const treatmentResults = {
-    title: "Treatment Results & Procedures",
-    description: "Showcasing our expertise in various dental treatments",
-    images: [
-      {
-        src: "/services/dental_bonding.jpg",
-        alt: "Dental Bonding Results - Cosmetic dentistry",
-        category: "Cosmetic",
-      },
-      {
-        src: "/services/teeth_white.jpg",
-        alt: "Teeth Whitening Results - Professional whitening",
-        category: "Whitening",
-      },
-      {
-        src: "/services/dental_aligners.jpeg",
-        alt: "Dental Aligners Treatment - Orthodontics",
-        category: "Orthodontics",
-      },
-      {
-        src: "/services/dental_implant.jpeg",
-        alt: "Dental Implant Procedure - Restorative dentistry",
-        category: "Implants",
-      },
-      {
-        src: "/services/facial_aesthetics.jpg",
-        alt: "Facial Aesthetics Treatment - Professional care",
-        category: "Aesthetics",
-      },
-      {
-        src: "/services/dental_spa.jpg",
-        alt: "Dental Spa Experience - Luxury comfort",
-        category: "Spa",
-      },
-    ],
-  };
-
+  const {clinicInterior, ourTeam, treatmentResults, stats} = data;
   const allImages = [
     ...clinicInterior.images,
     ...ourTeam.images,
     ...treatmentResults.images,
-  ];
-
-  const stats = [
-    { number: "1000+", label: "Happy Patients" },
-    { number: "15+", label: "Years Experience" },
-    { number: "5000+", label: "Successful Treatments" },
-    { number: "4.9★", label: "Patient Rating" },
-  ];
+    ];
 
   return (
     <>
@@ -267,7 +164,6 @@ export default function Gallery() {
           />
         </div>
       </section>
-
       {/* Our Team Section */}
       <section className="section-modern">
         <div className="container-modern">
