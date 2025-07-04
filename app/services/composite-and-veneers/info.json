@@ -1,42 +1,4 @@
 {
-  "treatments": [
-    {
-      "type": "Composite Bonding",
-      "description": "Quick, affordable repair for chipped, cracked, or discolored teeth",
-      "benefits": [
-        "Same-day treatment",
-        "Natural appearance",
-        "Conservative approach",
-        "Affordable option"
-      ],
-      "duration": "30-60 minutes per tooth",
-      "price": "From £125"
-    },
-    {
-      "type": "Porcelain Veneers",
-      "description": "Ultra-thin shells that transform your smile with lasting beauty",
-      "benefits": [
-        "Hollywood smile",
-        "Stain resistant",
-        "Long-lasting",
-        "Custom designed"
-      ],
-      "duration": "2-3 appointments",
-      "price": "From £650"
-    },
-    {
-      "type": "Composite Veneers",
-      "description": "Direct application veneers completed in one visit",
-      "benefits": [
-        "Single visit",
-        "Reversible",
-        "Cost-effective",
-        "Immediate results"
-      ],
-      "duration": "2-3 hours",
-      "price": "From £375"
-    }
-  ],
 
   "beforeAfter": [
     {

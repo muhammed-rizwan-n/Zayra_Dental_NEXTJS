@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import data from "./info.json";
+import pricing from "../../pricing/pricing.json";
 import {
   Calendar,
   CheckCircle,
@@ -92,7 +93,7 @@ export default function DentalAligners() {
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
                   <Calendar size={20} />
-                  Free Smile Assessment
+                  Book Appointment
                 </Link>
                 <a href="tel:01132488398" className="btn-secondary-modern">
                   <Phone size={20} />
@@ -562,20 +563,12 @@ export default function DentalAligners() {
                 Ready to Start Your Aligner Journey?
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                Book your free smile assessment and discover how clear aligners
+                Book your appointment and discover how clear aligners
                 can give you the straight, confident smile you&quot;ve always
                 wanted - virtually invisibly!
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    Free
-                  </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Smile Assessment
-                  </div>
-                </div>
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
                     3D
@@ -612,7 +605,7 @@ export default function DentalAligners() {
                   }}
                 >
                   <Calendar size={20} />
-                  Free Assessment
+                  Book Appointment
                 </Link>
                 <a
                   href="tel:01132488398"

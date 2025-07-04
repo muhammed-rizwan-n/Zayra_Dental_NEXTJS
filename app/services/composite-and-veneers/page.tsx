@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import data from "./info.json";
 import type { Metadata } from "next";
+import pricing from "../../pricing/pricing.json";
+const { processSteps, beforeAfter } = data;
 import {
   Calendar,
   CheckCircle,
@@ -12,6 +14,47 @@ import {
   Sparkles,
   Palette,
 } from "lucide-react";
+
+const treatments = [
+  {
+    type: "Composite Bonding",
+    description:
+      "Quick, affordable repair for chipped, cracked, or discolored teeth",
+    benefits: [
+      "Same-day treatment",
+      "Natural appearance",
+      "Conservative approach",
+      "Affordable option",
+    ],
+    duration: "30-60 minutes per tooth",
+    price: `From £?${pricing['Veneers']['Veneer Composite']['price']}`,
+  },
+  {
+    type: "Porcelain Veneers",
+    description:
+      "Ultra-thin shells that transform your smile with lasting beauty",
+    benefits: [
+      "Hollywood smile",
+      "Stain resistant",
+      "Long-lasting",
+      "Custom designed",
+    ],
+    duration: "2-3 appointments",
+    price: `From £${pricing['Veneers']['Veneer Porcelain']['price']}`,
+  },
+  {
+    type: "Composite Veneers",
+    description: "Direct application veneers completed in one visit",
+    benefits: [
+      "Single visit",
+      "Reversible",
+      "Cost-effective",
+      "Immediate results",
+    ],
+    duration: "2-3 hours",
+    price: `From £${pricing['Veneers']['Veneer Composite']['price']}`,
+  },
+];
 
 export const metadata: Metadata = {
   title: "Composite Bonding & Veneers Leeds | Smile Makeover | Zayra Dental",
@@ -50,9 +93,6 @@ export const metadata: Metadata = {
   },
 };
 
-const treatments = data.treatments;
-const processSteps = data.processSteps;
-const beforeAfter = data.beforeAfter;
 export default function CompositeAndVeneers() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -423,9 +463,13 @@ export default function CompositeAndVeneers() {
                         <td className="text-center">Permanent</td>
                       </tr>
                       <tr>
-                        <td className="fw-medium">Price Range</td>
-                        <td className="text-center">£150-400</td>
-                        <td className="text-center">£800-1200</td>
+                        <td className="fw-medium">Pricing</td>
+                        <td className="text-center">
+                          £{pricing["Veneers"]["Veneer Composite"]["price"]}
+                        </td>
+                        <td className="text-center">
+                          £{pricing["Veneers"]["Veneer Porcelain"]["price"]}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -532,14 +576,6 @@ export default function CompositeAndVeneers() {
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    Free
-                  </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Smile Design
-                  </div>
-                </div>
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
                     Same Day

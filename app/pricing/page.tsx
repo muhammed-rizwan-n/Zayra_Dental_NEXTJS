@@ -118,7 +118,7 @@ export default function PricingSection() {
               <div className="d-flex flex-wrap gap-3 justify-content-center mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
                   <Calendar size={20} />
-                  Book Free Consultation
+                  Book Consultation
                 </Link>
                 <a href="tel:01132488398" className="btn-secondary-modern">
                   <Phone size={20} />

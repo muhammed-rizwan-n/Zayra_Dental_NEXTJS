@@ -58,7 +58,7 @@ export default function DentalImplants() {
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <Link href="/appointment" className="btn-primary-modern">
                   <Calendar size={20} />
-                  Free Consultation
+                  Book Consultation
                 </Link>
                 <a href="tel:01132488398" className="btn-secondary-modern">
                   <Phone size={20} />
@@ -449,17 +449,17 @@ export default function DentalImplants() {
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
                 Take the first step towards a permanent solution for missing
-                teeth. Book your free consultation and discover if dental
+                teeth. Book your consultation and discover if dental
                 implants are right for you.
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
-                    Free
+                    GDC
                   </div>
                   <div className="small" style={{ opacity: 0.9 }}>
-                    Consultation
+                    Certified Dentists
                   </div>
                 </div>
                 <div>
@@ -498,7 +498,7 @@ export default function DentalImplants() {
                   }}
                 >
                   <Calendar size={20} />
-                  Free Consultation
+                  Book Consultation
                 </Link>
                 <a
                   href="tel:01132488398"

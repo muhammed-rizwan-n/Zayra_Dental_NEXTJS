@@ -598,10 +598,10 @@ export default function FacialAesthetics() {
               <div className="d-flex align-items-center gap-4">
                 <div>
                   <div className="h5 mb-1" style={{ color: "white" }}>
-                    Free
+                    GDC
                   </div>
                   <div className="small" style={{ opacity: 0.9 }}>
-                    Consultation
+                    Certified Dentists
                   </div>
                 </div>
                 <div>

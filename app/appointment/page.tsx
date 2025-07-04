@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import pricing from "../pricing/pricing.json";
 import {
   Clock,
   Phone,
@@ -60,28 +61,28 @@ export default function Appointment() {
       title: "Initial Consultation",
       description: "Comprehensive dental exam and treatment planning",
       duration: "30 minutes",
-      price: "£50",
+      price: `£${pricing['Implants']['Implant Consultation']['price']}`,
       icon: <User size={24} />,
     },
     {
       title: "Implant Consultation",
       description: "First step towards affordable implants.",
       duration: "30 minutes",
-      price: "£50",
+      price: `£${pricing['Implants']['Implant Consultation']['price']}`,
       icon: <CheckCircle size={24} />,
     },
     {
       title: "Emergency Appointment",
       description: "Urgent dental care for pain or dental emergencies",
       duration: "45 minutes",
-      price: "£95",
+      price: `£${pricing['Emergency & Urgent Care']['Urgent Treatment']['price']}`,
       icon: <Heart size={24} />,
     },
     {
       title: "Cosmetic Consultation",
       description: "Discuss teeth whitening, veneers, and smile makeovers",
       duration: "45 minutes",
-      price: "£60",
+      price: `£${pricing['Cosmetic Dentistry']['Aligner/Cosmetic Consultation']['price']}`,
       icon: <Star size={24} />,
     },
   ];

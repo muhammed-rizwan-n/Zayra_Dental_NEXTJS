@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import data from "./info.json";
+import pricing from "../../pricing/pricing.json";
+
 import {
   Calendar,
   CheckCircle,
@@ -11,8 +13,42 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const { benefits, beforeAfterSteps, faqs } = data
-export const metadata: Metadata = data.meta
+const { benefits, beforeAfterSteps, faqs } = data;
+export const metadata: Metadata = {
+  title: "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
+  description:
+    "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results. Book your teeth whitening consultation today.",
+  keywords: [
+    "teeth whitening Leeds",
+    "tooth whitening Leeds",
+    "professional teeth whitening",
+    "teeth bleaching Leeds",
+    "cosmetic dentist Leeds",
+    "teeth whitening cost",
+    "dental whitening Leeds",
+    "laser teeth whitening",
+    "teeth whitening near me",
+    "smile makeover Leeds",
+  ],
+  openGraph: {
+    title:
+      "Teeth Whitening Leeds | Professional Tooth Whitening | Zayra Dental",
+    description:
+      "Professional teeth whitening in Leeds - up to 8 shades whiter! Safe, effective treatment from £199. Same-day results available.",
+    url: "https://zayradental.co.uk/services/teeth-whitening",
+    images: [
+      {
+        url: "/services/teeth-whitening.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Professional Teeth Whitening Treatment at Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/teeth-whitening",
+  },
+};
 
 export default function TeethWhitening() {
   return (
@@ -83,7 +119,11 @@ export default function TeethWhitening() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -310,26 +350,19 @@ export default function TeethWhitening() {
                 Ready for a Brighter Smile?
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                Professional teeth whitening starting from £299. Book your
-                consultation today and discover how we can transform your smile
-                safely and effectively.
+                Professional teeth whitening starting from £
+                {pricing["Cosmetic Dentistry"]["Tooth Whitening"]["price"]}.
+                Book your consultation today and discover how we can transform
+                your smile safely and effectively.
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
-                    £299
+                    £{pricing["Cosmetic Dentistry"]["Tooth Whitening"]["price"]}
                   </div>
                   <div className="small" style={{ opacity: 0.9 }}>
                     Starting Price
-                  </div>
-                </div>
-                <div>
-                  <div className="h4 mb-1" style={{ color: "white" }}>
-                    Free
-                  </div>
-                  <div className="small" style={{ opacity: 0.9 }}>
-                    Consultation
                   </div>
                 </div>
                 <div>
