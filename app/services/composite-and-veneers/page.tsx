@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import data from "./info.json";
+import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
@@ -12,12 +13,47 @@ import {
   Palette,
 } from "lucide-react";
 
-const treatments = data.treatments
-const processSteps= data.processSteps
-const beforeAfter =  data.beforeAfter
-export default function CompositeAndVeneers() {
-  
+export const metadata: Metadata = {
+  title: "Composite Bonding & Veneers Leeds | Smile Makeover | Zayra Dental",
+  description:
+    "Transform your smile with composite bonding & porcelain veneers in Leeds. Same-day treatment, natural results. Award-winning cosmetic dentist. Book consultation.",
+  keywords: [
+    "composite bonding Leeds",
+    "porcelain veneers Leeds",
+    "cosmetic dentist Leeds",
+    "smile makeover Leeds",
+    "dental veneers Leeds",
+    "tooth bonding Leeds",
+    "composite veneers Leeds",
+    "dental aesthetics Leeds",
+    "smile design Leeds",
+    "chipped tooth repair Leeds",
+    "cosmetic dentistry Leeds",
+    "Hollywood smile Leeds",
+  ],
+  openGraph: {
+    title: "Composite Bonding & Veneers Leeds | Smile Makeover | Zayra Dental",
+    description:
+      "Transform your smile with composite bonding & porcelain veneers in Leeds. Same-day treatment, natural results. Award-winning cosmetic dentist.",
+    url: "https://zayradental.co.uk/services/composite-and-veneers",
+    images: [
+      {
+        url: "/services/dental_bonding.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Composite Bonding and Veneers Results - Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/composite-and-veneers",
+  },
+};
 
+const treatments = data.treatments;
+const processSteps = data.processSteps;
+const beforeAfter = data.beforeAfter;
+export default function CompositeAndVeneers() {
   return (
     <>
       {/* Hero Section */}
@@ -88,7 +124,11 @@ export default function CompositeAndVeneers() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -408,8 +448,8 @@ export default function CompositeAndVeneers() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The porcelain veneers gave me the Hollywood smile I always
-                  dreamed of. Worth every penny!&rdquo;
+                  &ldquo;The porcelain veneers gave me the Hollywood smile I
+                  always dreamed of. Worth every penny!&rdquo;
                 </p>
                 <div className="fw-semibold">James T.</div>
                 <div className="small text-subtle">Porcelain Veneers</div>
@@ -428,8 +468,8 @@ export default function CompositeAndVeneers() {
                   ))}
                 </div>
                 <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Dr. Reshma&apos;s attention to detail is incredible. My composite
-                  veneers look amazing!&rdquo;
+                  &ldquo;Dr. Reshma&apos;s attention to detail is incredible. My
+                  composite veneers look amazing!&rdquo;
                 </p>
                 <div className="fw-semibold">Maria S.</div>
                 <div className="small text-subtle">Composite Veneers</div>

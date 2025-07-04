@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import data from "./info.json";
+import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
@@ -12,18 +13,50 @@ import {
   Stethoscope,
   Award,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "General Dentistry Leeds | Comprehensive Dental Care | Zayra Dental",
+  description:
+    "Expert general dentistry in Leeds. Routine checkups, cleanings, fillings & preventive care. Award-winning CQC registered practice. Book your appointment today.",
+  keywords: [
+    "general dentist Leeds",
+    "dental checkup Leeds",
+    "teeth cleaning Leeds",
+    "preventive dental care Leeds",
+    "dental examination Leeds",
+    "oral health Leeds",
+    "dental fillings Leeds",
+    "gum disease treatment Leeds",
+    "family dentist Leeds",
+    "routine dental care Leeds",
+    "comprehensive dentistry Leeds",
+    "dental hygiene Leeds",
+  ],
+  openGraph: {
+    title: "General Dentistry Leeds | Comprehensive Dental Care | Zayra Dental",
+    description:
+      "Expert general dentistry in Leeds. Routine checkups, cleanings, fillings & preventive care. Award-winning CQC registered practice.",
+    url: "https://zayradental.co.uk/services/general-dentistry",
+    images: [
+      {
+        url: "/services/dental_treatment.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "General Dentistry Treatment - Zayra Dental Leeds",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://zayradental.co.uk/services/general-dentistry",
+  },
+};
 type IconName = "shield" | "checkcircle" | "heart";
 const icons = {
   shield: <Shield size={32} />,
   checkcircle: <CheckCircle size={32} />,
   heart: <Heart size={32} />,
 };
-const {
-  services,
-  preventiveBenefits,
-  whatToExpect,
-  oralHealthTips,
-} = data;
+const { services, preventiveBenefits, whatToExpect, oralHealthTips } = data;
 export default function GeneralDentistry() {
   return (
     <>
@@ -97,7 +130,11 @@ export default function GeneralDentistry() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -346,7 +383,7 @@ export default function GeneralDentistry() {
                       color: "white",
                     }}
                   >
-                    { tip.icon as IconName ? icons[tip.icon as IconName]:""}
+                    {(tip.icon as IconName) ? icons[tip.icon as IconName] : ""}
                   </div>
                   <h4 className="heading-tertiary mb-3">{tip.tip}</h4>
                   <p className="text-subtle">{tip.description}</p>
