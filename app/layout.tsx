@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -212,6 +217,69 @@ export default function RootLayout({
         <meta name="geo.placename" content="Leeds" />
         <meta name="geo.position" content="53.8022349;-1.4994857" />
         <meta name="ICBM" content="53.8022349, -1.4994857" />
+
+        {/* Performance optimizations */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/services/dental_treatment.jpeg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/services/bg-emergency.jpg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/services/dental_bonding.jpg"
+          as="image"
+          type="image/jpeg"
+        />
+
+        {/* Minimal critical CSS for instant rendering */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;margin:0;padding:0}
+            .hero-modern{padding-top:120px;min-height:80vh}
+            .container-modern{max-width:1200px;margin:0 auto;padding:0 1rem}
+          `,
+          }}
+        />
+
+        {/* Performance optimization script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            if('requestIdleCallback' in window){
+              requestIdleCallback(function(){
+                var link=document.createElement('link');
+                link.rel='stylesheet';
+                link.href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap';
+                document.head.appendChild(link);
+              })
+            } else {
+              var link=document.createElement('link');
+              link.rel='stylesheet';
+              link.href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap';
+              document.head.appendChild(link);
+            }
+          `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
