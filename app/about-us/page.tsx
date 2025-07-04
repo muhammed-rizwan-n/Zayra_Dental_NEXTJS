@@ -231,7 +231,7 @@ export default function About() {
               <p className="text-subtle mb-4">
                 With flexible payment options and a welcoming atmosphere, we
                 make every visit simple, stress-free, and surprisingly
-                affordable — often less than the price of your daily coffee.
+                affordable monthly plans often less than the price of your daily coffee.
               </p>
 
               <div className="row g-3 mb-4">

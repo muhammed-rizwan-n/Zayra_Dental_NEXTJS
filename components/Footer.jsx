@@ -229,7 +229,7 @@ export default function Footer() {
                       fontSize: "0.9rem",
                     }}
                   >
-                    <div>Mon - Tue: 9:00 AM - 5:00 PM</div>
+                    <div>Mon - Thu: 9:00 AM - 5:00 PM</div>
                     <div>Fri: 9:00 AM - 1:00 PM</div>
                   </div>
                 </div>
