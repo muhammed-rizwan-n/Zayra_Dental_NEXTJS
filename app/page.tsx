@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/home/waiting_room.jpg",
-        width: 1200,
-        height: 630,
+        width: 332,
+        height: 221,
         alt: "Zayra Dental Modern Clinic Leeds - Award Winning Dentist",
       },
     ],
