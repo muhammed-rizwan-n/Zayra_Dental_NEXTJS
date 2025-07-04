@@ -51,8 +51,41 @@ export const metadata: Metadata = {
 };
 
 export default function EmergencyDentalCare() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EmergencyService",
+    name: "Emergency Dental Care Leeds",
+    description:
+      "24/7 emergency dental care in Leeds for toothache, broken teeth, dental abscesses and lost crowns",
+    provider: {
+      "@type": "DentalClinic",
+      name: "Zayra Dental",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "599 Harehills Lane",
+        addressLocality: "Leeds",
+        postalCode: "LS9 6NQ",
+        addressCountry: "GB",
+      },
+      telephone: "+441132488398",
+    },
+    areaServed: "Leeds",
+    availableService: [
+      "Emergency Toothache Treatment",
+      "Dental Abscess Treatment",
+      "Broken Tooth Repair",
+      "Lost Crown Replacement",
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       {/* Hero Section */}
       <section
         className="hero-modern"

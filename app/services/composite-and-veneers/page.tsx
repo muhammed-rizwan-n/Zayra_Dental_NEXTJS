@@ -54,8 +54,39 @@ const treatments = data.treatments;
 const processSteps = data.processSteps;
 const beforeAfter = data.beforeAfter;
 export default function CompositeAndVeneers() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: "Composite Bonding and Porcelain Veneers",
+    description:
+      "Cosmetic dental treatments including composite bonding and porcelain veneers for smile makeovers",
+    provider: {
+      "@type": "DentalClinic",
+      name: "Zayra Dental",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "599 Harehills Lane",
+        addressLocality: "Leeds",
+        postalCode: "LS9 6NQ",
+        addressCountry: "GB",
+      },
+    },
+    procedureType: [
+      "Composite Bonding",
+      "Porcelain Veneers",
+      "Composite Veneers",
+      "Smile Makeover",
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       {/* Hero Section */}
       <section
         className="hero-modern"

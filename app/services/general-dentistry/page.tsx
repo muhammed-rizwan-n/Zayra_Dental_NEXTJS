@@ -58,8 +58,40 @@ const icons = {
 };
 const { services, preventiveBenefits, whatToExpect, oralHealthTips } = data;
 export default function GeneralDentistry() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: "General Dentistry Services",
+    description:
+      "Comprehensive general dentistry care including routine checkups, cleanings, fillings and preventive treatments",
+    provider: {
+      "@type": "DentalClinic",
+      name: "Zayra Dental",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "599 Harehills Lane",
+        addressLocality: "Leeds",
+        postalCode: "LS9 6NQ",
+        addressCountry: "GB",
+      },
+    },
+    procedureType: [
+      "Dental Checkup",
+      "Teeth Cleaning",
+      "Dental Fillings",
+      "Gum Disease Treatment",
+      "Oral Cancer Screening",
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       {/* Hero Section */}
       <section
         className="hero-modern"
