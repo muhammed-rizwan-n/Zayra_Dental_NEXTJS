@@ -250,6 +250,32 @@ export default function RootLayout({
             .text-accent{color:#37777a}
             .text-primary-brown{color:#b67758}
             .text-subtle{color:#6f6259}
+            .container-modern{max-width:1200px;margin:0 auto;padding:0 1rem}
+            .section-modern{padding:5rem 0}
+            .card-modern{background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:none;transition:all 0.3s ease}
+            .bg-cream{background:#fcf4f0}
+            .bg-light-modern{background:#f7f5f2}
+          `,
+          }}
+        />
+
+        {/* Performance optimization script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            if('requestIdleCallback' in window){
+              requestIdleCallback(function(){
+                var link=document.createElement('link');
+                link.rel='stylesheet';
+                link.href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap';
+                document.head.appendChild(link);
+              })
+            } else {
+              var link=document.createElement('link');
+              link.rel='stylesheet';
+              link.href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap';
+              document.head.appendChild(link);
+            }
           `,
           }}
         />
