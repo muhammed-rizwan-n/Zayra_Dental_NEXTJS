@@ -5,14 +5,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -211,6 +216,33 @@ export default function RootLayout({
         <meta name="geo.placename" content="Leeds" />
         <meta name="geo.position" content="53.8022349;-1.4994857" />
         <meta name="ICBM" content="53.8022349, -1.4994857" />
+
+        {/* Performance optimizations */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+        {/* Critical CSS inline */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            html{scroll-behavior:smooth}
+            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+            .hero-modern{padding-top:120px;min-height:80vh}
+            .heading-primary{font-family:"Playfair Display",serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:#473a2f}
+            .heading-secondary{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;line-height:1.3;letter-spacing:-0.01em;color:#473a2f}
+            .btn-primary-modern{background:#b67758;color:white;padding:0.875rem 2rem;border-radius:50px;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.3s ease;border:none}
+            .text-accent{color:#37777a}
+            .text-primary-brown{color:#b67758}
+            .text-subtle{color:#6f6259}
+          `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
