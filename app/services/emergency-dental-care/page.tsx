@@ -160,6 +160,7 @@ export default function EmergencyDentalCare() {
                     className="img-fluid rounded-modern"
                     style={{ objectFit: "cover" }}
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   />
                 </div>
               </div>
@@ -189,6 +190,8 @@ export default function EmergencyDentalCare() {
                 height={500}
                 className="img-fluid rounded-modern shadow-modern"
                 style={{ objectFit: "cover" }}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               />
             </div>
 

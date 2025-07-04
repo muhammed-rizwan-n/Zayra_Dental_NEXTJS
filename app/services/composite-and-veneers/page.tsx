@@ -139,6 +139,7 @@ export default function CompositeAndVeneers() {
                     className="img-fluid rounded-modern"
                     style={{ objectFit: "cover" }}
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   />
                 </div>
 
