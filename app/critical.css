@@ -1,0 +1,197 @@
+/* Critical CSS for First Contentful Paint optimization */
+
+/* Essential variables */
+:root {
+  --primary-teal: #73afaa;
+  --primary-brown: #b67758;
+  --secondary-brown: #86462a;
+  --text-primary: #473a2f;
+  --text-secondary: #6f6259;
+  --accent-teal: #37777a;
+  --bg-cream: #fcf4f0;
+  --bg-white: #ffffff;
+  --bg-light-gray: #f7f5f2;
+  --font-primary: "Playfair Display", serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Above-the-fold critical styles */
+.hero-modern {
+  padding-top: 120px;
+  min-height: 80vh;
+}
+
+.container-modern {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.heading-primary {
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.heading-secondary {
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.btn-primary-modern {
+  background: var(--primary-brown);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-modern:hover {
+  background: var(--secondary-brown);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-modern {
+  background: transparent;
+  color: var(--primary-brown);
+  border: 2px solid var(--primary-brown);
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.text-accent {
+  color: var(--accent-teal);
+}
+
+.text-primary-brown {
+  color: var(--primary-brown);
+}
+
+.text-subtle {
+  color: var(--text-secondary);
+}
+
+.section-modern {
+  padding: 5rem 0;
+}
+
+.card-modern {
+  background: var(--bg-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  border: none;
+  transition: var(--transition-smooth);
+}
+
+.bg-cream {
+  background: var(--bg-cream);
+}
+
+.bg-light-modern {
+  background: var(--bg-light-gray);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-modern {
+  border-radius: 1rem;
+}
+
+/* Bootstrap overrides for critical elements */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+@media (max-width: 991.98px) {
+  .col-lg-6 {
+    width: 100%;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
