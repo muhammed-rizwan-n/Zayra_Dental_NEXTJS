@@ -8,7 +8,7 @@ export default function ReviewCard( {review} ) {
 
   return (
     <div
-      key={review.t}
+      key={`${review.t}+${review.n}` }
       className="col-lg-4"
       data-aos="fade-up"
       data-aos-delay={100}
@@ -65,7 +65,7 @@ export default function ReviewCard( {review} ) {
               </a>
               <div className="small text-subtle">
                 {review.profession ||
-                  new Date(review.t * 1).toLocaleDateString("en-US", {
+                  new Date(parseInt(review.t)).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
