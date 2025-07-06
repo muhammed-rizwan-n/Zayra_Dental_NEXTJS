@@ -291,7 +291,7 @@ export default function Footer() {
               <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                 &copy; {currentYear} Zayra Dental. All rights reserved.
               </span>
-              <div className="d-flex gap-3">
+              <div className="d-none gap-3" style={{display: "none"}}>
                 <Link
                   href="/privacy"
                   className="text-decoration-none"

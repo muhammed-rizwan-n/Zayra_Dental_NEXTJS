@@ -176,7 +176,7 @@ export default function FacialAesthetics() {
               data-aos-delay="200"
             >
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/services/facial_aesthetics.jpg"
                     alt="Facial Aesthetics Treatment"

@@ -202,7 +202,7 @@ export default function CompositeAndVeneers() {
               data-aos-delay="200"
             >
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/services/dental_bonding.jpg"
                     alt="Composite Bonding and Veneers Results"

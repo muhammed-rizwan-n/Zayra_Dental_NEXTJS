@@ -96,7 +96,7 @@ export default function DentalImplants() {
               data-aos-delay="200"
             >
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/services/dental_implant.jpeg"
                     alt="Dental Implant Treatment Results"

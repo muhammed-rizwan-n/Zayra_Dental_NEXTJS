@@ -127,7 +127,7 @@ export default function DentalAligners() {
 
             <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/services/dental_aligners.jpeg"
                     alt="Clear Dental Aligners Treatment"

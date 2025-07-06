@@ -125,7 +125,7 @@ export default function TeethWhitening() {
               data-aos-delay="200"
             >
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/services/teeth_white.jpg"
                     alt="Professional Teeth Whitening Results"
