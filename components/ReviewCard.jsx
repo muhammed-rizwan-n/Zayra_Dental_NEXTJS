@@ -60,11 +60,24 @@ export default function ReviewCard({ review }) {
               </a>
               <div className="small text-subtle">
                 {review.profession ||
-                  new Date(parseInt(review.t)).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  (() => {
+                    const date = new Date(parseInt(review.t));
+                    const months = [
+                      "January",
+                      "February",
+                      "March",
+                      "April",
+                      "May",
+                      "June",
+                      "July",
+                      "August",
+                      "September",
+                      "October",
+                      "November",
+                      "December",
+                    ];
+                    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+                  })()}
               </div>
             </div>
           </div>
