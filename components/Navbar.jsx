@@ -20,42 +20,65 @@ export default function Navbar() {
 
   useEffect(() => {
     let lastScrollTop = 0;
+    let ticking = false;
     const navbar = document.getElementById("navbar");
 
     function handleScroll() {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-      if (window.innerWidth < 992) {
-        if (scrollTop > lastScrollTop) {
-          // Scrolling down
-          navbar.style.top = "-130px"; // Adjust to your navbar height
-        } else {
-          // Scrolling up
-          navbar.style.top = "";
-        }
-      } else {
-        // Always show on large screens
-        navbar.style.top = "0px";
+          // Update scrolled state for styling
+          setIsScrolled(scrollTop > 50);
+
+          if (window.innerWidth < 992) {
+            // Mobile/tablet behavior - hide on scroll down, show on scroll up
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+              // Scrolling down
+              navbar.style.transform = "translateY(-100%)";
+            } else {
+              // Scrolling up
+              navbar.style.transform = "translateY(0)";
+            }
+          } else {
+            // Large screens - always visible and fixed
+            navbar.style.transform = "translateY(0)";
+            navbar.style.position = "fixed";
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   return (
     <nav
       id="navbar"
-      className={`fixed-top navbar-modern ${isScrolled ? "scrolled" : ""}`}
+      className={`navbar-modern ${isScrolled ? "scrolled" : ""}`}
       style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1030,
         background: isScrolled
           ? "rgba(255, 255, 255, 0.98)"
           : "rgba(255, 255, 255, 0.95)",
         backdropFilter: "blur(20px)",
         borderBottom: isScrolled ? "1px solid rgba(0,0,0,0.1)" : "none",
-        transition: "all 0.3s ease",
+        transition: "all 0.3s ease, transform 0.3s ease",
+        transform: "translateY(0)",
       }}
     >
       <div className="container-modern">
