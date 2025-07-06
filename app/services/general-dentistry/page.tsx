@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import {
   Calendar,
   CheckCircle,
-  Star,
   ArrowRight,
   Phone,
   Shield,

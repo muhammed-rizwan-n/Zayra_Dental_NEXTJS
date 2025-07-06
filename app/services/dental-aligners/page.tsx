@@ -6,7 +6,6 @@ import {
   Calendar,
   CheckCircle,
   Clock,
-  Star,
   ArrowRight,
   Phone,
   Eye,

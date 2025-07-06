@@ -10,7 +10,6 @@ import {
   Calendar,
   CheckCircle,
   Clock,
-  Star,
   ArrowRight,
   Phone,
   Sparkles,

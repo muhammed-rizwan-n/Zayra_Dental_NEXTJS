@@ -15,7 +15,6 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
-import reviews from "../getReviews/finalReviews.json";
 import PatientReview from "../components/PatientReview";
 
 export const metadata: Metadata = {

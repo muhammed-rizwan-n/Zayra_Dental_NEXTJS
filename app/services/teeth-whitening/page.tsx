@@ -7,7 +7,6 @@ import pricing from "../../pricing/pricing.json";
 import {
   Calendar,
   CheckCircle,
-  Star,
   ArrowRight,
   Phone,
   Sparkles,
