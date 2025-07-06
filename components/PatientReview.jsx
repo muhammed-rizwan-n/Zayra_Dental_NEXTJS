@@ -23,26 +23,27 @@ export default function PatientReview() {
 
         <div className="row g-4">
           {allReviews.slice(0, visibleCount).map(([index, review]) => (
-            <ReviewCard key={index} review={review} />
+            <ReviewCard key={review.t} review={review} />
           ))}
         </div>
- {visibleCount < allReviews.length && (
-        <div className="text-center mt-5">
-          <button className="btn-primary-modern" onClick={loadMore}>
-            Load More
-          </button>
-        </div>
-      )}
+        {visibleCount < allReviews.length && (
+          <div className="text-center mt-5">
+            <button className="btn-primary-modern" onClick={loadMore}>
+              Load More
+            </button>
+          </div>
+        )}
         <div className="text-center mt-3" data-aos="fade-up">
-                   
           <div className="d-inline-flex align-items-center gap-2 text-subtle">
             <Star
               size={20}
               fill="var(--primary-teal)"
               color="var(--primary-teal)"
             />
-            <span className="fw-semibold">{reviews['averageRating']}/5 average rating</span>
-            <span>Based on {reviews['reviewsCount']}+ Google reviews</span>
+            <span className="fw-semibold">
+              {reviews["averageRating"]}/5 average rating
+            </span>
+            <span>Based on {reviews["reviewsCount"]}+ Google reviews</span>
           </div>
         </div>
       </div>

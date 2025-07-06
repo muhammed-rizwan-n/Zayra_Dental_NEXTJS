@@ -2,17 +2,12 @@
 import { useState } from "react";
 import { Star } from "lucide-react";
 import Image from "next/image";
-export default function ReviewCard( {review} ) {
+export default function ReviewCard({ review }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const isLong = review.m.length > 300;
 
   return (
-    <div
-      key={review.t}
-      className="col-lg-4"
-      data-aos="fade-up"
-      data-aos-delay={100}
-    >
+    <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
       <div className="testimonial-card h-100">
         <div className="d-flex mb-3">
           {[...Array(review.r)].map((_, i) => (
@@ -45,7 +40,7 @@ export default function ReviewCard( {review} ) {
 
         <div className="d-flex align-items-center gap-3 mt-3">
           <Image
-            src={review.ui || null}
+            src={review.ui || "/placeholder-avatar.jpg"}
             alt={review.n}
             width={50}
             height={50}
@@ -65,7 +60,7 @@ export default function ReviewCard( {review} ) {
               </a>
               <div className="small text-subtle">
                 {review.profession ||
-                  new Date(review.t * 1).toLocaleDateString("en-US", {
+                  new Date(parseInt(review.t)).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
