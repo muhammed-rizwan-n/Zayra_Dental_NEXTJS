@@ -53,6 +53,7 @@ body {
   overflow-x: hidden;
   font-display: swap;
   contain: layout style;
+  padding-top: 85px; /* Space for fixed navbar */
 }
 
 /* Typography Styles */
@@ -270,10 +271,12 @@ body {
   background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 85px);
   display: flex;
   align-items: center;
   padding-bottom: 20px;
+  margin-top: -85px;
+  padding-top: 105px;
 }
 
 .hero-modern::before {
@@ -461,6 +464,10 @@ body {
   :root {
     --section-padding: 3rem 0;
     --container-padding: 0 1rem;
+  }
+
+  body {
+    padding-top: 70px; /* Smaller padding for mobile */
   }
 
   .card-modern,

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Eye, ChevronLeft, ChevronRight } from "lucide-react";
+import { Eye, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface GalleryImage {
   src: string;
@@ -172,6 +172,36 @@ export default function GalleryClient({
             }}
             onClick={closeLightbox}
           >
+            {/* Close button */}
+            <button
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                background: "rgba(255,255,255,0.2)",
+                border: "none",
+                color: "white",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 10001,
+                transition: "background 0.3s ease",
+              }}
+              onClick={closeLightbox}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+              }}
+            >
+              <X size={20} />
+            </button>
+
             <div
               style={{
                 position: "relative",
@@ -254,12 +284,13 @@ export default function GalleryClient({
               <div
                 style={{
                   position: "relative",
-                  maxWidth: "100%",
-                  maxHeight: "80vh",
+                  maxWidth: "90vw",
+                  maxHeight: "90vh",
                   display: "flex",
-                  flexFlow: "row",
+                  flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+                  gap: "1rem",
                 }}
               >
                 <Image
@@ -268,8 +299,8 @@ export default function GalleryClient({
                   width={1200}
                   height={800}
                   style={{
-                    maxWidth: "100%",
-                    maxHeight: "75vh",
+                    maxWidth: "90vw",
+                    maxHeight: "80vh",
                     objectFit: "contain",
                     width: "auto",
                     height: "auto",
@@ -279,8 +310,6 @@ export default function GalleryClient({
                 {/* Image info */}
                 <div
                   style={{
-                    position: "absolute",
-                    transform: "translateX(-50%)",
                     color: "white",
                     textAlign: "center",
                     maxWidth: "90%",
@@ -468,6 +497,36 @@ export default function GalleryClient({
           }}
           onClick={closeLightbox}
         >
+          {/* Close button */}
+          <button
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              background: "rgba(255,255,255,0.2)",
+              border: "none",
+              color: "white",
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 10001,
+              transition: "background 0.3s ease",
+            }}
+            onClick={closeLightbox}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+            }}
+          >
+            <X size={20} />
+          </button>
+
           <div
             style={{
               position: "relative",
@@ -550,13 +609,13 @@ export default function GalleryClient({
             <div
               style={{
                 position: "relative",
-                maxWidth: "100%",
-                maxHeight: "85vh",
+                maxWidth: "90vw",
+                maxHeight: "90vh",
                 display: "flex",
-                flexFlow: "column",
-                width: "85vw",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: "1rem",
               }}
             >
               <Image
@@ -565,10 +624,10 @@ export default function GalleryClient({
                 width={600}
                 height={500}
                 style={{
-                  maxWidth: "100%",
-                  maxHeight: "75vh",
+                  maxWidth: "90vw",
+                  maxHeight: "80vh",
                   objectFit: "contain",
-                  width: "80vw",
+                  width: "auto",
                   height: "auto",
                 }}
                 onClick={(e) => e.stopPropagation()}

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const geistSans = Geist({
@@ -301,6 +302,7 @@ export default function RootLayout({
 
         <main>{children}</main>
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );
