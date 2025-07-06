@@ -172,6 +172,36 @@ export default function GalleryClient({
             }}
             onClick={closeLightbox}
           >
+            {/* Close button */}
+            <button
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                background: "rgba(255,255,255,0.2)",
+                border: "none",
+                color: "white",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 10001,
+                transition: "background 0.3s ease",
+              }}
+              onClick={closeLightbox}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+              }}
+            >
+              <X size={20} />
+            </button>
+
             <div
               style={{
                 position: "relative",
@@ -467,6 +497,36 @@ export default function GalleryClient({
           }}
           onClick={closeLightbox}
         >
+          {/* Close button */}
+          <button
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              background: "rgba(255,255,255,0.2)",
+              border: "none",
+              color: "white",
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 10001,
+              transition: "background 0.3s ease",
+            }}
+            onClick={closeLightbox}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(255,255,255,0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+            }}
+          >
+            <X size={20} />
+          </button>
+
           <div
             style={{
               position: "relative",
