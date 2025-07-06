@@ -50,35 +50,25 @@ Submitted at: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" }
 reCAPTCHA Score: ${recaptchaData.score}
     `;
 
-    // Send email using your preferred service (Nodemailer, SendGrid, etc.)
-    // For now, we'll simulate email sending
-    const emailResponse = await fetch(
-      "https://api.emailjs.com/api/v1.0/email/send",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: process.env.EMAILJS_SERVICE_ID,
-          template_id: process.env.EMAILJS_TEMPLATE_ID,
-          user_id: process.env.EMAILJS_PUBLIC_KEY,
-          template_params: {
-            to_email: "info@zayradental.co.uk",
-            from_name: `${firstName} ${lastName}`,
-            from_email: email,
-            phone: phone || "Not provided",
-            subject: subject,
-            message: message,
-            reply_to: email,
-          },
-        }),
-      },
-    );
+    // Log the email content (in production, you would send this to your email service)
+    console.log("Contact form submission:", {
+      name: `${firstName} ${lastName}`,
+      email,
+      phone,
+      subject,
+      message,
+      timestamp: new Date().toISOString(),
+      recaptchaScore: recaptchaData.score,
+    });
 
-    if (!emailResponse.ok) {
-      throw new Error("Failed to send email");
-    }
+    // In a real implementation, you would integrate with your email service here
+    // For example: SendGrid, Mailgun, AWS SES, Nodemailer, etc.
+    // await sendEmail({
+    //   to: 'info@zayradental.co.uk',
+    //   from: email,
+    //   subject: `Contact Form: ${subject}`,
+    //   html: emailContent,
+    // });
 
     return NextResponse.json({ success: true });
   } catch (error) {

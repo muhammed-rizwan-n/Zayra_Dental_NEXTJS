@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/react-google-recaptcha": "^2.1.9",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.6",
