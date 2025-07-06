@@ -22,6 +22,7 @@ export default function ReviewCard({ review }) {
 
   return (
     <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
+
       <div className="testimonial-card h-100">
         <div className="d-flex mb-3">
           {[...Array(review.r)].map((_, i) => (
@@ -73,6 +74,7 @@ export default function ReviewCard({ review }) {
               </a>
               <div className="small text-subtle">
                 {review.profession || formattedDate}
+
               </div>
             </div>
           </div>
