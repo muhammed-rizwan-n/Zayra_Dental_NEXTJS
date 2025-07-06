@@ -49,7 +49,10 @@ export const metadata: Metadata = {
     "dental aligners Leeds",
     "composite veneers Leeds",
   ],
-  authors: [{ name: "Dr. Reshma Parambil" }],
+  authors: [
+    { name: "Dr. Reshma Parambil" },
+    { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
+  ],
   creator: "Zayra Dental",
   publisher: "Zayra Dental",
   formatDetection: {
@@ -200,6 +203,12 @@ export default function RootLayout({
       "https://www.instagram.com/zayradental",
       "https://www.linkedin.com/company/zayradental",
     ],
+    developer: {
+      "@type": "Person",
+      name: "Muhammed Rizwan",
+      url: "https://muhammed-rizwan.vercel.app",
+      jobTitle: "Web Developer",
+    },
   };
 
   return (
@@ -211,7 +220,10 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
-        <meta name="google-site-verification" content="OrNCapr7kK95PzWbNlwvBm0p4yh7aI5hgObcC7wmafs" />
+        <meta
+          name="google-site-verification"
+          content="OrNCapr7kK95PzWbNlwvBm0p4yh7aI5hgObcC7wmafs"
+        />
         <link rel="canonical" href="https://zayradental.co.uk" />
         <meta name="geo.region" content="GB-ENG" />
         <meta name="geo.placename" content="Leeds" />
