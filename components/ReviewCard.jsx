@@ -1,10 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import Image from "next/image";
 export default function ReviewCard({ review }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [formattedDate, setFormattedDate] = useState("");
   const isLong = review.m.length > 300;
+
+  useEffect(() => {
+    if (!review.profession) {
+      const date = new Date(parseInt(review.t));
+      setFormattedDate(
+        date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }),
+      );
+    }
+  }, [review.t, review.profession]);
 
   return (
     <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
@@ -59,25 +73,7 @@ export default function ReviewCard({ review }) {
                 {review.n}
               </a>
               <div className="small text-subtle">
-                {review.profession ||
-                  (() => {
-                    const date = new Date(parseInt(review.t));
-                    const months = [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ];
-                    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-                  })()}
+                {review.profession || formattedDate}
               </div>
             </div>
           </div>
