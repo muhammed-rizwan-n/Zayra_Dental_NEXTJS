@@ -13,6 +13,7 @@ import {
   Clock,
   Leaf,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
 export const metadata: Metadata = {
   title: "Dental Spa Leeds | Luxury Dental Treatments | Zayra Dental",
@@ -586,72 +587,7 @@ export default function DentalSpa() {
             </h2>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The dental spa experience was incredible! I actually
-                  looked forward to my dental appointment. So relaxing and
-                  professional.&rdquo;
-                </p>
-                <div className="fw-semibold">Catherine H.</div>
-                <div className="small text-subtle">Spa Cleaning Package</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Perfect for anyone with dental anxiety. The
-                  aromatherapy and comfort amenities made all the
-                  difference.&rdquo;
-                </p>
-                <div className="fw-semibold">Michael D.</div>
-                <div className="small text-subtle">Relaxation Dentistry</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The complete wellness package was amazing! Great value
-                  for such a comprehensive and luxurious experience.&rdquo;
-                </p>
-                <div className="fw-semibold">Lisa P.</div>
-                <div className="small text-subtle">
-                  Complete Wellness Package
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="dental-spa" />
         </div>
       </section>
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import data from "./info.json";
 import type { Metadata } from "next";
 import pricing from "../../pricing/pricing.json";
+import ServiceReview from "../../../components/ServiceReview";
+
 const { processSteps, beforeAfter } = data;
 import {
   Calendar,
@@ -489,69 +491,7 @@ export default function CompositeAndVeneers() {
               Beautiful Smile Transformations
             </h2>
           </div>
-
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;My chipped front tooth was fixed in one visit. It looks
-                  completely natural and no one can tell!&rdquo;
-                </p>
-                <div className="fw-semibold">Lisa K.</div>
-                <div className="small text-subtle">Composite Bonding</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The porcelain veneers gave me the Hollywood smile I
-                  always dreamed of. Worth every penny!&rdquo;
-                </p>
-                <div className="fw-semibold">James T.</div>
-                <div className="small text-subtle">Porcelain Veneers</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Dr. Reshma&apos;s attention to detail is incredible. My
-                  composite veneers look amazing!&rdquo;
-                </p>
-                <div className="fw-semibold">Maria S.</div>
-                <div className="small text-subtle">Composite Veneers</div>
-              </div>
-            </div>
-          </div>
+            <ServiceReview data="composite and veneer" />
         </div>
       </section>
 

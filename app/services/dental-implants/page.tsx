@@ -12,15 +12,15 @@ import {
   Award,
   Heart,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
-const implantTypes =data.implantTypes;
+const implantTypes = data.implantTypes;
 const treatmentSteps = data.treatmentSteps;
-const  benefits = data.benefits;
+const benefits = data.benefits;
 const candidateRequirements = data.benefits;
 export const metadata: Metadata = data.meta;
 
 export default function DentalImplants() {
-
   return (
     <>
       {/* Hero Section */}
@@ -91,7 +91,11 @@ export default function DentalImplants() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -368,68 +372,7 @@ export default function DentalImplants() {
             </p>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The implant feels completely natural. I can eat
-                  anything I want and smile with confidence again.&rdquo;
-                </p>
-                <div className="fw-semibold">Sarah M.</div>
-                <div className="small text-subtle">Single Implant Patient</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Best decision I ever made. The team was professional
-                  and the results exceeded my expectations.&rdquo;
-                </p>
-                <div className="fw-semibold">Michael R.</div>
-                <div className="small text-subtle">Multiple Implants</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;From consultation to final crown, the entire process
-                  was smooth and pain-free.&rdquo;
-                </p>
-                <div className="fw-semibold">Emma L.</div>
-                <div className="small text-subtle">Full Mouth Restoration</div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="dental-implant" />
         </div>
       </section>
 
@@ -449,8 +392,8 @@ export default function DentalImplants() {
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
                 Take the first step towards a permanent solution for missing
-                teeth. Book your consultation and discover if dental
-                implants are right for you.
+                teeth. Book your consultation and discover if dental implants
+                are right for you.
               </p>
 
               <div className="d-flex align-items-center gap-4 mb-4">

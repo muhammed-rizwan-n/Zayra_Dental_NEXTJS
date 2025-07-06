@@ -11,9 +11,9 @@ import {
   Heart,
   AlertCircle,
 } from "lucide-react";
-const {symptoms, treatmentSteps, benefits, afterCareInstructions} = data;
+import ServiceReview from "@/components/ServiceReview";
+const { symptoms, treatmentSteps, benefits, afterCareInstructions } = data;
 export default function RootCanal() {
-
   return (
     <>
       {/* Hero Section */}
@@ -82,7 +82,11 @@ export default function RootCanal() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
@@ -142,8 +146,8 @@ export default function RootCanal() {
               style={{ maxWidth: "600px" }}
             >
               Root canal treatment becomes necessary when the tooth&apos;s pulp
-              becomes infected or severely inflamed. Don&apos;t ignore these warning
-              signs.
+              becomes infected or severely inflamed. Don&apos;t ignore these
+              warning signs.
             </p>
           </div>
 
@@ -192,7 +196,8 @@ export default function RootCanal() {
                     Experiencing Severe Pain?
                   </div>
                   <div className="small text-subtle">
-                    Don&apos;t wait - call us immediately for emergency treatment
+                    Don&apos;t wait - call us immediately for emergency
+                    treatment
                   </div>
                 </div>
               </div>
@@ -363,7 +368,7 @@ export default function RootCanal() {
                           />
                           <span className="small">{instruction}</span>
                         </li>
-                      ),
+                      )
                     )}
                   </ul>
                 </div>
@@ -392,7 +397,9 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">&ldquo;Root canals are extremely painful&rdquo;</p>
+                <p className="mb-3">
+                  &ldquo;Root canals are extremely painful&rdquo;
+                </p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Modern root canal treatment is
                   virtually painless thanks to advanced anesthesia and
@@ -409,7 +416,9 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">&ldquo;It&apos;s better to extract the tooth&rdquo;</p>
+                <p className="mb-3">
+                  &ldquo;It&apos;s better to extract the tooth&rdquo;
+                </p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> Saving your natural tooth is almost
                   always the best option. Root canal treatment has a 95% success
@@ -425,7 +434,9 @@ export default function RootCanal() {
                 <h5 className="fw-semibold mb-3" style={{ color: "#dc3545" }}>
                   MYTH
                 </h5>
-                <p className="mb-3">&ldquo;Root canal treatment causes illness&rdquo;</p>
+                <p className="mb-3">
+                  &ldquo;Root canal treatment causes illness&rdquo;
+                </p>
                 <div className="small text-subtle">
                   <strong>FACT:</strong> This outdated myth has been thoroughly
                   debunked by modern research. Root canals eliminate infection
@@ -463,69 +474,7 @@ export default function RootCanal() {
             </h2>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;I was terrified, but Dr. Reshma made it completely painless.
-                  I felt immediate relief from the severe pain I had been
-                  experiencing.&rdquo;
-                </p>
-                <div className="fw-semibold">Mark R.</div>
-                <div className="small text-subtle">Emergency Root Canal</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The procedure was much easier than I expected. I was back to
-                  work the next day with no pain at all.&rdquo;
-                </p>
-                <div className="fw-semibold">Jennifer L.</div>
-                <div className="small text-subtle">Preventive Root Canal</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Five years later and my tooth is still perfect. So glad I
-                  chose to save it instead of having it extracted.&rdquo;
-                </p>
-                <div className="fw-semibold">Paul M.</div>
-                <div className="small text-subtle">Follow-up Patient</div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="root-canal" />
         </div>
       </section>
 
@@ -593,9 +542,9 @@ export default function RootCanal() {
                 Save Your Tooth with Expert Care
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
-                Don&apos;t let dental pain control your life. Our experienced team
-                provides comfortable, effective root canal treatment to save
-                your natural tooth.
+                Don&apos;t let dental pain control your life. Our experienced
+                team provides comfortable, effective root canal treatment to
+                save your natural tooth.
               </p>
             </div>
 

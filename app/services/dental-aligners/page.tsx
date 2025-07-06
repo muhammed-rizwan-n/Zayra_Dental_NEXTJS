@@ -12,6 +12,7 @@ import {
   Eye,
   Smartphone,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 const alignerTypes = data.alignerTypes;
 const benefits = data.benefits;
 const treatmentSteps = data.treatmentSteps;
@@ -479,70 +480,8 @@ export default function DentalAligners() {
           </div>
 
           <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Nobody knew I was wearing aligners! The treatment was
-                  so convenient and the results are amazing.&rdquo;
-                </p>
-                <div className="fw-semibold">Rachel M.</div>
-                <div className="small text-subtle">8 months treatment</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  {
-                    "Perfect for my busy lifestyle. I could eat normally and\
-                  maintain my oral hygiene easily."
-                  }
-                </p>
-                <div className="fw-semibold">David L.</div>
-                <div className="small text-subtle">12 months treatment</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  {
-                    "The 3D preview showed me exactly what my smile would look\
-                  like. The results matched perfectly!"
-                  }
-                </p>
-                <div className="fw-semibold">Sophie T.</div>
-                <div className="small text-subtle">6 months treatment</div>
-              </div>
-            </div>
+                        <ServiceReview data="dental-aligner" />
+            
           </div>
         </div>
       </section>

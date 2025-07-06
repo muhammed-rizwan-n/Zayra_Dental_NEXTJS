@@ -13,6 +13,7 @@ import {
   Stethoscope,
   Award,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
 export const metadata: Metadata = {
   title: "General Dentistry Leeds | Comprehensive Dental Care | Zayra Dental",
@@ -501,68 +502,7 @@ export default function GeneralDentistry() {
             </h2>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Regular cleanings and checkups have kept my teeth
-                  healthy for years. The team is thorough and gentle.&rdquo;
-                </p>
-                <div className="fw-semibold">Patricia M.</div>
-                <div className="small text-subtle">Long-term Patient</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;They caught a cavity early during my routine checkup.
-                  Quick treatment prevented a bigger problem.&rdquo;
-                </p>
-                <div className="fw-semibold">Andrew R.</div>
-                <div className="small text-subtle">Preventive Care Success</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;My whole family comes here. Professional, caring staff
-                  who make dental visits comfortable for everyone.&rdquo;
-                </p>
-                <div className="fw-semibold">The Johnson Family</div>
-                <div className="small text-subtle">Family Practice</div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="general-dentistry" />
         </div>
       </section>
 

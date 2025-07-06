@@ -13,6 +13,7 @@ import {
   Users,
   Award,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
 export const metadata: Metadata = {
   title: "Facial Aesthetics Leeds | Anti-Wrinkle Treatments | Zayra Dental",
@@ -253,8 +254,8 @@ export default function FacialAesthetics() {
                           index === 0
                             ? "var(--primary-teal)"
                             : index === 1
-                              ? "var(--primary-brown)"
-                              : "var(--accent-teal)",
+                            ? "var(--primary-brown)"
+                            : "var(--accent-teal)",
                         color: "white",
                       }}
                     >
@@ -492,70 +493,7 @@ export default function FacialAesthetics() {
             </h2>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;The anti-wrinkle treatment was so natural looking.
-                  Professional service and I felt completely comfortable
-                  throughout.&rdquo;
-                </p>
-                <div className="fw-semibold">Rachel T.</div>
-                <div className="small text-subtle">Anti-wrinkle Treatment</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Amazing results with my lip enhancement. Subtle and
-                  natural - exactly what I wanted. Highly recommend!&rdquo;
-                </p>
-                <div className="fw-semibold">Sophie M.</div>
-                <div className="small text-subtle">Dermal Fillers</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Professional, knowledgeable, and caring. The
-                  consultation was thorough and results exceeded my
-                  expectations.&rdquo;
-                </p>
-                <div className="fw-semibold">James R.</div>
-                <div className="small text-subtle">Full Consultation</div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="facial-aestetics" />
         </div>
       </section>
 

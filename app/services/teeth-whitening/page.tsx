@@ -12,6 +12,7 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
 const { benefits, beforeAfterSteps, faqs } = data;
 export const metadata: Metadata = {
@@ -258,54 +259,17 @@ export default function TeethWhitening() {
           </div>
         </div>
       </section>
-
-      {/* Before & After Gallery */}
-      <section className="section-modern bg-light-modern">
+      {/* Patient Success Stories */}
+      <section className="section-modern">
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Real Results</span>
+            <span className="text-accent fw-medium">Patient Stories</span>
             <h2 className="heading-secondary mt-2 mb-4">
-              Amazing Transformations
+              Real Results from Regular Care
             </h2>
-            <p
-              className="lead text-subtle mx-auto"
-              style={{ maxWidth: "600px" }}
-            >
-              See the incredible results our patients have achieved with
-              professional teeth whitening.
-            </p>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-8 mx-auto" data-aos="fade-up">
-              <div className="card-elevated">
-                <Image
-                  src="/services/teeth_white.jpg"
-                  alt="Before and After Teeth Whitening Results"
-                  width={800}
-                  height={400}
-                  className="img-fluid rounded-modern"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="text-center mt-4"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className="d-inline-flex align-items-center gap-2 text-subtle">
-              <Star
-                size={20}
-                fill="var(--primary-teal)"
-                color="var(--primary-teal)"
-              />
-              <span className="fw-semibold">Actual patient results</span>
-              <span>Individual results may vary</span>
-            </div>
-          </div>
+          <ServiceReview data="teeth-whitening" />
         </div>
       </section>
 

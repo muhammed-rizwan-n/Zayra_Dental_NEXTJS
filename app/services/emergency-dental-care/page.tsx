@@ -12,6 +12,7 @@ import {
   Zap,
   Users,
 } from "lucide-react";
+import ServiceReview from "@/components/ServiceReview";
 
 export const metadata: Metadata = {
   title:
@@ -573,71 +574,7 @@ export default function EmergencyDentalCare() {
             </h2>
           </div>
 
-          <div className="row g-4">
-            <div className="col-lg-4" data-aos="fade-up">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Called with severe toothache on weekend. Dr. Reshma
-                  gave excellent advice over the phone and saw me first thing
-                  Monday morning.&rdquo;
-                </p>
-                <div className="fw-semibold">Sarah M.</div>
-                <div className="small text-subtle">Emergency Toothache</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Broke my tooth on Friday evening. Got an emergency
-                  appointment and had it fixed beautifully. Professional and
-                  caring service.&rdquo;
-                </p>
-                <div className="fw-semibold">David K.</div>
-                <div className="small text-subtle">Broken Tooth Repair</div>
-              </div>
-            </div>
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="card-modern text-center h-100">
-                <div className="d-flex justify-content-center mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="var(--primary-teal)"
-                      color="var(--primary-teal)"
-                    />
-                  ))}
-                </div>
-                <p className="text-subtle fst-italic mb-3">
-                  &ldquo;Dental abscess treated quickly and efficiently. The
-                  video consultation helped manage my pain until I could get to
-                  the clinic.&rdquo;
-                </p>
-                <div className="fw-semibold">Emma L.</div>
-                <div className="small text-subtle">Dental Abscess</div>
-              </div>
-            </div>
-          </div>
+          <ServiceReview data="emergency-dental-care" />
         </div>
       </section>
 
