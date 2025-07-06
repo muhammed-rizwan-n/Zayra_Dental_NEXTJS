@@ -160,7 +160,7 @@ export default function GalleryClient({
               position: "fixed",
               top: 0,
               left: 0,
-              width: "100%",
+              width: "100vw",
               height: "100vh",
               background: "rgba(0,0,0,0.95)",
               display: "flex",
@@ -168,6 +168,7 @@ export default function GalleryClient({
               justifyContent: "center",
               zIndex: 9999,
               padding: "20px",
+              overflow: "hidden",
             }}
             onClick={closeLightbox}
           >
@@ -409,8 +410,8 @@ export default function GalleryClient({
                       sectionColor === "var(--primary-teal)"
                         ? "115, 175, 170"
                         : sectionColor === "var(--primary-brown)"
-                        ? "182, 119, 88"
-                        : "55, 119, 122"
+                          ? "182, 119, 88"
+                          : "55, 119, 122"
                     }, 0.9)`,
                     transition: "opacity 0.3s ease",
                   }}
@@ -455,7 +456,7 @@ export default function GalleryClient({
             position: "fixed",
             top: 0,
             left: 0,
-            width: "100%",
+            width: "100vw",
             height: "100vh",
             background: "rgba(0,0,0,0.95)",
             display: "flex",
@@ -463,6 +464,7 @@ export default function GalleryClient({
             justifyContent: "center",
             zIndex: 9999,
             padding: "20px",
+            overflow: "hidden",
           }}
           onClick={closeLightbox}
         >
