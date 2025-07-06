@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import ContactForm from "../../components/ContactForm";
 import {
   MapPin,
   Phone,
@@ -398,129 +399,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div id="form" className="col-lg-7 scroll-fix" data-aos="fade-left">
-              <div className="card-modern h-100">
-                <span className="text-accent fw-medium">Send Us a Message</span>
-                <h2 className="heading-secondary mt-2 mb-4">
-                  Get in Touch Today
-                </h2>
-
-                <form className="form-modern">
-                  <div className="row g-3 mb-3">
-                    <div className="col-md-6">
-                      <label
-                        htmlFor="firstName"
-                        className="form-label fw-medium"
-                      >
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control-modern"
-                        id="firstName"
-                        placeholder="John"
-                        required
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <label
-                        htmlFor="lastName"
-                        className="form-label fw-medium"
-                      >
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control-modern"
-                        id="lastName"
-                        placeholder="Doe"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="row g-3 mb-3">
-                    <div className="col-md-6">
-                      <label htmlFor="email" className="form-label fw-medium">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        className="form-control-modern"
-                        id="email"
-                        placeholder="john.doe@example.com"
-                        required
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <label htmlFor="phone" className="form-label fw-medium">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        className="form-control-modern"
-                        id="phone"
-                        placeholder="07123 456789"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-md-6 mb-3">
-                    <label htmlFor="subject" className="form-label fw-medium">
-                      Subject *
-                    </label>
-                    <select
-                      className="form-control-modern"
-                      id="subject"
-                      required
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="appointment">Book an Appointment</option>
-                      <option value="consultation">About Consultation</option>
-                      <option value="emergency">Dental Emergency</option>
-                      <option value="information">General Information</option>
-                      <option value="pricing">Pricing Inquiry</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="col-md-7 mb-4">
-                    <label htmlFor="message" className="form-label fw-medium">
-                      Message *
-                    </label>
-                    <textarea
-                      className="form-control-modern"
-                      id="message"
-                      rows={6}
-                      placeholder="Please tell us how we can help you..."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="privacy"
-                        required
-                      />
-                      <label
-                        className="form-check-label small text-subtle"
-                        htmlFor="privacy"
-                      >
-                        I agree to the privacy policy and consent to my personal
-                        data being processed for the purpose of responding to my
-                        inquiry. *
-                      </label>
-                    </div>
-                  </div>
-
-                  <button type="submit" className="btn-primary-modern w-100">
-                    <MessageCircle size={20} />
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
