@@ -32,19 +32,18 @@ export default function Navbar() {
           // Update scrolled state for styling
           setIsScrolled(scrollTop > 50);
 
-          if (window.innerWidth < 992) {
-            // Mobile/tablet behavior - hide on scroll down, show on scroll up
+          if (window.innerWidth < 768) {
+            // Mobile behavior - hide on scroll down, show on scroll up
             if (scrollTop > lastScrollTop && scrollTop > 100) {
-              // Scrolling down
+              // Scrolling down - hide navbar
               navbar.style.transform = "translateY(-100%)";
             } else {
-              // Scrolling up
+              // Scrolling up - show navbar
               navbar.style.transform = "translateY(0)";
             }
           } else {
-            // Large screens - always visible and fixed
+            // Desktop/tablet - always visible and fixed
             navbar.style.transform = "translateY(0)";
-            navbar.style.position = "fixed";
           }
 
           lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
@@ -56,6 +55,10 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
+
+    // Initial call to set proper state
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);

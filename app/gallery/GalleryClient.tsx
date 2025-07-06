@@ -254,12 +254,13 @@ export default function GalleryClient({
               <div
                 style={{
                   position: "relative",
-                  maxWidth: "100%",
-                  maxHeight: "80vh",
+                  maxWidth: "90vw",
+                  maxHeight: "90vh",
                   display: "flex",
-                  flexFlow: "row",
+                  flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+                  gap: "1rem",
                 }}
               >
                 <Image
@@ -268,8 +269,8 @@ export default function GalleryClient({
                   width={1200}
                   height={800}
                   style={{
-                    maxWidth: "100%",
-                    maxHeight: "75vh",
+                    maxWidth: "90vw",
+                    maxHeight: "80vh",
                     objectFit: "contain",
                     width: "auto",
                     height: "auto",
@@ -279,8 +280,6 @@ export default function GalleryClient({
                 {/* Image info */}
                 <div
                   style={{
-                    position: "absolute",
-                    transform: "translateX(-50%)",
                     color: "white",
                     textAlign: "center",
                     maxWidth: "90%",
@@ -550,13 +549,13 @@ export default function GalleryClient({
             <div
               style={{
                 position: "relative",
-                maxWidth: "100%",
-                maxHeight: "85vh",
+                maxWidth: "90vw",
+                maxHeight: "90vh",
                 display: "flex",
-                flexFlow: "column",
-                width: "85vw",
+                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: "1rem",
               }}
             >
               <Image
@@ -565,10 +564,10 @@ export default function GalleryClient({
                 width={600}
                 height={500}
                 style={{
-                  maxWidth: "100%",
-                  maxHeight: "75vh",
+                  maxWidth: "90vw",
+                  maxHeight: "80vh",
                   objectFit: "contain",
-                  width: "80vw",
+                  width: "auto",
                   height: "auto",
                 }}
                 onClick={(e) => e.stopPropagation()}
