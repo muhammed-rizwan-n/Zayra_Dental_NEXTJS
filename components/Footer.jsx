@@ -78,7 +78,9 @@ export default function Footer() {
                     <Star key={i} size={16} fill="gold" color="gold" />
                   ))}
                 </div>
-                <span className="fw-semibold">{reviews['averageRating']}/5</span>
+                <span className="fw-semibold">
+                  {reviews["averageRating"]}/5
+                </span>
               </div>
               <p className="small mb-0" style={{ opacity: 0.9 }}>
                 Based on Google reviews
@@ -245,7 +247,7 @@ export default function Footer() {
         style={{
           background: "var(--primary-teal)",
           padding: "1rem 0",
-          display: "none"
+          display: "none",
         }}
       >
         <div className="container-modern">
@@ -291,27 +293,33 @@ export default function Footer() {
               <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                 &copy; {currentYear} Zayra Dental. All rights reserved.
               </span>
-              <div className="d-none gap-3" style={{display: "none"}}>
-                <Link
-                  href="/privacy"
-                  className="text-decoration-none"
-                  style={{
-                    color: "rgba(255, 255, 255, 0.6)",
-                    fontSize: "0.9rem",
-                  }}
+              <div className="d-flex flex-wrap gap-3">
+                <span
+                  className="small"
+                  style={{ color: "rgba(255, 255, 255, 0.6)" }}
                 >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/terms"
-                  className="text-decoration-none"
-                  style={{
-                    color: "rgba(255, 255, 255, 0.6)",
-                    fontSize: "0.9rem",
-                  }}
+                  Website by{" "}
+                  <a
+                    href="https://muhammed-rizwan.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none"
+                    style={{ color: "var(--primary-teal)" }}
+                  >
+                    Muhammed Rizwan
+                  </a>
+                </span>
+                <span
+                  className="small"
+                  style={{ color: "rgba(255, 255, 255, 0.6)" }}
                 >
-                  Terms of Service
-                </Link>
+                  Last updated:{" "}
+                  {new Date().toLocaleDateString("en-GB", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
             </div>
 
