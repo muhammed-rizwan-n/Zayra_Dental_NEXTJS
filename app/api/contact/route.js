@@ -63,12 +63,12 @@ reCAPTCHA Score: ${recaptchaData.score}
 
     // In a real implementation, you would integrate with your email service here
     // For example: SendGrid, Mailgun, AWS SES, Nodemailer, etc.
-    // await sendEmail({
-    //   to: 'info@zayradental.co.uk',
-    //   from: email,
-    //   subject: `Contact Form: ${subject}`,
-    //   html: emailContent,
-    // });
+    await sendEmail({
+      to: 'info@zayradental.co.uk',
+      from: email,
+      subject: `Contact Form: ${subject}`,
+      html: emailContent,
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {
