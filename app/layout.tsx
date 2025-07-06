@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
-import SiteInfo from "../components/SiteInfo";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -303,7 +302,6 @@ export default function RootLayout({
 
         <main>{children}</main>
         <Footer />
-        <SiteInfo />
         <ScrollToTopButton />
       </body>
     </html>
