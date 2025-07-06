@@ -64,7 +64,6 @@ export default function ReviewCard({ review }) {
           <div>
             <div>
               <a
-                key={review.n}
                 href={review.revlink}
                 className="nav-link-modern text-decoration-none"
                 target="_blank"
