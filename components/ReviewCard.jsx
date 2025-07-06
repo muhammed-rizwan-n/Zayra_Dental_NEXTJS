@@ -40,7 +40,7 @@ export default function ReviewCard({ review }) {
 
         <div className="d-flex align-items-center gap-3 mt-3">
           <Image
-            src={review.ui || "/placeholder-avatar.jpg"}
+            src={review.ui || "/placeholder-avatar.svg"}
             alt={review.n}
             width={50}
             height={50}
