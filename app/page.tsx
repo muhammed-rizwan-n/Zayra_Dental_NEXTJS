@@ -15,6 +15,8 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+import reviews from "../getReviews/finalReviews.json";
+import PatientReview from "../components/PatientReview";
 
 export const metadata: Metadata = {
   title:
@@ -69,6 +71,33 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* Floating Stats Card */}
+      <div
+        className="card-modern position-absolute d-none"
+        style={{
+          bottom: "20px",
+          left: "20px",
+          minWidth: "200px",
+        }}
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div className="text-center">
+          <div className="d-flex justify-content-center mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={16}
+                fill="var(--primary-teal)"
+                color="var(--primary-teal)"
+              />
+            ))}
+          </div>
+          <div className="heading-tertiary text-accent mb-1">{}/5</div>
+          <div className="small text-subtle">Based on 200+ reviews</div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="hero-modern" style={{ paddingTop: "120px" }}>
         <div className="container-modern">
@@ -124,7 +153,7 @@ export default function Home() {
               data-aos-delay="200"
             >
               <div className="position-relative">
-                <div className="card-elevated">
+                <div className="card-elevated text-center">
                   <Image
                     src="/home/waiting_room.jpg"
                     alt="Modern Zayra Dental Clinic"
@@ -134,37 +163,6 @@ export default function Home() {
                     style={{ objectFit: "cover" }}
                     priority
                   />
-                </div>
-
-                {/* Floating Stats Card */}
-                <div
-                  className="card-modern position-absolute d-none d-md-block"
-                  style={{
-                    bottom: "20px",
-                    left: "20px",
-                    minWidth: "200px",
-                  }}
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <div className="text-center">
-                    <div className="d-flex justify-content-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={16}
-                          fill="var(--primary-teal)"
-                          color="var(--primary-teal)"
-                        />
-                      ))}
-                    </div>
-                    <div className="heading-tertiary text-accent mb-1">
-                      4.9/5
-                    </div>
-                    <div className="small text-subtle">
-                      Based on 200+ reviews
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -228,7 +226,7 @@ export default function Home() {
                   Send your Enquiry online 24/7 at your convenience
                 </p>
                 <Link href="/contact#form" className="btn-primary-modern">
-                  Contact
+                  Send Enquiry
                 </Link>
               </div>
             </div>
@@ -667,96 +665,7 @@ export default function Home() {
       </section>
 
       {/* Patient Reviews */}
-      <section className="section-modern bg-cream">
-        <div className="container-modern">
-          <div className="text-center mb-5" data-aos="fade-up">
-            <span className="text-accent fw-medium">Patient Reviews</span>
-            <h2 className="heading-secondary mt-2 mb-4">
-              What Our Patients Say About Us
-            </h2>
-          </div>
-
-          <div className="row g-4">
-            {[
-              {
-                name: "Sarah Johnson",
-                profession: "Marketing Manager",
-                rating: 5,
-                review:
-                  "Exceptional service from start to finish. Dr. Reshma and her team made me feel completely at ease during my treatment. Highly recommend!",
-                image: "/bg-gallery.jpg",
-              },
-              {
-                name: "Michael Chen",
-                profession: "Software Engineer",
-                rating: 5,
-                review:
-                  "The best dental experience I've ever had. Modern facility, friendly staff, and painless procedures. My smile has never looked better!",
-                image: "/bg-gallery.jpg",
-              },
-              {
-                name: "Emma Williams",
-                profession: "Teacher",
-                rating: 5,
-                review:
-                  "Professional, caring, and thorough. The team at Zayra Dental genuinely cares about their patients' wellbeing and comfort.",
-                image: "/bg-gallery.jpg",
-              },
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="col-lg-4"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="testimonial-card h-100">
-                  <div className="d-flex mb-3">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={16}
-                        fill="var(--primary-teal)"
-                        color="var(--primary-teal)"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-subtle mb-4 fst-italic">
-                    &quot;{review.review}&quot;
-                  </p>
-                  <div className="d-flex align-items-center gap-3">
-                    <Image
-                      src={review.image}
-                      alt={review.name}
-                      width={50}
-                      height={50}
-                      className="rounded-circle"
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div>
-                      <div className="fw-semibold">{review.name}</div>
-                      <div className="small text-subtle">
-                        {review.profession}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-5" data-aos="fade-up">
-            <div className="d-inline-flex align-items-center gap-2 text-subtle">
-              <Star
-                size={20}
-                fill="var(--primary-teal)"
-                color="var(--primary-teal)"
-              />
-              <span className="fw-semibold">4.9/5 average rating</span>
-              <span>based on 200+ reviews</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PatientReview />
 
       {/* Contact CTA */}
       <section className="section-modern bg-white">
@@ -841,7 +750,7 @@ export default function Home() {
                       <div className="h3 mb-1" style={{ color: "white" }}>
                         4.9★
                       </div>
-                      <div className="small opacity-90">Average Rating</div>
+                      <div className="small opacity-90">Private Patient Rating</div>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import reviews from "../getReviews/finalReviews.json";
 import {
   MapPin,
   Phone,
@@ -77,7 +78,7 @@ export default function Footer() {
                     <Star key={i} size={16} fill="gold" color="gold" />
                   ))}
                 </div>
-                <span className="fw-semibold">4.9/5</span>
+                <span className="fw-semibold">{reviews['averageRating']}/5</span>
               </div>
               <p className="small mb-0" style={{ opacity: 0.9 }}>
                 Based on Google reviews

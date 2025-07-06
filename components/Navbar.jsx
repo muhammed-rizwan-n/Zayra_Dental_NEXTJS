@@ -32,11 +32,11 @@ export default function Navbar() {
           navbar.style.top = "-130px"; // Adjust to your navbar height
         } else {
           // Scrolling up
-          navbar.style.top = "0";
+          navbar.style.top = "";
         }
       } else {
         // Always show on large screens
-        navbar.style.top = "0";
+        navbar.style.top = "0px";
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
