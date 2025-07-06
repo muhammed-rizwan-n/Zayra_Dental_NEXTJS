@@ -11,6 +11,8 @@ import {
   Shield,
   Award,
   Heart,
+  Download,
+  FileText,
 } from "lucide-react";
 import pricingData from "./pricing.json";
 
@@ -83,7 +85,7 @@ export default function PricingSection() {
   const benefits = [
     "Consultation fees included in treatment planning",
     "Competitive prices without compromising quality",
-    "Payment plans available for treatments over £500",
+    "Payment plans available for treatments over ��500",
     "Same-day emergency appointments available",
     "All treatments include follow-up care",
     "Price matching on like-for-like treatments",
@@ -250,9 +252,7 @@ export default function PricingSection() {
                             }}
                           >
                             <div className="flex-grow-1">
-                              <h5 className="fw-semibold mb-2">
-                                {treatment}
-                              </h5>
+                              <h5 className="fw-semibold mb-2">{treatment}</h5>
                               <p className="text-subtle small mb-0">
                                 {treatmentDetails.description}
                               </p>
@@ -268,7 +268,7 @@ export default function PricingSection() {
                             </div>
                           </div>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
@@ -276,7 +276,57 @@ export default function PricingSection() {
             </div>
           ))}
 
+          {/* PDF Download Section */}
           <div className="card-modern mt-5" data-aos="fade-up">
+            <div className="row align-items-center">
+              <div className="col-lg-8">
+                <div className="d-flex align-items-center gap-3 mb-3">
+                  <div
+                    className="rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background: "var(--primary-brown)",
+                      color: "white",
+                    }}
+                  >
+                    <FileText size={24} />
+                  </div>
+                  <div>
+                    <h4 className="heading-tertiary mb-1">
+                      Detailed Pricing Guide
+                    </h4>
+                    <p className="text-subtle mb-0">
+                      Download our comprehensive pricing brochure with detailed
+                      treatment information
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <a
+                  href="/documents/zayra-dental-pricing-guide.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{
+                    background: "var(--primary-brown)",
+                    color: "white",
+                    border: "none",
+                    padding: "0.75rem 1.5rem",
+                    borderRadius: "50px",
+                    fontWeight: "500",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Download size={20} />
+                  Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-modern mt-4" data-aos="fade-up">
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h4 className="heading-tertiary mb-3">
