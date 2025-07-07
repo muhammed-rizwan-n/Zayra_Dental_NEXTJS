@@ -188,7 +188,7 @@ export default function GalleryClient({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                zIndex: 10001,
+                zIndex: 2001,
                 transition: "background 0.3s ease",
               }}
               onClick={closeLightbox}
@@ -334,7 +334,7 @@ export default function GalleryClient({
                 transform: "translateX(-50%)",
                 display: "flex",
                 gap: "10px",
-                zIndex: 10001,
+                zIndex: 2001,
               }}
               className="d-md-none"
             >
@@ -513,7 +513,7 @@ export default function GalleryClient({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              zIndex: 10001,
+              zIndex: 2001,
               transition: "background 0.3s ease",
             }}
             onClick={closeLightbox}
@@ -659,7 +659,7 @@ export default function GalleryClient({
               transform: "translateX(-50%)",
               display: "flex",
               gap: "10px",
-              zIndex: 10001,
+              zIndex: 2001,
             }}
             className="d-md-none"
           >
