@@ -300,7 +300,7 @@ export default function RootLayout({
         <AOSInitializer />
         <Navbar />
 
-        <main>{children}</main>
+        <main style={{marginTop: "80px"}}>{children}</main>
         <Footer />
         <ScrollToTopButton />
       </body>

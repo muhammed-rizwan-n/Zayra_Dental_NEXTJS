@@ -309,7 +309,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Bottom Footer */}
-      <div
+ <div
         style={{
           background: "rgba(0, 0, 0, 0.2)",
           padding: "1.5rem 0",
