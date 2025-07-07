@@ -166,7 +166,7 @@ export default function GalleryClient({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              zIndex: 9999,
+              zIndex: 2000,
               padding: "20px",
               overflow: "hidden",
             }}
@@ -491,7 +491,7 @@ export default function GalleryClient({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: 9999,
+            zIndex: 2000,
             padding: "20px",
             overflow: "hidden",
           }}
