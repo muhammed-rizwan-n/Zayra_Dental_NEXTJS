@@ -74,7 +74,7 @@ export default function Navbar() {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 1030,
+        zIndex: 1050,
         background: isScrolled
           ? "rgba(255, 255, 255, 0.98)"
           : "rgba(255, 255, 255, 0.95)",

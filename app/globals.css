@@ -352,11 +352,17 @@ body {
 
 /* Navigation Styles */
 .navbar-modern {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow-soft);
   padding: 1rem 0;
   transition: var(--transition-smooth);
+  z-index: 1050 !important;
 }
 
 .nav-link-modern {

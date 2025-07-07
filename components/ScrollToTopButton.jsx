@@ -46,7 +46,7 @@ export default function ScrollToTopButton() {
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "var(--shadow-medium)",
-        zIndex: 1000,
+        zIndex: 1040,
         opacity: isVisible ? "1" : "0",
         visibility: isVisible ? "visible" : "hidden",
         transform: isVisible ? "translateY(0)" : "translateY(20px)",
