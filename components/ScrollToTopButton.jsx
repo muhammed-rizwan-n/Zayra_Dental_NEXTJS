@@ -32,9 +32,6 @@ export default function ScrollToTopButton() {
       onClick={scrollToTop}
       aria-label="Scroll to top"
       style={{
-        position: "fixed",
-        bottom: "30px",
-        right: "30px",
         width: "50px",
         height: "50px",
         borderRadius: "50%",
@@ -46,11 +43,10 @@ export default function ScrollToTopButton() {
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "var(--shadow-medium)",
-        zIndex: 1040,
         opacity: isVisible ? "1" : "0",
         visibility: isVisible ? "visible" : "hidden",
-        transform: isVisible ? "translateY(0)" : "translateY(20px)",
-        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        transition:
+          "opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.background = "var(--secondary-brown)";
