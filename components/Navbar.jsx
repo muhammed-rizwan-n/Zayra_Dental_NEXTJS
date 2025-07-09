@@ -37,13 +37,16 @@ export default function Navbar() {
             if (scrollTop > lastScrollTop && scrollTop > 100) {
               // Scrolling down - hide navbar
               navbar.style.transform = "translateY(-100%)";
+              navbar.style.transition = "transform 0.3s ease";
             } else {
               // Scrolling up - show navbar
               navbar.style.transform = "translateY(0)";
+              navbar.style.transition = "transform 0.3s ease";
             }
           } else {
             // Desktop/tablet - always visible and fixed
             navbar.style.transform = "translateY(0)";
+            navbar.style.transition = "none";
           }
 
           lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
@@ -80,8 +83,9 @@ export default function Navbar() {
           : "rgba(255, 255, 255, 0.95)",
         backdropFilter: "blur(20px)",
         borderBottom: isScrolled ? "1px solid rgba(0,0,0,0.1)" : "none",
-        transition: "all 0.3s ease, transform 0.3s ease",
-        transform: "translateY(0)",
+        transition:
+          "background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease",
+        transform: "none",
       }}
     >
       <div className="container-modern">

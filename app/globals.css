@@ -384,6 +384,30 @@ body {
   right: 0 !important;
   width: 100% !important;
   z-index: 1050 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Override any Bootstrap or other framework styles */
+nav#navbar,
+nav.navbar-modern,
+.navbar-modern {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1050 !important;
+  margin: 0 !important;
+  transform: translateY(0) !important;
+}
+
+/* Force body padding */
+body,
+html body {
+  padding-top: 85px !important;
+  margin-top: 0 !important;
 }
 
 .nav-link-modern {
@@ -596,15 +620,31 @@ body {
 }
 
 /* Scroll to top button */
-.scroll-to-top-btn {
+.scroll-to-top-btn,
+button.scroll-to-top-btn {
   position: fixed !important;
   bottom: 30px !important;
   right: 30px !important;
   z-index: 1040 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+.scroll-to-top-btn.visible {
+  transform: translateY(0) !important;
+}
+
+.scroll-to-top-btn:not(.visible) {
+  transform: translateY(20px) !important;
 }
 
 /* Ensure all lightbox elements are above navbar */
 .lightbox-overlay,
 .lightbox-content {
   z-index: 2000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
