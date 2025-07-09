@@ -263,11 +263,13 @@ export default function RootLayout({
           type="image/jpeg"
         />
 
-        {/* Minimal critical CSS for instant rendering */}
+        {/* Critical CSS for positioning */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;margin:0;padding:0}
+            body{font-family:system-ui,-apple-system,sans-serif;color:#473a2f;background:#fff;margin:0;padding-top:85px!important}
+            #navbar,.navbar-modern{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:1050!important;margin:0!important}
+            .scroll-to-top-btn{position:fixed!important;bottom:30px!important;right:30px!important;z-index:1040!important}
             .hero-modern{padding-top:120px;min-height:80vh}
             .container-modern{max-width:1200px;margin:0 auto;padding:0 1rem}
           `,
