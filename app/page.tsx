@@ -70,35 +70,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Floating Stats Card */}
-      <div
-        className="card-modern position-absolute d-none"
-        style={{
-          bottom: "20px",
-          left: "20px",
-          minWidth: "200px",
-        }}
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        <div className="text-center">
-          <div className="d-flex justify-content-center mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={16}
-                fill="var(--primary-teal)"
-                color="var(--primary-teal)"
-              />
-            ))}
-          </div>
-          <div className="heading-tertiary text-accent mb-1">{}/5</div>
-          <div className="small text-subtle">Based on 200+ reviews</div>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="hero-modern" style={{ paddingTop: "120px" }}>
+      <section className="hero-modern">
         <div className="container-modern">
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-6" data-aos="fade-right">

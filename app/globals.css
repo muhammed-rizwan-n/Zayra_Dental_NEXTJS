@@ -52,7 +52,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-display: swap;
-  contain: layout style;
   padding-top: 85px; /* Space for fixed navbar */
 }
 
@@ -126,48 +125,20 @@ body {
   .content-overlay {
     top: 50%;
     left: 30%;
-    transform: translate(-50%, -50%);
     background: transparent;
     padding: 2rem;
     border-radius: 1rem;
     width: 100%;
-  }
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      rgb(249, 10, 253),
-      rgba(255, 255, 255, 0.33)
-    );
-    z-index: 1;
   }
 }
 @media (max-width: 767.98px) {
   .content-overlay {
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background: transparent;
     padding: 0rem;
     border-radius: 1rem;
     width: 100%;
-  }
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      to top,
-      rgb(249, 10, 253),
-      rgba(255, 255, 255, 0.33)
-    );
-    z-index: 1;
   }
 }
 
@@ -275,7 +246,7 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 20px;
-  margin-top: -85px;
+  margin-top: -135px;
   padding-top: 105px;
 }
 
