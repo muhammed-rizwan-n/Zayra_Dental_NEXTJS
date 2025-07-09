@@ -187,7 +187,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div className="col-lg-6 md" data-aos="fade-left" data-aos-delay="200">
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image

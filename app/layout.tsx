@@ -24,34 +24,32 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds | Business Awards UK Winner",
-    template: "%s | Award-Winning Zayra Dental Leeds",
+      "Award-Winning Zayra Dental - Private Dentist Leeds | CQC Registered | Business Awards UK Winner",
+    template: "%s | Zayra Dental Leeds",
   },
   description:
-    "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering teeth whitening, dental implants, veneers & more. Book your appointment today.",
+    "Zayra Dental in Leeds offers award-winning private dental care with a focus on affordability and patient comfort. CQC registered and Business Awards UK Winner. Book your appointment now for implants, whitening, veneers & more.",
   keywords: [
-    "award winning dentist Leeds",
-    "Business Awards UK winner",
-    "CQC registered dentist Leeds",
-    "patient centered dental care",
-    "dentist Leeds",
     "private dentist Leeds",
-    "dental clinic Leeds",
+    "award-winning dental clinic",
+    "CQC registered dentist",
+    "affordable dental care Leeds",
     "teeth whitening Leeds",
     "dental implants Leeds",
-    "cosmetic dentist Leeds",
-    "emergency dentist Leeds",
-    "dental check up Leeds",
-    "affordable dentist Leeds",
-    "Harehills Lane dentist",
-    "dental practice Leeds",
-    "teeth cleaning Leeds",
-    "root canal Leeds",
-    "dental aligners Leeds",
     "composite veneers Leeds",
+    "emergency dentist Leeds",
+    "root canal Leeds",
+    "cosmetic dentistry Leeds",
+    "Harehills Lane dentist",
+    "best dentist in Leeds",
+    "dental aligners Leeds",
+    "check-up dentist Leeds",
+    "gentle dental care Leeds",
+    "dental clinic Leeds",
+    "UK dental awards winner",
   ],
   authors: [
-    { name: "Dr. Reshma Parambil" },
+    { name: "Dr. Reshma Parambil", url: "https://zayradental.co.uk" },
     { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
   ],
   creator: "Zayra Dental",
@@ -63,31 +61,31 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://zayradental.co.uk"),
   alternates: {
-    canonical: "/",
+    canonical: "https://zayradental.co.uk/",
   },
   openGraph: {
     title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
     description:
-      "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering teeth whitening, dental implants, veneers & more.",
+      "CQC registered and Business Awards UK Winner, Zayra Dental provides exceptional private dental care in Leeds. Services include implants, whitening, veneers, and more.",
     url: "https://zayradental.co.uk",
     siteName: "Zayra Dental",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "/home/waiting_room.jpg",
+        url: "https://zayradental.co.uk/home/waiting_room.jpg",
         width: 1200,
         height: 630,
-        alt: "Zayra Dental Modern Clinic Interior Leeds",
+        alt: "Modern dental clinic in Leeds - Zayra Dental",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Award-Winning Zayra Dental - CQC Registered Leeds",
+    title: "Zayra Dental | Award-Winning Private Dentist in Leeds",
     description:
-      "Business Awards UK Winner! CQC registered expert private dental care in Leeds. Award-winning patient-centered dentist offering comprehensive treatments.",
-    images: ["/home/waiting_room.jpg"],
+      "Visit Zayra Dental in Leeds — Business Awards UK Winner and CQC registered. Providing trusted, affordable private dental care for all.",
+    images: ["https://zayradental.co.uk/home/waiting_room.jpg"],
   },
   robots: {
     index: true,
@@ -199,6 +197,15 @@ export default function RootLayout({
       reviewCount: "200",
       bestRating: "5",
     },
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Zayra Dental",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Leeds",
+        addressCountry: "UK",
+      },
+    },
     sameAs: [
       "https://www.facebook.com/zayradental",
       "https://www.instagram.com/zayradental",
@@ -300,7 +307,7 @@ export default function RootLayout({
         <AOSInitializer />
         <Navbar />
 
-        <main style={{marginTop: "80px"}}>{children}</main>
+        <main style={{ marginTop: "80px" }}>{children}</main>
         <Footer />
         <ScrollToTopButton />
       </body>
