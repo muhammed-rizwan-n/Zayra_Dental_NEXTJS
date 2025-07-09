@@ -109,115 +109,117 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "DentalClinic",
-  "name": "Zayra Dental - Award-Winning CQC Registered Practice",
-  "description": "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
-  "url": "https://zayradental.co.uk",
-  "logo": "https://zayradental.co.uk/logo.png",
-  "image": "https://zayradental.co.uk/home/waiting_room.jpg",
-  "telephone": "+441132488398",
-  "email": "info@zayradental.co.uk",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "599 Harehills Lane",
-    "addressLocality": "Leeds",
-    "postalCode": "LS9 6NQ",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "53.8022349",
-    "longitude": "-1.4994857"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      "opens": "09:00",
-      "closes": "17:00"
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    name: "Zayra Dental - Award-Winning CQC Registered Practice",
+    description:
+      "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: 100,
+      bestRating: "5",
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Friday",
-      "opens": "09:00",
-      "closes": "13:00"
-    }
-  ],
-  "priceRange": "££",
-  "acceptsReservations": "True",
-  "currenciesAccepted": "GBP",
-  "paymentAccepted": "Cash, Credit Card, Debit Card, Bank Transfer",
-  "medicalSpecialty": [
-    "Cosmetic",
-    "Restorative",
-    "Preventive",
-    "Orthodontic",
-    "OralSurgery"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "Dr. Reshma Parambil",
-    "jobTitle": "Principal Dentist",
-    "honorificSuffix": "BDS, MDS – Prosthodontics",
-    "award": [
-      "Patient-Centered Dental Care Winner 2024 - Business Awards UK",
-      "Rising Star Award Finalist 2024 - Business Awards UK",
-      "Dentist of the Year Finalist 2024 - Business Awards UK"
-    ]
-  },
-  "award": [
-    {
-      "@type": "Award",
-      "name": "Patient-Centered Dental Care",
-      "awarder": "Business Awards UK",
-      "dateAwarded": "2024",
-      "description": "Winner for exceptional patient care and satisfaction"
+    url: "https://zayradental.co.uk",
+    logo: "https://zayradental.co.uk/logo.png",
+    image: "https://zayradental.co.uk/home/waiting_room.jpg",
+    telephone: "+441132488398",
+    email: "info@zayradental.co.uk",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "599 Harehills Lane",
+      addressLocality: "Leeds",
+      postalCode: "LS9 6NQ",
+      addressCountry: "GB",
     },
-    {
-      "@type": "Award",
-      "name": "Rising Star Award",
-      "awarder": "Business Awards UK",
-      "dateAwarded": "2024",
-      "description": "Finalist for innovative dental practice and outstanding growth"
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "53.8022349",
+      longitude: "-1.4994857",
     },
-    {
-      "@type": "Award",
-      "name": "Dentist of the Year 2024",
-      "awarder": "Business Awards UK",
-      "dateAwarded": "2024",
-      "description": "Finalist for outstanding clinical expertise and patient care"
-    }
-  ],
-  "accreditation": [
-    {
-      "@type": "Organization",
-      "name": "Care Quality Commission (CQC)"
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Friday",
+        opens: "09:00",
+        closes: "13:00",
+      },
+    ],
+    priceRange: "££",
+    acceptsReservations: "True",
+    currenciesAccepted: "GBP",
+    paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
+    medicalSpecialty: [
+      "Cosmetic",
+      "Restorative",
+      "Preventive",
+      "Orthodontic",
+      "OralSurgery",
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Dr. Reshma Parambil",
+      jobTitle: "Principal Dentist",
+      honorificSuffix: "BDS, MDS – Prosthodontics",
+      award: [
+        "Patient-Centered Dental Care Winner 2024 - Business Awards UK",
+        "Rising Star Award Finalist 2024 - Business Awards UK",
+        "Dentist of the Year Finalist 2024 - Business Awards UK",
+      ],
     },
-    {
-      "@type": "Organization",
-      "name": "General Dental Council (GDC)"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": 200,
-    "bestRating": "5"
-  },
-  "sameAs": [
-    "https://www.facebook.com/zayradental",
-    "https://www.instagram.com/zayradental",
-    "https://www.linkedin.com/company/zayradental"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Muhammed Rizwan",
-    "url": "https://muhammed-rizwan.vercel.app",
-    "jobTitle": "Web Developer"
-  }
-}
-
+    award: [
+      {
+        "@type": "Award",
+        name: "Patient-Centered Dental Care",
+        awarder: "Business Awards UK",
+        dateAwarded: "2024",
+        description: "Winner for exceptional patient care and satisfaction",
+      },
+      {
+        "@type": "Award",
+        name: "Rising Star Award",
+        awarder: "Business Awards UK",
+        dateAwarded: "2024",
+        description:
+          "Finalist for innovative dental practice and outstanding growth",
+      },
+      {
+        "@type": "Award",
+        name: "Dentist of the Year 2024",
+        awarder: "Business Awards UK",
+        dateAwarded: "2024",
+        description:
+          "Finalist for outstanding clinical expertise and patient care",
+      },
+    ],
+    accreditation: [
+      {
+        "@type": "Organization",
+        name: "Care Quality Commission (CQC)",
+      },
+      {
+        "@type": "Organization",
+        name: "General Dental Council (GDC)",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/zayradental",
+      "https://www.instagram.com/zayradental",
+      "https://www.linkedin.com/company/zayradental",
+    ],
+    author: {
+      "@type": "Person",
+      name: "Muhammed Rizwan",
+      url: "https://muhammed-rizwan.vercel.app",
+      jobTitle: "Web Developer",
+    },
+  };
 
   return (
     <html lang="en-GB">
