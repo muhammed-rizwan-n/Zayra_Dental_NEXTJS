@@ -1,5 +1,4 @@
 // app/sitemap/route.ts
-import { MetadataRoute } from "next";
 
 export async function GET(): Promise<Response> {
   const baseUrl = "https://zayra-dental-nextjs.vercel.app";
