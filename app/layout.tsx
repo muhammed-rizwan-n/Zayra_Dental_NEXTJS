@@ -114,12 +114,12 @@ export default function RootLayout({
     name: "Zayra Dental - Award-Winning CQC Registered Practice",
     description:
       "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: 100,
-      bestRating: "5",
-    },
+    // aggregateRating: {
+    //   "@type": "AggregateRating",
+    //   ratingValue: "4.9",
+    //   reviewCount: 100,
+    //   bestRating: "5",
+    // },
     url: "https://zayradental.co.uk",
     logo: "https://zayradental.co.uk/logo.png",
     image: "https://zayradental.co.uk/home/waiting_room.jpg",
