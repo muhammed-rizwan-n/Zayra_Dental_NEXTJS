@@ -108,8 +108,8 @@ export default function Contact() {
     {
       icon: <MessageCircle size={32} />,
       title: "Emergency Care",
-      description: "Emergency dental service",
-      action: "Emergency Line",
+      description: "National Health Service Emergency",
+      action: "National Emergency Line",
       href: "tel:111",
       color: "var(--secondary-brown)",
     },

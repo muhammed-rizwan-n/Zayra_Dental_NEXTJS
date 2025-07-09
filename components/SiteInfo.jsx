@@ -6,43 +6,34 @@ export default function SiteInfo() {
   });
 
   return (
-    <div
-      className="fixed-bottom d-none d-lg-block"
-      style={{
-        bottom: "20px",
-        right: "20px",
-        zIndex: 1000,
-        maxWidth: "300px",
-      }}
-    >
-      <div
-        className="card-modern small p-3"
-        style={{
-          background: "rgba(255, 255, 255, 0.95)",
-          backdropFilter: "blur(10px)",
-          border: "1px solid rgba(0,0,0,0.1)",
-          fontSize: "0.75rem",
-          opacity: 0.8,
-        }}
-      >
-        <div className="text-center">
-          <div className="mb-1">
-            <strong>Website by:</strong>{" "}
-            <a
-              href="https://muhammed-rizwan.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-              style={{ color: "var(--primary-teal)" }}
-            >
-              Muhammed Rizwan
-            </a>
-          </div>
-          <div style={{ color: "var(--text-subtle)" }}>
-            Last updated: {lastUpdated}
+      <div className="container align-items-center">
+        <div className="container-modern mb-2">
+          <div className="d-flex flex-wrap justify-content-center align-items-center gap-3">
+            <div className="d-flex flex-wrap gap-4">
+              <span
+                className="small"
+                style={{ color: "rgb(255, 255, 255)" }}
+              >
+                Designed by{" "}
+                <a
+                  href="https://www.linkedin.com/in/muhammed-rizwan-n/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none"
+                  style={{ color: "var(--primary-teal)" }}
+                >
+                  Muhammed Rizwan N
+                </a>
+              </span>
+              <span
+                className="small"
+                style={{ color: "rgb(255, 255, 255)" }}
+              >
+                Last updated:{" "}6 July 2025
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
