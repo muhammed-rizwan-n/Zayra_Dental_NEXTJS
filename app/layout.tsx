@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "UK dental awards winner",
   ],
   authors: [
-    { name: "Dr. Reshma Parambil", url: "https://zayradental.co.uk" },
+    { name: "Dr. Reshma Parambil", url: "https://zayra-dental-nextjs.vercel.app" },
     { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
   ],
   creator: "Zayra Dental",
@@ -59,21 +59,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zayradental.co.uk"),
+  metadataBase: new URL("https://zayra-dental-nextjs.vercel.app"),
   alternates: {
-    canonical: "https://zayradental.co.uk/",
+    canonical: "https://zayra-dental-nextjs.vercel.app/",
   },
   openGraph: {
     title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
     description:
       "CQC registered and Business Awards UK Winner, Zayra Dental provides exceptional private dental care in Leeds. Services include implants, whitening, veneers, and more.",
-    url: "https://zayradental.co.uk",
+    url: "https://zayra-dental-nextjs.vercel.app",
     siteName: "Zayra Dental",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://zayradental.co.uk/home/waiting_room.jpg",
+        url: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
         width: 1200,
         height: 630,
         alt: "Modern dental clinic in Leeds - Zayra Dental",
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     title: "Zayra Dental | Award-Winning Private Dentist in Leeds",
     description:
       "Visit Zayra Dental in Leeds — Business Awards UK Winner and CQC registered. Providing trusted, affordable private dental care for all.",
-    images: ["https://zayradental.co.uk/home/waiting_room.jpg"],
+    images: ["https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg"],
   },
   robots: {
     index: true,
@@ -120,9 +120,9 @@ export default function RootLayout({
     //   reviewCount: 100,
     //   bestRating: "5",
     // },
-    url: "https://zayradental.co.uk",
-    logo: "https://zayradental.co.uk/logo.png",
-    image: "https://zayradental.co.uk/home/waiting_room.jpg",
+    url: "https://zayra-dental-nextjs.vercel.app",
+    logo: "https://zayra-dental-nextjs.vercel.app/logo.png",
+    image: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
     telephone: "+441132488398",
     email: "info@zayradental.co.uk",
     address: {
@@ -234,7 +234,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="OrNCapr7kK95PzWbNlwvBm0p4yh7aI5hgObcC7wmafs"
         />
-        <link rel="canonical" href="https://zayradental.co.uk" />
+        <link rel="canonical" href="https://zayra-dental-nextjs.vercel.app" />
         <meta name="geo.region" content="GB-ENG" />
         <meta name="geo.placename" content="Leeds" />
         <meta name="geo.position" content="53.8022349;-1.4994857" />

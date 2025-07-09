@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Award-Winning Private Dentist Leeds | Zayra Dental - CQC Registered",
     description:
       "Business Awards UK Winner! CQC registered private dentist in Leeds offering affordable dental care, cosmetic dentistry, teeth whitening & dental implants. Book your appointment today!",
-    url: "https://zayradental.co.uk",
+    url: "https://zayra-dental-nextjs.vercel.app",
     images: [
       {
         url: "/home/waiting_room.jpg",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     images: ["/home/waiting_room.jpg"],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk",
+    canonical: "https://zayra-dental-nextjs.vercel.app",
   },
 };
 

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "About Dr Reshma Parambil | Award-Winning Dentist Leeds | Zayra Dental",
     description:
       "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care.",
-    url: "https://zayradental.co.uk/about-us",
+    url: "https://zayra-dental-nextjs.vercel.app/about-us",
     images: [
       {
         url: "/about-us/reshma_parambil.jpg",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/about-us",
+    canonical: "https://zayra-dental-nextjs.vercel.app/about-us",
   },
 };
 

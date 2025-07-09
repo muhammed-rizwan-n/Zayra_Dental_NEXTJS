@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Contact Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
     description:
       "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice with free parking & emergency care.",
-    url: "https://zayradental.co.uk/contact",
+    url: "https://zayra-dental-nextjs.vercel.app/contact",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/contact",
+    canonical: "https://zayra-dental-nextjs.vercel.app/contact",
   },
 };
 

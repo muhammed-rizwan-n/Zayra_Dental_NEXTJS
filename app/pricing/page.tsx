@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Award-Winning Dental Prices Leeds | CQC Registered Affordable Treatment Costs",
     description:
       "Business Awards UK Winner! Transparent dental pricing in Leeds. Check-ups from £45, teeth whitening £199, implants £1,200. 0% finance available. CQC registered practice.",
-    url: "https://zayradental.co.uk/pricing",
+    url: "https://zayra-dental-nextjs.vercel.app/pricing",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/pricing",
+    canonical: "https://zayra-dental-nextjs.vercel.app/pricing",
   },
 };
 
