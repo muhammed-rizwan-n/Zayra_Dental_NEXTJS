@@ -452,6 +452,14 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Latest Blog Posts */}
+      <BlogSection
+        title="Related Dental Health Articles"
+        subtitle="Learn more about our dental services and oral health tips"
+        showCount={3}
+        compact={true}
+      />
+
       {/* CTA Section */}
       <section className="section-modern">
         <div className="container-modern">
