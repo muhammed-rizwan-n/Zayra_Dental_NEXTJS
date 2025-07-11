@@ -5,7 +5,12 @@
     "title": "The Importance of Regular Dental Checkups: Your Path to Optimal Oral Health",
     "excerpt": "Discover why regular dental checkups are crucial for maintaining excellent oral health and preventing serious dental issues before they become costly problems.",
     "content": "Regular dental checkups are the cornerstone of preventive dental care. At Zayra Dental, we recommend visiting our Leeds practice every six months for comprehensive oral health assessments.",
-    "author": "Dr. Reshma Parambil",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "With over 15 years of experience in cosmetic and restorative dentistry, Dr. Parambil is passionate about helping patients achieve optimal oral health."
+    },
     "date": "2024-01-15",
     "readTime": "5 min read",
     "category": "Preventive Care",
@@ -15,23 +20,58 @@
       "oral health",
       "Leeds dentist"
     ],
-    "image": "/services/dental_checkup.jpg",
+    "images": {
+      "hero": "/services/dental_checkup.jpg",
+      "gallery": [
+        "/services/dental_treatment.jpeg",
+        "/home/dental_xray.jpg",
+        "/services/dental-hygiene.jpg",
+        "/gallery/clinic-interior-1.jpg"
+      ],
+      "thumbnail": "/services/dental_checkup.jpg"
+    },
     "featured": true,
+    "trending": true,
+    "views": 1250,
+    "readingProgress": 0,
+    "relatedServices": ["general-dentistry", "dental-hygiene"],
+    "faqs": [
+      {
+        "question": "How often should I visit the dentist?",
+        "answer": "Most patients should visit every 6 months, but some may need more frequent visits based on their oral health needs."
+      },
+      {
+        "question": "What happens during a dental checkup?",
+        "answer": "A comprehensive examination, professional cleaning, X-rays if needed, and personalized oral health advice."
+      }
+    ],
+    "keyTakeaways": [
+      "Early detection prevents costly treatments",
+      "Professional cleaning removes harmful plaque buildup",
+      "Regular checkups save money in the long run",
+      "Oral health impacts overall wellbeing"
+    ],
+    "difficulty": "Beginner",
+    "estimatedCost": "£50-80",
     "metaDescription": "Learn why regular dental checkups are essential for oral health. Expert advice from award-winning Zayra Dental in Leeds on preventive dental care.",
-    "schema": {
-      "type": "Article",
-      "headline": "The Importance of Regular Dental Checkups: Your Path to Optimal Oral Health",
-      "datePublished": "2024-01-15",
-      "dateModified": "2024-01-15"
+    "socialStats": {
+      "likes": 89,
+      "shares": 23,
+      "comments": 12
     }
   },
   {
     "id": "2",
     "slug": "teeth-whitening-options-leeds",
     "title": "Professional Teeth Whitening vs. At-Home Treatments: What Leeds Patients Should Know",
-    "excerpt": "Compare professional teeth whitening services in Leeds with at-home alternatives. Learn which option delivers the best results for your smile.",
-    "content": "A bright, confident smile can transform your appearance and boost your self-esteem. At Zayra Dental in Leeds, we offer professional teeth whitening treatments that deliver superior results compared to over-the-counter options.",
-    "author": "Dr. Reshma Parambil",
+    "excerpt": "Compare professional teeth whitening services in Leeds with at-home alternatives. Learn which option delivers the best results for your smile transformation.",
+    "content": "A bright, confident smile can transform your appearance and boost your self-esteem. At Zayra Dental in Leeds, we offer professional teeth whitening treatments that deliver superior results.",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "Specialist in cosmetic dentistry with extensive experience in smile makeovers and aesthetic treatments."
+    },
     "date": "2024-01-10",
     "readTime": "7 min read",
     "category": "Cosmetic Dentistry",
@@ -41,14 +81,43 @@
       "Leeds",
       "professional treatment"
     ],
-    "image": "/services/teeth_whitening.jpg",
-    "featured": false,
+    "images": {
+      "hero": "/services/teeth_whitening.jpg",
+      "gallery": [
+        "/gallery/before-after-whitening-1.jpg",
+        "/gallery/whitening-process.jpg",
+        "/services/cosmetic-consultation.jpg",
+        "/gallery/smile-transformation.jpg"
+      ],
+      "thumbnail": "/services/teeth_whitening.jpg"
+    },
+    "featured": true,
+    "trending": false,
+    "views": 980,
+    "relatedServices": ["teeth-whitening", "cosmetic-dentistry"],
+    "faqs": [
+      {
+        "question": "How long do professional whitening results last?",
+        "answer": "Professional whitening typically lasts 2-3 years with proper care and maintenance."
+      },
+      {
+        "question": "Is teeth whitening safe?",
+        "answer": "Yes, when performed by qualified professionals using approved materials, teeth whitening is completely safe."
+      }
+    ],
+    "keyTakeaways": [
+      "Professional treatment delivers superior results",
+      "Faster and more dramatic whitening",
+      "Safer application with professional supervision",
+      "Longer-lasting results than over-the-counter options"
+    ],
+    "difficulty": "Intermediate",
+    "estimatedCost": "£300-600",
     "metaDescription": "Professional teeth whitening in Leeds vs at-home treatments. Expert comparison from award-winning Zayra Dental. Book your consultation today.",
-    "schema": {
-      "type": "Article",
-      "headline": "Professional Teeth Whitening vs. At-Home Treatments: What Leeds Patients Should Know",
-      "datePublished": "2024-01-10",
-      "dateModified": "2024-01-10"
+    "socialStats": {
+      "likes": 156,
+      "shares": 45,
+      "comments": 28
     }
   },
   {
@@ -56,8 +125,13 @@
     "slug": "dental-implants-complete-guide",
     "title": "Dental Implants in Leeds: A Complete Guide to Permanent Tooth Replacement",
     "excerpt": "Everything you need to know about dental implants in Leeds. From consultation to recovery, discover how dental implants can restore your smile permanently.",
-    "content": "Dental implants represent the gold standard in tooth replacement technology. At Zayra Dental, our experienced team provides comprehensive implant services to Leeds patients seeking permanent solutions for missing teeth.",
-    "author": "Dr. Reshma Parambil",
+    "content": "Dental implants represent the gold standard in tooth replacement technology. At Zayra Dental, our experienced team provides comprehensive implant services.",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "Specialized training in implant dentistry with hundreds of successful implant procedures completed."
+    },
     "date": "2024-01-05",
     "readTime": "10 min read",
     "category": "Restorative Dentistry",
@@ -67,14 +141,43 @@
       "Leeds",
       "restorative dentistry"
     ],
-    "image": "/services/dental_implants.jpg",
+    "images": {
+      "hero": "/services/dental_implants.jpg",
+      "gallery": [
+        "/gallery/implant-procedure.jpg",
+        "/gallery/implant-xray.jpg",
+        "/gallery/implant-crown.jpg",
+        "/gallery/implant-before-after.jpg"
+      ],
+      "thumbnail": "/services/dental_implants.jpg"
+    },
     "featured": true,
+    "trending": true,
+    "views": 1840,
+    "relatedServices": ["dental-implants", "restorative-dentistry"],
+    "faqs": [
+      {
+        "question": "How long do dental implants last?",
+        "answer": "With proper care, dental implants can last 25+ years or even a lifetime."
+      },
+      {
+        "question": "Am I suitable for dental implants?",
+        "answer": "Most healthy adults are candidates. We'll assess your bone density and overall oral health during consultation."
+      }
+    ],
+    "keyTakeaways": [
+      "Most natural-feeling tooth replacement option",
+      "Prevents bone loss in the jaw",
+      "No impact on adjacent healthy teeth",
+      "Excellent long-term value"
+    ],
+    "difficulty": "Advanced",
+    "estimatedCost": "£2000-4000",
     "metaDescription": "Complete guide to dental implants in Leeds. Expert advice from award-winning Zayra Dental on permanent tooth replacement solutions.",
-    "schema": {
-      "type": "Article",
-      "headline": "Dental Implants in Leeds: A Complete Guide to Permanent Tooth Replacement",
-      "datePublished": "2024-01-05",
-      "dateModified": "2024-01-05"
+    "socialStats": {
+      "likes": 203,
+      "shares": 67,
+      "comments": 41
     }
   },
   {
@@ -82,20 +185,54 @@
     "slug": "emergency-dental-care-leeds",
     "title": "Emergency Dental Care in Leeds: When to Seek Immediate Treatment",
     "excerpt": "Know when dental pain requires emergency treatment. Zayra Dental provides urgent dental care in Leeds for dental emergencies and severe tooth pain.",
-    "content": "Dental emergencies can be frightening and painful. Knowing when to seek immediate dental care can save your tooth and prevent more serious complications. Zayra Dental offers emergency dental services to Leeds patients.",
-    "author": "Dr. Reshma Parambil",
+    "content": "Dental emergencies can be frightening and painful. Knowing when to seek immediate dental care can save your tooth and prevent serious complications.",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "Experienced in emergency dental procedures with 24/7 emergency care protocols for urgent dental needs."
+    },
     "date": "2023-12-28",
     "readTime": "6 min read",
     "category": "Emergency Care",
     "tags": ["emergency dental", "urgent care", "Leeds", "dental pain"],
-    "image": "/services/bg-emergency.jpg",
+    "images": {
+      "hero": "/services/bg-emergency.jpg",
+      "gallery": [
+        "/gallery/emergency-equipment.jpg",
+        "/gallery/emergency-treatment.jpg",
+        "/gallery/dental-trauma.jpg",
+        "/gallery/emergency-room.jpg"
+      ],
+      "thumbnail": "/services/bg-emergency.jpg"
+    },
     "featured": false,
+    "trending": true,
+    "views": 756,
+    "relatedServices": ["emergency-dental-care", "general-dentistry"],
+    "faqs": [
+      {
+        "question": "What constitutes a dental emergency?",
+        "answer": "Severe pain, knocked-out teeth, uncontrolled bleeding, or facial swelling are dental emergencies."
+      },
+      {
+        "question": "Do you provide after-hours emergency care?",
+        "answer": "Yes, we have emergency protocols for urgent dental situations outside normal hours."
+      }
+    ],
+    "keyTakeaways": [
+      "Quick action can save damaged teeth",
+      "Know the signs of dental emergencies",
+      "Keep emergency dental contact handy",
+      "Proper first aid can prevent complications"
+    ],
+    "difficulty": "Intermediate",
+    "estimatedCost": "£80-300",
     "metaDescription": "Emergency dental care in Leeds. Know when to seek urgent treatment. Zayra Dental provides immediate dental care for emergencies.",
-    "schema": {
-      "type": "Article",
-      "headline": "Emergency Dental Care in Leeds: When to Seek Immediate Treatment",
-      "datePublished": "2023-12-28",
-      "dateModified": "2023-12-28"
+    "socialStats": {
+      "likes": 67,
+      "shares": 34,
+      "comments": 19
     }
   },
   {
@@ -103,20 +240,54 @@
     "slug": "oral-hygiene-tips-healthy-teeth",
     "title": "Expert Oral Hygiene Tips for Healthy Teeth and Gums",
     "excerpt": "Master the fundamentals of oral hygiene with expert tips from Zayra Dental. Learn proper brushing, flossing techniques, and daily care routines.",
-    "content": "Maintaining excellent oral hygiene is the foundation of dental health. Our dental team at Zayra Dental shares professional tips and techniques for keeping your teeth and gums healthy between visits.",
-    "author": "Dr. Reshma Parambil",
+    "content": "Maintaining excellent oral hygiene is the foundation of dental health. Our dental team shares professional tips for keeping your teeth and gums healthy.",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "Passionate advocate for preventive dental care with expertise in oral health education and patient guidance."
+    },
     "date": "2023-12-20",
     "readTime": "4 min read",
     "category": "Oral Health",
     "tags": ["oral hygiene", "dental care", "healthy teeth", "gum health"],
-    "image": "/services/dental_treatment.jpeg",
+    "images": {
+      "hero": "/services/dental_treatment.jpeg",
+      "gallery": [
+        "/gallery/brushing-technique.jpg",
+        "/gallery/flossing-demo.jpg",
+        "/gallery/dental-products.jpg",
+        "/gallery/hygiene-routine.jpg"
+      ],
+      "thumbnail": "/services/dental_treatment.jpeg"
+    },
     "featured": false,
+    "trending": false,
+    "views": 432,
+    "relatedServices": ["general-dentistry", "dental-hygiene"],
+    "faqs": [
+      {
+        "question": "How often should I brush my teeth?",
+        "answer": "Brush twice daily - once in the morning and once before bed, for at least 2 minutes each time."
+      },
+      {
+        "question": "Is flossing really necessary?",
+        "answer": "Yes! Flossing removes plaque and bacteria from areas your toothbrush can't reach."
+      }
+    ],
+    "keyTakeaways": [
+      "Proper technique is more important than frequency",
+      "Choose the right tools for your needs",
+      "Consistency is key to oral health",
+      "Professional guidance ensures best results"
+    ],
+    "difficulty": "Beginner",
+    "estimatedCost": "£10-30",
     "metaDescription": "Expert oral hygiene tips from award-winning Zayra Dental in Leeds. Learn proper dental care techniques for healthy teeth and gums.",
-    "schema": {
-      "type": "Article",
-      "headline": "Expert Oral Hygiene Tips for Healthy Teeth and Gums",
-      "datePublished": "2023-12-20",
-      "dateModified": "2023-12-20"
+    "socialStats": {
+      "likes": 91,
+      "shares": 18,
+      "comments": 7
     }
   },
   {
@@ -124,8 +295,13 @@
     "slug": "composite-veneers-vs-porcelain-veneers",
     "title": "Composite vs Porcelain Veneers: Choosing the Right Option for Your Smile",
     "excerpt": "Compare composite and porcelain veneers in Leeds. Discover which type of veneer is best suited for your smile goals and budget at Zayra Dental.",
-    "content": "Veneers can dramatically transform your smile, but choosing between composite and porcelain options requires careful consideration. At Zayra Dental, we help Leeds patients select the ideal veneer type for their unique needs.",
-    "author": "Dr. Reshma Parambil",
+    "content": "Veneers can dramatically transform your smile, but choosing between composite and porcelain options requires careful consideration of various factors.",
+    "author": {
+      "name": "Dr. Reshma Parambil",
+      "title": "Principal Dentist & Prosthodontist",
+      "avatar": "/team/dr-reshma.jpg",
+      "bio": "Expert in cosmetic dentistry with specialization in smile design and veneer applications for natural-looking results."
+    },
     "date": "2023-12-15",
     "readTime": "8 min read",
     "category": "Cosmetic Dentistry",
@@ -135,14 +311,43 @@
       "porcelain veneers",
       "smile makeover"
     ],
-    "image": "/services/dental_bonding.jpg",
+    "images": {
+      "hero": "/services/dental_bonding.jpg",
+      "gallery": [
+        "/gallery/veneer-comparison.jpg",
+        "/gallery/veneer-application.jpg",
+        "/gallery/smile-design.jpg",
+        "/gallery/veneer-results.jpg"
+      ],
+      "thumbnail": "/services/dental_bonding.jpg"
+    },
     "featured": false,
+    "trending": false,
+    "views": 623,
+    "relatedServices": ["composite-veneers", "porcelain-veneers"],
+    "faqs": [
+      {
+        "question": "Which veneers look more natural?",
+        "answer": "Both can look natural when expertly applied. Porcelain tends to have superior light reflection properties."
+      },
+      {
+        "question": "Can veneers be repaired if damaged?",
+        "answer": "Composite veneers can often be repaired chairside, while porcelain veneers typically need replacement."
+      }
+    ],
+    "keyTakeaways": [
+      "Consider longevity vs. immediate cost",
+      "Assess your lifestyle and habits",
+      "Professional consultation is essential",
+      "Both options can deliver beautiful results"
+    ],
+    "difficulty": "Intermediate",
+    "estimatedCost": "£200-1500",
     "metaDescription": "Composite vs porcelain veneers in Leeds. Expert comparison from Zayra Dental to help you choose the perfect veneer option for your smile.",
-    "schema": {
-      "type": "Article",
-      "headline": "Composite vs Porcelain Veneers: Choosing the Right Option for Your Smile",
-      "datePublished": "2023-12-15",
-      "dateModified": "2023-12-15"
+    "socialStats": {
+      "likes": 78,
+      "shares": 22,
+      "comments": 15
     }
   }
 ]
