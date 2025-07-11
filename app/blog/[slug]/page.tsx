@@ -134,7 +134,7 @@ function getBlogPostContent(slug: string) {
       <p>A bright, confident smile can transform your appearance and boost your self-esteem. At Zayra Dental in Leeds, we offer professional teeth whitening treatments that deliver superior results compared to over-the-counter options.</p>
 
       <h2>Professional vs At-Home Whitening: The Key Differences</h2>
-      
+
       <h3>Professional In-Office Whitening</h3>
       <p>Our professional whitening treatments use higher-concentration bleaching agents that are not available in over-the-counter products:</p>
       <ul>
@@ -156,7 +156,7 @@ function getBlogPostContent(slug: string) {
       </ul>
 
       <h2>Our Professional Whitening Options</h2>
-      
+
       <h3>In-Office Power Whitening</h3>
       <p>Our signature whitening treatment combines advanced technology with professional expertise:</p>
       <ul>
@@ -205,7 +205,7 @@ function getBlogPostContent(slug: string) {
       <p>Dental implants are titanium posts surgically placed into the jawbone to replace missing tooth roots. They provide a stable foundation for crowns, bridges, or dentures, offering the closest thing to natural teeth available in modern dentistry.</p>
 
       <h2>The Dental Implant Process</h2>
-      
+
       <h3>1. Initial Consultation and Planning</h3>
       <p>Your implant journey begins with a comprehensive evaluation:</p>
       <ul>
@@ -244,7 +244,7 @@ function getBlogPostContent(slug: string) {
       </ul>
 
       <h2>Benefits of Dental Implants</h2>
-      
+
       <h3>Functional Advantages</h3>
       <ul>
         <li><strong>Natural Feel:</strong> Function just like your natural teeth</li>
@@ -402,7 +402,7 @@ function getBlogPostContent(slug: string) {
       <p>Good oral hygiene isn't just about brushing your teeth. It's a comprehensive approach to maintaining oral health that includes proper technique, timing, and the right tools.</p>
 
       <h2>Brushing: More Than Just Moving the Brush</h2>
-      
+
       <h3>Proper Brushing Technique</h3>
       <ol>
         <li><strong>Choose the Right Brush:</strong> Soft-bristled, appropriate size for your mouth</li>
@@ -523,7 +523,7 @@ function getBlogPostContent(slug: string) {
       <p>Veneers are thin shells that cover the front surface of teeth to improve their appearance. They can correct various cosmetic issues including discoloration, chips, gaps, and minor misalignment.</p>
 
       <h2>Composite Veneers: The Direct Approach</h2>
-      
+
       <h3>What Are Composite Veneers?</h3>
       <p>Composite veneers are made from tooth-colored resin material applied directly to your teeth in a single appointment. This technique is also known as "direct veneers" or "bonding."</p>
 
@@ -705,48 +705,113 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
     wordCount: post.fullContent.split(" ").length,
   };
 
-  // Preview mode - minimal styling for iframe display
+  // Preview mode - optimized for iframe display
   if (isPreview) {
     return (
       <div
         style={{
-          padding: "2rem",
           fontFamily: "system-ui, sans-serif",
           lineHeight: "1.6",
           color: "#333",
           backgroundColor: "#fff",
           minHeight: "100vh",
+          margin: 0,
+          padding: 0,
         }}
       >
-        <h1
-          style={{
-            fontSize: "2rem",
-            marginBottom: "1rem",
-            color: "#b67758",
-          }}
-        >
-          {post.title}
-        </h1>
+        {/* Header Image */}
         <div
           style={{
-            display: "flex",
-            gap: "1rem",
-            marginBottom: "2rem",
-            fontSize: "0.9rem",
-            color: "#666",
+            width: "100%",
+            height: "200px",
+            backgroundImage: `url(${post.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            position: "relative",
           }}
         >
-          <span>📅 {new Date(post.date).toLocaleDateString("en-GB")}</span>
-          <span>⏱️ {post.readTime}</span>
-          <span>👤 {post.author}</span>
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              background: "linear-gradient(transparent, rgba(0,0,0,0.8))",
+              color: "white",
+              padding: "2rem 1.5rem 1.5rem",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: "1rem",
+                marginBottom: "0.5rem",
+                fontSize: "0.8rem",
+                opacity: 0.9,
+              }}
+            >
+              <span>📅 {new Date(post.date).toLocaleDateString("en-GB")}</span>
+              <span>⏱️ {post.readTime}</span>
+            </div>
+            <h1
+              style={{
+                fontSize: "1.5rem",
+                marginBottom: "0.5rem",
+                color: "white",
+                fontWeight: "600",
+                lineHeight: "1.2",
+              }}
+            >
+              {post.title}
+            </h1>
+          </div>
         </div>
+
+        {/* Content */}
         <div
           style={{
-            fontSize: "1.1rem",
-            lineHeight: "1.8",
+            padding: "1.5rem",
+            fontSize: "1rem",
+            lineHeight: "1.7",
           }}
         >
-          {post.excerpt}
+          <p
+            style={{
+              marginBottom: "1rem",
+              color: "#555",
+            }}
+          >
+            {post.excerpt}
+          </p>
+
+          <div
+            style={{
+              marginTop: "1.5rem",
+              padding: "1rem",
+              backgroundColor: "#f8f9fa",
+              borderRadius: "8px",
+              borderLeft: "4px solid #b67758",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "0.9rem",
+                color: "#666",
+                marginBottom: "0.5rem",
+              }}
+            >
+              By {post.author}
+            </div>
+            <div
+              style={{
+                fontSize: "0.8rem",
+                color: "#b67758",
+                fontWeight: "500",
+              }}
+            >
+              {post.category} • Read full article →
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -761,47 +826,81 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
 
       <main>
         {/* Blog Post Header */}
-        <section className="blog-post-header">
-          <div className="container-modern">
-            <div className="row">
-              <div className="col-lg-8 mx-auto">
-                <div data-aos="fade-up">
-                  <Link
-                    href="/blog"
-                    className="d-inline-flex align-items-center gap-2 text-decoration-none text-primary-brown mb-4"
-                  >
-                    <ArrowLeft size={18} />
-                    Back to Blog
-                  </Link>
+        <section className="blog-post-header position-relative overflow-hidden">
+          {/* Background Image */}
+          <div
+            className="position-absolute top-0 start-0 w-100 h-100"
+            style={{
+              backgroundImage: `url(${post.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "brightness(0.3)",
+            }}
+          />
 
-                  <div className="blog-post-meta">
-                    <div className="d-flex align-items-center gap-2 text-subtle">
-                      <Calendar size={16} />
-                      <span>
-                        {new Date(post.date).toLocaleDateString("en-GB")}
-                      </span>
+          {/* Content Overlay */}
+          <div className="position-relative" style={{ zIndex: 2 }}>
+            <div className="container-modern">
+              <div className="row">
+                <div className="col-lg-8 mx-auto">
+                  <div data-aos="fade-up">
+                    <Link
+                      href="/blog"
+                      className="d-inline-flex align-items-center gap-2 text-decoration-none text-white mb-4"
+                      style={{ opacity: 0.9 }}
+                    >
+                      <ArrowLeft size={18} />
+                      Back to Blog
+                    </Link>
+
+                    <div className="blog-post-meta">
+                      <div
+                        className="d-flex align-items-center gap-2 text-white"
+                        style={{ opacity: 0.8 }}
+                      >
+                        <Calendar size={16} />
+                        <span>
+                          {new Date(post.date).toLocaleDateString("en-GB")}
+                        </span>
+                      </div>
+                      <div
+                        className="d-flex align-items-center gap-2 text-white"
+                        style={{ opacity: 0.8 }}
+                      >
+                        <Clock size={16} />
+                        <span>{post.readTime}</span>
+                      </div>
+                      <div
+                        className="d-flex align-items-center gap-2 text-white"
+                        style={{ opacity: 0.8 }}
+                      >
+                        <User size={16} />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="d-flex align-items-center gap-2">
+                        <Tag size={16} className="text-white" />
+                        <span
+                          className="text-white fw-medium"
+                          style={{
+                            background: "rgba(182, 119, 88, 0.8)",
+                            padding: "0.25rem 0.75rem",
+                            borderRadius: "15px",
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {post.category}
+                        </span>
+                      </div>
                     </div>
-                    <div className="d-flex align-items-center gap-2 text-subtle">
-                      <Clock size={16} />
-                      <span>{post.readTime}</span>
-                    </div>
-                    <div className="d-flex align-items-center gap-2 text-subtle">
-                      <User size={16} />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="d-flex align-items-center gap-2">
-                      <Tag size={16} className="text-primary-brown" />
-                      <span className="text-primary-brown fw-medium">
-                        {post.category}
-                      </span>
-                    </div>
+
+                    <h1 className="heading-primary text-white mb-4">
+                      {post.title}
+                    </h1>
+
+                    <p className="lead text-white" style={{ opacity: 0.9 }}>
+                      {post.excerpt}
+                    </p>
                   </div>
-
-                  <h1 className="heading-primary text-primary-brown mb-4">
-                    {post.title}
-                  </h1>
-
-                  <p className="lead text-subtle">{post.excerpt}</p>
                 </div>
               </div>
             </div>
