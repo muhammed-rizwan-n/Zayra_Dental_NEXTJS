@@ -19,6 +19,25 @@
   background: var(--bg-light-gray);
 }
 
+.blog-preview-frame-small.d-flex {
+  display: flex !important;
+}
+
+.blog-preview-frame-small .w-50 {
+  width: 50% !important;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-preview-frame-small .w-50:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.blog-preview-frame-small .w-50:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
 .blog-preview-iframe {
   width: 125%;
   height: 125%;
@@ -31,13 +50,13 @@
 }
 
 .blog-preview-iframe-small {
-  width: 130%;
+  width: 200%;
   height: 130%;
   border: none;
-  transform: scale(0.77);
+  transform: scale(0.5);
   transform-origin: top left;
   pointer-events: none;
-  border-radius: 12px;
+  border-radius: 0 12px 12px 0;
   background: white;
 }
 

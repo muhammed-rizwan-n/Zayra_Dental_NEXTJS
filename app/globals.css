@@ -657,6 +657,7 @@ button.scroll-to-top-btn {
   overflow: hidden;
   background: var(--bg-light-gray);
   flex-shrink: 0;
+  position: relative;
 }
 
 .blog-preview-iframe-mini {
