@@ -1064,13 +1064,24 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                       className="text-decoration-none"
                     >
                       <article className="card-modern h-100 overflow-hidden p-0">
-                        <div className="blog-preview-frame-small">
-                          <iframe
-                            src={`/blog/${relatedPost.slug}?preview=true`}
-                            title={`Preview of ${relatedPost.title}`}
-                            className="blog-preview-iframe-small"
-                            loading="lazy"
-                          />
+                        <div className="blog-preview-frame-small d-flex">
+                          <div className="w-50 position-relative">
+                            <Image
+                              src={relatedPost.image}
+                              alt={relatedPost.title}
+                              fill
+                              className="blog-preview-image"
+                              style={{ objectFit: "cover" }}
+                            />
+                          </div>
+                          <div className="w-50">
+                            <iframe
+                              src={`/blog/${relatedPost.slug}?preview=true`}
+                              title={`Preview of ${relatedPost.title}`}
+                              className="blog-preview-iframe-small"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
 
                         <div className="p-3">
