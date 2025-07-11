@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import blogData from "./blog/blogData.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zayradental.co.uk";
@@ -89,5 +90,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    // Add all blog posts
+    ...blogData.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.date,
+      changeFrequency: "monthly" as const,
+      priority: post.featured ? 0.7 : 0.6,
+    })),
   ];
 }
