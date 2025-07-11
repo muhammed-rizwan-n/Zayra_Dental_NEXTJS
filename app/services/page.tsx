@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import serviceList from "./serviceList.json";
+import BlogSection from "../../components/BlogSection";
 
 export const metadata: Metadata = {
   title:
