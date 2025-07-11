@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import PatientReview from "../components/PatientReview";
+import BlogSection from "../components/BlogSection";
 
 export const metadata: Metadata = {
   title:
@@ -666,6 +667,14 @@ export default function Home() {
       {/* Patient Reviews */}
       <PatientReview />
 
+      {/* Latest Blog Posts */}
+      <BlogSection
+        title="Expert Dental Health Advice"
+        subtitle="Stay informed with the latest insights from our award-winning dental team in Leeds"
+        showCount={3}
+        compact={false}
+      />
+
       {/* Contact CTA */}
       <section className="section-modern bg-white">
         <div className="container-modern">
@@ -749,7 +758,9 @@ export default function Home() {
                       <div className="h3 mb-1" style={{ color: "white" }}>
                         4.9★
                       </div>
-                      <div className="small opacity-90">Private Patient Rating</div>
+                      <div className="small opacity-90">
+                        Private Patient Rating
+                      </div>
                     </div>
                   </div>
                 </div>
