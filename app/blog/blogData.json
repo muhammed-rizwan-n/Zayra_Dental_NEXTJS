@@ -15,7 +15,7 @@
       "oral health",
       "Leeds dentist"
     ],
-    "image": "/blog/regular-checkups.jpg",
+    "image": "/services/dental_checkup.jpg",
     "featured": true,
     "metaDescription": "Learn why regular dental checkups are essential for oral health. Expert advice from award-winning Zayra Dental in Leeds on preventive dental care.",
     "schema": {
@@ -41,7 +41,7 @@
       "Leeds",
       "professional treatment"
     ],
-    "image": "/blog/teeth-whitening.jpg",
+    "image": "/services/teeth_whitening.jpg",
     "featured": false,
     "metaDescription": "Professional teeth whitening in Leeds vs at-home treatments. Expert comparison from award-winning Zayra Dental. Book your consultation today.",
     "schema": {
@@ -67,7 +67,7 @@
       "Leeds",
       "restorative dentistry"
     ],
-    "image": "/blog/dental-implants.jpg",
+    "image": "/services/dental_implants.jpg",
     "featured": true,
     "metaDescription": "Complete guide to dental implants in Leeds. Expert advice from award-winning Zayra Dental on permanent tooth replacement solutions.",
     "schema": {
@@ -88,7 +88,7 @@
     "readTime": "6 min read",
     "category": "Emergency Care",
     "tags": ["emergency dental", "urgent care", "Leeds", "dental pain"],
-    "image": "/blog/emergency-dental.jpg",
+    "image": "/services/bg-emergency.jpg",
     "featured": false,
     "metaDescription": "Emergency dental care in Leeds. Know when to seek urgent treatment. Zayra Dental provides immediate dental care for emergencies.",
     "schema": {
@@ -109,7 +109,7 @@
     "readTime": "4 min read",
     "category": "Oral Health",
     "tags": ["oral hygiene", "dental care", "healthy teeth", "gum health"],
-    "image": "/blog/oral-hygiene.jpg",
+    "image": "/services/dental_treatment.jpeg",
     "featured": false,
     "metaDescription": "Expert oral hygiene tips from award-winning Zayra Dental in Leeds. Learn proper dental care techniques for healthy teeth and gums.",
     "schema": {
@@ -135,7 +135,7 @@
       "porcelain veneers",
       "smile makeover"
     ],
-    "image": "/blog/veneers-comparison.jpg",
+    "image": "/services/dental_bonding.jpg",
     "featured": false,
     "metaDescription": "Composite vs porcelain veneers in Leeds. Expert comparison from Zayra Dental to help you choose the perfect veneer option for your smile.",
     "schema": {
