@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import blogData from "../app/blog/blogData.json";
 
@@ -55,12 +56,13 @@ export default function BlogSection({
                 >
                   <article className="card-modern h-100 p-3 blog-card-compact">
                     <div className="d-flex align-items-start gap-3">
-                      <div className="blog-preview-mini">
-                        <iframe
-                          src={`/blog/${post.slug}?preview=true`}
-                          title={`Preview of ${post.title}`}
-                          className="blog-preview-iframe-mini"
-                          loading="lazy"
+                      <div className="blog-preview-mini position-relative">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="blog-preview-image"
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
 
@@ -152,13 +154,24 @@ export default function BlogSection({
               >
                 <article className="card-modern h-100 overflow-hidden p-0 blog-card">
                   <div className="position-relative">
-                    <div className="blog-preview-frame-small">
-                      <iframe
-                        src={`/blog/${post.slug}?preview=true`}
-                        title={`Preview of ${post.title}`}
-                        className="blog-preview-iframe-small"
-                        loading="lazy"
-                      />
+                    <div className="blog-preview-frame-small d-flex">
+                      <div className="w-50 position-relative">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="blog-preview-image"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                      <div className="w-50">
+                        <iframe
+                          src={`/blog/${post.slug}?preview=true`}
+                          title={`Preview of ${post.title}`}
+                          className="blog-preview-iframe-small"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div className="position-absolute top-0 start-0 w-100 h-100 blog-overlay-light">
                       {post.featured && (
