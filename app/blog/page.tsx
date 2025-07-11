@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock, User, Tag, ArrowRight } from "lucide-react";
 import blogData from "./blogData.json";
+import "./style.css";
 
 export const metadata: Metadata = {
   title: "Dental Health Blog | Expert Advice from Zayra Dental Leeds",

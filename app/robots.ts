@@ -1,27 +1,29 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://zayradental.co.uk";
-
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin/", "/api/", "/_next/", "/private/"],
+        disallow: ["/api/", "/admin/", "/_next/", "/private/"],
       },
       {
         userAgent: "Googlebot",
-        allow: "/",
-        crawlDelay: 1,
-      },
-      {
-        userAgent: "Bingbot",
-        allow: "/",
-        crawlDelay: 2,
+        allow: [
+          "/",
+          "/blog/",
+          "/services/",
+          "/gallery/",
+          "/pricing/",
+          "/about-us/",
+          "/contact/",
+          "/appointment/",
+        ],
+        disallow: ["/api/", "/admin/", "/_next/", "/private/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: "https://zayradental.co.uk/sitemap.xml",
+    host: "https://zayradental.co.uk",
   };
 }
