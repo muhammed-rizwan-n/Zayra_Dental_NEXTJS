@@ -14,7 +14,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Googlebot",
         allow: "/",
-        crawlDelay: 1,
       },
       {
         userAgent: "Bingbot",
@@ -23,6 +22,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
   };
 }
