@@ -144,18 +144,33 @@ export default function BlogPage() {
                       <article className="card-modern h-100 overflow-hidden p-0 featured-blog-card">
                         <div className="position-relative">
                           <div className="blog-preview-frame">
-                            <iframe
-                              src={`/blog/${post.slug}?preview=true`}
-                              title={`Preview of ${post.title}`}
-                              className="blog-preview-iframe"
-                              loading="lazy"
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="blog-preview-image"
+                              style={{ objectFit: "cover" }}
                             />
-                          </div>
-                          <div className="position-absolute top-0 start-0 w-100 h-100 blog-overlay">
-                            <div className="position-absolute bottom-0 start-0 w-100 p-4">
+                            <div className="blog-preview-content">
                               <span className="badge rounded-pill bg-primary-brown mb-2">
                                 Featured
                               </span>
+                              <h4 className="h6 fw-semibold mb-2 text-white">
+                                {post.title}
+                              </h4>
+                              <div
+                                className="d-flex align-items-center gap-2 text-white small"
+                                style={{ opacity: 0.9 }}
+                              >
+                                <Calendar size={12} />
+                                <span>
+                                  {new Date(post.date).toLocaleDateString(
+                                    "en-GB",
+                                  )}
+                                </span>
+                                <Clock size={12} />
+                                <span>{post.readTime}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -235,13 +250,24 @@ export default function BlogPage() {
                   >
                     <article className="card-modern h-100 overflow-hidden p-0 blog-card">
                       <div className="position-relative">
-                        <div className="blog-preview-frame-small">
-                          <iframe
-                            src={`/blog/${post.slug}?preview=true`}
-                            title={`Preview of ${post.title}`}
-                            className="blog-preview-iframe-small"
-                            loading="lazy"
-                          />
+                        <div className="blog-preview-frame-small d-flex">
+                          <div className="w-50 position-relative">
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="blog-preview-image"
+                              style={{ objectFit: "cover" }}
+                            />
+                          </div>
+                          <div className="w-50">
+                            <iframe
+                              src={`/blog/${post.slug}?preview=true`}
+                              title={`Preview of ${post.title}`}
+                              className="blog-preview-iframe-small"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                         <div className="position-absolute top-0 start-0 w-100 h-100 blog-overlay-light">
                           {post.featured && (
