@@ -18,7 +18,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Bingbot",
         allow: "/",
-        crawlDelay: 2,
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
