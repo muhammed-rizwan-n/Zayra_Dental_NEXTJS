@@ -21,7 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
  return urls.map((path) => ({
     url: `${baseUrl}/${path}`,
     lastModified: new Date(),
-    changeFrequency: "daily",
-    priority: 1,
   }));
 }
