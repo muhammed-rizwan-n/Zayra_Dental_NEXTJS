@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
+import { unstable_noStore as noStore } from 'next/cache';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  noStore();
   const baseUrl = "https://zayra-dental-nextjs.vercel.app";
   const urls = [
     "",
