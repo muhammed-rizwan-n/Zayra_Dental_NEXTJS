@@ -44,17 +44,17 @@ export default function GalleryClient({
     document.body.style.overflow = "auto";
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     const newIndex =
       currentImageIndex > 0 ? currentImageIndex - 1 : currentImages.length - 1;
     setCurrentImageIndex(newIndex);
-  };
+  }, [currentImageIndex, currentImages.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     const newIndex =
       currentImageIndex < currentImages.length - 1 ? currentImageIndex + 1 : 0;
     setCurrentImageIndex(newIndex);
-  };
+  }, [currentImageIndex, currentImages.length]);
 
   // Handle keyboard navigation
   useEffect(() => {
