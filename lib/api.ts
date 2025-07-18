@@ -78,7 +78,10 @@ export async function getTeamData(member?: string) {
   return apiFetch(`/team${query}`);
 }
 
-export async function updateTeamData(teamData: any[], adminKey: string) {
+export async function updateTeamData(
+  teamData: Record<string, unknown>[],
+  adminKey: string,
+) {
   return apiFetch("/team", {
     method: "POST",
     headers: {
