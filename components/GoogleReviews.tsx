@@ -129,7 +129,7 @@ export default function GoogleReviews({
           <div key={`${review.time}-${index}`} className="col-lg-6">
             <div className="card-modern h-100">
               <div className="d-flex align-items-start gap-3 mb-3">
-                <img
+                <Image
                   src={review.profile_photo_url}
                   alt={review.author_name}
                   className="rounded-circle"
