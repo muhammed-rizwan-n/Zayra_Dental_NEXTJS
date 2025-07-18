@@ -149,7 +149,7 @@ export default function GoogleReviews({
                 </div>
               </div>
 
-              <p className="text-subtle mb-0">"{review.text}"</p>
+              <p className="text-subtle mb-0">&ldquo;{review.text}&rdquo;</p>
 
               {review.language !== "en" && (
                 <div className="mt-2">
