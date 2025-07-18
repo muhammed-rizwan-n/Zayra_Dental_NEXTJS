@@ -58,7 +58,10 @@ export default function BlogSection({
                     <div className="d-flex align-items-start gap-3">
                       <div className="blog-preview-mini position-relative">
                         <Image
-                          src={post.image}
+                          src={
+                            post.images?.hero ||
+                            "/services/dental_treatment.jpeg"
+                          }
                           alt={post.title}
                           fill
                           className="blog-preview-image"
@@ -157,7 +160,10 @@ export default function BlogSection({
                     <div className="blog-preview-frame-small d-flex">
                       <div className="w-50 position-relative">
                         <Image
-                          src={post.image}
+                          src={
+                            post.images?.hero ||
+                            "/services/dental_treatment.jpeg"
+                          }
                           alt={post.title}
                           fill
                           className="blog-preview-image"
