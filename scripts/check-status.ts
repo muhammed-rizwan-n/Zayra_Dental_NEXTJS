@@ -10,7 +10,7 @@ import path from "path";
 async function main() {
   console.log("🔍 Checking Google Reviews System Status...\n");
 
-  const dataDir = path.join(process.cwd(), "data");
+  const dataDir = path.join(process.cwd(), "public", "data");
   const dataFile = path.join(dataDir, "google-reviews.json");
 
   // Check if data directory exists
