@@ -48,6 +48,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zayradental.co.uk/services/teeth-whitening",
   },
+  other: {
+    "Cache-Control":
+      "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400", // 1 hour cache, 1 day stale for service content
+  },
 };
 
 export default function TeethWhitening() {
