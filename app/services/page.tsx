@@ -58,6 +58,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zayra-dental-nextjs.vercel.app/services",
   },
+  other: {
+    "Cache-Control":
+      "public, max-age=1800, s-maxage=1800, stale-while-revalidate=7200", // 30 minutes cache, 2 hours stale for service listings
+  },
 };
 
 export default function Services() {
@@ -187,7 +191,11 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="col-lg-6 md" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 md"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="position-relative">
                 <div className="card-elevated">
                   <Image
