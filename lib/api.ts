@@ -59,7 +59,10 @@ export async function getPricing(category?: string, treatment?: string) {
   return apiFetch(`/pricing${query}`);
 }
 
-export async function updatePricing(pricingData: any, adminKey: string) {
+export async function updatePricing(
+  pricingData: Record<string, unknown>,
+  adminKey: string,
+) {
   return apiFetch("/pricing", {
     method: "POST",
     headers: {
