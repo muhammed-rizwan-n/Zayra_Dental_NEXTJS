@@ -97,7 +97,9 @@ export async function POST() {
       cache: "no-store", // Force fresh data
     });
 
-    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(`Google Places API error: ${response.status}`);
+    }
 
     return NextResponse.json({
       success: true,
