@@ -108,7 +108,7 @@ function getBlogPostContent(slug: string) {
 
       <h2>Your Comprehensive Examination Experience</h2>
       <p>At Zayra Dental, we've refined our examination process to be thorough yet comfortable. Here's what you can expect during your visit:</p>
-      
+
       <div class="process-steps">
         <div class="step">
           <div class="step-number">1</div>
@@ -154,7 +154,7 @@ function getBlogPostContent(slug: string) {
 
       <h2>The Financial Benefits of Prevention</h2>
       <p>Many patients worry about the cost of regular checkups, but the mathematics of prevention are compelling:</p>
-      
+
       <div class="comparison-table">
         <div class="comparison-item preventive">
           <h4>Preventive Care Route</h4>
@@ -180,7 +180,7 @@ function getBlogPostContent(slug: string) {
 
       <h2>Warning Signs Between Visits</h2>
       <p>While regular checkups are essential, certain symptoms require immediate attention. Contact us immediately if you experience:</p>
-      
+
       <div class="warning-signs">
         <div class="warning-sign urgent">
           <div class="warning-icon">🚨</div>
@@ -232,7 +232,7 @@ function getBlogPostContent(slug: string) {
       </div>
 
       <h2>Professional vs At-Home: The Complete Comparison</h2>
-      
+
       <div class="comparison-detailed">
         <div class="comparison-section professional">
           <div class="section-header">
@@ -243,7 +243,7 @@ function getBlogPostContent(slug: string) {
               <span>Recommended</span>
             </div>
           </div>
-          
+
           <div class="feature-list">
             <div class="feature">
               <CheckCircle className="check-icon" size={20} />
@@ -274,7 +274,7 @@ function getBlogPostContent(slug: string) {
               </div>
             </div>
           </div>
-          
+
           <div class="investment-info">
             <div class="cost-range">£300-600</div>
             <div class="value-prop">Best long-term value</div>
@@ -290,7 +290,7 @@ function getBlogPostContent(slug: string) {
               <span>Limited Results</span>
             </div>
           </div>
-          
+
           <div class="limitation-list">
             <div class="limitation">
               <span className="x-icon">✗</span>
@@ -321,7 +321,7 @@ function getBlogPostContent(slug: string) {
               </div>
             </div>
           </div>
-          
+
           <div class="investment-info">
             <div class="cost-range">£20-100</div>
             <div class="value-prop">Higher long-term cost</div>
@@ -331,7 +331,7 @@ function getBlogPostContent(slug: string) {
 
       <h2>Our Advanced Whitening Technology</h2>
       <p>At Zayra Dental, we use the latest in professional whitening technology to ensure optimal results with minimal sensitivity:</p>
-      
+
       <div class="technology-features">
         <div class="tech-feature">
           <div class="tech-icon">🔬</div>
@@ -358,7 +358,7 @@ function getBlogPostContent(slug: string) {
       <div class="candidacy-assessment">
         <h2>Are You a Good Candidate for Whitening?</h2>
         <p>Most people can achieve excellent whitening results, but certain factors affect the outcome:</p>
-        
+
         <div class="candidacy-grid">
           <div class="candidacy-item excellent">
             <h4>🟢 Excellent Candidates</h4>
@@ -370,7 +370,7 @@ function getBlogPostContent(slug: string) {
               <li>Realistic expectations</li>
             </ul>
           </div>
-          
+
           <div class="candidacy-item good">
             <h4>🟡 Good Candidates with Considerations</h4>
             <ul>
@@ -380,7 +380,7 @@ function getBlogPostContent(slug: string) {
               <li>Orthodontic treatment history</li>
             </ul>
           </div>
-          
+
           <div class="candidacy-item limited">
             <h4>🔴 Limited Results Expected</h4>
             <ul>
@@ -395,7 +395,7 @@ function getBlogPostContent(slug: string) {
 
       <h2>Maintaining Your Brilliant Results</h2>
       <p>Professional whitening is an investment in your smile. Here's how to protect that investment:</p>
-      
+
       <div class="maintenance-timeline">
         <div class="timeline-item">
           <div class="timeline-marker">24h</div>
@@ -409,7 +409,7 @@ function getBlogPostContent(slug: string) {
             </ul>
           </div>
         </div>
-        
+
         <div class="timeline-item">
           <div class="timeline-marker">48h</div>
           <div class="timeline-content">
@@ -422,7 +422,7 @@ function getBlogPostContent(slug: string) {
             </ul>
           </div>
         </div>
-        
+
         <div class="timeline-item">
           <div class="timeline-marker">1 Week+</div>
           <div class="timeline-content">
@@ -489,79 +489,28 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
   // Preview mode for iframe
   if (isPreview) {
     return (
-      <div className="preview-container">
-        <div className="preview-header">
+      <div className="blog-preview-container">
+        <div className="blog-preview-header">
           <Image
-            src={post.images.hero}
+            src={post.images.hero || "/services/dental_treatment.jpeg"}
             alt={post.title}
             width={400}
             height={200}
-            className="preview-image"
+            className="blog-preview-image"
           />
-          <div className="preview-overlay">
-            <span className="preview-category">{post.category}</span>
-            <h1 className="preview-title">{post.title}</h1>
+          <div className="blog-preview-overlay">
+            <span className="blog-preview-category">{post.category}</span>
+            <h1 className="blog-preview-title">{post.title}</h1>
           </div>
         </div>
-        <div className="preview-content">
-          <p className="preview-excerpt">{post.excerpt}</p>
-          <div className="preview-meta">
+        <div className="blog-preview-content">
+          <p className="blog-preview-excerpt">{post.excerpt}</p>
+          <div className="blog-preview-meta">
             <span>📅 {new Date(post.date).toLocaleDateString("en-GB")}</span>
             <span>⏱️ {post.readTime}</span>
             <span>👤 {post.author.name}</span>
           </div>
         </div>
-        <style jsx>{`
-          .preview-container {
-            font-family: system-ui;
-            margin: 0;
-            padding: 0;
-          }
-          .preview-header {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-          }
-          .preview-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .preview-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: white;
-            padding: 1rem;
-          }
-          .preview-category {
-            background: #b67758;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-          }
-          .preview-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0.5rem 0;
-          }
-          .preview-content {
-            padding: 1rem;
-          }
-          .preview-excerpt {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-          }
-          .preview-meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.8rem;
-            color: #666;
-          }
-        `}</style>
       </div>
     );
   }
@@ -578,7 +527,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
         <section className="post-hero">
           <div className="hero-background">
             <Image
-              src={post.images.hero}
+              src={post.images.hero || "/services/dental_treatment.jpeg"}
               alt={post.title}
               fill
               className="hero-image"
@@ -677,7 +626,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                   <div className="share-title">Share Article</div>
                   <div className="share-buttons">
                     <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== "undefined" ? window.location.href : ""}`}
+                      href={`https://www.facebook.com/sharer/sharer.php?u=https://zayradental.co.uk/blog/${post.slug}`}
                       className="share-btn facebook"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -685,7 +634,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                       <Facebook size={20} />
                     </a>
                     <a
-                      href={`https://twitter.com/intent/tweet?url=${typeof window !== "undefined" ? window.location.href : ""}&text=${post.title}`}
+                      href={`https://twitter.com/intent/tweet?url=https://zayradental.co.uk/blog/${post.slug}&text=${encodeURIComponent(post.title)}`}
                       className="share-btn twitter"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -693,7 +642,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                       <Twitter size={20} />
                     </a>
                     <a
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${typeof window !== "undefined" ? window.location.href : ""}`}
+                      href={`https://www.linkedin.com/sharing/share-offsite/?url=https://zayradental.co.uk/blog/${post.slug}`}
                       className="share-btn linkedin"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -701,7 +650,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                       <Linkedin size={20} />
                     </a>
                     <a
-                      href={`https://wa.me/?text=${post.title} ${typeof window !== "undefined" ? window.location.href : ""}`}
+                      href={`https://wa.me/?text=${encodeURIComponent(post.title)} https://zayradental.co.uk/blog/${post.slug}`}
                       className="share-btn whatsapp"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -756,17 +705,19 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                   <div className="content-gallery" data-aos="fade-up">
                     <h3>Related Images</h3>
                     <div className="gallery-grid">
-                      {post.images.gallery.map((image, index) => (
-                        <div key={index} className="gallery-item">
-                          <Image
-                            src={image}
-                            alt={`${post.title} - Image ${index + 1}`}
-                            width={300}
-                            height={200}
-                            className="gallery-image"
-                          />
-                        </div>
-                      ))}
+                      {post.images.gallery
+                        .filter(Boolean)
+                        .map((image, index) => (
+                          <div key={index} className="gallery-item">
+                            <Image
+                              src={image || "/services/dental_treatment.jpeg"}
+                              alt={`${post.title} - Image ${index + 1}`}
+                              width={300}
+                              height={200}
+                              className="gallery-image"
+                            />
+                          </div>
+                        ))}
                     </div>
                   </div>
                 )}
@@ -924,7 +875,10 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                     >
                       <div className="related-image">
                         <Image
-                          src={relatedPost.images.thumbnail}
+                          src={
+                            relatedPost.images.thumbnail ||
+                            "/services/dental_treatment.jpeg"
+                          }
                           alt={relatedPost.title}
                           width={300}
                           height={200}
