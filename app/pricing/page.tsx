@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import {
   Calendar,
   CheckCircle,
@@ -16,7 +17,14 @@ import {
 } from "lucide-react";
 import pricingData from "./pricing.json";
 
-export const metadata: Metadata = {
+// Custom cache control for dynamic pricing data
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = headers();
+
+  return {
+    other: {
+      'Cache-Control': 'public, max-age=600, s-maxage=600, stale-while-revalidate=3600', // 10 minutes cache, 1 hour stale
+    },
   title:
     "Award-Winning Dental Prices Leeds | Affordable CQC Registered Treatment Costs | Zayra Dental",
   description:
@@ -54,8 +62,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://zayra-dental-nextjs.vercel.app/pricing",
-  },
-};
+    },
+  };
+}
+
+export const metadata: Metadata = {
 
 export default function PricingSection() {
   const paymentOptions = [
