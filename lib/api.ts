@@ -101,7 +101,10 @@ export async function getAnalytics(period?: string, metric?: string) {
   return apiFetch(`/analytics${query}`);
 }
 
-export async function logAnalyticsEvent(event: string, data?: any) {
+export async function logAnalyticsEvent(
+  event: string,
+  data?: Record<string, unknown>,
+) {
   return apiFetch("/analytics", {
     method: "POST",
     body: JSON.stringify({
