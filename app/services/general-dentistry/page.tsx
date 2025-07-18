@@ -50,10 +50,6 @@ export const metadata: Metadata = {
     canonical:
       "https://zayra-dental-nextjs.vercel.app/services/general-dentistry",
   },
-  other: {
-    "Cache-Control":
-      "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400", // 1 hour cache, 1 day stale for service content
-  },
 };
 type IconName = "shield" | "checkcircle" | "heart";
 const icons = {
