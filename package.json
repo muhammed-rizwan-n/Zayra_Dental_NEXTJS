@@ -10,7 +10,7 @@
     "lint": "next lint",
     "fetch-reviews": "npx tsx scripts/fetch-reviews.ts",
     "check-status": "npx tsx scripts/check-status.ts",
-    "setup-reviews": "mkdir -p data && echo '{\"data\":[],\"latest\":{\"business_name\":\"Zayra Dental\",\"business_rating\":0,\"total_reviews\":0,\"reviews\":[],\"last_updated\":\"\",\"fetch_count\":0},\"history\":[]}' > data/google-reviews.json"
+    "setup-reviews": "mkdir -p public/data && echo '{\"data\":[],\"latest\":{\"business_name\":\"Zayra Dental\",\"business_rating\":0,\"total_reviews\":0,\"reviews\":[],\"last_updated\":\"\",\"fetch_count\":0},\"history\":[]}' > public/data/google-reviews.json"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
