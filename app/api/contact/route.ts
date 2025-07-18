@@ -13,7 +13,7 @@ const contactSchema = z.object({
 
 // Verify reCAPTCHA token
 async function verifyRecaptcha(token: string): Promise<boolean> {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY || "6LeGlocrAAAAANqDvm1k7tzvLZpTS-n1yKmd2QHG";
 
   if (!secretKey) {
     console.error("RECAPTCHA_SECRET_KEY not found in environment variables");
