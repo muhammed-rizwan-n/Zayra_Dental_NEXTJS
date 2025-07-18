@@ -6,11 +6,10 @@ import { MessageCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
-    subject: "",
+    service: "",
     message: "",
     privacy: false,
   });
@@ -218,7 +217,8 @@ export default function ContactForm() {
           ref={recaptchaRef}
           size="invisible"
           sitekey={
-            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeGlocrAAAAAOcBXke1QhswSORS0OdxAqJG6zHy"
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+            "6LeGlocrAAAAAOcBXke1QhswSORS0OdxAqJG6zHy"
           }
         />
 
