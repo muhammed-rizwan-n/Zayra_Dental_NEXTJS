@@ -23,6 +23,65 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   trailingSlash: false,
+  async headers() {
+    return [
+      {
+        // Static assets - Long cache
+        source:
+          "/(.*\\.(ico|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot|css|js)).*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        // Dynamic content pages - Short cache
+        source: "/(pricing|about-us)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "public, max-age=600, s-maxage=600, stale-while-revalidate=3600",
+          },
+        ],
+      },
+      {
+        // Service pages - Medium cache
+        source: "/services/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "public, max-age=1800, s-maxage=1800, stale-while-revalidate=7200",
+          },
+        ],
+      },
+      {
+        // Contact and appointment pages - Short cache
+        source: "/(contact|appointment)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "public, max-age=300, s-maxage=300, stale-while-revalidate=1800",
+          },
+        ],
+      },
+      {
+        // API routes - no cache
+        source: "/api/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
