@@ -80,9 +80,9 @@ export class ReviewScheduler {
 
   public getStatus() {
     return {
-      isScheduled: this.task?.scheduled || false,
+      isScheduled: this.task ? true : false,
       isRunning: this.isRunning,
-      nextRun: this.task?.scheduled ? "Daily at 2:00 AM" : "Not scheduled",
+      nextRun: this.task ? "Daily at 2:00 AM" : "Not scheduled",
     };
   }
 }
