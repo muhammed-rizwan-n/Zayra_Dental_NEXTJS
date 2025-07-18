@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import {
   Calendar,
   CheckCircle,
