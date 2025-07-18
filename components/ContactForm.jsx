@@ -88,37 +88,20 @@ export default function ContactForm() {
       )}
 
       <form className="form-modern" onSubmit={handleSubmit}>
-        <div className="row g-3 mb-3">
-          <div className="col-md-6">
-            <label htmlFor="firstName" className="form-label fw-medium">
-              First Name *
-            </label>
-            <input
-              type="text"
-              className="form-control-modern"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="John"
-              required
-            />
-          </div>
-          <div className="col-md-6">
-            <label htmlFor="lastName" className="form-label fw-medium">
-              Last Name *
-            </label>
-            <input
-              type="text"
-              className="form-control-modern"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Doe"
-              required
-            />
-          </div>
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label fw-medium">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            className="form-control-modern"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="John Doe"
+            required
+          />
         </div>
 
         <div className="row g-3 mb-3">
