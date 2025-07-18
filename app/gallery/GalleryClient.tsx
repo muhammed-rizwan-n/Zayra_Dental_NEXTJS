@@ -68,7 +68,13 @@ export default function GalleryClient({
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxOpen, currentImageIndex, currentImages.length]);
+  }, [
+    lightboxOpen,
+    currentImageIndex,
+    currentImages.length,
+    goToNext,
+    goToPrevious,
+  ]);
 
   const justifyClass = justify === "center" ? "justify-content-center" : "";
 
