@@ -7,6 +7,11 @@ import AOSInitializer from "../components/AOSInitializer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Initialize review scheduler on server startup
+if (typeof window === "undefined") {
+  import("../lib/startup").catch(console.error);
+}
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -49,7 +54,10 @@ export const metadata: Metadata = {
     "UK dental awards winner",
   ],
   authors: [
-    { name: "Dr. Reshma Parambil", url: "https://zayra-dental-nextjs.vercel.app" },
+    {
+      name: "Dr. Reshma Parambil",
+      url: "https://zayra-dental-nextjs.vercel.app",
+    },
     { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
   ],
   creator: "Zayra Dental",
