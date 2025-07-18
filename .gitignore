@@ -20,6 +20,9 @@
 # production
 /build
 
+#temporary
+/temporary
+
 # misc
 .DS_Store
 *.pem
