@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Star, Calendar, User } from "lucide-react";
+import Image from "next/image";
 
 interface GoogleReview {
   author_name: string;
