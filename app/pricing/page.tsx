@@ -55,10 +55,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zayra-dental-nextjs.vercel.app/pricing",
   },
-  other: {
-    "Cache-Control":
-      "public, max-age=600, s-maxage=600, stale-while-revalidate=3600", // 10 minutes cache, 1 hour stale for dynamic pricing
-  },
 };
 
 export default function PricingSection() {
