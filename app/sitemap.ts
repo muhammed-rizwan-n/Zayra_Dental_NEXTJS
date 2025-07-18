@@ -1,9 +1,11 @@
 import { MetadataRoute } from "next";
 import serviceList from "./services/serviceList.json";
+import { unstable_noStore as noStore } from "next/cache";
 
 const baseUrl = "https://zayra-dental-nextjs.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  noStore();
   // Static pages
   const staticPages = [
     {
@@ -54,8 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages = Object.entries(serviceList).map(([slug]) => ({
     url: `${baseUrl}/services/${slug}`,
     lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
   }));
 
   return [...staticPages, ...servicePages];
