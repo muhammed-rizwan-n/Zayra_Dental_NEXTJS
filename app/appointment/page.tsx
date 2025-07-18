@@ -53,10 +53,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zayra-dental-nextjs.vercel.app/appointment",
   },
-  other: {
-    "Cache-Control":
-      "public, max-age=300, s-maxage=300, stale-while-revalidate=1800", // 5 minutes cache, 30 minutes stale for appointment booking
-  },
 };
 
 export default function Appointment() {
