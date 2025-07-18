@@ -172,7 +172,9 @@ export default function BlogSection({
                       </div>
                       <div className="w-50">
                         <iframe
-                          src={`/blog/${post.slug}?preview=true`}
+                          src={
+                            post.slug ? `/blog/${post.slug}?preview=true` : ""
+                          }
                           title={`Preview of ${post.title}`}
                           className="blog-preview-iframe-small"
                           loading="lazy"
