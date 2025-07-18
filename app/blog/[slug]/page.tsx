@@ -701,7 +701,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                 </article>
 
                 {/* Image Gallery */}
-                {post.images.gallery.length > 0 && (
+                {post.images?.gallery?.length > 0 && (
                   <div className="content-gallery" data-aos="fade-up">
                     <h3>Related Images</h3>
                     <div className="gallery-grid">
@@ -723,7 +723,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                 )}
 
                 {/* FAQs Section */}
-                {post.faqs.length > 0 && (
+                {post.faqs?.length > 0 && (
                   <div className="faqs-section" data-aos="fade-up">
                     <h3>Frequently Asked Questions</h3>
                     <div className="faqs-list">
@@ -824,7 +824,7 @@ export default function BlogPost({ params, searchParams }: BlogPostProps) {
                 </div>
 
                 {/* Related Services */}
-                {post.relatedServices.length > 0 && (
+                {post.relatedServices?.length > 0 && (
                   <div
                     className="related-services-card"
                     data-aos="fade-up"
