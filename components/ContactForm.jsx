@@ -137,20 +137,27 @@ export default function ContactForm() {
         </div>
 
         <div className="col-md-6 mb-3">
-          <label htmlFor="subject" className="form-label fw-medium">
-            Subject *
+          <label htmlFor="service" className="form-label fw-medium">
+            Service of Interest *
           </label>
           <select
             className="form-control-modern"
-            id="subject"
-            name="subject"
-            value={formData.subject}
+            id="service"
+            name="service"
+            value={formData.service}
             onChange={handleChange}
             required
           >
-            <option value="">Select a subject</option>
-            <option value="appointment">Book an Appointment</option>
-            <option value="consultation">About Consultation</option>
+            <option value="">Select a service</option>
+            <option value="General Check-up">General Check-up</option>
+            <option value="Teeth Whitening">Teeth Whitening</option>
+            <option value="Dental Implants">Dental Implants</option>
+            <option value="Composite Veneers">Composite Veneers</option>
+            <option value="Root Canal">Root Canal Treatment</option>
+            <option value="Emergency Care">Emergency Dental Care</option>
+            <option value="Dental Aligners">Dental Aligners</option>
+            <option value="Facial Aesthetics">Facial Aesthetics</option>
+            <option value="Other">Other</option>
             <option value="emergency">Dental Emergency</option>
             <option value="information">General Information</option>
             <option value="pricing">Pricing Inquiry</option>
