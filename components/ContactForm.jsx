@@ -218,7 +218,7 @@ export default function ContactForm() {
           ref={recaptchaRef}
           size="invisible"
           sitekey={
-            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcbzHkrAAAAAE-ceoFclsZUNMykEfJkXNfeuYxp"
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeGlocrAAAAAOcBXke1QhswSORS0OdxAqJG6zHy"
           }
         />
 
