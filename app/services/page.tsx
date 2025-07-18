@@ -58,10 +58,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zayra-dental-nextjs.vercel.app/services",
   },
-  other: {
-    "Cache-Control":
-      "public, max-age=1800, s-maxage=1800, stale-while-revalidate=7200", // 30 minutes cache, 2 hours stale for service listings
-  },
 };
 
 export default function Services() {
