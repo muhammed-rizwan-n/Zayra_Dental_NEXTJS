@@ -47,7 +47,8 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/services/general-dentistry",
+    canonical:
+      "https://zayra-dental-nextjs.vercel.app/services/general-dentistry",
   },
 };
 type IconName = "shield" | "checkcircle" | "heart";

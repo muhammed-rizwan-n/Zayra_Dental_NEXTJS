@@ -61,28 +61,28 @@ export default function Appointment() {
       title: "Initial Consultation",
       description: "Comprehensive dental exam and treatment planning",
       duration: "30 minutes",
-      price: `£?${pricing['Implants']['Implant Consultation']['price']}`,
+      price: `£?${pricing["Implants"]["Implant Consultation"]["price"]}`,
       icon: <User size={24} />,
     },
     {
       title: "Implant Consultation",
       description: "First step towards affordable implants.",
       duration: "30 minutes",
-      price: `£${pricing['Implants']['Implant Consultation']['price']}`,
+      price: `£${pricing["Implants"]["Implant Consultation"]["price"]}`,
       icon: <CheckCircle size={24} />,
     },
     {
       title: "Emergency Appointment",
       description: "Urgent dental care for pain or dental emergencies",
       duration: "45 minutes",
-      price: `£${pricing['Emergency & Urgent Care']['Urgent Treatment']['price']}`,
+      price: `£${pricing["Emergency & Urgent Care"]["Urgent Treatment"]["price"]}`,
       icon: <Heart size={24} />,
     },
     {
       title: "Cosmetic Consultation",
       description: "Discuss teeth whitening, veneers, and smile makeovers",
       duration: "45 minutes",
-      price: `£${pricing['Cosmetic Dentistry']['Aligner/Cosmetic Consultation']['price']}`,
+      price: `£${pricing["Cosmetic Dentistry"]["Aligner/Cosmetic Consultation"]["price"]}`,
       icon: <Star size={24} />,
     },
   ];
@@ -165,7 +165,11 @@ export default function Appointment() {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-3 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+            <div
+              className="col-lg-6 mt-3 md:mt-0"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <div className="appointment-quick-info">
                 <div className="card-elevated">
                   <div className="text-center mb-4">
@@ -179,7 +183,6 @@ export default function Appointment() {
                         <h4>Call Direct</h4>
                         <p>Speak to our team now</p>
                         <a
-                        
                           href="tel:01132488398"
                           className="btn-primary-modern"
                         >

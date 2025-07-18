@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Eye, ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -44,17 +44,17 @@ export default function GalleryClient({
     document.body.style.overflow = "auto";
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     const newIndex =
       currentImageIndex > 0 ? currentImageIndex - 1 : currentImages.length - 1;
     setCurrentImageIndex(newIndex);
-  };
+  }, [currentImageIndex, currentImages.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     const newIndex =
       currentImageIndex < currentImages.length - 1 ? currentImageIndex + 1 : 0;
     setCurrentImageIndex(newIndex);
-  };
+  }, [currentImageIndex, currentImages.length]);
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -68,7 +68,13 @@ export default function GalleryClient({
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxOpen, currentImageIndex, currentImages.length]);
+  }, [
+    lightboxOpen,
+    currentImageIndex,
+    currentImages.length,
+    goToNext,
+    goToPrevious,
+  ]);
 
   const justifyClass = justify === "center" ? "justify-content-center" : "";
 

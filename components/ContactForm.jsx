@@ -6,11 +6,10 @@ import { MessageCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
-    subject: "",
+    service: "",
     message: "",
     privacy: false,
   });
@@ -51,11 +50,10 @@ export default function ContactForm() {
       if (response.ok) {
         setSubmitStatus("success");
         setFormData({
-          firstName: "",
-          lastName: "",
+          name: "",
           email: "",
           phone: "",
-          subject: "",
+          service: "",
           message: "",
           privacy: false,
         });
@@ -90,37 +88,20 @@ export default function ContactForm() {
       )}
 
       <form className="form-modern" onSubmit={handleSubmit}>
-        <div className="row g-3 mb-3">
-          <div className="col-md-6">
-            <label htmlFor="firstName" className="form-label fw-medium">
-              First Name *
-            </label>
-            <input
-              type="text"
-              className="form-control-modern"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="John"
-              required
-            />
-          </div>
-          <div className="col-md-6">
-            <label htmlFor="lastName" className="form-label fw-medium">
-              Last Name *
-            </label>
-            <input
-              type="text"
-              className="form-control-modern"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Doe"
-              required
-            />
-          </div>
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label fw-medium">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            className="form-control-modern"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="John Doe"
+            required
+          />
         </div>
 
         <div className="row g-3 mb-3">
@@ -156,20 +137,27 @@ export default function ContactForm() {
         </div>
 
         <div className="col-md-6 mb-3">
-          <label htmlFor="subject" className="form-label fw-medium">
-            Subject *
+          <label htmlFor="service" className="form-label fw-medium">
+            Service of Interest *
           </label>
           <select
             className="form-control-modern"
-            id="subject"
-            name="subject"
-            value={formData.subject}
+            id="service"
+            name="service"
+            value={formData.service}
             onChange={handleChange}
             required
           >
-            <option value="">Select a subject</option>
-            <option value="appointment">Book an Appointment</option>
-            <option value="consultation">About Consultation</option>
+            <option value="">Select a service</option>
+            <option value="General Check-up">General Check-up</option>
+            <option value="Teeth Whitening">Teeth Whitening</option>
+            <option value="Dental Implants">Dental Implants</option>
+            <option value="Composite Veneers">Composite Veneers</option>
+            <option value="Root Canal">Root Canal Treatment</option>
+            <option value="Emergency Care">Emergency Dental Care</option>
+            <option value="Dental Aligners">Dental Aligners</option>
+            <option value="Facial Aesthetics">Facial Aesthetics</option>
+            <option value="Other">Other</option>
             <option value="emergency">Dental Emergency</option>
             <option value="information">General Information</option>
             <option value="pricing">Pricing Inquiry</option>
@@ -218,7 +206,8 @@ export default function ContactForm() {
           ref={recaptchaRef}
           size="invisible"
           sitekey={
-            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeGlocrAAAAAOcBXke1QhswSORS0OdxAqJG6zHy"
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+            "6LeGlocrAAAAAOcBXke1QhswSORS0OdxAqJG6zHy"
           }
         />
 
