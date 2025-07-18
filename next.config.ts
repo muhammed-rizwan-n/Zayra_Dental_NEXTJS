@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
       {
         // Static assets - Long cache
         source:
-          "/(.*\\.(ico|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot|css|js)).*",
+          "/(.*)\\.(ico|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot|css|js)",
         headers: [
           {
             key: "Cache-Control",
@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
       },
       {
         // Dynamic content pages - Short cache
-        source: "/(pricing|about-us)",
+        source: "/:path(pricing|about-us)",
         headers: [
           {
             key: "Cache-Control",
@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
       },
       {
         // Service pages - Medium cache
-        source: "/services/(.*)",
+        source: "/services/:path*",
         headers: [
           {
             key: "Cache-Control",
@@ -61,7 +61,7 @@ const nextConfig: NextConfig = {
       },
       {
         // Contact and appointment pages - Short cache
-        source: "/(contact|appointment)",
+        source: "/:path(contact|appointment)",
         headers: [
           {
             key: "Cache-Control",
@@ -72,7 +72,7 @@ const nextConfig: NextConfig = {
       },
       {
         // API routes - no cache
-        source: "/api/(.*)",
+        source: "/api/:path*",
         headers: [
           {
             key: "Cache-Control",
