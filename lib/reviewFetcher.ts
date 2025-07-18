@@ -44,7 +44,7 @@ export class GoogleReviewsFetcher {
   constructor() {
     this.apiKey = process.env.GOOGLE_PLACES_API_KEY || "";
     this.placeId = process.env.GOOGLE_PLACE_ID || "ChIJyWEHuEHDeUgRB8XJhBnwYQQ";
-    this.dataDir = path.join(process.cwd(), "data");
+    this.dataDir = path.join(process.cwd(), "public", "data");
     this.dataFile = path.join(this.dataDir, "google-reviews.json");
   }
 
