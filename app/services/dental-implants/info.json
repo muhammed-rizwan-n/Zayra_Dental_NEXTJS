@@ -29,9 +29,6 @@
     },
     "alternates": {
       "canonical": "https://zayra-dental-nextjs.vercel.app/services/dental-implants"
-    },
-    "other": {
-      "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
     }
   },
   "implantTypes": [
