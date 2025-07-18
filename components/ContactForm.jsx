@@ -50,11 +50,10 @@ export default function ContactForm() {
       if (response.ok) {
         setSubmitStatus("success");
         setFormData({
-          firstName: "",
-          lastName: "",
+          name: "",
           email: "",
           phone: "",
-          subject: "",
+          service: "",
           message: "",
           privacy: false,
         });
