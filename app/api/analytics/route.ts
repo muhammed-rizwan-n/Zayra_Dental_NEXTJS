@@ -139,7 +139,6 @@ export async function GET(request: NextRequest) {
 // Endpoint to log events (for future analytics collection)
 export async function POST(request: NextRequest) {
   try {
-    const authHeader = request.headers.get("authorization");
     const body = await request.json();
 
     // Validate the event data
