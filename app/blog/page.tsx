@@ -205,7 +205,9 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`} className="card-link">
                     <div className="card-image-wrapper">
                       <Image
-                        src={post.images.hero}
+                        src={
+                          post.images.hero || "/services/dental_treatment.jpeg"
+                        }
                         alt={post.title}
                         fill
                         className="card-image"
@@ -295,7 +297,10 @@ export default function BlogPage() {
 
                         <div className="trending-image">
                           <Image
-                            src={post.images.thumbnail}
+                            src={
+                              post.images.thumbnail ||
+                              "/services/dental_treatment.jpeg"
+                            }
                             alt={post.title}
                             width={80}
                             height={80}
@@ -355,7 +360,9 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`} className="card-link">
                     <div className="article-image-wrapper">
                       <Image
-                        src={post.images.hero}
+                        src={
+                          post.images.hero || "/services/dental_treatment.jpeg"
+                        }
                         alt={post.title}
                         fill
                         className="article-image"
