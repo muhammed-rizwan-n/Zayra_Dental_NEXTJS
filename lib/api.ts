@@ -158,7 +158,10 @@ export async function submitAppointmentForm(formData: AppointmentFormData) {
 }
 
 // Utility for client-side caching
-const cache = new Map<string, { data: any; timestamp: number; ttl: number }>();
+const cache = new Map<
+  string,
+  { data: unknown; timestamp: number; ttl: number }
+>();
 
 export function getCachedData<T>(key: string): T | null {
   const cached = cache.get(key);
