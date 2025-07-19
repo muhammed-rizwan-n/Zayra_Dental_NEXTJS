@@ -7,11 +7,6 @@ import AOSInitializer from "../components/AOSInitializer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Initialize review scheduler on server startup
-if (typeof window === "undefined") {
-  import("../lib/startup").catch(console.error);
-}
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
