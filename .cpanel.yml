@@ -3,6 +3,7 @@ name: Zayra_Dental_NEXT_JS
 deployment:
   tasks:
     - export NODE_ENV=production
+    - export $(cat .env.production | xargs)
     - npm install
     - npm run build
     - npm run start:cpanel
