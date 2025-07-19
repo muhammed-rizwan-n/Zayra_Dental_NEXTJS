@@ -4,7 +4,6 @@ import {
   Calendar,
   CheckCircle,
   CreditCard,
-  DollarSign,
   Phone,
   Clock,
   Shield,
@@ -12,6 +11,7 @@ import {
   Heart,
   Download,
   FileText,
+  PoundSterlingIcon,
 } from "lucide-react";
 import pricingData from "./pricing.json";
 
@@ -27,7 +27,7 @@ export default function PricingSection() {
       color: "var(--primary-teal)",
     },
     {
-      icon: <DollarSign size={24} />,
+      icon: <PoundSterlingIcon size={24} />,
       title: "Insurance Accepted",
       description:
         "We work with most dental insurance providers to maximize your benefits",
@@ -45,7 +45,7 @@ export default function PricingSection() {
   const benefits = [
     "Consultation fees included in treatment planning",
     "Competitive prices without compromising quality",
-    "Payment plans available for treatments over ��500",
+    "Payment plans available for treatments over £500",
     "Same-day emergency appointments available",
     "All treatments include follow-up care",
     "Price matching on like-for-like treatments",
@@ -350,7 +350,7 @@ export default function PricingSection() {
                   >
                     Emergency Consultation:
                   </span>
-                  <span className="ms-2">£100</span>
+                  <span className="ms-2">£{pricingData["Emergency & Urgent Care"]["Urgent Treatment"]['price']}</span>
                 </div>
               </div>
             </div>

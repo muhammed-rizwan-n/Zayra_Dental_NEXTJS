@@ -88,7 +88,7 @@ export default function ContactForm() {
       )}
 
       <form className="form-modern" onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className="row mb-3">
           <label htmlFor="name" className="form-label fw-medium">
             Full Name *
           </label>
@@ -136,7 +136,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="col-md-6 mb-3">
+        <div className="row mb-3">
           <label htmlFor="service" className="form-label fw-medium">
             Service of Interest *
           </label>
@@ -165,7 +165,7 @@ export default function ContactForm() {
           </select>
         </div>
 
-        <div className="col-md-7 mb-4">
+        <div className="row mb-4">
           <label htmlFor="message" className="form-label fw-medium">
             Message *
           </label>

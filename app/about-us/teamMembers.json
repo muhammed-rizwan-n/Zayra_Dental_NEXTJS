@@ -34,21 +34,23 @@
     "title": "Dental Nurse",
     "image": "/about-us/Malgorzata Lewalsk.png",
     "expertise": [
-      "Dental Implants & Full Arch Restorations",
-      "Fixed & Removable Orthodontics",
-      "Digital Smile Design",
-      "Aligners & Braces"
-    ]
+      "Patient Care & Pain Management",
+      "Chairside Assistance in Oral Surgery",
+      "Sterilization & Infection Control",
+      "Post-operative Care & Guidance"
+    ],
+    "quote": "Caring for patients is not just a job — it's a commitment to comfort and trust."
   },
   {
     "name": "Dr. Madeleine Sloan",
     "title": "Trainee",
     "image": "/about-us/Madeleine Sloan.jpg",
     "expertise": [
-      "Dental Implants & Full Arch Restorations",
-      "Fixed & Removable Orthodontics",
-      "Digital Smile Design",
-      "Aligners & Braces"
-    ]
+      "Preventive Dental Treatments",
+      "Oral Health Education",
+      "Basic Restorative Procedures",
+      "Patient Communication & Empathy"
+    ],
+    "quote": "Every smile I help restore is a step in my journey of learning and compassion."
   }
 ]

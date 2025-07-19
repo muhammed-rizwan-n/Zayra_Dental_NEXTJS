@@ -2,37 +2,38 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "About Dr Reshma Parambil | Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
+    "About Us | Zayra Dental Leeds | Trusted & Award-Winning Private Dental Practice",
   description:
-    "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care in Leeds.",
+    "Discover Zayra Dental — Leeds' trusted private dental clinic offering affordable, patient-first care. CQC regulated, award-winning, with expert dentists & flexible payment plans.",
   keywords: [
-    "Dr Reshma Parambil dentist",
-    "award winning dentist Leeds",
-    "Business Awards UK winner",
-    "CQC registered dentist",
-    "experienced dentist Leeds",
-    "cosmetic dentist Leeds",
-    "prosthodontist Leeds",
-    "dental team Leeds",
-    "qualified dentist Leeds",
-    "BDS MDS dentist",
+    "Zayra Dental Leeds",
+    "private dentist Leeds",
+    "affordable dental care Leeds",
+    "award-winning dental clinic",
+    "trusted dental clinic Leeds",
+    "best dentist in Leeds",
+    "Business Awards UK dental winner",
+    "CQC regulated dentist Leeds",
+    "patient-first dental care",
+    "modern dental clinic Leeds",
     "restorative dentist Leeds",
-    "about Zayra Dental",
-    "dental practice Leeds team",
-    "patient centered dental care",
+    "cosmetic dentist Leeds",
+    "flexible payment dental clinic",
+    "GDC registered dentist",
+    "British Dental Association member",
   ],
   openGraph: {
     title:
-      "About Dr Reshma Parambil | Award-Winning Dentist Leeds | Zayra Dental",
+      "About Zayra Dental | Trusted, Affordable & Award-Winning Dental Care in Leeds",
     description:
-      "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care.",
+      "Zayra Dental is a CQC-regulated private dental clinic in Leeds, offering compassionate, affordable, and expert-led dental care. Finalist at Business Awards UK 2024.",
     url: "https://zayra-dental-nextjs.vercel.app/about-us",
     images: [
       {
-        url: "/about-us/reshma_parambil.jpg",
+        url: "/about-us/clinic_team.jpg", // You can change this if needed
         width: 1200,
         height: 630,
-        alt: "Dr Reshma Parambil - Principal Dentist at Zayra Dental Leeds",
+        alt: "Zayra Dental Team - Private Dental Clinic Leeds",
       },
     ],
   },
