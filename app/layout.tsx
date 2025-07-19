@@ -82,8 +82,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
-        width: 1200,
-        height: 630,
+        width: 332,
+        height: 221,
         alt: "Modern dental clinic in Leeds - Zayra Dental",
       },
     ],
