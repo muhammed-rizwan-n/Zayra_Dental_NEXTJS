@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import serviceList from "./services/serviceList.json";
 import { unstable_noStore as noStore } from "next/cache";
 
-const baseUrl = "https://zayra-dental-nextjs.vercel.app";
+const baseUrl = "https://www.zayradental.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   noStore();
