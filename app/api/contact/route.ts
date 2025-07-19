@@ -13,7 +13,7 @@ const contactSchema = z.object({
 
 // Verify reCAPTCHA token
 async function verifyRecaptcha(token: string): Promise<boolean> {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY || "6LeGlocrAAAAANqDvm1k7tzvLZpTS-n1yKmd2QHG";
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   if (!secretKey) {
     console.error("RECAPTCHA_SECRET_KEY not found in environment variables");
@@ -73,7 +73,7 @@ async function sendEmail(
             phone: formData.phone,
             service: formData.service,
             message: formData.message,
-            to_email: "info@zayradental.co.uk",
+            to_email: process.env.EMAIL_USER,
           },
         }),
       },
