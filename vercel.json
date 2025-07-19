@@ -1,5 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "ignoreCommand": "echo 'Ignoring server.js for Vercel deployment'"
+  "outputDirectory": ".next"
 }
