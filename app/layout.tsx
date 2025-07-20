@@ -315,7 +315,7 @@ export default function RootLayout({
 
         <main style={{ marginTop: "80px" }}>
           {children}
-          <SpeedInsights />
+{process.env.NEXT_PUBLIC_ENV === 'production' && <SpeedInsights />}
         </main>
         <Footer />
         <ScrollToTopButton />

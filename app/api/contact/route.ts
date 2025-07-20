@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import nodemailer from "nodemailer";
+const DEVELOPMENT = true;
 
 // Contact form validation schema
 const contactSchema = z.object({
@@ -47,7 +48,7 @@ async function sendEmail(
 ): Promise<boolean> {
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
+      host: process.env.SMTP_HOST, 
       port: parseInt(process.env.SMTP_PORT || "465"),
       secure: true, // Use true for port 465, false for 587
       auth: {
@@ -55,6 +56,7 @@ async function sendEmail(
         pass: process.env.SMTP_PASS,
       },
     });
+    console.log(transporter)
 
     const mailOptions = {
       from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
@@ -90,7 +92,7 @@ export async function POST(request: NextRequest) {
     const isRecaptchaValid = await verifyRecaptcha(
       validatedData.recaptchaToken
     );
-    if (!isRecaptchaValid) {
+    if (!isRecaptchaValid && !DEVELOPMENT) {
       return NextResponse.json(
         {
           success: false,
@@ -103,7 +105,7 @@ export async function POST(request: NextRequest) {
 
     // Send email
     const emailSent = await sendEmail(validatedData);
-    if (!emailSent) {
+    if (emailSent != true) {
       return NextResponse.json(
         {
           success: false,
@@ -136,7 +138,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: "An unexpected error occurred. Please try again.",
+        message: "An unexpected error occurred. Please try again. ",
+        m: error
       },
       { status: 500 }
     );
