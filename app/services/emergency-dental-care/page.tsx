@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Emergency Dental Care Leeds | 24/7 Urgent Dental Treatment | Zayra Dental",
     description:
       "Emergency dental care in Leeds within 24 hours. Expert treatment for toothache, broken teeth & dental emergencies. Award-winning practice.",
-    url: "https://zayra-dental-nextjs.vercel.app/services/emergency-dental-care",
+    url: "https://www.zayradental.co.uk/services/emergency-dental-care",
     images: [
       {
         url: "/services/bg-emergency.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/services/emergency-dental-care",
+    canonical: "https://www.zayradental.co.uk/services/emergency-dental-care",
   },
 };
 

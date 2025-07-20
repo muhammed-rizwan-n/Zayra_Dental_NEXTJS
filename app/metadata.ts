@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Dr. Reshma Parambil",
-      url: "https://zayra-dental-nextjs.vercel.app",
+      url: "https://www.zayradental.co.uk",
     },
     { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
   ],
@@ -41,21 +41,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zayra-dental-nextjs.vercel.app"),
+  metadataBase: new URL("https://www.zayradental.co.uk"),
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/",
+    canonical: "https://www.zayradental.co.uk/",
   },
   openGraph: {
     title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
     description:
       "CQC registered and Business Awards UK Winner, Zayra Dental provides exceptional private dental care in Leeds. Services include implants, whitening, veneers, and more.",
-    url: "https://zayra-dental-nextjs.vercel.app",
+    url: "https://www.zayradental.co.uk",
     siteName: "Zayra Dental",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
+        url: "https://www.zayradental.co.uk/home/waiting_room.jpg",
         width: 1200,
         height: 630,
         alt: "Modern dental clinic in Leeds - Zayra Dental",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Zayra Dental | Award-Winning Private Dentist in Leeds",
     description:
       "Visit Zayra Dental in Leeds — Business Awards UK Winner and CQC registered. Providing trusted, affordable private dental care for all.",
-    images: ["https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg"],
+    images: ["https://www.zayradental.co.uk/home/waiting_room.jpg"],
   },
   robots: {
     index: true,

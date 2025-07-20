@@ -41,25 +41,25 @@ export const metadata: Metadata = {
     title: "Contact Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
     description:
       "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice with free parking & emergency care.",
-    url: "https://zayra-dental-nextjs.vercel.app/contact",
+    url: "https://www.zayradental.co.uk/contact",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 300,
         alt: "Contact Zayra Dental Leeds - Modern Dental Clinic",
       },
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/contact",
+    canonical: "https://www.zayradental.co.uk/contact",
   },
 };
 
 export default function Contact() {
   const contactInfo = {
     address: "599 Harehills Lane, Leeds, LS9 6NQ",
-    phone: "0113 248 8398",
+    phone: ["01132488398", "01132120933"],
     email: "info@zayradental.co.uk",
     hours: {
       weekdays: "Monday - Thursday: 9:00 AM - 5:00 PM",
@@ -284,13 +284,21 @@ export default function Contact() {
                     </div>
                     <div>
                       <h5 className="heading-tertiary mb-2">Phone Number</h5>
-                      <a
-                        href={`tel:${contactInfo.phone}`}
-                        className="text-decoration-none"
-                        style={{ color: "var(--text-primary)" }}
-                      >
-                        {contactInfo.phone}
-                      </a>
+                      {contactInfo.phone.map((phoneNumber, index) => (
+                        <a
+                          key={index}
+                          href={`tel:${phoneNumber}`}
+                          className="text-decoration-none"
+                          style={{ color: "var(--text-primary)" }}
+                        >
+                          {phoneNumber.slice(0, 4) +
+                            " " +
+                            phoneNumber.slice(4, 7) +
+                            " " +
+                            phoneNumber.slice(7, 11)}
+                          <br />
+                        </a>
+                      ))}
                     </div>
                   </div>
 

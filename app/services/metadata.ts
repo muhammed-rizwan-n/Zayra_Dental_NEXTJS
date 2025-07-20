@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Award-Winning Dental Services Leeds | CQC Registered Cosmetic Dentistry & Implants",
     description:
       "Business Awards UK Winner! Complete dental services in Leeds: teeth whitening, dental implants, veneers, orthodontics & emergency care. CQC registered expert dentist.",
-    url: "https://zayra-dental-nextjs.vercel.app/services",
+    url: "https://www.zayradental.co.uk/services",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
@@ -41,6 +41,6 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/services",
+    canonical: "https://www.zayradental.co.uk/services",
   },
 };

@@ -84,6 +84,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/our-team',
+        destination: '/about-us#team',
+        permanent: true,
+      },
+      {
+        source: '/fees-and-finance',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/contact-us',
+        destination: '/contact',
+        permanent: true,
+      },
+    ];
+  }
 };
 
 export default nextConfig;

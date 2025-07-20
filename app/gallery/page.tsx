@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental",
     description:
       "See our award-winning modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
-    url: "https://zayra-dental-nextjs.vercel.app/gallery",
+    url: "https://www.zayradental.co.uk/gallery",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/gallery",
+    canonical: "https://www.zayradental.co.uk/gallery",
   },
 };
 

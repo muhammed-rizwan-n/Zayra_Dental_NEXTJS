@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "Book Award-Winning Dental Appointment Leeds Online | CQC Registered Zayra Dental",
     description:
       "Book appointment with Business Awards UK Winner! Quick & easy online booking for check-ups, teeth whitening, implants & emergency care. CQC registered practice.",
-    url: "https://zayra-dental-nextjs.vercel.app/appointment",
+    url: "https://www.zayradental.co.uk/appointment",
     images: [
       {
         url: "/home/waiting_room.jpg",
@@ -36,6 +36,6 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/appointment",
+    canonical: "https://www.zayradental.co.uk/appointment",
   },
 };

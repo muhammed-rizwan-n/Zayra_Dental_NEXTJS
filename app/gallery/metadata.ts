@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Award-Winning Dental Clinic Gallery Leeds | Modern Practice Photos | CQC Registered Zayra Dental",
     description:
       "Explore our award-winning dental clinic in Leeds. View photos of our modern facilities, state-of-the-art equipment, and comfortable patient areas. Business Awards UK Winner.",
-    url: "https://zayra-dental-nextjs.vercel.app/gallery",
+    url: "https://www.zayradental.co.uk/gallery",
     images: [
       {
         url: "/gallery/Zayradental_Edits_11.jpg",
@@ -35,6 +35,6 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/gallery",
+    canonical: "https://www.zayradental.co.uk/gallery",
   },
 };

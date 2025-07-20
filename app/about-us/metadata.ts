@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "About Zayra Dental | Trusted, Affordable & Award-Winning Dental Care in Leeds",
     description:
       "Zayra Dental is a CQC-regulated private dental clinic in Leeds, offering compassionate, affordable, and expert-led dental care. Finalist at Business Awards UK 2024.",
-    url: "https://zayra-dental-nextjs.vercel.app/about-us",
+    url: "https://www.zayradental.co.uk/about-us",
     images: [
       {
         url: "/about-us/clinic_team.jpg", // You can change this if needed
@@ -38,6 +38,6 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/about-us",
+    canonical: "https://www.zayradental.co.uk/about-us",
   },
 };

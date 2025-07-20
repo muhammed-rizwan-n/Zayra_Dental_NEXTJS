@@ -198,6 +198,15 @@ export default function Footer() {
                   >
                     0113 248 8398
                   </a>
+                  <br />
+                  <a
+                    href="tel:01132120933"
+                    className="text-decoration-none"
+                    style={{ color: "rgba(255, 255, 255, 0.8)" }}
+                  >
+                    0113 212 0933
+                  </a>
+                   
                 </div>
               </div>
 

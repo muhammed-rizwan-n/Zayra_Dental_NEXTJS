@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "About Dr Reshma Parambil | Award-Winning Dentist Leeds | Zayra Dental",
     description:
       "Meet Dr Reshma Parambil, Business Awards UK Winner with 15+ years expertise in cosmetic & restorative dentistry. CQC registered, award-winning patient-focused dental care.",
-    url: "https://zayra-dental-nextjs.vercel.app/about-us",
+    url: "https://www.zayradental.co.uk/about-us",
     images: [
       {
         url: "/about-us/reshma_parambil.jpg",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/about-us",
+    canonical: "https://www.zayradental.co.uk/about-us",
   },
 };
 
@@ -100,21 +100,25 @@ export default function About() {
 
   const certifications = [
     {
+      url: "https://www.gdc-uk.org/",
       name: "General Dental Council",
       description: "GDC Registered Dentist",
       logo: "/about-us/gdc_logo.jpeg",
     },
     {
+      url: "https://www.bda.org/",
       name: "British Dental Association",
       description: "BDA Member Practice",
       logo: "/about-us/bda_logo.jpeg",
     },
     {
+      url: "https://www.cqc.org.uk/location/1-7938660947",
       name: "Care Quality Commission",
       description: "CQC Regulated",
       logo: "/about-us/cqc_logo.jpeg",
     },
     {
+      url: "https://www.theddu.com/",
       name: "Dental Protection",
       description: "Professional Indemnity",
       logo: "/about-us/ddu_logo.png",
@@ -261,6 +265,7 @@ export default function About() {
       <section
         className="section-modern"
         style={{ background: "rgba(255, 200, 123, 0.81)" }}
+        id="team"
       >
         <div className="container-modern">
           <div className="text-center mb-5" data-aos="fade-up">
@@ -573,25 +578,29 @@ export default function About() {
 
           <div className="row g-4 justify-content-center">
             {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="card-modern text-center h-100">
-                  <Image
-                    src={cert.logo}
-                    alt={cert.name}
-                    width={80}
-                    height={80}
-                    className="img-fluid mb-3 mx-auto"
-                    style={{ objectFit: "contain" }}
-                  />
-                  <h5 className="heading-tertiary mb-2">{cert.name}</h5>
-                  <p className="text-subtle small">{cert.description}</p>
+                <div
+                  key={index}
+                  className="col-md-6 col-lg-3"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                                <Link href={cert.url} target="_blank" style={{textDecoration: "none"}}>
+
+                  <div className="card-modern text-center h-100">
+                    <Image
+                      src={cert.logo}
+                      alt={cert.name}
+                      width={80}
+                      height={80}
+                      className="img-fluid mb-3 mx-auto"
+                      style={{ objectFit: "contain" }}
+                    />
+                    <h5 className="heading-tertiary mb-2">{cert.name}</h5>
+                    <p className="text-subtle small">{cert.description}</p>
+                  </div>
+                                </Link>
+
                 </div>
-              </div>
             ))}
           </div>
         </div>

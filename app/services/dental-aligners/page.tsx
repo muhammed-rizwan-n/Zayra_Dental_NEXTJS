@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Dental Aligners Leeds | Invisible Braces | Clear Aligners | Zayra Dental",
     description:
       "Invisible dental aligners in Leeds - straighten teeth discreetly! Clear aligners from £1,500. Faster than traditional braces.",
-    url: "https://zayra-dental-nextjs.vercel.app/services/dental-aligners",
+    url: "https://www.zayradental.co.uk/services/dental-aligners",
     images: [
       {
         url: "/services/dental-aligners.jpg",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/services/dental-aligners",
+    canonical: "https://www.zayradental.co.uk/services/dental-aligners",
   },
 };
 

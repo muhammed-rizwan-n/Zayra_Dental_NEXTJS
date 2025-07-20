@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 // Contact form validation schema
 const contactSchema = z.object({
@@ -41,47 +42,37 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 }
 
 // Send email using EmailJS
-async function sendEmail(
-  formData: z.infer<typeof contactSchema>,
-): Promise<boolean> {
-  const serviceId = process.env.EMAILJS_SERVICE_ID;
-  const templateId = process.env.EMAILJS_TEMPLATE_ID;
-  const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-  const privateKey = process.env.EMAILJS_PRIVATE_KEY;
+async function sendEmail(formData: z.infer<typeof contactSchema>): Promise<boolean> {
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || "465"),
+    secure: true, // Use true for port 465, false for 587
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
 
-  if (!serviceId || !templateId || !publicKey || !privateKey) {
-    console.error("EmailJS configuration missing in environment variables");
-    return false;
-  }
+  const mailOptions = {
+    from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
+    to: process.env.SMTP_USER, // sends to your own info@domain.com
+    subject: `New Inquiry from ${formData.name}`,
+    replyTo: formData.email,
+    html: `
+      <h3>New Contact Form Submission</h3>
+      <p><strong>Name:</strong> ${formData.name}</p>
+      <p><strong>Email:</strong> ${formData.email}</p>
+      <p><strong>Phone:</strong> ${formData.phone}</p>
+      <p><strong>Service:</strong> ${formData.service}</p>
+      <p><strong>Message:</strong><br/>${formData.message}</p>
+    `,
+  };
 
   try {
-    const response = await fetch(
-      "https://api.emailjs.com/api/v1.0/email/send",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: serviceId,
-          template_id: templateId,
-          user_id: publicKey,
-          accessToken: privateKey,
-          template_params: {
-            from_name: formData.name,
-            from_email: formData.email,
-            phone: formData.phone,
-            service: formData.service,
-            message: formData.message,
-            to_email: process.env.EMAIL_USER,
-          },
-        }),
-      },
-    );
-
-    return response.ok;
+    await transporter.sendMail(mailOptions);
+    return true;
   } catch (error) {
-    console.error("Email sending error:", error);
+    console.error("SMTP Email error:", error);
     return false;
   }
 }
