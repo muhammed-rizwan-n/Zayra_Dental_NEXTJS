@@ -30,7 +30,7 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `secret=${secretKey}&response=${token}`,
-      },
+      }
     );
 
     const data = await response.json();
@@ -42,23 +42,26 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 }
 
 // Send email using EmailJS
-async function sendEmail(formData: z.infer<typeof contactSchema>): Promise<boolean> {
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || "465"),
-    secure: true, // Use true for port 465, false for 587
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+async function sendEmail(
+  formData: z.infer<typeof contactSchema>
+): Promise<boolean> {
+  try {
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || "465"),
+      secure: true, // Use true for port 465, false for 587
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-  const mailOptions = {
-    from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
-    to: process.env.SMTP_USER, // sends to your own info@domain.com
-    subject: `New Inquiry from ${formData.name}`,
-    replyTo: formData.email,
-    html: `
+    const mailOptions = {
+      from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_USER, // sends to your own info@domain.com
+      subject: `New Inquiry from ${formData.name}`,
+      replyTo: formData.email,
+      html: `
       <h3>New Contact Form Submission</h3>
       <p><strong>Name:</strong> ${formData.name}</p>
       <p><strong>Email:</strong> ${formData.email}</p>
@@ -66,9 +69,8 @@ async function sendEmail(formData: z.infer<typeof contactSchema>): Promise<boole
       <p><strong>Service:</strong> ${formData.service}</p>
       <p><strong>Message:</strong><br/>${formData.message}</p>
     `,
-  };
+    };
 
-  try {
     await transporter.sendMail(mailOptions);
     return true;
   } catch (error) {
@@ -86,16 +88,16 @@ export async function POST(request: NextRequest) {
 
     // Verify reCAPTCHA
     const isRecaptchaValid = await verifyRecaptcha(
-      validatedData.recaptchaToken,
+      validatedData.recaptchaToken
     );
     if (!isRecaptchaValid) {
       return NextResponse.json(
         {
           success: false,
           message: "reCAPTCHA verification failed. Please try again.",
-          data: {'isrecaptcha':isRecaptchaValid, "body": validatedData}
+          datarecieved: { isrecaptcha: isRecaptchaValid, body: validatedData },
         },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -107,8 +109,9 @@ export async function POST(request: NextRequest) {
           success: false,
           message:
             "Failed to send email. Please try again or call us directly at 0113 248 8398.",
+          info: emailSent,
         },
-        { status: 500 },
+        { status: 500 }
       );
     }
 
@@ -125,7 +128,7 @@ export async function POST(request: NextRequest) {
           message: "Please check the form fields and try again.",
           errors: error.flatten().fieldErrors,
         },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -135,7 +138,7 @@ export async function POST(request: NextRequest) {
         success: false,
         message: "An unexpected error occurred. Please try again.",
       },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
