@@ -93,6 +93,7 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           message: "reCAPTCHA verification failed. Please try again.",
+          data: {'isrecaptcha':isRecaptchaValid, "body": validatedData}
         },
         { status: 400 },
       );

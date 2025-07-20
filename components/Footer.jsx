@@ -172,15 +172,18 @@ export default function Footer() {
                 />
                 <div>
                   <div className="fw-medium mb-1">Our Location</div>
-                  <p
-                    className="mb-0"
+                  <Link
+                    href = "https://maps.app.goo.gl/mXJS7FprA4n6NTRdA"
+                    target="_blank"
+                    className="mb-0 text-decoration-none"
                     style={{ color: "rgba(255, 255, 255, 0.8)" }}
                   >
                     599 Harehills Lane
                     <br />
                     Leeds, LS9 6NQ
-                  </p>
+                  </Link>
                 </div>
+
               </div>
 
               <div className="d-flex align-items-start gap-3 mb-3">

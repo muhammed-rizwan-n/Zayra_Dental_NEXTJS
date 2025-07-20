@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 import ContactForm from "../../components/ContactForm";
 import {
   MapPin,
@@ -17,48 +16,12 @@ import {
   Linkedin,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title:
-    "Contact Award-Winning Dentist Leeds | Book Appointment | CQC Registered Zayra Dental",
-  description:
-    "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice on Harehills Lane with free parking. Emergency dental care available.",
-  keywords: [
-    "contact award winning dentist Leeds",
-    "CQC registered dentist Leeds",
-    "Business Awards UK winner",
-    "book dental appointment Leeds",
-    "dentist Harehills Lane",
-    "emergency dentist Leeds",
-    "Zayra Dental contact",
-    "dental clinic Leeds location",
-    "dental appointment booking",
-    "Leeds dentist phone number",
-    "dental emergency Leeds",
-    "dentist near me Leeds",
-    "patient centered dental care",
-  ],
-  openGraph: {
-    title: "Contact Award-Winning Dentist Leeds | CQC Registered Zayra Dental",
-    description:
-      "Contact Business Awards UK Winner Zayra Dental Leeds - Call 0113 248 8398 to book appointment. CQC registered practice with free parking & emergency care.",
-    url: "https://www.zayradental.co.uk/contact",
-    images: [
-      {
-        url: "/gallery/Zayradental_Edits_11.jpg",
-        width: 600,
-        height: 300,
-        alt: "Contact Zayra Dental Leeds - Modern Dental Clinic",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://www.zayradental.co.uk/contact",
-  },
-};
+export { metadata } from "./metadata";
 
 export default function Contact() {
   const contactInfo = {
     address: "599 Harehills Lane, Leeds, LS9 6NQ",
+    map: "https://maps.app.goo.gl/mXJS7FprA4n6NTRdA",
     phone: ["01132488398", "01132120933"],
     email: "info@zayradental.co.uk",
     hours: {
@@ -109,7 +72,7 @@ export default function Contact() {
       icon: <MessageCircle size={32} />,
       title: "Emergency Care",
       description: "National Health Service Emergency",
-      action: "National Emergency Line",
+      action: "Call 111",
       href: "tel:111",
       color: "var(--secondary-brown)",
     },
@@ -267,6 +230,7 @@ export default function Contact() {
                     <div>
                       <h5 className="heading-tertiary mb-2">Our Location</h5>
                       <p className="text-subtle mb-0">{contactInfo.address}</p>
+                      <Link href={contactInfo.map}>View Map</Link>
                     </div>
                   </div>
 
@@ -459,7 +423,7 @@ export default function Contact() {
 
           <div className="text-center mt-5" data-aos="fade-up">
             <a
-              href="https://maps.google.com/?q=599+Harehills+Lane+Leeds+LS9+6NQ"
+              href="https://maps.app.goo.gl/mXJS7FprA4n6NTRdA"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary-modern"

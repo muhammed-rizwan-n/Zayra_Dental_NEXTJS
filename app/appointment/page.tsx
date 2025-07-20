@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 import pricing from "../pricing/pricing.json";
 import {
   Clock,
@@ -15,45 +14,7 @@ import {
 } from "lucide-react";
 import "./style.css";
 
-export const metadata: Metadata = {
-  title:
-    "Book Award-Winning Dental Appointment Leeds Online | CQC Registered Zayra Dental",
-  description:
-    "Book appointment with Business Awards UK Winner! Quick & easy online booking for dental check-ups, teeth whitening, implants & emergency care. CQC registered practice. Same-day appointments available.",
-  keywords: [
-    "book award winning dental appointment Leeds",
-    "CQC registered dentist Leeds",
-    "Business Awards UK winner",
-    "online dental booking Leeds",
-    "dental appointment booking",
-    "dentist appointment Leeds",
-    "emergency dental appointment",
-    "dental consultation Leeds",
-    "same day dental appointment",
-    "dental check up booking",
-    "Leeds dentist booking online",
-    "dental appointment Harehills",
-    "patient centered dental care",
-  ],
-  openGraph: {
-    title:
-      "Book Award-Winning Dental Appointment Leeds Online | CQC Registered Zayra Dental",
-    description:
-      "Book appointment with Business Awards UK Winner! Quick & easy online booking for check-ups, teeth whitening, implants & emergency care. CQC registered practice.",
-    url: "https://www.zayradental.co.uk/appointment",
-    images: [
-      {
-        url: "/home/waiting_room.jpg",
-        width: 332,
-        height: 221,
-        alt: "Book Dental Appointment Online at Zayra Dental Leeds",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://zayradental.co.uk/appointment",
-  },
-};
+export { metadata } from "./metadata";
 
 export default function Appointment() {
   const appointmentTypes = [
@@ -129,7 +90,7 @@ export default function Appointment() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take the first step towards a healthier, more confident smile.
-                Book your appointment online or call us directly - we&apos;re
+                Book your appointment by calling us directly - we&apos;re
                 here to make your dental care convenient and stress-free.
               </p>
 

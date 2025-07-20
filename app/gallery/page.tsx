@@ -1,49 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import { Camera, ArrowRight, Calendar, Eye } from "lucide-react";
 import GalleryClient from "./GalleryClient";
 import "./style.css";
 import data from "./info.json";
 
-export const metadata: Metadata = {
-  title:
-    "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental Photos",
-  description:
-    "See our award-winning modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers, implants & smile makeover transformations. Virtual clinic tour available.",
-  keywords: [
-    "dental clinic Leeds photos",
-    "dental before after Leeds",
-    "teeth whitening results",
-    "dental transformation Leeds",
-    "smile makeover Leeds",
-    "dental clinic interior",
-    "dental treatment results",
-    "cosmetic dentistry results",
-    "dental practice Leeds tour",
-    "dental gallery Leeds",
-    "CQC registered dentist",
-    "award winning dental practice",
-  ],
-  openGraph: {
-    title:
-      "Dental Clinic Gallery Leeds | Before & After Results | Zayra Dental",
-    description:
-      "See our award-winning modern dental clinic in Leeds & amazing before/after results. View teeth whitening, veneers & smile makeover transformations.",
-    url: "https://www.zayradental.co.uk/gallery",
-    images: [
-      {
-        url: "/gallery/Zayradental_Edits_11.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Zayra Dental Clinic Gallery Leeds - Award-Winning Modern Dental Practice",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://www.zayradental.co.uk/gallery",
-  },
-};
+export { metadata } from "./metadata";
 
 export default function Gallery() {
   const {clinicInterior, ourTeam, treatmentResults, stats} = data;
@@ -71,7 +33,7 @@ export default function Gallery() {
                 </span>
               </h1>
               <p className="lead text-subtle mb-4">
-                Take a virtual tour of our CQC registered, award-winning dental
+                Take a tour of our CQC registered, award-winning dental
                 practice and see the incredible smile transformations we&apos;ve
                 achieved. Every picture tells a story of confidence, health, and
                 professional excellence.
@@ -239,7 +201,7 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Virtual Tour CTA */}
+      {/* Tour CTA */}
       <section
         className="section-modern text-white"
         style={{

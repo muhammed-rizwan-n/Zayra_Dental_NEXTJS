@@ -315,7 +315,7 @@ export default function RootLayout({
 
         <main style={{ marginTop: "80px" }}>
           {children}
-          <SpeedInsights />
+          {/*<SpeedInsights /> */}
         </main>
         <Footer />
         <ScrollToTopButton />
