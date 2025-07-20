@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOSInitializer from "../components/AOSInitializer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const geistSans = Geist({
@@ -312,7 +313,10 @@ export default function RootLayout({
         <AOSInitializer />
         <Navbar />
 
-        <main style={{ marginTop: "80px" }}>{children}</main>
+        <main style={{ marginTop: "80px" }}>
+          {children}
+          <SpeedInsights />
+        </main>
         <Footer />
         <ScrollToTopButton />
       </body>

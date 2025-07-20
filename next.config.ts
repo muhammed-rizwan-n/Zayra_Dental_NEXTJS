@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    output: 'standalone',
+  output: "standalone",
   reactStrictMode: true,
   images: {
     formats: ["image/webp", "image/avif"],
@@ -34,8 +34,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value:
-              "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800",
+            value: "public, max-age=31536000, s-maxage=31536000, immutable",
           },
         ],
       },
@@ -87,22 +86,22 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/our-team',
-        destination: '/about-us#team',
+        source: "/our-team",
+        destination: "/about-us#team",
         permanent: true,
       },
       {
-        source: '/fees-and-finance',
-        destination: '/pricing',
+        source: "/fees-and-finance",
+        destination: "/pricing",
         permanent: true,
       },
       {
-        source: '/contact-us',
-        destination: '/contact',
+        source: "/contact-us",
+        destination: "/contact",
         permanent: true,
       },
     ];
-  }
+  },
 };
 
 export default nextConfig;
