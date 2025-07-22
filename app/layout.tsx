@@ -336,13 +336,6 @@ export default function RootLayout({
           as="image"
           type="image/jpeg"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-yFhfzF9DgVD2ALUG6C95Ao7uO04SYKZ06SYLzvZmUAvH8OiG5UbVPTAaUZ0FjvZpVnLtJm+JJM6iy+9Z1QqzKg=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
 
         {/* Minimal critical CSS for instant rendering */}
         <style
