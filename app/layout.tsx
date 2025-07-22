@@ -118,15 +118,9 @@ export default function RootLayout({
     name: "Zayra Dental - Award-Winning CQC Registered Practice",
     description:
       "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
-    // aggregateRating: {
-    //   "@type": "AggregateRating",
-    //   ratingValue: "4.9",
-    //   reviewCount: 100,
-    //   bestRating: "5",
-    // },
-    url: "https://zayra-dental-nextjs.vercel.app",
-    logo: "https://zayra-dental-nextjs.vercel.app/logo.png",
-    image: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
+    url: "https://www.zayradental.co.uk",
+    logo: "https://www.zayradental.co.uk/logo_192_192.png",
+    image: "https://www.zayradental.co.uk/home/waiting_room.jpg",
     telephone: "+441132488398",
     email: "info@zayradental.co.uk",
     address: {
@@ -156,7 +150,7 @@ export default function RootLayout({
       },
     ],
     priceRange: "££",
-    acceptsReservations: "True",
+    acceptsReservations: true,
     currenciesAccepted: "GBP",
     paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
     medicalSpecialty: [
@@ -165,18 +159,78 @@ export default function RootLayout({
       "Preventive",
       "Orthodontic",
       "OralSurgery",
+      "Endodontics",
+      "Periodontics",
+      "Prosthodontics",
+      "Pediatric",
+      "Geriatric",
+      "Sedation",
+      "Implantology",
+      "DentalRadiology",
+      "General",
     ],
     founder: {
       "@type": "Person",
       name: "Dr. Reshma Parambil",
       jobTitle: "Principal Dentist",
-      honorificSuffix: "BDS, MDS – Prosthodontics",
+      honorificSuffix: "Oral & Maxillofacial Surgery",
       award: [
         "Patient-Centered Dental Care Winner 2024 - Business Awards UK",
         "Rising Star Award Finalist 2024 - Business Awards UK",
         "Dentist of the Year Finalist 2024 - Business Awards UK",
       ],
     },
+    foundingDate: "2020-10-01",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: 98,
+      bestRating: "5",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Jodie Johnson",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Had the best experience at zayra dental. The staff was lovely and they did an amazing job on my front tooth. The best prices you will find in Leeds. Would highly recommend.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Arusah Ali",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Extremely good service, the dentist made me feel very comfortable and was very understanding. She also was very patient I would 100% recommend.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Beverley Callaghan",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Reshma is a trusted practitioner. I was made to feel calm. I’m usually nervous of going to the dentist but Reshma puts me at ease and there was hardly any wait before I went in. The last few years I’ve had check ups and no treatment needed but she still cleans and descales my teeth every time. I rebooked for my next check up in 6 months time.",
+      },
+    ],
     award: [
       {
         "@type": "Award",
@@ -212,15 +266,23 @@ export default function RootLayout({
         name: "General Dental Council (GDC)",
       },
     ],
+    areaServed: {
+      "@type": "Place",
+      name: "Leeds",
+    },
     sameAs: [
-      "https://www.facebook.com/zayradental",
-      "https://www.instagram.com/zayradental",
-      "https://www.linkedin.com/company/zayradental",
+      "https://www.facebook.com/Zayra-Dental-100487084965519",
+      "https://www.instagram.com/zayradentalleeds/",
+      "https://x.com/zayradental1",
+      "https://www.cqc.org.uk/location/1-7938660947",
+      "https://www.nhs.uk/services/dentist/zayradental/V009427",
+      "https://www.instagram.com/resh_vp/",
+      "https://www.linkedin.com/in/reshma-parambil-43b35a1b9/",
     ],
     author: {
       "@type": "Person",
       name: "Muhammed Rizwan N",
-      url: "https://https://www.linkedin.com/in/muhammed-rizwan-n/",
+      url: "https://www.linkedin.com/in/muhammed-rizwan-n/",
       jobTitle: "Web Developer",
     },
   };
@@ -274,6 +336,13 @@ export default function RootLayout({
           as="image"
           type="image/jpeg"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-yFhfzF9DgVD2ALUG6C95Ao7uO04SYKZ06SYLzvZmUAvH8OiG5UbVPTAaUZ0FjvZpVnLtJm+JJM6iy+9Z1QqzKg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
 
         {/* Minimal critical CSS for instant rendering */}
         <style
@@ -315,7 +384,7 @@ export default function RootLayout({
 
         <main style={{ marginTop: "80px" }}>
           {children}
-{process.env.NEXT_PUBLIC_ENV === 'production' && <SpeedInsights />}
+          {process.env.NEXT_PUBLIC_ENV === "production" && <SpeedInsights />}
         </main>
         <Footer />
         <ScrollToTopButton />

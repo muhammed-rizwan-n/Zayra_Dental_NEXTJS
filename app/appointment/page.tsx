@@ -22,7 +22,7 @@ export default function Appointment() {
       title: "Initial Consultation",
       description: "Comprehensive dental exam and treatment planning",
       duration: "30 minutes",
-      price: `£?${pricing["Implants"]["Implant Consultation"]["price"]}`,
+      price: `*£${pricing["Implants"]["Implant Consultation"]["price"]}`,
       icon: <User size={24} />,
     },
     {
@@ -90,8 +90,8 @@ export default function Appointment() {
               </h1>
               <p className="lead text-subtle mb-4">
                 Take the first step towards a healthier, more confident smile.
-                Book your appointment by calling us directly - we&apos;re
-                here to make your dental care convenient and stress-free.
+                Book your appointment by calling us directly - we&apos;re here
+                to make your dental care convenient and stress-free.
               </p>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
@@ -115,6 +115,14 @@ export default function Appointment() {
                     <div className="small text-subtle">Response Time</div>
                   </div>
                 </div>
+                <div className="col-4">
+                  <div className="text-center">
+                    <div className="heading-tertiary text-accent mb-1">98%</div>
+                    <div className="small text-subtle">
+                      Patient Satisfaction
+                    </div>
+                  </div>
+                </div>{" "}
                 <div className="col-4">
                   <div className="text-center">
                     <div className="heading-tertiary text-accent mb-1">5★</div>

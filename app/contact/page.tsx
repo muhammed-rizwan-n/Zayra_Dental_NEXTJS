@@ -13,7 +13,6 @@ import {
   Bus,
   Facebook,
   Instagram,
-  Linkedin,
 } from "lucide-react";
 
 export { metadata } from "./metadata";
@@ -320,7 +319,7 @@ export default function Contact() {
                   <h5 className="heading-tertiary mb-3">Follow Us</h5>
                   <div className="d-flex gap-3">
                     <a
-                      href="https://facebook.com/zayradental"
+                      href="https://www.facebook.com/Zayra-Dental-100487084965519"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
@@ -335,7 +334,7 @@ export default function Contact() {
                       <Facebook size={20} />
                     </a>
                     <a
-                      href="https://instagram.com/zayradental"
+                      href="https://www.instagram.com/zayradentalleeds/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
@@ -350,7 +349,7 @@ export default function Contact() {
                       <Instagram size={20} />
                     </a>
                     <a
-                      href="https://linkedin.com/company/zayradental"
+                      href="https://x.com/zayradental1"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
@@ -362,7 +361,7 @@ export default function Contact() {
                         textDecoration: "none",
                       }}
                     >
-                      <Linkedin size={20} />
+                      <i className="fab fa-x-twitter" size={18}></i>
                     </a>
                   </div>
                 </div>

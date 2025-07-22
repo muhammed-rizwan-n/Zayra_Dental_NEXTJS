@@ -9,7 +9,6 @@ import {
   Clock,
   Facebook,
   Instagram,
-  Linkedin,
   Star,
   ArrowRight,
 } from "lucide-react";
@@ -91,7 +90,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="d-flex gap-3">
               <a
-                href="https://facebook.com/zayradental"
+                href="https://www.facebook.com/Zayra-Dental-100487084965519"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
@@ -99,7 +98,7 @@ export default function Footer() {
                 <Facebook size={18} />
               </a>
               <a
-                href="https://instagram.com/zayradental"
+                href="https://www.instagram.com/zayradentalleeds/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
@@ -107,12 +106,12 @@ export default function Footer() {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://linkedin.com/company/zayradental"
+                href="https://x.com/zayradental1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link d-inline-flex align-items-center justify-content-center rounded-circle"
               >
-                <Linkedin size={18} />
+                <i className="fab fa-x-twitter" size={18}></i>
               </a>
             </div>
           </div>
@@ -173,7 +172,7 @@ export default function Footer() {
                 <div>
                   <div className="fw-medium mb-1">Our Location</div>
                   <Link
-                    href = "https://maps.app.goo.gl/mXJS7FprA4n6NTRdA"
+                    href="https://maps.app.goo.gl/mXJS7FprA4n6NTRdA"
                     target="_blank"
                     className="mb-0 text-decoration-none"
                     style={{ color: "rgba(255, 255, 255, 0.8)" }}
@@ -183,7 +182,6 @@ export default function Footer() {
                     Leeds, LS9 6NQ
                   </Link>
                 </div>
-
               </div>
 
               <div className="d-flex align-items-start gap-3 mb-3">
@@ -209,7 +207,6 @@ export default function Footer() {
                   >
                     0113 212 0933
                   </a>
-                   
                 </div>
               </div>
 
@@ -292,11 +289,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       <SiteInfo />
 
       {/* Bottom Footer */}
- <div
+      <div
         style={{
           background: "rgba(0, 0, 0, 0.2)",
           padding: "1.5rem 0",
@@ -311,10 +308,7 @@ export default function Footer() {
             </div>
 
             <div className="d-flex align-items-center gap-2">
-              <span
-                className="small"
-                style={{ color: "rgb(255, 255, 255)" }}
-              >
+              <span className="small" style={{ color: "rgb(255, 255, 255)" }}>
                 CQC Registered Practice
               </span>
               <div
