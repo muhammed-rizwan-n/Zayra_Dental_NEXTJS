@@ -711,24 +711,80 @@
       "ui": "https://lh3.googleusercontent.com/a/ACg8ocI-konsUcIgpzsp-9LdKw0qh3NTeJVb3fh_miYFltXxZNdLMQ=s64-c-rp-mo-br100",
       "revlink": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUN5N2F5dDZnRRAB!2m1!1s0x0:0x406604ce7c613151!3m1!1s2@1:CIHM0ogKEICAgICy7ayt6gE%7CCgwI4vGJgQYQkOzW1AM%7C?hl=en-GB",
       "m": "Jestem bardzo zadowolony z obs\u0142ugi i szybkiej wizyty u dentysty. Z pewno\u015bci\u0105 mog\u0119 poleci\u0107 to miejsce \ud83d\udc4c\ud83d\udc4c\ud83d\udc4c\ud83d\udc4c\ud83d\udc4c\ud83d\udca5\ud83d\udca5\ud83d\udca5\ud83d\udca5\ud83d\udca5"
-    },
-    "1,1|1746702084492|Marika D": {
-      "r": 1,
-      "t": "1746702084492",
-      "n": "Marika D",
-      "ui": "https://lh3.googleusercontent.com/a/ACg8ocIbmSkVye26Pqb0lwFjYGPqSNSbmY8DoHUzMXWMRoW9Gj1QTQ=s64-c-rp-mo-br100",
-      "revlink": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VPMmk2TjdFcjl5NHp3RRAB!2m1!1s0x0:0x406604ce7c613151!3m1!1s2@1:CIHM0ogKEO2i6N7Er9y4zwE%7CCgwIhJ7ywAYQ6I6B6wE%7C?hl=en-GB",
-      "m": "All fillings was not done correctly. I am still in pain and vety sensitive if my teetch touch something or changes of temperature"
-    },
-    "0,1|1749729470699|Jahday Osborne": {
-      "r": 1,
-      "t": "1749729470699",
-      "n": "Jahday Osborne",
-      "ui": "https://lh3.googleusercontent.com/a-/ALV-UjWdD9LXrhbr8iS4RFYJUFduPFXTVgedymc_p_Xd3wZhhQ_0Vu83=s64-c-rp-mo-br100",
-      "revlink": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VLeXNtUGJaM0xQR3ZBRRAB!2m1!1s0x0:0x406604ce7c613151!3m1!1s2@1:CIHM0ogKEKysmPbZ3LPGvAE%7CCgwIvoGrwgYQ0PvazQI%7C?hl=en-GB",
-      "m": "My filling fell out literally the day they put it in I struggle with anxiety and I feel they can be quite rude and don\u2019t care for customers who are with the nhs"
     }
   },
+
   "averageRating": 4.8,
-  "reviewsCount": 98
+  "reviewsCount": 98,
+  "general-dentistry": [
+    "5,5|1715871072642|Ryan Hamadani",
+
+    "3,5|1741862148690|Victoria Wharton",
+
+    "3,5|1707408532715|Sarah Percival"
+  ],
+
+  "dental-spa": [
+    "3,5|1669912828764|Mike Krasnianskyi",
+
+    "3,5|1640800431249|Zaib Mattara",
+
+    "3,5|1636119000356|Lauren Mcculloch"
+  ],
+
+  "emergency-dental-care": [
+    "3,5|1667690868515|fra Qala",
+
+    "3,5|1687775135187|Ian Smith",
+
+    "3,5|1619030448881|Mindaugas Malinauskas"
+  ],
+
+  "teeth-whitening": [
+    "3,5|1640800431249|Zaib Mattara",
+
+    "3,5|1619253090625|Tammy Nelson",
+
+    "3,5|1636119000356|Lauren Mcculloch"
+  ],
+
+  "composite and veneer": [
+    "3,5|1614346637785|Jurate Dauciunaite",
+
+    "3,5|1619030448881|Mindaugas Malinauskas",
+
+    "3,5|1616693907800|Margo Oleksy"
+  ],
+
+  "dental-aligner": [
+    "3,5|1639757890670|Magdalena Król",
+
+    "3,5|1638362065472|M. Murat Erguvan",
+
+    "3,5|1637606741891|Shameel Mattara"
+  ],
+
+  "dental-implant": [
+    "3,5|1639757890670|Magdalena Król",
+
+    "3,5|1640800431249|Zaib Mattara",
+
+    "3,5|1686610449901|طارق الصباغ"
+  ],
+
+  "root-canal": [
+    "3,5|1619253090625|Tammy Nelson",
+
+    "3,5|1616693907800|Margo Oleksy",
+
+    "3,5|1616238958931|marcin lampart"
+  ],
+
+  "facial-aestetics": [
+    "3,5|1639757890670|Magdalena Król",
+
+    "3,5|1638362065472|M. Murat Erguvan",
+
+    "3,5|1615727540472|Pawel Cup"
+  ]
 }

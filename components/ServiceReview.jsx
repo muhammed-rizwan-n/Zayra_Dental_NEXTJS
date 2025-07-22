@@ -4,10 +4,10 @@ import reviews from "../getReviews/finalReviews.json";
 import { Star } from "lucide-react";
 
 
-export function ServiceReviewCard({userid, data}){
+export function ServiceReviewCard({userid, data, index}){
   const [isExpanded, setIsExpanded] = useState(false);
 return (
-        <div key={userid} className="col-lg-4" data-aos="fade-up">
+        <div key={data+userid} className="col-lg-4" data-aos="fade-up">
           <div className="card-modern text-center h-100">
             <div className="d-flex justify-content-center mb-3">
               {[...Array(5)].map((_, i) => (
@@ -45,7 +45,7 @@ export default function ServiceReview({ data }) {
   return (
     <div className="row g-4">
         {reviews[data].map((userid, index) => (
-      <ServiceReviewCard data= {data} userid={userid}  />
+      <ServiceReviewCard data= {data} userid={userid} key={data} />
         ))}
     </div>
   );
