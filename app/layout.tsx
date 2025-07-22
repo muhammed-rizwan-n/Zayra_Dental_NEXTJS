@@ -219,8 +219,8 @@ export default function RootLayout({
     ],
     author: {
       "@type": "Person",
-      name: "Muhammed Rizwan",
-      url: "https://muhammed-rizwan.vercel.app",
+      name: "Muhammed Rizwan N",
+      url: "https://https://www.linkedin.com/in/muhammed-rizwan-n/",
       jobTitle: "Web Developer",
     },
   };

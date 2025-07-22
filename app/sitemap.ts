@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Service pages from serviceList.json
   const servicePages = Object.entries(serviceList).map(([slug]) => ({
-    url: `${baseUrl}/services/${slug}`,
+    url: `${baseUrl}${serviceList[slug].href}`,
     lastModified: new Date(),
   }));
 
