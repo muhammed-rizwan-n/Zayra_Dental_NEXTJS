@@ -15,10 +15,11 @@ def overallRating():
 def oldReviews():
     # Open and read the JSON file
     with open('./my-app/getReviews/old_review.txt', 'r',  encoding='utf-8') as file:
-        data = str(file.readlines()[2])
+        data = str(file.readlines()[3])
         data = json.loads(data)
+        data = json.loads(data[0][2])
     # FOR getLocal based url data
-    for i in data[1][10][2]:
+    for i in data[2]:
         #https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png
         finaldata['allreviews'][f'{i[1]}|{i[2][2]}|{i[3][0]}']= {
             'r': i[1],
@@ -28,6 +29,7 @@ def oldReviews():
             'revlink': i[12],
             'm': i[27],
         }
+        print(finaldata['allreviews'][f'{i[1]}|{i[2][2]}|{i[3][0]}'])
         # print("Rating=", i[1])
         # print("Time=", i[2][2])
         # print("Name=", i[3][0])
