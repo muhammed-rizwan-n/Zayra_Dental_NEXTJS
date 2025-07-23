@@ -96,8 +96,28 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/dental-treatment",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
         source: "/contact-us",
         destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/emergency-dental-care",
+        destination: "/services/emergency-dental-care",
+        permanent: true,
+      },
+      {
+        source: "/dental-aligners",
+        destination: "/services/dental-aligners",
+        permanent: true,
+      },
+      {
+        source: "/composite-and-veneers",
+        destination: "/services/composite-and-veneers",
         permanent: true,
       },
     ];
