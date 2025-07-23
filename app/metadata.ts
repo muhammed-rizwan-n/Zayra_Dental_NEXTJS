@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Dr. Reshma Parambil",
-      url: "https://www.zayradental.co.uk",
+      url: "https://www.linkedin.com/in/reshma-parambil-43b35a1b9/",
     },
-    { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
+    { name: "Muhammed Rizwan N", url: "https://www.linkedin.com/in/muhammed-rizwan-n/" },
   ],
   creator: "Zayra Dental",
   publisher: "Zayra Dental",

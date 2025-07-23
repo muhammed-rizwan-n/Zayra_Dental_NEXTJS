@@ -318,7 +318,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
         {/* Preload critical resources */}
-        <link
+        {/* <link
           rel="preload"
           href="/services/dental_treatment.jpeg"
           as="image"
@@ -335,7 +335,7 @@ export default function RootLayout({
           href="/services/dental_bonding.jpg"
           as="image"
           type="image/jpeg"
-        />
+        /> */}
 
         {/* Minimal critical CSS for instant rendering */}
         <style
