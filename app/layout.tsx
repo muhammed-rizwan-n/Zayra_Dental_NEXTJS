@@ -114,7 +114,7 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "DentalClinic",
+    "@type": "LocalBusiness",
     name: "Zayra Dental - Award-Winning CQC Registered Practice",
     description:
       "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
