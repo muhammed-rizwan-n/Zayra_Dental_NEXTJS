@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.zayradental.co.uk/services/emergency-dental-care",
+    canonical: "https://zayradental.co.uk/services/emergency-dental-care",
   },
 };
 

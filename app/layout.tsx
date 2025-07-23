@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Dr. Reshma Parambil",
-      url: "https://zayra-dental-nextjs.vercel.app",
+      url: "https://zayradental.co.uk",
     },
     { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
   ],
@@ -63,21 +63,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zayra-dental-nextjs.vercel.app"),
+  metadataBase: new URL("https://zayradental.co.uk"),
   alternates: {
-    canonical: "https://zayra-dental-nextjs.vercel.app/",
+    canonical: "https://zayradental.co.uk/",
   },
   openGraph: {
     title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
     description:
       "CQC registered and Business Awards UK Winner, Zayra Dental provides exceptional private dental care in Leeds. Services include implants, whitening, veneers, and more.",
-    url: "https://zayra-dental-nextjs.vercel.app",
+    url: "https://zayradental.co.uk",
     siteName: "Zayra Dental",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg",
+        url: "https://zayradental.co.uk/home/waiting_room.jpg",
         width: 332,
         height: 221,
         alt: "Modern dental clinic in Leeds - Zayra Dental",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     title: "Zayra Dental | Award-Winning Private Dentist in Leeds",
     description:
       "Visit Zayra Dental in Leeds — Business Awards UK Winner and CQC registered. Providing trusted, affordable private dental care for all.",
-    images: ["https://zayra-dental-nextjs.vercel.app/home/waiting_room.jpg"],
+    images: ["https://zayradental.co.uk/home/waiting_room.jpg"],
   },
   robots: {
     index: true,
@@ -300,7 +300,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="OrNCapr7kK95PzWbNlwvBm0p4yh7aI5hgObcC7wmafs"
         />
-        <link rel="canonical" href="https://zayra-dental-nextjs.vercel.app" />
+        <link rel="canonical" href="https://zayradental.co.uk" />
         <meta name="geo.region" content="GB-ENG" />
         <meta name="geo.placename" content="Leeds" />
         <meta name="geo.position" content="53.8022349;-1.4994857" />

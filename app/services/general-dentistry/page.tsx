@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "General Dentistry Leeds | Comprehensive Dental Care | Zayra Dental",
     description:
       "Expert general dentistry in Leeds. Routine checkups, cleanings, fillings & preventive care. Award-winning CQC registered practice.",
-    url: "https://www.zayradental.co.uk/services/general-dentistry",
+    url: "https://zayradental.co.uk/services/general-dentistry",
     images: [
       {
         url: "/services/dental_treatment.jpeg",

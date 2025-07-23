@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.zayradental.co.uk/services/dental-spa",
+    canonical: "https://zayradental.co.uk/services/dental-spa",
   },
 };
 

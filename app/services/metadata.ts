@@ -41,6 +41,6 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.zayradental.co.uk/services",
+    canonical: "https://zayradental.co.uk/services",
   },
 };

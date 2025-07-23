@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.zayradental.co.uk/services/facial-aesthetics",
+    canonical: "https://zayradental.co.uk/services/facial-aesthetics",
   },
 };
 
