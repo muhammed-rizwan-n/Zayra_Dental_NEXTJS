@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       name: "Dr. Reshma Parambil",
       url: "https://zayradental.co.uk",
     },
-    { name: "Muhammed Rizwan", url: "https://muhammed-rizwan.vercel.app" },
+    { name: "Muhammed Rizwan", url: "https://www.linkedin.com/in/muhammed-rizwan-n/" },
   ],
   creator: "Zayra Dental",
   publisher: "Zayra Dental",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://zayradental.co.uk"),
   alternates: {
-    canonical: "https://zayradental.co.uk/",
+    canonical: "https://www.zayradental.co.uk/",
   },
   openGraph: {
     title: "Award-Winning Zayra Dental - CQC Registered Private Dentist Leeds",
@@ -118,9 +118,9 @@ export default function RootLayout({
     name: "Zayra Dental - Award-Winning CQC Registered Practice",
     description:
       "Business Awards UK Winner! CQC registered private dental practice in Leeds offering award-winning patient-centered comprehensive dental care including cosmetic dentistry, dental implants, teeth whitening and general dentistry.",
-    url: "https://www.zayradental.co.uk",
-    logo: "https://www.zayradental.co.uk/logo_192_192.png",
-    image: "https://www.zayradental.co.uk/home/waiting_room.jpg",
+    url: "https://zayradental.co.uk",
+    logo: "https://zayradental.co.uk/logo_192_192.png",
+    image: "https://zayradental.co.uk/home/waiting_room.jpg",
     telephone: "+441132488398",
     email: "info@zayradental.co.uk",
     address: {

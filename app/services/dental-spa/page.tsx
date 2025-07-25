@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Dental Spa Leeds | Luxury Dental Treatments | Zayra Dental",
     description:
       "Experience luxury dental care at our dental spa in Leeds. Relaxing treatments with spa-like comfort and premium dental services.",
-    url: "https://www.zayradental.co.uk/services/dental-spa",
+    url: "https://zayradental.co.uk/services/dental-spa",
     images: [
       {
         url: "/services/dental_spa.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/services/dental-spa",
+    canonical: "https://www.zayradental.co.uk/services/dental-spa",
   },
 };
 

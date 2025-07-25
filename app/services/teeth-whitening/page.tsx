@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/services/teeth-whitening",
+    canonical: "https://www.zayradental.co.uk/services/teeth-whitening",
   },
 };
 

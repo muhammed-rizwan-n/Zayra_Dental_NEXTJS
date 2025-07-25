@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Facial Aesthetics Leeds | Anti-Wrinkle Treatments | Zayra Dental",
     description:
       "Professional facial aesthetics in Leeds. Anti-wrinkle treatments, dermal fillers & skin rejuvenation by qualified professionals.",
-    url: "https://www.zayradental.co.uk/services/facial-aesthetics",
+    url: "https://zayradental.co.uk/services/facial-aesthetics",
     images: [
       {
         url: "/services/facial_aesthetics.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://zayradental.co.uk/services/facial-aesthetics",
+    canonical: "https://www.zayradental.co.uk/services/facial-aesthetics",
   },
 };
 

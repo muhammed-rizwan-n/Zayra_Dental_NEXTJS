@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "Composite Bonding & Veneers Leeds | Smile Makeover | Zayra Dental",
     description:
       "Transform your smile with composite bonding & porcelain veneers in Leeds. Same-day treatment, natural results. Award-winning cosmetic dentist.",
-    url: "https://www.zayradental.co.uk/services/composite-and-veneers",
+    url: "https://zayradental.co.uk/services/composite-and-veneers",
     images: [
       {
         url: "/services/dental_bonding.jpg",

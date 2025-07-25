@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import ServiceReview from "@/components/ServiceReview";
 const { symptoms, treatmentSteps, benefits, afterCareInstructions } = data;
+
 export default function RootCanal() {
   return (
     <>
