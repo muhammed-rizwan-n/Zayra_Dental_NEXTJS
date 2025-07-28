@@ -7,25 +7,21 @@
     "Scale and Polish": { "description": "", "price": "85.00", "surface": [] },
     "Fluoride Varnish Application": {
       "description": "",
-      "price": "15.00",
-      "surface": []
+      "price": "15.00"
     },
     "Arrest of Bleeding": {
       "description": "",
-      "price": "52.90",
-      "surface": []
+      "price": "52.90"
     },
     "Prescription": { "description": "", "price": "25.00", "surface": [] },
     "Removal Sutures": { "description": "", "price": "30.00", "surface": [] },
     "Direct Access Hygienist": {
       "description": "",
-      "price": "100.00",
-      "surface": []
+      "price": "100.00"
     },
     "Hygiene Appointment": {
       "description": "",
-      "price": "90.00",
-      "surface": []
+      "price": "90.00"
     }
   },
   "Fillings": {
@@ -88,8 +84,7 @@
     "Metal Onlay": { "description": "", "price": "425.00", "surface": [] },
     "Semi-Precious Onlay": {
       "description": "",
-      "price": "531.60",
-      "surface": []
+      "price": "531.60"
     },
     "Semi-Precious Inlay": {
       "description": "",
@@ -102,19 +97,16 @@
     "Full Gold Crown": { "description": "", "price": "950.00", "surface": [] },
     "Porcelain Bonded Crown": {
       "description": "",
-      "price": "550.00",
-      "surface": []
+      "price": "550.00"
     },
     "Porcelain Jacket Crown": {
       "description": "",
-      "price": "550.00",
-      "surface": []
+      "price": "550.00"
     },
     "Pressed Crown": { "description": "", "price": "736.70", "surface": [] },
     "Semi-Precious Crown": {
       "description": "",
-      "price": "456.30",
-      "surface": []
+      "price": "456.30"
     },
     "Emax Crown": { "description": "", "price": "600.00", "surface": [] },
     "Metal Crown": { "description": "", "price": "490.00", "surface": [] },
@@ -130,48 +122,39 @@
   "Dentures": {
     "Upper Acrylic Denture": {
       "description": "",
-      "price": "585.00",
-      "surface": []
+      "price": "585.00"
     },
     "Lower Acrylic Denture": {
       "description": "",
-      "price": "585.00",
-      "surface": []
+      "price": "585.00"
     },
     "Upper Metal Denture": {
       "description": "",
-      "price": "1216.70",
-      "surface": []
+      "price": "1216.70"
     },
     "Lower Metal Denture": {
       "description": "",
-      "price": "1000.00",
-      "surface": []
+      "price": "1000.00"
     },
     "Denture Acrylic Upper": {
       "description": "",
-      "price": "580.00",
-      "surface": []
+      "price": "580.00"
     },
     "Denture Acrylic Lower": {
       "description": "",
-      "price": "580.00",
-      "surface": []
+      "price": "580.00"
     },
     "Chrome Denture Upper": {
       "description": "",
-      "price": "1200.00",
-      "surface": []
+      "price": "1200.00"
     },
     "Chrome Denture Lower": {
       "description": "",
-      "price": "1293.40",
-      "surface": []
+      "price": "1293.40"
     },
     "Implant Retained Denture": {
       "description": "",
-      "price": "5000.00",
-      "surface": []
+      "price": "5000.00"
     }
   },
   "Implants": {
@@ -179,15 +162,13 @@
     "Implant Crown": { "description": "", "price": "1200.00", "surface": [] },
     "Implant Consultation": {
       "description": "",
-      "price": "50.00",
-      "surface": []
+      "price": "50.00"
     }
   },
   "Orthodontics": {
     "Orthodontic Retainer": {
       "description": "",
-      "price": "180.00",
-      "surface": []
+      "price": "180.00"
     },
     "Ortho Splint": { "description": "", "price": "200.00", "surface": [] },
     "Perio Splint": { "description": "", "price": "497.60", "surface": [] }
@@ -196,23 +177,19 @@
     "Extraction": { "description": "", "price": "125.00", "surface": [] },
     "Urgent Extraction": {
       "description": "",
-      "price": "150.00",
-      "surface": []
+      "price": "150.00"
     },
     "EXTRACTION WISDOM TOOTH": {
       "description": "",
-      "price": "290.00",
-      "surface": []
+      "price": "290.00"
     },
     "SURGICAL EXTRACTION": {
       "description": "",
-      "price": "264.50",
-      "surface": []
+      "price": "264.50"
     },
     "Non-Surgical Periodontal Treatment": {
       "description": "",
-      "price": "150.00",
-      "surface": []
+      "price": "150.00"
     }
   },
   "Bridges & Retainers": {
@@ -220,24 +197,20 @@
     "Gold Retainer": { "description": "", "price": "334.60", "surface": [] },
     "Porcelain Bonded Pontic": {
       "description": "",
-      "price": "550.00",
-      "surface": []
+      "price": "550.00"
     },
     "Porcelain Bonded Retainer": {
       "description": "",
-      "price": "550.00",
-      "surface": []
+      "price": "550.00"
     },
     "Porcelain Pontic": { "description": "", "price": "500.00", "surface": [] },
     "Porcelain Retainer": {
       "description": "",
-      "price": "500.00",
-      "surface": []
+      "price": "500.00"
     },
     "Maryland Retainer": {
       "description": "",
-      "price": "450.00",
-      "surface": []
+      "price": "450.00"
     },
     "Maryland Pontic": { "description": "", "price": "450.00", "surface": [] }
   },
@@ -245,23 +218,19 @@
     "Bridge Repair": { "description": "", "price": "250.30", "surface": [] },
     "Denture Repair Lower Acrylic": {
       "description": "",
-      "price": "150.00",
-      "surface": []
+      "price": "150.00"
     },
     "Denture Repair Lower Metal": {
       "description": "",
-      "price": "250.00",
-      "surface": []
+      "price": "250.00"
     },
     "Denture Repair Upper Acrylic": {
       "description": "",
-      "price": "150.00",
-      "surface": []
+      "price": "150.00"
     },
     "Denture Repair Upper Metal": {
       "description": "",
-      "price": "250.00",
-      "surface": []
+      "price": "250.00"
     },
     "Denture Addition": { "description": "", "price": "120.00", "surface": [] },
     "Denture Reline": { "description": "", "price": "91.30", "surface": [] },
@@ -276,8 +245,7 @@
   "Preventative & Misc": {
     "Preventative Resin Restoration": {
       "description": "",
-      "price": "60.00",
-      "surface": []
+      "price": "60.00"
     },
     "Night Guard": { "description": "", "price": "250.00", "surface": [] }
   },
@@ -285,25 +253,21 @@
     "Tooth Whitening": { "description": "", "price": "295.00", "surface": [] },
     "Aligner/Cosmetic Consultation": {
       "description": "",
-      "price": "63.20",
-      "surface": []
+      "price": "63.20"
     }
   },
   "Consultations & Appointments": {
     "Implant Consultation": {
       "description": "",
-      "price": "50.00",
-      "surface": []
+      "price": "50.00"
     },
     "Regulation 11 Replace 1 Appliance": {
       "description": "",
-      "price": "0.00",
-      "surface": []
+      "price": "0.00"
     },
     "Regulation 11 Replace 2 Appliances": {
       "description": "",
-      "price": "0.00",
-      "surface": []
+      "price": "0.00"
     }
   },
   "Emergency & Urgent Care": {
