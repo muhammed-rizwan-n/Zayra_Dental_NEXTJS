@@ -76,10 +76,10 @@ export default function Home() {
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-6" data-aos="fade-right">
               <div className="hero-content">
-                <h1 className="heading-primary mb-4">
-                  Crafting Beautiful Smiles with
+                <h1 className="heading-primary mb-4 mt-2">
+                  Leeds’ Trusted -
                   <span className="text-accent d-block">
-                    Expert Dental Care
+                    Crafting Beautiful Smiles
                   </span>
                 </h1>
                 <p
@@ -722,7 +722,9 @@ export default function Home() {
                       <div className="h3 mb-1" style={{ color: "white" }}>
                         4.9★
                       </div>
-                      <div className="small opacity-90">Private Patient Rating</div>
+                      <div className="small opacity-90">
+                        Private Patient Rating
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -202,7 +202,7 @@ export default function PricingSection() {
                   <div className="row g-4">
                     {Object.entries(treatments).map(
                       ([treatment, treatmentDetails]) => (
-                        <div key={treatment} className="col-lg-6">
+                        (treatmentDetails['priority'] ? <div key={treatment} className="col-lg-6">
                           <div
                             className="d-flex justify-content-between align-items-start p-3 rounded"
                             style={{
@@ -227,8 +227,9 @@ export default function PricingSection() {
                               <div className="small text-subtle">from</div>
                             </div>
                           </div>
-                        </div>
-                      ),
+                        </div>: null )
+                        
+                      )
                     )}
                   </div>
                 </div>
@@ -350,7 +351,14 @@ export default function PricingSection() {
                   >
                     Emergency Consultation:
                   </span>
-                  <span className="ms-2">£{pricingData["Emergency & Urgent Care"]["Urgent Treatment"]['price']}</span>
+                  <span className="ms-2">
+                    £
+                    {
+                      pricingData["General Dentistry"][
+                        "Emergency Pain Appointment"
+                      ]["price"]
+                    }
+                  </span>
                 </div>
               </div>
             </div>

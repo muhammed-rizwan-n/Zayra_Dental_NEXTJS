@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import data from "./info.json";
 import type { Metadata } from "next";
-import pricing from "../../pricing/pricing.json";
+import pricing from "../../pricing/price_id.json";
 import ServiceReview from "../../../components/ServiceReview";
 
 const { processSteps, beforeAfter } = data;
@@ -28,7 +28,7 @@ const treatments = [
       "Affordable option",
     ],
     duration: "30-60 minutes per tooth",
-    price: `From £?${pricing['Veneers']['Veneer Composite']['price']}`,
+    price: `From £${pricing["VENEER_BOND"]['price']}`,
   },
   {
     type: "Porcelain Veneers",
@@ -41,7 +41,7 @@ const treatments = [
       "Custom designed",
     ],
     duration: "2-3 appointments",
-    price: `From £${pricing['Veneers']['Veneer Porcelain']['price']}`,
+    price: `From £${pricing["VENEER_PORC"]['price']}`,
   },
   {
     type: "Composite Veneers",
@@ -53,7 +53,7 @@ const treatments = [
       "Immediate results",
     ],
     duration: "2-3 hours",
-    price: `From £${pricing['Veneers']['Veneer Composite']['price']}`,
+    price: `From £${pricing['VENEER_COMP']['price']}`,
   },
 ];
 
@@ -466,10 +466,10 @@ export default function CompositeAndVeneers() {
                       <tr>
                         <td className="fw-medium">Pricing</td>
                         <td className="text-center">
-                          £{pricing["Veneers"]["Veneer Composite"]["price"]}
+                          £{pricing["VENEER_COMP"]["price"]}
                         </td>
                         <td className="text-center">
-                          £{pricing["Veneers"]["Veneer Porcelain"]["price"]}
+                          £{pricing["VENEER_PORC"]["price"]}
                         </td>
                       </tr>
                     </tbody>

@@ -1,0 +1,71 @@
+ID	Category	Name	Priority	Price	Description	exclusivePlan	2 Surface	3 Surface	4 Surface	5 Surface	1
+EMERGENCY_CONS	General Dentistry	Emergency Pain Appointment	TRUE	100	Same-day appointment for urgent dental pain.	False					
+INITIAL_CONS	General Dentistry	New Patient Examination	TRUE	75	Comprehensive assessment for new patients including necessary x-rays.	True					
+	General Dentistry	Routine Dental Examination	TRUE	45	Regular check-up including all necessary x-rays.	True					1
+	Hygiene Therapy	Hygiene Maintenance/Appointment	TRUE	90	Routine cleaning and hygiene maintenance.	Included in Plan					
+	Hygiene Therapy	Diamond Clean (Airflow)	TRUE	100	Airflow cleaning for stain and plaque removal.	80.00					
+	Hygiene Therapy	Hygiene With Periodontal Treatment	TRUE	90	Hygiene session including periodontal care.	70.00					
+	Hygiene Therapy	Hygiene Implant Maintenance	TRUE	80	Maintenance cleaning around dental implants.	60.00					
+	Hygiene Therapy	Advanced Periodontal Treatment (1 Hour)	FALSE	140	In-depth periodontal treatment session for advanced cases.	110.00					1
+	Fillings	Amalgam Filling	TRUE	100	Durable silver-colored filling commonly used in back teeth.	100.00	120	140	150	170	
+	Fillings	Resin Modified Gic (Semi-Permanent)	TRUE	120	Semi-permanent filling using resin-modified glass ionomer cement.	100.00					
+	Fillings	Anterior Composite	TRUE	200	Tooth-colored composite filling for front (anterior) teeth.	100.00					
+	Fillings	Posterior Composite	TRUE	200	Tooth-colored composite filling for back (posterior) teeth.	100.00					
+	Root Canal Treatment	Anterior Tooth	TRUE	450	Root canal treatment for front tooth (anterior).	360.00					
+	Root Canal Treatment	Premolar Tooth	TRUE	550	Root canal treatment for premolar tooth.	440.00					
+	Root Canal Treatment	Molar Tooth	TRUE	700	Root canal treatment for molar tooth (back tooth).	570.00					
+	Oral Surgery	Simple Extraction	TRUE	125	Removal of a tooth with minimal complexity.	130.00					
+	Oral Surgery	Surgical Extraction	TRUE	200	Tooth removal requiring surgical procedure.	170.00					
+	Oral Surgery	Private Prescription	FALSE	20	Prescription issued privately for medications.	Included in Plan					
+	Prosthetic Services	"Partial Acrylic Denture, Upper Or Lower"	TRUE	690	Removable acrylic denture for either upper or lower arch.	570.00					
+	Prosthetic Services	Partial Flexible/Valplast Denture	TRUE	900	Flexible Valplast denture for comfort and aesthetics.	750.00					
+	Prosthetic Services	"Partial Cobalt Chrome Denture, Upper Or Lower"	TRUE	1000	Durable cobalt chrome framework denture for upper or lower arch.	850.00					
+	Prosthetic Services	"Acrylic Full Dentures, Upper Or Lower"	TRUE	750	Complete removable acrylic denture for either upper or lower jaw.	600.00     					
+	Prosthetic Services	Acrylic Full Dentures (Set)	FALSE	1100	Complete set of upper and lower full acrylic dentures.	950.00					
+	Prosthetic Services	"Partial Ultaire Denture, Upper Or Lower"	FALSE	1000	High-performance polymer Ultaire denture for strength and lightness.	850.00					
+	Prosthetic Services	Nightguard	FALSE	180	Custom-fitted nightguard to protect teeth from grinding.	150.00					
+	Prosthetic Services	Sport Guard	FALSE	190	Custom mouthguard designed for sports protection.	152.00					1
+	Crowns	Porcelain Crown / Onlay / Inlay (Emax)	TRUE	760.4	"High-strength Emax porcelain crown, onlay, or inlay for aesthetic and durability."	550.00 					
+	Crowns	Porcelain Bridge (Per Tooth)	TRUE	700	Per-tooth cost for a porcelain bridge to replace missing teeth.	550.00					
+	Crowns	Porcelain Veneers (Emax)	TRUE	700	Cosmetic porcelain veneers for smile enhancement using Emax.	550.00					
+	Crowns	Full Gold Crown	TRUE	950	Durable gold alloy crown ideal for back teeth with high strength.	550.00					
+	Crowns	Direct Fibre Post And Core Buildup	FALSE	200	Fibre post placement and core buildup for crown support.	170.00					
+	Crowns	Crown Recement	FALSE	90	Reattachment of a previously placed crown.	None					
+	Crowns	Lab Made Provisional Crown Per Tooth	FALSE	250	Temporary lab-made crown used before placing the final crown.	200.00					1
+IMPLANT_CONS	Dental Implants	Implant Consultation With Dentist	TRUE	50	Initial consultation with a dentist to assess suitability for dental implants.	0.00   					
+	Dental Implants	Cbct X-Ray With Implant Planning And Report	TRUE	150	3D scan and comprehensive report for planning dental implant placement.	None					
+	Dental Implants	Dental Implant Per Implant	TRUE	1500	"Cost per dental implant, including placement."	-10%					
+	Dental Implants	Screw Retained Dental Implant Crown/Bridge Per Tooth	TRUE	1100	"Screw-retained crown or bridge attached to a dental implant, per tooth."	None					
+	Dental Implants	Bone Grafting	FALSE	500	Bone graft procedure to support future implant placement.	None					
+	Dental Implants	Aesthetic Gum Shaping With Provisional Crown	FALSE	550	Cosmetic gum contouring with a temporary crown for aesthetic purposes.	None					
+TEETH_WHIT	Teeth Whitening	Boutique Whitening Treatment (4-6 Shades Lighter)	TRUE	350	Professional whitening treatment to lighten teeth by 4-6 shades.	10% off					
+	Teeth Whitening	Boutique Whitening B1 Shade Guaranteed Kit	TRUE	550	Guaranteed B1 shade whitening kit with professional supervision.	10% off    					
+	Teeth Whitening	Replacement Whitening Trays Only	FALSE	160	Replacement custom whitening trays (no gel).	10% off					
+	Teeth Whitening	Single Syringes For Maintenance	FALSE	40	Individual whitening syringes for ongoing maintenance.	10% off					
+	ClearCorrect & Retainers	Clearcorrect Consultation Including Digital Scanning	TRUE	0	Initial consultation with digital scanning to evaluate eligibility for ClearCorrect treatment.	None					
+CLEAR_ALIGN	ClearCorrect & Retainers	Clearcorrect Bronze	TRUE	2750	"Up to 12 clear aligners for upper and lower teeth,1 set of night time retainers, includes consultation, simulation and OPG."	None					
+	ClearCorrect & Retainers	Clearcorrect Silver	TRUE	3500	"Up to 30 clear aligners for upper and lower teeth,1 refinement,1 set of night time retainers, includes consultation, simulation and OPG."	None					
+	ClearCorrect & Retainers	Clearcorrect Gold	TRUE	4350	"Unlimited clear aligners,2 sets of night time retainers, teeth whitening, includes consultation, simulation and OPG."	None					
+	ClearCorrect & Retainers	Clearcorrect Platinum	TRUE	4675	"Unlimited clear aligners,2 night retainers, fixed retainers (upper/lower), composite edge bonding, teeth whitening; includes consultation, simulation and OPG."	None					
+	ClearCorrect & Retainers	Bonded Retainer Per Arch	FALSE	280	Permanent bonded retainer for a single arch (upper or lower).	None					
+	ClearCorrect & Retainers	Removable Retainers (1 Set Upper And Lower)	FALSE	330	Set of removable retainers for both upper and lower arches.	None 					
+	ClearCorrect & Retainers	Removable Retainers (1 Retainer Upper Or Lower)	FALSE	190	Single removable retainer for either upper or lower arch.	None					
+	ClearCorrect & Retainers	Replacement Retainers For Clearcorrect Patients (2 Sets Upper And Lower)	FALSE	330	Replacement package for ClearCorrect patients: 2 sets of upper and lower retainers.	None					
+	ClearCorrect & Retainers	Smilefast Add-On For Clearcorrect Patients	FALSE	60	Free smile design worth £60 for ClearCorrect patients (as part of Smilefast).	None					1
+VENEER_COMP	Veneers	Veneer Composite	TRUE	375							1
+VENEER_PORC	Veneers	Veneer Porcelain	TRUE	650							1
+COSMETIC_CONS	General Dentistry	Aligner/Cosmetic Consultation									
+VENEER_BOND											1
+	Fillings	Gold Filling	TRUE	170.6			175.6	201	234.1	251.3	1
+	Gold	Gold Filling		170.6			175.6	201	234.1	251.3	1
+	Gold	Full Gold Crown		950							1
+	Gold	Gold Inlay		251.3			251.3	292.3	334.6	377	1
+	Gold	Gold Pontic		953.6							1
+	Gold	Gold Retainer		334.6							1
+	Crowns	Lava Crown		650							1
+	Fillings	Temporary Filling		90			67.4	76.7	76.7	76.7	1
+	Fillings	Root Filling		500							1
+	Crowns	Semi-Precious Crown		456.3							1
+	Crowns	Emax Crown		600							1
+	Crowns	Metal Crown		490							
+	Gold	Gold Onlay		600							

@@ -12,6 +12,7 @@ import {
   Stethoscope,
   Award,
 } from "lucide-react";
+import pricingData from "../../pricing/price_id.json";
 import ServiceReview from "@/components/ServiceReview";
 
 export const metadata: Metadata = {
@@ -529,7 +530,7 @@ export default function GeneralDentistry() {
               <div className="d-flex align-items-center gap-4 mb-4">
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
-                    £95
+                    £{pricingData["EMERGENCY_CONS"]["price"]} onwards
                   </div>
                   <div className="small" style={{ opacity: 0.9 }}>
                     Checkup & Clean

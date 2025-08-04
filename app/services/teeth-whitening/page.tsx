@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import data from "./info.json";
-import pricing from "../../pricing/pricing.json";
+import pricing from "../../pricing/price_id.json";
 
 import {
   Calendar,
@@ -314,7 +314,7 @@ export default function TeethWhitening() {
               </h2>
               <p className="lead mb-4" style={{ opacity: 0.9 }}>
                 Professional teeth whitening starting from £
-                {pricing["Cosmetic Dentistry"]["Tooth Whitening"]["price"]}.
+                {pricing["TEETH_WHIT"]["price"]}.
                 Book your consultation today and discover how we can transform
                 your smile safely and effectively.
               </p>
@@ -322,7 +322,7 @@ export default function TeethWhitening() {
               <div className="d-flex align-items-center gap-4 mb-4">
                 <div>
                   <div className="h4 mb-1" style={{ color: "white" }}>
-                    £{pricing["Cosmetic Dentistry"]["Tooth Whitening"]["price"]}
+                    £{pricing["TEETH_WHIT"]["price"]}
                   </div>
                   <div className="small" style={{ opacity: 0.9 }}>
                     Starting Price
