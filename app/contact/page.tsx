@@ -378,7 +378,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div id="form" className="col-lg-7 scroll-fix" data-aos="fade-left">
+            <div id="form" className="col-lg-7 scroll-fix">
               <ContactForm />
             </div>
           </div>
