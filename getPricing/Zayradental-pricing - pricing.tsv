@@ -63,9 +63,9 @@ CLEAR_ALIGN	ClearCorrect & Retainers	Clearcorrect Bronze	TRUE	2750	Up to 12 clea
 VENEER_COMP	Veneers	Veneer Composite	TRUE	375							1
 VENEER_PORC	Veneers	Veneer Porcelain	TRUE	650							1
 VENEER_BOND	Veneers	Veneer Bonding									
-	Gold	Gold Filling		170.6			175.6	201	234.1	251.3	1
-	Gold	Full Gold Crown		950							1
-	Gold	Gold Inlay		251.3			251.3	292.3	334.6	377	1
+	Gold	Gold Filling	TRUE	170.6			175.6	201	234.1	251.3	1
+	Gold	Full Gold Crown	TRUE	950							1
+	Gold	Gold Inlay	TRUE	251.3			251.3	292.3	334.6	377	1
 	Gold	Gold Pontic		953.6							1
-	Gold	Gold Retainer		334.6							1
+	Gold	Gold Retainer	TRUE	334.6							1
 	Gold	Gold Onlay		600							1
